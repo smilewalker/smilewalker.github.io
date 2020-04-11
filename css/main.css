@@ -1993,7 +1993,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4f2dd1;
+  background: #edb0fa;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3188,11 +3188,12 @@ pre .javascript .function {
   }
 }
 body {
-  background-image: url("/images/bgHome.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-color: #222;
+  background-image: url("/images/bgCity3.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+  background-color: #000;
   background-attachment: fixed;
+  background-position: 0 0;
 }
 .content-wrap {
   border-radius: 0.2em;
