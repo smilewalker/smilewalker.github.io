@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/function%20small()%20%7B%20%5Bnative%20code%5D%20%7D?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="技术,web,gpu动画," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="译者序：原文GPU Animation: Doing It Right，发表于2016年12月6日，本文是对该篇的中文翻译，如有帮助，作为译者，也深感欣慰。附原文链接：https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;12&#x2F;gpu-animation-doing-it-right&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web之GPU 动画：正确的打开方式">
+<meta property="og:url" content="https://smilewalker.github.io/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Smilewalker">
+<meta property="og:description" content="译者序：原文GPU Animation: Doing It Right，发表于2016年12月6日，本文是对该篇的中文翻译，如有帮助，作为译者，也深感欣慰。附原文链接：https:&#x2F;&#x2F;www.smashingmagazine.com&#x2F;2016&#x2F;12&#x2F;gpu-animation-doing-it-right&#x2F;">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-70987315f62301d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-e3bf6b8dac8cb1dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-03c54fb508a6c322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-5a3a8ef95b9caa33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-fb875922ac8302ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-2e62078255e25d9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-c670b8e674d656e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-e825f1c1f487bf11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-46b78c354e3cf9fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-a2b0c6e93ba05810.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-d6a05e0d42a6c209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-8ca8de109ca432d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-b671951236278765.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-4b64ee278970fcfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-3e91087d076759b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-d32102c85921289d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-cafbf3e36cd9d65b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-23e07527b8ac308e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-4e914a9de2818c79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-da1c1f12d98b4711.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-a7793adcc80d7063.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2016-12-22T14:44:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:06:14.969Z">
+<meta property="article:author" content="smilewalker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="gpu动画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2320147-70987315f62301d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://smilewalker.github.io/2016/12/22/web之GPU动画的正确打开方式/"/>
+
+
+
+
+
+  <title>web之GPU 动画：正确的打开方式 | Smilewalker</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="https://tva1.sinaimg.cn/large/00831rSTly1gdmq4rimjxj30zg0u0ae0.jpg"
+               alt="Smilewalker"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Smilewalker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Experience · Action</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-compass"></i> <br />
+            
+            日志
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            专集
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            博主
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="点我搜索吧..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">web之GPU 动画：正确的打开方式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-22T22:44:44+08:00">
+                2016-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/" class="leancloud_visitors" data-flag-title="web之GPU 动画：正确的打开方式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  8.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  30
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>译者序：原文<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">GPU Animation: Doing It Right</a>，发表于2016年12月6日，本文是对该篇的中文翻译，如有帮助，作为译者，也深感欣慰。<br>附原文链接：<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/</a></p>
+<a id="more"></a>
+
+<p>译者序：原文<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">GPU Animation: Doing It Right</a>，发表于2016年12月6日，本文是对该篇的中文翻译，如有帮助，作为译者，也深感欣慰。<br>附原文链接：<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/</a></p>
+<p><strong>目前，大部分人都知道现代浏览器是使用GPU来渲染web的部分页面，尤其是带有动画的。举个例子，一个使用<code>transform</code>的css动画看起来会比使用<code>left</code>和<code>top</code>属性的更为流畅。但是如果你问，“我是如何从GPU获得平滑的动画？”多数情况下，你可能会听到比如“使用 <code>transform: translateZ(0)</code> 或者 <code>will-change: transform</code>。”的回答。</strong></p>
+<p>这些属性好比如我们在IE6使用<code>zoom：1</code>（如果你懂我的意思），用于准备GPU的动画——或者<strong>合成（compositing）</strong>，浏览器供应商喜欢这么称它。</p>
+<p>但有时，简单演示中运行的很好很流畅的动画，在真实网站却很慢，引起视觉错误甚至导致浏览器崩溃。为什么会产生这种现象？<strong>我们如何修复它？</strong>接下来一起试着理解吧。<br>###免责声明<br>在我们深入GPU的合成前，我想告诉你一件重要的事：这是一个<strong>巨大的hack</strong>。你不会在<a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a>的规范里（至少目前来说）找到任何关于合成（compositing ）如何工作的资料，如何显式地在合成层上放置元素，甚至于合成本身。它只是浏览器用于执行确定任务的优化，并且每个浏览器供应商以自己的方式实现。</p>
+<p>你在这篇文章学到的一切，不是官方说明文档，而是我个人实验的结果，夹杂着一点常识和不同浏览器子系统运行原理的知识。部分可能绝对是错的，部分可能随着时间而变化——这个要事先说明！</p>
+<p>###合成（Compositing ）的工作原理<br>为了准备GPU动画的页面，我们需要理解浏览器的工作原理，而不仅仅是听取来自网上或本文的随意建议。</p>
+<p>比如说一个页面有 <code>A</code> 和 <code>B</code>的元素，均为绝对定位<code>position: absolute</code>，带着不同的 <code>z-index</code>。浏览器将会从CPU绘制，然后把生成的图像发送给GPU——于屏幕上显示结果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">#a, #b &#123; position: absolute; &#125;</span><br><span class="line">#a &#123;</span><br><span class="line">  left: 30px; </span><br><span class="line">  top: 30px; </span><br><span class="line">  z-index: 2;</span><br><span class="line">&#125;</span><br><span class="line">#b &#123; z-index: 1; &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;a&quot;&gt;A&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;b&quot;&gt;B&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-70987315f62301d3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1"></p>
+<p>现在用<code>left</code>属性和css的animation，来移动<code>A</code>元素：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">#a, #b &#123; position: absolute; &#125;</span><br><span class="line">#a &#123;</span><br><span class="line">  left: 30px; </span><br><span class="line">  top: 30px; </span><br><span class="line">  z-index: 2;</span><br><span class="line">  animation: move 1s linear;</span><br><span class="line">&#125;</span><br><span class="line">#b &#123; z-index: 1; &#125;</span><br><span class="line">@keyframes move &#123; </span><br><span class="line">  from &#123; left: 30px; &#125; </span><br><span class="line">  to &#123; left: 100px; &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;a&quot;&gt;A&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;b&quot;&gt;B&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e3bf6b8dac8cb1dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2"></p>
+<p>在这种情况下，对于每个动画帧，浏览器都会重新计算元素的几何形状(即回流reflow)，渲染页面新状态的图像 (即重绘repaint)，然后再次将其发给GPU以显示在屏幕。我们知道重绘是很耗性能成本的，每个现代浏览器都足够快速的来重绘页面改变的部分，而不是整个页面。浏览器在多数情况下能都很快地重绘，但我们的动画依旧不平滑。</p>
+<p>在动画的每一步（甚至递增）进行回流和重绘整个页面，听起来真的很慢，特别是对于一个庞大复杂的布局。而绘制两个独立的图像会更有效——一个是<code>A</code>元素，一个是没有<code>A</code>元素的整个页面——然后简单的相对彼此偏移那些图像。换句话来说，<strong>合成（composing）</strong>缓存的元素图像会更快。这也是GPU闪光的地方：它能快速合成带有<strong>亚像素精度</strong>的图像，为动画添加“性感“的平滑度。</p>
+<p>为了优化合成，浏览器得确保css的动画属性：</p>
+<ul>
+<li>不影响文档流，</li>
+<li>不依赖于文档流，</li>
+<li>不会造成重绘。</li>
+</ul>
+<p>有人会认为带有<code>position: absolute</code>以及<code>fixed</code>的<code>top</code>和<code>left</code>属性，不依赖于其环境，但事实并非如此。比如说，值为百分比的<code>left</code>属性，会取决于<code>.offsetParent</code>的大小；同样，<code>em</code>, <code>vh</code>以及其他单位也会取决于自身环境。而<code>transform</code>和<code>opacity</code>是css唯一会满足上述情况的属性。<br>下面用<code>transform</code>代替<code>left</code>来动画：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">#a, #b &#123; position: absolute; &#125;</span><br><span class="line">#a &#123;</span><br><span class="line">  left: 30px; </span><br><span class="line">  top: 30px; </span><br><span class="line">  z-index: 2;</span><br><span class="line">  animation: move 1s linear;</span><br><span class="line">&#125;</span><br><span class="line">#b &#123; z-index: 1; &#125;</span><br><span class="line">@keyframes move &#123; </span><br><span class="line">  from &#123; transform: translateX(0); &#125;</span><br><span class="line">  to &#123; transform: translateX(70px); &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;a&quot;&gt;A&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;b&quot;&gt;B&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+<p>这里，我们<strong>声明式</strong>地描述了动画：它的开始位置，结束位置，持续时间等。它将提前告诉浏览器css的更新属性。因为浏览器如果知道没有任何属性会导致回流或重绘，它可以应用合成优化：绘制<strong>合成层（compositing layers）</strong>的图像并发给GPU。</p>
+<p>这种优化的优点在哪？</p>
+<ul>
+<li>得到一个带有亚像素精密度的柔顺平滑动画，运行在特别为图形任务的优化的单元上，并且非常快。</li>
+<li>动画不再绑定到CPU。即使运行一个强化的JavaScript任务，动画依然会快速执行。</li>
+</ul>
+<p>一切看起来如此的清楚和简单，对吧，那会遇到什么问题呢？一起来看看这种优化方式是如何工作的。</p>
+<p>它可能会让你震惊，GPU竟是一个<strong>独立的计算机</strong>。是的，每个现代设备的重要部分通常都是独立单元，有自己的处理器，自己的内存和数据处理模块。就像其他任何应用程序或者游戏一样，浏览器需要用外部设备跟GPU通信。</p>
+<p>为了更好的理解它是怎么工作的，想想AJAX吧。假使你要提交用户输入的数据，你不会告诉远程服务器，“嗨，过来获取这些输入框的数据和JS变量，并保存到数据库。”远程服务器不能访问用户浏览器的内存。取而代之的是，你需要从页面保存这些数据到可以轻松解析的简单数据格式（如JSON）的有效内容中，并发送给远程服务器。</p>
+<p>合成也是如此。GPU就像远程服务器，浏览器需要首先创建一个有效载荷，然后发送到设备。当然，GPU没有距离CPU数千米长；它就在旁边。然而，鉴于多数情况，远程服务器请求和返回允许2秒，对于GPU的数据转换的额外3~5毫秒会导致糟糕的动画。</p>
+<p>什么是GPU的有效载荷？多数情况下，它包含了<strong>层图像</strong>，以及附加的说明比如大小，偏移量，以及动画参数。下面大致的写了有效负载及GPU传输的数据：</p>
+<ul>
+<li>绘制每个合成层成独立图像。</li>
+<li>准备层数据（例如大小，偏移量，透明度）</li>
+<li>准备动画的着色（如果用到的话）</li>
+<li>发送GPU数据</li>
+</ul>
+<p>如你所见，每当为元素添加<code>transform: translateZ(0)</code>或者<code>will-change: transform</code>，你会开始同样的过程。而重绘是很耗性能成本的，这里它会更慢。多数情况下，浏览器不能进行递增的重绘，它会去绘制之前覆盖了新合成层的区域。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-03c54fb508a6c322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>###隐式合成（Implicit Compositing）</p>
+<p>回到我们刚才<code>A</code>和<code>B</code>的例子。之前，我们动画处于所有元素上层的<code>A</code>，导致有两个合成层：一是<code>A</code>元素，另一个是<code>B</code>元素和整个页面背景（也就是没有<code>A</code>）。<br>现在，我们让<code>B</code>动画。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5a3a8ef95b9caa33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="初始状态"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-fb875922ac8302ec.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="移动状态"></p>
+<p>我们陷入了逻辑问题。<code>B</code>元素应该是一个独立的合成层，最终的层图像应该在GPU被合成。但是<code>A</code>元素应该出现在<code>B</code>的上面，我们并没有定义关于<code>A</code>的任何东西来推动它在自己层。</p>
+<p>记住那个<strong>大的声明</strong>：特殊的GPU-合成(GPU-compositing)模式并不是CSS规范的一部分；它只是浏览器内部应用的优化。因为定义了<code>z-index</code>，<code>A</code>肯定是在<code>B</code>上方。而浏览器会做些什么呢？</p>
+<p>它将会强制创建一个包含<code>A</code>的新合成层，当然，添加了另一个重绘：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2e62078255e25d9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
+<p>它被称为<strong>隐式合成 implicit compositing</strong>：以堆叠顺序应当出现在合成上的一个或多个非合成元素被提升为复合层 —— 即，被绘制为分离的图像，然后将其发送到GPU。</p>
+<p>我们在隐式合成里犯的错远比你想象的还要多。浏览器提升元素为合成层是有很多原因的，下面列了几条：</p>
+<ul>
+<li>3D变换： <code>translate3d</code>, <code>translateZ</code>等；</li>
+<li><code>&lt;video&gt;</code>,<code>&lt;iframe&gt;</code>元素；</li>
+<li>通过<code>Element.animate()</code>来改变<code>transform</code>, <code>opacity</code></li>
+<li>通过css的transitions和animations改变<code>transform</code>, <code>opacity</code>；</li>
+<li><code>position: fixed</code>;</li>
+<li><code>will-change</code></li>
+<li><code>filter</code></li>
+</ul>
+<p>可以看“<a href="https://cs.chromium.org/chromium/src/third_party/WebKit/Source/platform/graphics/CompositingReasons.h?q=file:CompositingReasons.h" target="_blank" rel="noopener">CompositingReasons.h</a>” 的文章，有更多关于谷歌浏览器的解释。</p>
+<p>看起来GPU动画的主要问题似乎是意想不到的重绘，事实上并不是，最大的问题是……<br>###内存消耗<br>再一次温馨提醒，GPU是独立式计算机：它不仅要将渲染的层图像发送给GPU，而且要<strong>存储</strong>它们便于在以后动画的重用。</p>
+<p>那么单个合成层需要多少内存？举个例子，猜想下，保存一个填充色为<code>#FF0000</code>的320*240的矩形，需多少内存。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c670b8e674d656e4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>典型的web开发者会去想，“这是一个纯色图。我会把它作为png来保存，再检查大小，应该比1KB小。”毫无疑问，他们是正确的，这种图片作为png是104字节（byte）。</p>
+<p>问题是PNG，或JPEG，GIF等用来存储以及传输图像数据。为了将图像绘制到显示器上，计算机需要分析图像格式，然后<strong>表示为像素数组/矩阵</strong>。所以，我们的示例图片将会占<code>320 × 240 × 3 = 230,400 bytes</code>的计算机内存。也就是说，我们要将图像的宽乘高来获取图片的像素数。然后，我们再乘3，因为每个像素由3个字节（RGB）描述。如果图像包含透明区域，我们需要乘4，因为需要额外的字节来描述透明度：（RGBa）：<code>320 × 240 × 4 = 307,200 bytes</code>。</p>
+<p>浏览器总是将合成层绘制为RGBa图像，看起来似乎没有有效的方法来判断元素是否包含透明区域。</p>
+<p>举个更可能的例子：10张图片的轮播效果，每张800*600像素。我们需要在用户交互（如拖动）时让图片之间进行平滑的切换，因此我们为每个图片添加了<code>will-change: transform</code>。这会事先将图片提升为合成层，以便在用户交互时立即转换。如此一来，计算机显示轮播图需要的内存是： 800 × 600 × 4 × 10 ≈ <strong>19 MB</strong>。</p>
+<p>19MB的额外内存被用来渲染单个控件！如果你是现代web开发者，正在创建单页面网站，并有很多动画控件、视差效果、高分辨率图像以及其他视觉增强，那么每页额外的100~200MB才刚开始。添加隐式合成到混合（承认吧——你以前从没想过这个），那你将会结束掉设备的所有可用内存。</p>
+<p>此外，多数情况下，这些显示相同结果的内存将会被浪费。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e825f1c1f487bf11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
+<p>这对桌面客户端来说可能不是一个问题，但它真的会损害移动端用户。首先，现代的很多设备有高密度屏幕：合成层图像的权重要乘4<del>9。其次，移动设备并没有台式机那么大的内存。例如，现在的iphone 6有1GB的共有内存（即内存既用于RAM，也用于VRAM）。考虑到至少1/3的内存被用于操作系统和后台进程，另1/3被用于浏览器和现在的页面（对于高度优化的没有大量框架的页面），我们最后会有大约200</del>300MB留给GPU效果。而iphone 6 是相当昂贵的高端设备；很多手机的内存会更少。</p>
+<p>你可能会问，“在GPU存储PNG图片来减少内存空间可能吗？”技术上说，有可能。问题是GPU是<a href="http://www.html5rocks.com/en/tutorials/webgl/shaders/" target="_blank" rel="noopener">逐像素地绘制屏幕</a>，意味着要将完整的PNG图像解码成一个一个的像素。我怀疑这种情况下的动画比每秒1帧更快。</p>
+<p>值得一提的是，针对GPU的 <a href="https://en.wikipedia.org/wiki/Texture_compression" target="_blank" rel="noopener">图像压缩格式</a>是存在的，但是在压缩比方面不如PNG或JPEG，而且功能会受硬件的影响。</p>
+<p>###优缺点<br>现在我们学到一些GPU动画的基础，一起总结下它的优缺点吧。</p>
+<p>优点：</p>
+<ul>
+<li>这种动画更快更平滑，达到每秒60帧。</li>
+<li>正确制作的动画在单独的线程运行，不会被JS的计算所阻塞。</li>
+<li>3D转换比较“廉价”。</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>额外的重绘将元素提升至合成层。有时候这是很慢的（即我们获取整个层的重绘，而不是增量的部分）。</li>
+<li>绘制层必须传输给GPU。根据层的数量和尺寸，传输可能会很慢，而导致中低端的设备产生闪烁现象。</li>
+<li>每个合成层消耗额外的内存。而内存是移动端的宝贵资源，过度的内存使用会造成<strong>浏览器的崩溃</strong>。</li>
+<li>如果不考虑隐式合成，缓慢地重绘，极有可能发生额外的的内存使用和浏览器崩溃。</li>
+<li>我们会看到视觉失真，比如某些情况下Safari里渲染的文字和页面内容消失或被扭曲。</li>
+</ul>
+<p>如你所见，GPU动画虽然有着实用独特的优点，但也有不好的问题。其中最重要的是重绘和过度的内存使用；而下面涵盖的所有优化技术将解决这些问题。</p>
+<p>###浏览器设置</p>
+<p>在优化前，我们需要了解那些能帮助检查页面合成层，以及提供有关优化效果的明确反馈的工具。</p>
+<p>#####SAFARI<br>Safari的web检查器（Web Inspector）有个“layers”边栏，来显示所有合成层及内存消耗，合成原因。来看这个边栏：</p>
+<ol>
+<li>在Safari中，利用<code>⌘ + ⌥ + I</code>打开web检查器，如果没用，选择左上角的“preferences”——&gt; “Advanced” ，勾选“Show Develop Menu in menu bar”选项，然后重试。</li>
+<li>web检查器打开后，选择“Elements”选项，并在右侧边栏选择“Layers”。</li>
+<li>现在点击“Elements”主面板的DOM节点，你将会看到选中元素的layers信息（如果它用了合成）以及派生的层。</li>
+<li>单击派生层查看合成原因。浏览器将告诉你为什么将该元素移动到自己的合成层。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-46b78c354e3cf9fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例">)<br>(<a href="https://www.smashingmagazine.com/wp-content/uploads/2016/11/safari-large-opt.png" target="_blank" rel="noopener">查看大图</a>)</p>
+<p>#####CHROME</p>
+<p>chrome的DevTools有类似的面板，但要先启动标记：</p>
+<ol>
+<li>在chrome中，前往<code>chrome://flags/#enable-devtools-experiments</code>，启动 “Developer Tools experiments”（开发者工具实验性功能） 的标记。</li>
+<li>Mac利用<code>⌘ + ⌥ + I</code>打开DevTools，PC利用<code>Ctrl + Shift + I</code>，后点击右上角的如下图标，选择“Settings”选项。</li>
+<li>转入“Experiments” 面板，勾选 “Layers”选项。</li>
+<li>重新打开DevTools，你将看到“Layers”面板。</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a2b0c6e93ba05810.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PC"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d6a05e0d42a6c209.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="PC"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8ca8de109ca432d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Mac">)<br>(<a href="https://www.smashingmagazine.com/wp-content/uploads/2016/11/chrome-large-opt.png" target="_blank" rel="noopener">查看大图</a>)</p>
+<p>该面板将当前页面的所有活动合成层显示为树。选择某个层，你会看到相关信息如大小(size)，内存消耗(memory consumption)，重绘次数(repaint count)以及合成原因(reason for being composited)。</p>
+<p>###优化建议</p>
+<p>已经设置好环境后，我们开始优化合成层。之前确定合成的主要两个问题：额外的重绘（造成GPU的数据传输问题），以及额外的内存消耗。因此，下面的所有优化建议将针对上述问题：</p>
+<p>#####避免隐式合成<br>这是最简单也最重要的建议，是的，很重要。再次提醒，所有非合成的DOM元素带有显示合成原因（如<code>position: fixed</code>, video，css animation）将会被强制提升为自己层，便于GPU的最终图像合成。在移动端，这可能会导致动画非常缓慢。</p>
+<p>举个例子（<a href="http://codepen.io/sergeche/pen/jrZZgL" target="_blank" rel="noopener">查看代码链接，戳此进</a>）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-b671951236278765.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4b64ee278970fcfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css"></p>
+<p><code>A</code>元素要在用户交互时进行动画。如果在“Layers”面板看这页面，你会看到，它并没有多余的层。而点击“play”按钮后，你会看到多层，这些图层在动画完成后立即删除。如果在“TimeLine”面板看该过程，你会看到动画的开始和结束都伴随着大面积的重绘。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3e91087d076759b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例.png"></p>
+<p>(<a href="https://www.smashingmagazine.com/wp-content/uploads/2016/11/chrome-timeline-large-opt.png" target="_blank" rel="noopener">查看大图</a>)</p>
+<p>浏览器是这么一步步做的：</p>
+<ol>
+<li>当页面加载好后，浏览器若找不到合成原因，它会选取最佳策略：在单个背景层上绘制页面所有内容。</li>
+<li>当点击“play”按钮时，我们显然看到增加了元素<code>A</code>的合成——因为<code>transform</code>属性。当浏览器确定堆叠顺序的元素<code>A</code>是在元素<code>B</code>的下面，所以它提升<code>B</code>为自己的合成层（隐式合成）。</li>
+<li>提升至合成层总会造成重绘：浏览器必须为元素创建新的纹理，并将其从之前的层删除。</li>
+<li>新的图层必须传输给GPU，便于用户在屏幕上看到最终的图像合成。根据层数，纹理大小和内容复杂度，需大量时间来执行重绘和数据传输。这也就是为什么我们有时会看到动画开始或结束时元素在闪烁。</li>
+<li>动画完成后，我们去除了元素<code>A</code>合成的原因，那么，浏览器看到已经不需要合成了，就会回退到最佳策略：页面所有内容都在一个层，这也就意味着背景层需重新绘制<code>A</code>和<code>B</code>（另一个重绘），并将新的纹理发给GPU。上述的步骤也就导致了闪烁。</li>
+</ol>
+<p>为了摆脱隐式合成问题和减少视觉差异，我建议以下方法：</p>
+<ul>
+<li>试着用<code>z-index</code>将动画的元素保持尽可能高。理论上，这些元素应该是<code>body</code>的直接子元素。当然，当动画元素嵌套在DOM树内且依赖正常流，这标记并不总是可能的。这种情况下，你可以克隆元素并将其放在body中仅用于动画。</li>
+<li>你可以给浏览器一个<code>wiil-change</code>的提示，表示准备合成。设置元素该属性，浏览器将（但不总是）提前将其提升至合成层，以便动画平滑的开始结束。但不要滥用该属性，否则内存将大大增加！</li>
+</ul>
+<p>#####动画用<code>TRANSFORM</code>和<code>OPACITY</code>属性</p>
+<p><code>transform</code>和<code>opacity</code>属性保证既不影响正常流，也不影响DOM环境（即，不会造成回流或重绘，动画可以完全转移到GPU）。基本上，这意味着你可以有效的处理动画移动，缩放，旋转，透明度，以及变换。有时你可能想用这些属性模仿其他动画类型。</p>
+<p>举个简单的例子：背景颜色的过渡。基本方法是添加<code>transition</code>属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;bg-change&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">#bg-change &#123; </span><br><span class="line">width: 100px; </span><br><span class="line">height: 100px; </span><br><span class="line">background: red; </span><br><span class="line">transition: background 0.4s;</span><br><span class="line">&#125;</span><br><span class="line">#bg-change:hover &#123; background: blue;&#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这种情况下，动画完全在CPU上运行，每一步都会重绘。而我们可以在GPU上实现同样的效果：取代<code>background-color</code>属性，我们在顶部添加一个层来变化它的opacity：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;bg-change&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">#bg-change &#123; </span><br><span class="line">width: 100px; </span><br><span class="line">height: 100px; </span><br><span class="line">background: red;</span><br><span class="line">&#125;</span><br><span class="line">#bg-change::before &#123; </span><br><span class="line">background: blue; </span><br><span class="line">opacity: 0; </span><br><span class="line">transition: opacity 0.4s;</span><br><span class="line">&#125;</span><br><span class="line">#bg-change:hover::before &#123; opacity: 1; &#125;</span><br><span class="line">&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这个动画更快更平滑，但是记住它会导致隐式合成和需要额外内存。这种情况大大减少内存消耗。</p>
+<p>#####减少合成层的大小</p>
+<p>看下面的图片，有发现不同么？</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d32102c85921289d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例.png"></p>
+<p>这两个合成层<strong>视觉上是一样</strong>的，但第一个40000字节（39KB），第二个才400字节，少100倍。为什么？看代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;a&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div id&#x3D;&quot;b&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">#a, #b &#123; will-change: transform;&#125;</span><br><span class="line">#a &#123; width: 100px; height: 100px;&#125;</span><br><span class="line">#b &#123; width: 10px; height: 10px; transform: scale(10);&#125;&lt;&#x2F;style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>不同点在于<code>#a</code>的物理尺寸是100*100像素（100*100*4=40000字节），而<code>#b</code>只有10*10像素大小（10*10*4=400字节），利用<code>transform: scale(10)</code>放大成100*100像素。<code>#b</code>是合成层，由于带了<code>will-change</code>属性，在最终图像绘制期间，<code>transform</code>完全是在GPU上发生。</p>
+<p>技巧很简单：利用<code>width</code>和<code>height</code>属性减少物理大小，利用<code>transform: scale(…)</code>升级其纹理。当然，对于非常简单的纯色层来说，这个技巧极大地减少了内存的消耗。举个例子，如果你想动画一张大照片，你可以缩小它到5%到10%，然后放大它；用户可能看不出任何差别，你也节省出几兆的宝贵内存。</p>
+<p>#####如果可以的话，利用CSS的transitions和animations</p>
+<p>我们已经知道，通过<code>transform</code>以及<code>opacity</code>会自动创建合成层，并在GPU上运行。我们同样可以通过JavaScript来动画，但需要添加<code>transform: translateZ(0)</code>或<code>will-change: transform, opacity</code>来保证元素获得自己的合成层。</p>
+<p><code>requestAnimationFrame</code>回调计算每个步骤，发生JavaScript动画，通过<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/animate" target="_blank" rel="noopener">Element.animate()
+</a>是一个有效的css动画声明。</p>
+<p>一方面，通过css的transition或animation来创建简单重用的动画是很容易的；而另一方面，JS创建复杂的动画比css简单的多。此外，JavaScript是与用户交互的唯一的路径。</p>
+<p>哪种方式更好？我们可以利用通用JavaScript库来动画元素么？</p>
+<p>基于CSS的动画有个重要的特征：它是<strong>完全在GPU上运行</strong>的。因为你<strong>声明</strong>了动画应该怎么开始和结束，浏览器可以在动画开始前准备所有命令，并发给GPU。在<strong>命令式</strong>JavaScript的情况下，浏览器需要当前所有帧的状态。为了实现平滑的动画，我们需要在主浏览器线程计算新帧，然后每秒发送给GPU至少60次。除了计算和发送数据比css慢的多的事实外，它们还依赖于主进程的工作负载。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-cafbf3e36cd9d65b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例.png"></p>
+<p>上述的范例里，你可以当主进程会被强化的JavaScript计算阻塞时会发生什么，而css动画不会被影响，因为新帧是在单独的线程里计算的，但JavaScript的动画需要等大量计算完成后才计算新帧。</p>
+<p>因此，尽可能使用基于css的动画，特别是加载和进度指示，不仅更快，而且不会被大量JavaScript计算所阻塞。</p>
+<p>###现实的优化实例</p>
+<p>这篇文章是我在开发 <a href="https://ru.4game.com/chaos-fighters/" target="_blank" rel="noopener">Chaos Fighters</a>页面过程中调查和试验的结果。这是一个有着很多动画的手机游戏的响应推广页面。当开始开发时，我只知道如何产生基于GPU的动画，但并不知道它的工作原理。结果，第一个里程碑页面导致iphone5 —— 当时最新的Apple手机——在加载完页面后几秒内崩溃。而现在，即使是不太高级的手机，这个页面依然正常运行。</p>
+<p>一起考虑这个页面的有趣优化。</p>
+<p>页面最顶部是游戏介绍，类似红色的光线在背景中旋转。毫无疑问是个无限循环，没有交互，一个很好的css动画范例。第一个（误导）的尝试是保存光线图像作为<code>img</code>元素置于页面上，并使用无限的css动画。链接：[<a href="http://codepen.io/sergeche/pen/gwBjqG]" target="_blank" rel="noopener">http://codepen.io/sergeche/pen/gwBjqG]</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-23e07527b8ac308e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>一切都看起来很正常，但是光线的图片是很大的，移动端用户并不会高兴。</p>
+<p>仔细观察图像。基本上，它只是来自图像中心的几条光线，而光线是相同的，所以我们可以保存单个光线图像，并反复利用达到最终效果。最终得到单光线图像，这远比初始图小的多。</p>
+<p>针对这种优化，我们必须将<code>.sun</code>的标记复杂化，它是光线图像元素的容器。每一光线都有特定的旋转角度。(代码链接)[<a href="http://codepen.io/sergeche/pen/qaJraq]" target="_blank" rel="noopener">http://codepen.io/sergeche/pen/qaJraq]</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4e914a9de2818c79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例.png"></p>
+<p>视觉效果一样，但网络传输的数据量会少很多。合成层的尺寸都为500×500×4≈977KB。</p>
+<p>弄的简单些，示例的光线图片很小，只有500*500像素。在真实的网站，设备的大小及像素分辨率并不相同（手机，平板，电脑），最终的图片大约是3000*3000*4=36MB！而这仅仅是页面上的一个动画元素。</p>
+<p>再看下“Layers”面板的页面元素。我们已经让整个太阳旋转变得简单。因此，这个容器会被提升至合成层，被绘制成单一的大纹理图像，然后发给CPU。正因为我们的简化，纹理中包含了无用的数据：之间的缝隙。</p>
+<p>更多来说，无用的数据比有用的还多！占据有限的内存资源并不是一个最好的方式。</p>
+<p>这个问题的解决方案跟网络传输的优化相同：发送有用的数据（即光线）给GPU，我们可以计算节约了多大内存：</p>
+<ul>
+<li>太阳容器：500*500*4 = 977KB </li>
+<li>12条线： 250*40*4*12 = 469KB </li>
+</ul>
+<p>内存消耗减少2倍。要做到这一点，我们<strong>分别动画每条线</strong>，替换整个容器。这样一来，只有光线图片会被发给GPU，之间的间隙不会占据任何资源。</p>
+<p>我们不得不使标签复杂，以便单独对光线进行动画处理，而css的干扰也会更多。我们已经对线条初始旋转动画用了<code>transform</code>，然后开始每个动画一样的效果，旋转360度。基本上，我们需要创建一个单独的<code>@keyframes</code>部分，有很多传输的代码。</p>
+<p>编写一个简短的JavaScript来处理光线初始放置，并允许对动画，光线数量等进行微调，这将变得更容易。见代码 [<a href="http://codepen.io/sergeche/pen/bwmxoz]" target="_blank" rel="noopener">http://codepen.io/sergeche/pen/bwmxoz]</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da1c1f12d98b4711.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
+<p>新动画看起来跟之前一样，但内存消耗上少了2倍。</p>
+<p>而且，在布局组成上，动画的太阳不是主要元素，而是背景元素。光线没有清晰的对比元素。这意味着，我们可以发略低分辨的光线图给GPU，随后将其升级，这帮我们减少一点内存消耗。</p>
+<p>尝试将纹理大小减小10%。光线的物理大小是250*0.9*40*0.9=255*36像素。为了使光线看起来像250*20，我们将其放大250÷225≈1.111。</p>
+<p>我们将添加一行代码<code>background-size: cover</code>给<code>.sun-ray</code>，便于背景图片自动调整，然后添加<code>transform: scale(1.111)</code>给光线。代码<a href="http://codepen.io/sergeche/pen/YGJOva" target="_blank" rel="noopener">http://codepen.io/sergeche/pen/YGJOva</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a7793adcc80d7063.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
+<p>注意，我们只改变了元素的大小; PNG图像的大小保持不变。由DOM元素创建的矩形将作为GPU的纹理，而不是PNG图像。</p>
+<p>太阳光线在GPU的合成大小是225×36×4×12≈380 KB（之前是469KB）。我们减少了大概19%的内存，并获得更灵活的代码，通过缩减来得到更佳质量——内存比。因此，增加简单动画的复杂性，减少了977÷380≈2.5倍的内存！</p>
+<p>我想你已经注意到，这个解决方案有个重大的缺点：动画运行在CPU上会被JavaScript计算阻塞。如果你想更熟悉GPU操作动画，我提个作业。codepen上fork下<a href="https://codepen.io/sergeche/pen/YGJOva" target="_blank" rel="noopener">Codepen of the sun rays</a>，使其完全运行在GPU上，就像先前的例子一样高效灵活。在评论中发布你的代码以获得反馈。</p>
+<p>###收获</p>
+<p>对于Chaos Fighters 页面的优化使我重新思考开发现代网页的过程。这里列了几条我的主要原则：</p>
+<ul>
+<li>始终与客户，设计谈论网站上的所有动画和效果。这会大大影响页面的标签，以为更好的合成。</li>
+<li>一开始注意合成层的数量和大小，特别是隐式合成层。浏览器的开发工具中的“Layers”面板是你最好的伙伴。</li>
+<li>现代浏览器频繁使用合成，不仅用于动画，而且优化页面元素绘制。举个例子，<code>position: fixed</code>和<code>iframe</code>,<code>video</code>使用合成。</li>
+<li>合成层的大小比数量更重要。某些情况下，浏览器会尝试减少合成层的数量（查看“<a href="https://www.chromium.org/developers/design-documents/gpu-accelerated-compositing-in-chrome" target="_blank" rel="noopener">GPU Accelerated Compositing in Chrome</a>“的 “Layer Squashing”这一块），它防止了“层爆炸”并减少内存消耗，特别是层有巨大的交叉点时。有时候，这种优化具有负面影响，比如说一个大的纹理比几个小的层消耗更多内存。为了绕过这个优化，我给了<code>translateZ()</code>很小的值，比如说<code>translateZ(0.0001px)</code>，<code>translateZ(0.0002px)</code>。浏览器将确定元素位于3D空间的不同面板，因此跳过优化。</li>
+<li>你不能仅添加<code>transform: translateZ(0)</code>或<code>will-change: transform</code>给任意元素，来虚拟提高动画性能或摆脱视觉差。GPU的合成要考虑弊端和取舍。当不使用时，合成会降低整体性能，最坏的情况导致浏览器崩溃。</li>
+</ul>
+<p>请允许我再次提醒：这不是GPU合成的官方规范，每个浏览器解决同一问题方式是不同的。本文某些内容在几个月后可能就过时了。例如，谷歌开发者正在探索如何减少CPU到GPU数据传输的开销，包括零复制开销的特殊共享内存的使用。此外，Safari已经能够将简单元素的绘制（比如说有<code>background-color</code>的空DOM元素）委托给GPU，而不是在CPU上创建图像。</p>
+<p>无论如何，我希望这篇文章能帮助你更好地理解浏览器是如何使用GPU渲染的，以便您创建能在各设备下快速运行的令人印象深刻的网站了。</p>
+<p><strong>###词汇介绍</strong>：</p>
+<p> <em>1. 纹理(texture)</em>？</p>
+<blockquote>
+<p>这里的纹理是 GPU 的一个术语：可以把它想象成一个从主存储器(例如 RAM)移动到图像存储器(例如 GPU 中的 VRAM)的位图图像(bitmap image)。一旦它被移动到 GPU 中，你可以将它匹配成一个网格几何体(mesh geometry)，在 Chrome 中使用纹理来从 GPU 上获得大块的页面内容。[参考源自<a href="http://web.jobbole.com/85993/]" target="_blank" rel="noopener">http://web.jobbole.com/85993/]</a></p>
+</blockquote>
+<p><em>2. 回流（reflow）</em></p>
+<blockquote>
+<p>当渲染树（render Tree）中的一部分(或全部)因为元素的规模尺寸，布局，隐藏等改变而需要重新构建。这就称为回流（reflow），也就是重新布局（relayout）。<br>每个页面至少需要一次回流，就是在页面第一次加载的时候。在回流的时候，浏览器会使渲染树中受到影响的部分失效，并重新构造这部分渲染树，完成回流后，浏览器会重新绘制受影响的部分到屏幕中，该过程成为重绘。[参考源自<a href="http://web.jobbole.com/85993/]" target="_blank" rel="noopener">http://web.jobbole.com/85993/]</a></p>
+</blockquote>
+<p><em>3. 重绘（repaint）</em></p>
+<blockquote>
+<p>当render tree中的一些元素需要更新属性，而这些属性只是影响元素的外观，风格，而不会影响布局的，比如 background-color 。则就叫称为重绘。<br>值得注意的是，回流必将引起重绘，而重绘不一定会引起回流。<br>明显，回流的代价更大，简单而言，当操作元素会使元素修改它的大小或位置，那么就会发生回流。[参考源自<a href="http://web.jobbole.com/85993/]" target="_blank" rel="noopener">http://web.jobbole.com/85993/]</a></p>
+</blockquote>
+<p><em>4. 亚像素精度（subpixel precision）</em></p>
+<blockquote>
+<p>亚像素精度是指相邻两像素之间细分情况。输入值通常为二分之一，三分之一或四分之一。这意味着每个像素将被分为更小的单元从而对这些更小的单元实施插值算法。例如，如果选择四分之一，就相当于每个像素在横向和纵向上都被当作四个像素来计算。因此，如果一张5x5像素的图像选择了四分之一的亚像素精度之后，就等于创建了一张20x20的离散点阵，进而对该点阵进行插值。[来自百度百科]</p>
+</blockquote>
+<p>外文原文：<br><a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/?utm_source=CSS-Weekly&amp;utm_campaign=Issue-243&amp;utm_medium=email#one-big-disclaimer" target="_blank" rel="noopener">https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/?utm_source=CSS-Weekly&amp;utm_campaign=Issue-243&amp;utm_medium=email#one-big-disclaimer</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>有赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="smilewalker 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    smilewalker
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://smilewalker.github.io/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/" title="web之GPU 动画：正确的打开方式">https://smilewalker.github.io/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/gpu%E5%8A%A8%E7%94%BB/" rel="tag"># gpu动画</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/13/css%E8%AF%BB%E6%87%82margin/" rel="next" title="css读懂margin">
+                <i class="fa fa-chevron-left"></i> css读懂margin
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/" rel="prev" title="css搞定input-checkbox的美化">
+                css搞定input-checkbox的美化 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">smilewalker</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">专集</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/smilewalker" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2282769623@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">smilewalker</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">27.8k</span>
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+--!>
+
+
+
+<!--
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+--!>
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-users"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span id="busuanzi_container_site_pv">访问次数：<span id="busuanzi_value_site_pv"></span></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66543196";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3jxuVavCwVeAtrjKQDj5J0hA-gzGzoHsz", "Ljg967ra3eJTcrTKTSVxIrbi");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

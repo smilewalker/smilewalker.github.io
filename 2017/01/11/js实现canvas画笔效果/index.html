@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/function%20small()%20%7B%20%5Bnative%20code%5D%20%7D?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="技术,web,canvas,JavaScript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="“别看我只是支画笔，我有雄心志气高”，今天便来讲讲canvas的画笔。之前做H5 canvas绘画时，思考如何让画出来的线条有纹理，翻找半天找不出个所以然，机缘巧合得知有个createPattern属性，嘿，成了，效果图如下。索性总结下画笔的属性，列个大概。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js实现canvas画笔效果">
+<meta property="og:url" content="https://smilewalker.github.io/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/index.html">
+<meta property="og:site_name" content="Smilewalker">
+<meta property="og:description" content="“别看我只是支画笔，我有雄心志气高”，今天便来讲讲canvas的画笔。之前做H5 canvas绘画时，思考如何让画出来的线条有纹理，翻找半天找不出个所以然，机缘巧合得知有个createPattern属性，嘿，成了，效果图如下。索性总结下画笔的属性，列个大概。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-feef2756babfaa3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620">
+<meta property="article:published_time" content="2017-01-11T11:54:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:04:10.766Z">
+<meta property="article:author" content="smilewalker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="canvas">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2320147-feef2756babfaa3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://smilewalker.github.io/2017/01/11/js实现canvas画笔效果/"/>
+
+
+
+
+
+  <title>js实现canvas画笔效果 | Smilewalker</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="https://tva1.sinaimg.cn/large/00831rSTly1gdmq4rimjxj30zg0u0ae0.jpg"
+               alt="Smilewalker"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Smilewalker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Experience · Action</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-compass"></i> <br />
+            
+            日志
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            专集
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            博主
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="点我搜索吧..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js实现canvas画笔效果</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-11T19:54:44+08:00">
+                2017-01-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/" class="leancloud_visitors" data-flag-title="js实现canvas画笔效果">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  7
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>“别看我只是支画笔，我有雄心志气高”，今天便来讲讲canvas的画笔。之前做H5 canvas绘画时，思考如何让画出来的线条有纹理，翻找半天找不出个所以然，机缘巧合得知有个<code>createPattern</code>属性，嘿，成了，效果图如下。索性总结下画笔的属性，列个大概。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-feef2756babfaa3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="纹理画笔"></p>
+<a id="more"></a>
+<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《js实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
+<ol>
+<li>创建音频环境</li>
+<li>获取音频，创建buffer节点</li>
+<li>解码音频，分析音频</li>
+<li>连接音频输入输出</li>
+<li>canvas绘制频谱</li>
+<li>连接播放</li>
+</ol>
+<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
+
+<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
+
+<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
+<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
+<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
+<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
+<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
+<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>有赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="smilewalker 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    smilewalker
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://smilewalker.github.io/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/" title="js实现canvas画笔效果">https://smilewalker.github.io/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/canvas/" rel="tag"># canvas</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/" rel="next" title="css读懂动画steps">
+                <i class="fa fa-chevron-left"></i> css读懂动画steps
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/" rel="prev" title="js解决canvas绘制多图">
+                js解决canvas绘制多图 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            主页简介
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">smilewalker</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">专集</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/smilewalker" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2282769623@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#创建音频环境AudioContext"><span class="nav-number">1.0.1.</span> <span class="nav-text">创建音频环境AudioContext</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#获取音频，创建buffer节点"><span class="nav-number">1.0.2.</span> <span class="nav-text">获取音频，创建buffer节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解码音频，分析音频"><span class="nav-number">1.0.3.</span> <span class="nav-text">解码音频，分析音频</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#连接音频输入输出"><span class="nav-number">1.0.4.</span> <span class="nav-text">连接音频输入输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#canvas绘制频谱"><span class="nav-number">1.0.5.</span> <span class="nav-text">canvas绘制频谱</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思考"><span class="nav-number">1.0.6.</span> <span class="nav-text">思考</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">smilewalker</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">27.8k</span>
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+--!>
+
+
+
+<!--
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+--!>
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-users"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span id="busuanzi_container_site_pv">访问次数：<span id="busuanzi_value_site_pv"></span></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66543196";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3jxuVavCwVeAtrjKQDj5J0hA-gzGzoHsz", "Ljg967ra3eJTcrTKTSVxIrbi");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

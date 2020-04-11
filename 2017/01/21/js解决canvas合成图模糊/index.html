@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="技术,web,canvas,JavaScript," />
 
 
 
@@ -80,12 +80,24 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Smilewalker">
-<meta property="og:url" content="https://smilewalker.github.io/archives/index.html">
+<meta name="description" content="写H5 canvas的时候，我们可能会遇到这样那样的问题，比如说canvas合成的图片模糊，俗语有言“一颗老鼠屎坏了一锅粥”，最后有没有因模糊而坏了H5这锅粥也就自我衡量吧。索性来看看移动端canvas合成的图片模糊问题。先上两张图：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js解决canvas合成图模糊">
+<meta property="og:url" content="https://smilewalker.github.io/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/index.html">
 <meta property="og:site_name" content="Smilewalker">
+<meta property="og:description" content="写H5 canvas的时候，我们可能会遇到这样那样的问题，比如说canvas合成的图片模糊，俗语有言“一颗老鼠屎坏了一锅粥”，最后有没有因模糊而坏了H5这锅粥也就自我衡量吧。索性来看看移动端canvas合成的图片模糊问题。先上两张图：">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-ac4adb2cf965c867.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-ac4adb2cf965c867.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-b0af2c3a2ba2595a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440">
+<meta property="article:published_time" content="2017-01-21T14:54:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:04:48.363Z">
 <meta property="article:author" content="smilewalker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="canvas">
+<meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2320147-ac4adb2cf965c867.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440">
 
 
 
@@ -115,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="https://smilewalker.github.io/archives/"/>
+  <link rel="canonical" href="https://smilewalker.github.io/2017/01/21/js解决canvas合成图模糊/"/>
 
 
 
 
 
-  <title>日志 | Smilewalker</title>
+  <title>js解决canvas合成图模糊 | Smilewalker</title>
   
 
 
@@ -140,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     
     <div class="headband"></div>
 
@@ -286,421 +298,323 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">js解决canvas合成图模糊</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-21T22:54:44+08:00">
+                2017-01-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        呀..! 已经有 21 篇日志啦 继续努力
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/" itemprop="url">
-              
-                <span itemprop="name">《 Mac快捷键指南 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-28T22:54:44+08:00"
-              content="2019-04-28" >
-          04-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/" itemprop="url">
-              
-                <span itemprop="name">《 Mac安装office365 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-15T22:54:44+08:00"
-              content="2019-03-15" >
-          03-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/" itemprop="url">
-              
-                <span itemprop="name">《 Mac实现Adobe Indesign CC快速切换中英 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-28T22:54:44+08:00"
-              content="2018-10-28" >
-          10-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
+            
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+          
+             <span id="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/" class="leancloud_visitors" data-flag-title="js解决canvas合成图模糊">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">《 Mac Mail绑定QQ邮箱 》</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1k
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T22:54:44+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  3
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="url">
-              
-                <span itemprop="name">《 node-sass安装的小坑 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T22:54:44+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>写H5 canvas的时候，我们可能会遇到这样那样的问题，比如说canvas合成的图片模糊，俗语有言“一颗老鼠屎坏了一锅粥”，最后有没有因模糊而坏了H5这锅粥也就自我衡量吧。索性来看看移动端canvas合成的图片模糊问题。先上两张图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ac4adb2cf965c867.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="图1"></p>
+<a id="more"></a>
 
-        
-        
+<p>“模糊是多么 多么寂寞；模糊是多么 多么空虚；独自在清晰中，对比不断地扫过；我的寂寞，谁能明白我；模糊是多么 多么寂寞；模糊是多么 多么空虚；web开发的你，可不可听我诉说；我的寂寞，无尽的寂寞……”<br>——题记，改编源自《美人鱼》</p>
+<h4 id="昨夜西风凋碧树，独上高楼，望尽天涯路。"><a href="#昨夜西风凋碧树，独上高楼，望尽天涯路。" class="headerlink" title="昨夜西风凋碧树，独上高楼，望尽天涯路。"></a>昨夜西风凋碧树，独上高楼，望尽天涯路。</h4><p>写H5 canvas的时候，我们可能会遇到这样那样的问题，比如说canvas合成的图片模糊，俗语有言“一颗老鼠屎坏了一锅粥”，最后有没有因模糊而坏了H5这锅粥也就自我衡量吧。索性来看看移动端canvas合成的图片模糊问题。先上两张图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ac4adb2cf965c867.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="图1"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-b0af2c3a2ba2595a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="图2"></p>
+<p>图1图2的对比，显而易见图1的质量低得不忍直视，一点点把H5拉低了档次，图2则相较清晰许多。第一张利用的是直接合成操作，第二张canvas做了放大处理再来合成。先来找找原因，合成的图片怎这般糊？再对症下药。</p>
+<h4 id="衣带渐宽终不悔，为伊消得人憔悴。"><a href="#衣带渐宽终不悔，为伊消得人憔悴。" class="headerlink" title="衣带渐宽终不悔，为伊消得人憔悴。"></a>衣带渐宽终不悔，为伊消得人憔悴。</h4><p>为什么会模糊？我们看看canvas是如何合成的。这里谈到一个词，像素渲染，涉及的属性有<code>devicePixelRatio</code>，解释如下：</p>
+<blockquote>
+<p>The Window.devicePixelRatio<br> read-only property returns the ratio of the (vertical) size of one physical pixel on the current display device to the size of one device independent pixels(dips).  <em>[引自 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio" target="_blank" rel="noopener">MDN</a>]</em></p>
+</blockquote>
+<blockquote>
+<p>window.devicePixelRatio是设备的物理像素和设备独立像素(device-independent pixels (dips))的比例。<br>公式表示为：window.devicePixelRatio = 物理像素 / dips  </p>
+</blockquote>
+<p>我们可以通过输出移动端的devicePixelRatio来看看，部分手机测的数据如下：</p>
+<table>
+<thead>
+<tr>
+<th>device</th>
+<th align="center">devicePixelRatio</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iphone6</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>魅蓝U20</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td>OPPO R9m</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td>红米note</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td>mi3</td>
+<td align="center">3</td>
+</tr>
+</tbody></table>
+<p>现在ios的多数情况是这样的：视网膜的屏幕物理像素640，独立像素320，所以devicePixelRadio=640 / 320 = 2;。什么意思？比如说一张图片为100*100像素，在devicePixelRadio=2的情况，相当于用2个像素的宽度来渲染1个像素，所以实际上占了200*200的空间，相当于放大1倍。在canvas也有类似的属性：</p>
+<blockquote>
+<p>canvas context中存在一个webkitBackingStorePixelRatio的属性（仅Safari和chrome），该属性的值决定了浏览器在渲染canvas之前会用几个像素来来存储画布信息。</p>
+</blockquote>
+<p>若webkitBackingStorePixelRatio为2，canvas同理，用2个像素点的宽度来渲染。目前测到的iOS canvas的webkitBackingStorePixelRatio为1，安卓为undifined，测的手机不多，还没测到其他数据的手机。</p>
+<p>也就是说，如果webkitBackingStorePixelRatio的值为2，而devicePixelRadio值也为2，生成的图片跟渲染的图片大小一致，这样的话是不会出现图片失真的情况。而当两者不一致时，那么问题就来了。</p>
+<h4 id="众里寻他千百度，蓦然回首，那人却在灯火阑珊处。"><a href="#众里寻他千百度，蓦然回首，那人却在灯火阑珊处。" class="headerlink" title="众里寻他千百度，蓦然回首，那人却在灯火阑珊处。"></a>众里寻他千百度，蓦然回首，那人却在灯火阑珊处。</h4><p>综上所述，我们的一个解决思路是对canvas的大小进行处理，使生成的图片跟渲染的图片一致。怎么一致？利用两者的比值，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var  devicePixelRatio &#x3D; window.devicePixelRatio || 1,   </span><br><span class="line">  backingStoreRatio &#x3D; context.webkitBackingStorePixelRatio || context.mozBackingStorePixelRatio || context.msBackingStorePixelRatio || context.oBackingStorePixelRatio || context.backingStorePixelRatio || 1, </span><br><span class="line">  ratio &#x3D; devicePixelRatio &#x2F; backingStoreRatio;</span><br><span class="line"></span><br><span class="line">var oldWidth &#x3D; canvas.width; </span><br><span class="line">var oldHeight &#x3D; canvas.height; </span><br><span class="line">canvas.width &#x3D; oldWidth * ratio; </span><br><span class="line">canvas.height &#x3D; oldHeight * ratio; </span><br><span class="line">canvas.style.width &#x3D; oldWidth + &#39;px&#39;; </span><br><span class="line">canvas.style.height &#x3D; oldHeight + &#39;px&#39;; </span><br><span class="line">context.scale(ratio, ratio);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;进行正常的操作</span><br><span class="line">context.drawImage()</span><br></pre></td></tr></table></figure>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/" itemprop="url">
-              
-                <span itemprop="name">《 css实现progress进度条美化 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-17T22:54:44+08:00"
-              content="2017-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p>具体手机具体对应，可能有人会奇怪怎有两个长度，事实上，一个是显示的canvas的css长宽，一个是canvas画布实际大小，两者并不冲突。暂此，敬请交流。</p>
+<p><em>参考文章</em><br><a href="http://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/" target="_blank" rel="noopener">http://www.zhangxinxu.com/wordpress/2012/08/window-devicepixelratio/</a><br><a href="https://www.html5rocks.com/en/tutorials/canvas/hidpi/" target="_blank" rel="noopener">https://www.html5rocks.com/en/tutorials/canvas/hidpi/</a><br><a href="http://blog.csdn.net/laijingyao881201/article/details/39505043" target="_blank" rel="noopener">http://blog.csdn.net/laijingyao881201/article/details/39505043</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/" itemprop="url">
-              
-                <span itemprop="name">《 web前端收藏的网站 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-13T22:54:44+08:00"
-              content="2017-03-13" >
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/" itemprop="url">
-              
-                <span itemprop="name">《 js实现七牛云上传图片视频 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-12T22:54:44+08:00"
-              content="2017-03-12" >
-          03-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" itemprop="url">
-              
-                <span itemprop="name">《 web audio api实现你的音乐·下 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-27T22:54:44+08:00"
-              content="2017-02-27" >
-          02-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" itemprop="url">
-              
-                <span itemprop="name">《 web audio api实现你的音乐·上 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-16T22:54:44+08:00"
-              content="2017-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>有赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="smilewalker 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    smilewalker
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://smilewalker.github.io/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/" title="js解决canvas合成图模糊">https://smilewalker.github.io/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/canvas/" rel="tag"># canvas</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/" rel="next" title="css之神奇的渐变效果">
+                <i class="fa fa-chevron-left"></i> css之神奇的渐变效果
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" rel="prev" title="web audio api实现你的音乐·上">
+                web audio api实现你的音乐·上 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">&gt;</a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -708,6 +622,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -728,8 +649,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            主页简介
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -807,6 +737,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#昨夜西风凋碧树，独上高楼，望尽天涯路。"><span class="nav-number">1.</span> <span class="nav-text">昨夜西风凋碧树，独上高楼，望尽天涯路。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#衣带渐宽终不悔，为伊消得人憔悴。"><span class="nav-number">2.</span> <span class="nav-text">衣带渐宽终不悔，为伊消得人憔悴。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#众里寻他千百度，蓦然回首，那人却在灯火阑珊处。"><span class="nav-number">3.</span> <span class="nav-text">众里寻他千百度，蓦然回首，那人却在灯火阑珊处。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -991,6 +937,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

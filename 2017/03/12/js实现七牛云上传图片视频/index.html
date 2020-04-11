@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="技术,web,JavaScript,七牛云," />
 
 
 
@@ -80,12 +80,23 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Smilewalker">
-<meta property="og:url" content="https://smilewalker.github.io/archives/index.html">
+<meta name="description" content="最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js实现七牛云上传图片视频">
+<meta property="og:url" content="https://smilewalker.github.io/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/index.html">
 <meta property="og:site_name" content="Smilewalker">
+<meta property="og:description" content="最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2017-03-12T14:54:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:04:24.237Z">
 <meta property="article:author" content="smilewalker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="七牛云">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -115,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://smilewalker.github.io/archives/"/>
+  <link rel="canonical" href="https://smilewalker.github.io/2017/03/12/js实现七牛云上传图片视频/"/>
 
 
 
 
 
-  <title>日志 | Smilewalker</title>
+  <title>js实现七牛云上传图片视频 | Smilewalker</title>
   
 
 
@@ -140,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     
     <div class="headband"></div>
 
@@ -286,421 +297,279 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">js实现七牛云上传图片视频</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-12T22:54:44+08:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        呀..! 已经有 21 篇日志啦 继续努力
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/" itemprop="url">
-              
-                <span itemprop="name">《 Mac快捷键指南 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-28T22:54:44+08:00"
-              content="2019-04-28" >
-          04-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/" itemprop="url">
-              
-                <span itemprop="name">《 Mac安装office365 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-15T22:54:44+08:00"
-              content="2019-03-15" >
-          03-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/" itemprop="url">
-              
-                <span itemprop="name">《 Mac实现Adobe Indesign CC快速切换中英 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-28T22:54:44+08:00"
-              content="2018-10-28" >
-          10-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
+            
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+          
+             <span id="/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/" class="leancloud_visitors" data-flag-title="js实现七牛云上传图片视频">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">《 Mac Mail绑定QQ邮箱 》</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  970
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T22:54:44+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  5
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="url">
-              
-                <span itemprop="name">《 node-sass安装的小坑 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T22:54:44+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<a id="more"></a>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/" itemprop="url">
-              
-                <span itemprop="name">《 css实现progress进度条美化 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-17T22:54:44+08:00"
-              content="2017-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
+<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
+<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br></pre></td><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 
+<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/" itemprop="url">
-              
-                <span itemprop="name">《 web前端收藏的网站 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-13T22:54:44+08:00"
-              content="2017-03-13" >
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/" itemprop="url">
-              
-                <span itemprop="name">《 js实现七牛云上传图片视频 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-12T22:54:44+08:00"
-              content="2017-03-12" >
-          03-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" itemprop="url">
-              
-                <span itemprop="name">《 web audio api实现你的音乐·下 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-27T22:54:44+08:00"
-              content="2017-02-27" >
-          02-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" itemprop="url">
-              
-                <span itemprop="name">《 web audio api实现你的音乐·上 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-16T22:54:44+08:00"
-              content="2017-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>有赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="smilewalker 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    smilewalker
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://smilewalker.github.io/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/" title="js实现七牛云上传图片视频">https://smilewalker.github.io/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag"># 七牛云</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" rel="next" title="web audio api实现你的音乐·下">
+                <i class="fa fa-chevron-left"></i> web audio api实现你的音乐·下
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/" rel="prev" title="web前端收藏的网站">
+                web前端收藏的网站 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">&gt;</a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -708,6 +577,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -728,8 +604,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            主页简介
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -807,6 +692,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -991,6 +892,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

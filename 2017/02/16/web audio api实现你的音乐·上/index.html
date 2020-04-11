@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/function%20small()%20%7B%20%5Bnative%20code%5D%20%7D?v=5.1.4">
+
+
+
+
+
+
+  <meta name="keywords" content="技术,web,JavaScript,web audio api," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Web Audio API为控制网页的音频提供了强有力的后盾，允许开发人员为音频添加效果，创建音频可视化等等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="web audio api实现你的音乐·上">
+<meta property="og:url" content="https://smilewalker.github.io/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/index.html">
+<meta property="og:site_name" content="Smilewalker">
+<meta property="og:description" content="Web Audio API为控制网页的音频提供了强有力的后盾，允许开发人员为音频添加效果，创建音频可视化等等。">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487245004499&di=5772e6bce17addb4605adf4284b86861&imgtype=0&src=http%253A%252F%252Fimgsrc.baidu.com%252Fforum%252Fw%253D580%252Fsign%253D715823f1f403918fd7d13dc2613c264b%252Ffaa155540923dd544431d379d209b3de9d824896.jpg">
+<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487245004499&di=5772e6bce17addb4605adf4284b86861&imgtype=0&src=http%253A%252F%252Fimgsrc.baidu.com%252Fforum%252Fw%253D580%252Fsign%253D715823f1f403918fd7d13dc2613c264b%252Ffaa155540923dd544431d379d209b3de9d824896.jpg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-b157f7d93dee4389.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-c6c714a2f55d2df4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-2066094f7b0153c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-b45ad376c2ba1bba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-425d7b50d4102aac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-1a22a86df5ff0002.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-c0cee8c6b87eb34c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-51c6e14208b9a133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-9b243c6477e09fca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-99e5161174db7acd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540">
+<meta property="article:published_time" content="2017-02-16T14:54:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:05:54.550Z">
+<meta property="article:author" content="smilewalker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="web audio api">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487245004499&di=5772e6bce17addb4605adf4284b86861&imgtype=0&src=http%253A%252F%252Fimgsrc.baidu.com%252Fforum%252Fw%253D580%252Fsign%253D715823f1f403918fd7d13dc2613c264b%252Ffaa155540923dd544431d379d209b3de9d824896.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://smilewalker.github.io/2017/02/16/web audio api实现你的音乐·上/"/>
+
+
+
+
+
+  <title>web audio api实现你的音乐·上 | Smilewalker</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta custom-logo">
+    
+      <div class="site-meta-headline">
+        <a>
+          <img class="custom-logo-image" src="https://tva1.sinaimg.cn/large/00831rSTly1gdmq4rimjxj30zg0u0ae0.jpg"
+               alt="Smilewalker"/>
+        </a>
+      </div>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Smilewalker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Experience · Action</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            主页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-compass"></i> <br />
+            
+            日志
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            专集
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            博主
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="点我搜索吧..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">web audio api实现你的音乐·上</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-16T22:54:44+08:00">
+                2017-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" class="leancloud_visitors" data-flag-title="web audio api实现你的音乐·上">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  2.3k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Web Audio API为控制网页的音频提供了强有力的后盾，允许开发人员为音频添加效果，创建音频可视化等等。</p>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487245004499&di=5772e6bce17addb4605adf4284b86861&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D715823f1f403918fd7d13dc2613c264b%2Ffaa155540923dd544431d379d209b3de9d824896.jpg" alt="源自网络.png"></p>
+<a id="more"></a>
+
+<p>“如毒似魅，如解似仙。程序世界，代码纷纷，web audio是流经存在的邂逅。九十刹那为一念，一念中一刹那经九百生灭，盘舞环形地来寻你。”<br>—— 题记</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><hr>
+<h3 id="Web-Audio简介"><a href="#Web-Audio简介" class="headerlink" title="Web Audio简介"></a>Web Audio简介</h3><p>Web Audio API为控制网页的音频提供了强有力的后盾，允许开发人员为音频添加效果，创建音频可视化等等。</p>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487245004499&di=5772e6bce17addb4605adf4284b86861&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D715823f1f403918fd7d13dc2613c264b%2Ffaa155540923dd544431d379d209b3de9d824896.jpg" alt="源自网络.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-b157f7d93dee4389.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="源自网络.png"></p>
+<blockquote>
+<p><strong>百科：音频和声音</strong><br><img src="http://upload-images.jianshu.io/upload_images/2320147-c6c714a2f55d2df4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="百度百科"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-2066094f7b0153c6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="百度百科"></p>
+</blockquote>
+<h6 id="Web-audio的内容和用途"><a href="#Web-audio的内容和用途" class="headerlink" title="Web audio的内容和用途"></a>Web audio的内容和用途</h6><p>Web Audio API包含通过<strong>audio context</strong>操控音频，不同类型的源也可以被一个环境支持，并允许模块路由。利用<strong>audio nodes</strong>（连接一起形成了<strong>audio routing graph</strong>）执行操作，模块的设计为创建复杂音频功能提供灵活性。</p>
+<p>根据英文解释，它是在<strong>audio context</strong>里操控音乐的发生，无论是一首或多首，都可以在一个audio context里搞定，相当于为audio的控制设置了一个环境，我们在这个操控室里统筹音乐。环境有了，用什么来操作，<strong>audio nodes</strong>，相当于各种操纵杆。也有这么一个比喻说，“想象卡拉OK设备，DVD机相当于音频音源，音响相当于音频播放设备，混响器（主要用于把你的声音与背景音乐合成最终输出到音响上）相当于音频处理模块”，然后各个模块通过电线连接，最终接在音响上。</p>
+<h6 id="Web-audio的工作流程"><a href="#Web-audio的工作流程" class="headerlink" title="Web audio的工作流程"></a>Web audio的工作流程</h6><ol>
+<li>创建音频环境（audio context）</li>
+<li>在音频环境里，创建源 —— 比如<audio>, oscillator, stream</li>
+<li>创建效果节点，比如reverb, biquad filter, panner, compressor</li>
+<li>选择音频的最终输出口，比如扬声器</li>
+<li>连接 源——效果——目的地（输入——处理——输出）</li>
+</ol>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-b45ad376c2ba1bba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例.png"></p>
+<h3 id="部分属性方法解释"><a href="#部分属性方法解释" class="headerlink" title="部分属性方法解释"></a>部分属性方法解释</h3><h5 id="AudioContext"><a href="#AudioContext" class="headerlink" title="AudioContext"></a>AudioContext</h5><p>音频上下文对象，相当于声音容器，处理音频的前提环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var AudioContext &#x3D; window.AudioContext || window.webkitAudioContext;</span><br><span class="line">var audioCtx &#x3D; new AudioContext();</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/destination" target="_blank" rel="noopener">AudioContext.destination
+</a>  **<br>返回对象 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioDestinationNode" target="_blank" rel="noopener">AudioDestinationNode
+</a>，表示环境里的所有音频的最终目标，代表实际的音频渲染设备，例如扬声器。</p>
+</li>
+<li><p><strong><a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/decodeAudioData" target="_blank" rel="noopener">AudioContext.decodeAudioData()
+</a></strong><br>用于异步解析 <a href="https://developer.mozilla.org/en-US/docs/Web/API/ArrayBuffer" target="_blank" rel="noopener">ArrayBuffer
+</a>里的音乐文件。这种情况下，ArrayBuffer 通过<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank" rel="noopener">XMLHttpRequest
+</a> 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/FileReader" target="_blank" rel="noopener">FileReader
+</a>加载。解析后的音频缓冲被重复抽样到AudioContext的采样率，然后用于callback或者promise。<br>这是从音轨创建Web音频API的音频源的首选方法。<br>利用回调： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(decodedData) &#123;</span><br><span class="line">  &#x2F;&#x2F; use the decoded data here</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>或者利用promise：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData).then(function(decodedData) &#123;</span><br><span class="line">  &#x2F;&#x2F; use the decoded data here</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createBufferSource" target="_blank" rel="noopener">AudioContext.createBufferSource()
+</a> **<br>用于创建新的音频节点对象 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode" target="_blank" rel="noopener">AudioBufferSourceNode</a>，来播放 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer" target="_blank" rel="noopener">AudioBuffer
+</a>的音乐数据。而<a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBuffer" target="_blank" rel="noopener">AudioBuffer</a>s是通过 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createBuffer" target="_blank" rel="noopener">AudioContext.createBuffer
+</a> 来创建或者 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/decodeAudioData" target="_blank" rel="noopener">AudioContext.decodeAudioData
+</a>成功解码音轨时返回。</p>
+</li>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createAnalyser" target="_blank" rel="noopener">AudioContext.createAnalyser()</a> **<br>创建分析节点对象 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode" target="_blank" rel="noopener">AnalyserNode
+</a>，被用来展示音频时间和频率数据，并创建数据可视化。</p>
+</li>
+</ul>
+<h5 id="AudioNode"><a href="#AudioNode" class="headerlink" title="AudioNode"></a>AudioNode</h5><p>用于表示像音频源的节点（例如，HTML <audio>或<video>元素，振荡器节点等），音频目的地，中间处理模块（例如像BiquadFilterNode或ConvolverNode）或音量控制（如GainNode）。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-425d7b50d4102aac.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官方图例.png"></p>
+<p>AudioNode具有输入和输出，每个都有一定数量的通道。零输入但有一个或多个输出的AudioNode称为源节点（<em>source node</em>）。不同节点的音频处理是不同的，总之，节点解读其输入，进行一些音频相关处理，并为其输出生成新的值，或者简单的让音频通过（例如，在 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode" target="_blank" rel="noopener">AnalyserNode
+</a>里，其中处理的结果被单独访问）</p>
+<p>连接不同的节点可以组成一个处理图（* processing graph *），同样包含在  <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioContext" target="_blank" rel="noopener">AudioContext
+</a>中。一般来说，处理节点继承AudioNode的方法和属性，但会在顶部定义自身功能。有关更多详细信息，请参阅各个节点页面，如 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank" rel="noopener">Web Audio API</a> 首页所列。</p>
+<ul>
+<li>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioNode/connect" target="_blank" rel="noopener">AudioNode.connect()
+</a> **<br>允许将当前节点的输出连接到目的，可以是音频节点（将声音数据定向到指定节点），或<a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioParam" target="_blank" rel="noopener">AudioParam
+</a>，以便节点的输出数据随时间自动更改该参数的值。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var destinationNode &#x3D; AudioNode.connect(destination, outputIndex, inputIndex);</span><br><span class="line">AudioNode.connect(destination, outputIndex);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>** AudioBufferSourceNode **</p>
+<p>操作audioBuffer对象里的音频数据，把audioBuffer中的数据转化为音频信号，作为音频源，零输入，一个输出，属于Audio Node。输出的通道数量对应着音频缓冲区的通道数量。如果没有任何的缓冲区，也就是说，如果AudioBufferSourceNode 的值为null，输出为包含静音的一个通道。一个 <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode" target="_blank" rel="noopener">AudioBufferSourceNode
+</a>只可以播放一次；常说，AudioBufferSourceNodes 有个“射后不管”模式，一劳永逸：一旦开始，所有节点的引用都可以被删除，并且自动回收。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1a22a86df5ff0002.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官方图例.png"></p>
+<ul>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/buffer" target="_blank" rel="noopener">AudioBufferSourceNode.buffer
+</a> **<br>音频缓冲区，表示播放的音频集，当被设置值为null的时候，会被定义为静音单声道。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.buffer &#x3D; myBuffer;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/start" target="_blank" rel="noopener">AudioBufferSourceNode.start()
+</a> **<br>音乐的开始播放。AudioBufferSourceNode.start()仅对应一个。如果再次播放，需要另创建一个AudioBufferSourceNode 。这些节点是很容易创建的，AudioBuffers 也能够反复利用。</p>
+</li>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AudioBufferSourceNode/stop" target="_blank" rel="noopener">AudioBufferSourceNode.stop()
+</a> **<br>音乐的停止播放。AudioBufferSourceNode.stop()是被允许暂停多个音乐。最近的声音将会替代原先的，没有完全到缓冲区的末尾。</p>
+</li>
+</ul>
+<h5 id="AnalyserNode"><a href="#AnalyserNode" class="headerlink" title="AnalyserNode"></a>AnalyserNode</h5><p>能提供实时频率以及时间域分析信息的节点，它是一个AudioNode，将音频流从输入传递到输出，允许获取和处理生成的数据，并创建音频可视化。<br>拥有一个输出，一个输出，尽管输出没有链接，节点也会工作。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c0cee8c6b87eb34c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="官方图例.png"></p>
+<ul>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/frequencyBinCount" target="_blank" rel="noopener">AnalyserNode.frequencyBinCount</a> **<br>无符号长整型值，是FFT大小的一半。这通常等于将要用于可视化的数据值的数量。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var audioCtx &#x3D; new AudioContext();</span><br><span class="line">var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>** <a href="https://developer.mozilla.org/en-US/docs/Web/API/AnalyserNode/getByteFrequencyData" target="_blank" rel="noopener">AnalyserNode.getByteFrequencyData()</a> **<br>将当前数据频率复制转化为<a href="https://developer.mozilla.org/en-US/docs/Web/API/Uint8Array" target="_blank" rel="noopener">Uint8Array
+</a>。<br>如果数组具有比AnalyserNode.frequencyBinCount更少的元素，则会删除多余的元素。如果它具有比所需要的更多的元素，则忽略多余的元素。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var audioCtx &#x3D; new AudioContext();</span><br><span class="line">var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">var dataArray &#x3D; new Uint8Array(analyser.frequencyBinCount); &#x2F;&#x2F; Uint8Array should be the same length as the frequencyBinCount </span><br><span class="line">analyser.getByteFrequencyData(dataArray); &#x2F;&#x2F; fill the Uint8Array with data returned from getByteFrequencyData()</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>举个简单的例子，结合音频链路和代码：</p>
+<ol>
+<li><p>创建上下文，audio context;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var AudioContext &#x3D; window.AudioContext || window.webkitAudioContext;</span><br><span class="line">var audioCtx;</span><br><span class="line">&#x2F;&#x2F; var source;</span><br><span class="line">try &#123;</span><br><span class="line">    audioCtx &#x3D; new AudioContext();</span><br><span class="line">    console.log(&#39;support&#39;);</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-51c6e14208b9a133.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="console.log(audioCtx).png"></p>
+</li>
+<li><p>利用方法createBufferSource()创建audioBufferSourceNode音频源对象；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &#x3D; audioCtx.createBufferSource();</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9b243c6477e09fca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="console.log(source)"></p>
+</li>
+<li><p>完成获取需要播放的音频数据后，利用decodeAudioData()解码数据；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var request &#x3D; new XMLHttpRequest();</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">    request.open(&#39;GET&#39;, &#39;audio&#x2F;music.mp3&#39;, true);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 配置数据返回类型,从服务器取回二进制数据</span><br><span class="line">    request.responseType &#x3D; &#39;arraybuffer&#39;;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">    request.onload &#x3D; function() &#123;</span><br><span class="line">        var audioData &#x3D; request.response;</span><br><span class="line">        audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">            ……</span><br><span class="line">        &#125;,</span><br><span class="line">        function(e) &#123; console.log(&quot;Error with decoding audio data&quot; + e.err); &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></li>
+<li><p>audioBufferSourceNode对象的buffer属性接收audioBuffer数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source.buffer &#x3D; buffer;</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-99e5161174db7acd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="console.log(buffer)"></p>
+</li>
+<li><p>通过connect()将audioBufferSourceNode对象连接到audioContext的desitination（speakers）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>从最开始播放</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source.start(0);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>附简单例子最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#x2F;&#x2F; create environment -- audio context</span><br><span class="line">&#x2F;&#x2F; define variables</span><br><span class="line"></span><br><span class="line">var AudioContext &#x3D; window.AudioContext || window.webkitAudioContext;</span><br><span class="line">var audioCtx;</span><br><span class="line">var source;</span><br><span class="line">try &#123;</span><br><span class="line">    audioCtx &#x3D; new AudioContext();</span><br><span class="line">    console.log(&#39;support&#39;);</span><br><span class="line">            console.log(audioCtx)</span><br><span class="line">    </span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line"></span><br><span class="line">var getData &#x3D; function() &#123;</span><br><span class="line">    &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">    source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">            console.log(source)</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 请求</span><br><span class="line">    var request &#x3D; new XMLHttpRequest();</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">    request.open(&#39;GET&#39;, &#39;audio&#x2F;music.mp3&#39;, true);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 配置数据返回类型,从服务器取回二进制数据</span><br><span class="line">    request.responseType &#x3D; &#39;arraybuffer&#39;;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">    request.onload &#x3D; function() &#123;</span><br><span class="line">        var audioData &#x3D; request.response;</span><br><span class="line">        audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">            source.buffer &#x3D; buffer;</span><br><span class="line"></span><br><span class="line">            source.connect(audioCtx.destination);</span><br><span class="line">            source.loop &#x3D; true;</span><br><span class="line">        &#125;,</span><br><span class="line">        function(e) &#123; console.log(&quot;Error with decoding audio data&quot; + e.err); &#125;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 发送一个 HTTP 请求</span><br><span class="line">    request.send();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; play audio</span><br><span class="line">getData();</span><br><span class="line">source.start(0);</span><br></pre></td></tr></table></figure>
+
+<p>【零零碎碎，通过一点点阅读官方英文文档，与部分中文文档的理解整理，web audio实现了跟音频的通信，会耗硬件资源，适用性没有canvas那么广，或许这也是中文文档并不多的原因，音乐世界，趣味无穷。震撼于它跟canvas结合制造的效果，欲知后事如何，且听下回分解吧~】</p>
+<p>参考文章：<br><a href="https://developer.mozilla.org/en-US/docs/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://github.com/wendellvian/blog/wiki/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86Audio%E4%B9%8B%E7%9C%8B%E5%BE%97%E8%A7%81%E7%9A%84%E9%9F%B3%E4%B9%90_20160725" target="_blank" rel="noopener">https://github.com/wendellvian/blog/wiki/%E9%87%8D%E6%96%B0%E8%AE%A4%E8%AF%86Audio%E4%B9%8B%E7%9C%8B%E5%BE%97%E8%A7%81%E7%9A%84%E9%9F%B3%E4%B9%90_20160725</a><br><a href="http://www.ayqy.net/blog/web-audio-api%E8%A7%A3%E6%9E%90/" target="_blank" rel="noopener">http://www.ayqy.net/blog/web-audio-api%E8%A7%A3%E6%9E%90/</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>有赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="smilewalker 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    smilewalker
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://smilewalker.github.io/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" title="web audio api实现你的音乐·上">https://smilewalker.github.io/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+            <a href="/tags/web-audio-api/" rel="tag"># web audio api</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/" rel="next" title="js解决canvas合成图模糊">
+                <i class="fa fa-chevron-left"></i> js解决canvas合成图模糊
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" rel="prev" title="web audio api实现你的音乐·下">
+                web audio api实现你的音乐·下 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            主页简介
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">smilewalker</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">专集</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/smilewalker" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i></a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:2282769623@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i></a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">1.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Web-Audio简介"><span class="nav-number">1.1.</span> <span class="nav-text">Web Audio简介</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Web-audio的内容和用途"><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">Web audio的内容和用途</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Web-audio的工作流程"><span class="nav-number">1.1.0.0.2.</span> <span class="nav-text">Web audio的工作流程</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部分属性方法解释"><span class="nav-number">1.2.</span> <span class="nav-text">部分属性方法解释</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#AudioContext"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">AudioContext</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#AudioNode"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">AudioNode</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#AnalyserNode"><span class="nav-number">1.2.0.3.</span> <span class="nav-text">AnalyserNode</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">smilewalker</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">27.8k</span>
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+--!>
+
+
+
+<!--
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+--!>
+        
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-users"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span id="busuanzi_container_site_pv">访问次数：<span id="busuanzi_value_site_pv"></span></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=66543196";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("3jxuVavCwVeAtrjKQDj5J0hA-gzGzoHsz", "Ljg967ra3eJTcrTKTSVxIrbi");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="技术,web,css," />
 
 
 
@@ -80,12 +80,31 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Smilewalker">
-<meta property="og:url" content="https://smilewalker.github.io/archives/index.html">
+<meta name="description" content="当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css实现progress进度条美化">
+<meta property="og:url" content="https://smilewalker.github.io/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/index.html">
 <meta property="og:site_name" content="Smilewalker">
+<meta property="og:description" content="当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2017-03-17T14:54:44.000Z">
+<meta property="article:modified_time" content="2020-04-11T10:02:53.055Z">
 <meta property="article:author" content="smilewalker">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="css">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -115,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="https://smilewalker.github.io/archives/"/>
+  <link rel="canonical" href="https://smilewalker.github.io/2017/03/17/css实现progress进度条美化/"/>
 
 
 
 
 
-  <title>日志 | Smilewalker</title>
+  <title>css实现progress进度条美化 | Smilewalker</title>
   
 
 
@@ -140,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     
     <div class="headband"></div>
 
@@ -286,421 +305,300 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">css实现progress进度条美化</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T22:54:44+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        呀..! 已经有 21 篇日志啦 继续努力
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/" itemprop="url">
-              
-                <span itemprop="name">《 Mac快捷键指南 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-04-28T22:54:44+08:00"
-              content="2019-04-28" >
-          04-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/" itemprop="url">
-              
-                <span itemprop="name">《 Mac安装office365 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-15T22:54:44+08:00"
-              content="2019-03-15" >
-          03-15
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/" itemprop="url">
-              
-                <span itemprop="name">《 Mac实现Adobe Indesign CC快速切换中英 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-28T22:54:44+08:00"
-              content="2018-10-28" >
-          10-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
+            
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
 
-        
+          
+          
+             <span id="/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/" class="leancloud_visitors" data-flag-title="css实现progress进度条美化">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" itemprop="url">
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">《 Mac Mail绑定QQ邮箱 》</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  903
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-28T22:54:44+08:00"
-              content="2017-09-28" >
-          09-28
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  3
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="url">
-              
-                <span itemprop="name">《 node-sass安装的小坑 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-19T22:54:44+08:00"
-              content="2017-04-19" >
-          04-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<a id="more"></a>
 
-        
-        
+<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
+<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<p><strong>语法</strong></p>
+<blockquote>
+<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
+</blockquote>
+<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
+<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
+<p>看代码：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
+<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
+<p>为啥，我们以w3c的线图来解读。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
+<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
+<p>接下来切换end：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
+<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
+<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/" itemprop="url">
-              
-                <span itemprop="name">《 css实现progress进度条美化 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-17T22:54:44+08:00"
-              content="2017-03-17" >
-          03-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
+<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
+<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/" itemprop="url">
-              
-                <span itemprop="name">《 web前端收藏的网站 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-13T22:54:44+08:00"
-              content="2017-03-13" >
-          03-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/" itemprop="url">
-              
-                <span itemprop="name">《 js实现七牛云上传图片视频 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-12T22:54:44+08:00"
-              content="2017-03-12" >
-          03-12
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" itemprop="url">
-              
-                <span itemprop="name">《 web audio api实现你的音乐·下 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-27T22:54:44+08:00"
-              content="2017-02-27" >
-          02-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" itemprop="url">
-              
-                <span itemprop="name">《 web audio api实现你的音乐·上 》</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-02-16T22:54:44+08:00"
-              content="2017-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>有赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="smilewalker 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    smilewalker
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://smilewalker.github.io/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/" title="css实现progress进度条美化">https://smilewalker.github.io/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/" rel="next" title="web前端收藏的网站">
+                <i class="fa fa-chevron-left"></i> web前端收藏的网站
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" rel="prev" title="node-sass安装的小坑">
+                node-sass安装的小坑 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/">&gt;</a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -708,6 +606,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -991,6 +896,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
