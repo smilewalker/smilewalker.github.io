@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Mac Mail绑定QQ邮箱</title>
+    <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+<a id="more"></a>
+
+<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？其实并不难。</p>
+<p>邮件——添加帐户——QQ邮箱——配置邮箱（输入账号密码），提示错误；<br><img src="http://upload-images.jianshu.io/upload_images/2320147-314949ed89a3cf61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="错误"></p>
+<p>错在该mail的密码非自己邮箱账号的密码，而是qq生成的授权码，正确姿势应是：首先进入QQ邮箱，设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-db7c0ce8d022da7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1ede29e2b3925cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="密码"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aaa600eb5daa17c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="输入授权码"></p>
+<p>配置成功！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-25ee52b0ccf8065a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置成功"></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac安装office365</title>
     <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
     <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
@@ -21,6 +44,29 @@
         <tag>Mac</tag>
         <tag>app</tag>
         <tag>office</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac实现Adobe Indesign CC快速切换中英</title>
+    <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
+    <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+<a id="more"></a>
+
+<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-13d58a46211db1da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>点击应用程序，如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d07d36c00206192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-4b3a8130e6265c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>将“Find-Change Queries”里的的三个包：GREP 与 Object 与 Text 的文件名的“en_US”都换成“zh_CN”</p>
+<p>同理，再将“InDesign Shortcut Sets” 的 “en_US”换成“zh_CN”，再将“InDesign_Workspaces” 的 “en_US”换成“zh_CN”，重新打开Indesign CC，成功完成了英文en_US转化成了中文zh_CN，是不是很简单呢～</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+        <tag>办公</tag>
+        <tag>adobe</tag>
       </tags>
   </entry>
   <entry>
@@ -199,6 +245,36 @@
       </tags>
   </entry>
   <entry>
+    <title>css利用mask实现奇葩形状</title>
+    <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
+    <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<a id="more"></a>
+
+<p>“mask-image”看着“图片”：“你想变啊！图片，你要是想变的话你就来找我嘛，你不找我怎么知道你想变呢？固然你不太懂跟我怎么相处，然则你照旧得找我，我会带你的嘛，不相处你说你想变我不给你变，你不想变我也不给你变，要讲沟通嘛！你想改头换面就来找我，我肯定给你想要的诶，你是真的想整型吧？”。<br>——题记，改编源自《大话西游之仙履奇缘》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<p>这个css可以怎么实现，之前的“我”说“clip-path”，本文的“我”当然说“mask-image”。mask-image，也就是遮罩图片的意思，它的作用相当于利用PS的alpha通道。一张原图，一张需要显示的区域图，两个结合在一起，就显示为“区域图形状的原图”。且看：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a5294b1788eb9d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f44619493ce9e7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="frame.png，非JPG格式"></p>
+<p>然后使用mask-image属性，读取遮罩图片透明信息，应用到元素图片上，如 -webkit-mask-image: url(../images/frame.png);</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3c4bd2f2b9d4759e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="mask-image结合图"></p>
+<p>一行代码，一张图片，我们就可以看到效果图了，这样够了么？当然不够。有时候在iphone7显示会有点问题，可能会导致重复性，保险起见，最好设置mask-size: 宽度 高度 及mask-repeat: no-repeat，这个跟background很相似，同样可以简写。<br>然后到这里完了么？点点头：完了。反问：真的完了？眼尖的人可能发现，好像跟效果图不太一样，呀，少了边框。这个边框怎么处理，我们换个思路就可以解决了，平时常用的一个方法，外面套个标签，设置下background，外级图片如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aa29499f3b1112ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="边框.png"></p>
+<p>over，附上最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*html*&#x2F;</span><br><span class="line">&lt;div class&#x3D;&quot;pic-frame&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;pic&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*css*&#x2F;</span><br><span class="line">.pic-frame &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	margin: auto;</span><br><span class="line">  	background-image: url(..&#x2F;images&#x2F;frame3.png);</span><br><span class="line">  	background-repeat: no-repeat;</span><br><span class="line">  	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.pic &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;pic.jpg) no-repeat center;</span><br><span class="line">	background-size: cover;</span><br><span class="line">    &#x2F;*background-image: url(..&#x2F;images&#x2F;pic.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;*&#x2F;</span><br><span class="line">    -webkit-mask: url(..&#x2F;images&#x2F;frame2.png) no-repeat;</span><br><span class="line">    -webkit-mask-size: 564px 732px ;</span><br><span class="line">&#x2F;*	-webkit-mask-size: 564px 732px ;</span><br><span class="line">    -webkit-mask-image: url(..&#x2F;images&#x2F;frame2.png);</span><br><span class="line">    -webkit-mask-repeat: no-repeat;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果实现，不过这个属性还没有写进w3c里，webkit内核可以使用，基本包括了移动端，具体也可看<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask" target="_blank" rel="noopener">MDN</a>的介绍。个人觉得颇有意思的属性，来实现各种奇葩形状~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css之神奇的渐变效果</title>
     <url>/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
@@ -243,39 +319,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css利用mask实现奇葩形状</title>
-    <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
-    <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<a id="more"></a>
-
-<p>“mask-image”看着“图片”：“你想变啊！图片，你要是想变的话你就来找我嘛，你不找我怎么知道你想变呢？固然你不太懂跟我怎么相处，然则你照旧得找我，我会带你的嘛，不相处你说你想变我不给你变，你不想变我也不给你变，要讲沟通嘛！你想改头换面就来找我，我肯定给你想要的诶，你是真的想整型吧？”。<br>——题记，改编源自《大话西游之仙履奇缘》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<p>这个css可以怎么实现，之前的“我”说“clip-path”，本文的“我”当然说“mask-image”。mask-image，也就是遮罩图片的意思，它的作用相当于利用PS的alpha通道。一张原图，一张需要显示的区域图，两个结合在一起，就显示为“区域图形状的原图”。且看：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a5294b1788eb9d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f44619493ce9e7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="frame.png，非JPG格式"></p>
-<p>然后使用mask-image属性，读取遮罩图片透明信息，应用到元素图片上，如 -webkit-mask-image: url(../images/frame.png);</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3c4bd2f2b9d4759e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="mask-image结合图"></p>
-<p>一行代码，一张图片，我们就可以看到效果图了，这样够了么？当然不够。有时候在iphone7显示会有点问题，可能会导致重复性，保险起见，最好设置mask-size: 宽度 高度 及mask-repeat: no-repeat，这个跟background很相似，同样可以简写。<br>然后到这里完了么？点点头：完了。反问：真的完了？眼尖的人可能发现，好像跟效果图不太一样，呀，少了边框。这个边框怎么处理，我们换个思路就可以解决了，平时常用的一个方法，外面套个标签，设置下background，外级图片如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aa29499f3b1112ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="边框.png"></p>
-<p>over，附上最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*html*&#x2F;</span><br><span class="line">&lt;div class&#x3D;&quot;pic-frame&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;pic&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*css*&#x2F;</span><br><span class="line">.pic-frame &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	margin: auto;</span><br><span class="line">  	background-image: url(..&#x2F;images&#x2F;frame3.png);</span><br><span class="line">  	background-repeat: no-repeat;</span><br><span class="line">  	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.pic &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;pic.jpg) no-repeat center;</span><br><span class="line">	background-size: cover;</span><br><span class="line">    &#x2F;*background-image: url(..&#x2F;images&#x2F;pic.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;*&#x2F;</span><br><span class="line">    -webkit-mask: url(..&#x2F;images&#x2F;frame2.png) no-repeat;</span><br><span class="line">    -webkit-mask-size: 564px 732px ;</span><br><span class="line">&#x2F;*	-webkit-mask-size: 564px 732px ;</span><br><span class="line">    -webkit-mask-image: url(..&#x2F;images&#x2F;frame2.png);</span><br><span class="line">    -webkit-mask-repeat: no-repeat;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果实现，不过这个属性还没有写进w3c里，webkit内核可以使用，基本包括了移动端，具体也可看<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask" target="_blank" rel="noopener">MDN</a>的介绍。个人觉得颇有意思的属性，来实现各种奇葩形状~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
         <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -321,9 +367,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -361,32 +407,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac实现Adobe Indesign CC快速切换中英</title>
-    <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
-    <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
-<a id="more"></a>
-
-<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-13d58a46211db1da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>点击应用程序，如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d07d36c00206192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-4b3a8130e6265c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
-<p>将“Find-Change Queries”里的的三个包：GREP 与 Object 与 Text 的文件名的“en_US”都换成“zh_CN”</p>
-<p>同理，再将“InDesign Shortcut Sets” 的 “en_US”换成“zh_CN”，再将“InDesign_Workspaces” 的 “en_US”换成“zh_CN”，重新打开Indesign CC，成功完成了英文en_US转化成了中文zh_CN，是不是很简单呢～</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-        <tag>办公</tag>
-        <tag>adobe</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -417,9 +440,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -455,9 +478,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
         <tag>margin</tag>
       </tags>
   </entry>
@@ -504,9 +527,40 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js实现base64获图片url的坑-七牛云</title>
+    <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
+    <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
+<a id="more"></a>
+
+<p>“Base64：数据界的云存储是个便利小器，某一天他踩着白色祥云来渡我，我猜中了前后，可是我却走岔了路。”<br>——题记，改编源自《大话西游》</p>
+<p>###前文<br>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-4fb9c8406ecf732d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5理论图"><br>至于H5如何上传显示图片，可采取FileReader ，readAsDataURL() 读取指定File对象中的内容，利用exif获取旋转参数，目前自我总结ios是右1,左3,正6,倒8，这个可以自己测试看看，主要用法如下：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8faa2f665f9e5cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="部分读取图片代码"><br>读取图片及获得旋转参数这里不多说了，大致是获取旋转参数后，利用canvas重新生成一张图，得base64路径。不过需要canvas将图摆正，然后得到一个新的base64，获得旋转之后的新图base64。而有时候我们是需要使用这个图片路径的，总不可能用base64，太大，转换以下链接，也就有了下文，这里选择七牛进行转换。</p>
+<p>###正文<br>base64转换七牛链接一般流程为：web请求后台接口 ——&gt; 后台返回数据，获取相应的token（上传权限）、key（文件名），urlTpl（文件的模板格式），这些参数建议后台生成 ——&gt; 请求七牛云空间地址，带上后台获取的key，以及添加HTTP请求头（content-type，Authorization身份验证带token），发送需转化的base64 url ——&gt; 获取responseText响应数据（来自七牛云），将传过来的key值带入之前的urlTpl模板，新url完成。代码如下，<a href="https://qiniu.kf5.com/hc/kb/article/69078/" target="_blank" rel="noopener">七牛云文档</a>也可以查看。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">putb64: function(token, key, urlTpl, imageBase64) &#123;</span><br><span class="line">	  var pic &#x3D; imageBase64.replace(&#x2F;^.*?,&#x2F;, &#39;&#39;);</span><br><span class="line">          var url &#x3D; location.protocol &#x3D;&#x3D; &#39;http:&#39; </span><br><span class="line">	          ? &quot;http:&#x2F;&#x2F;up.qiniu.com&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key </span><br><span class="line">	          : &quot;https:&#x2F;&#x2F;up.qbox.me&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key;</span><br><span class="line">	  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	  xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">	    if (xhr.readyState &#x3D;&#x3D; 4)&#123;</span><br><span class="line">	    	var response &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">	    	var result_url &#x3D; urlTpl.replace(&#39;%QiniuUploadImg%&#39;, response.key);</span><br><span class="line">	    	console.log(result_url)</span><br><span class="line">				$(&#39;#show&#39;).attr(&#39;src&#39;, result_url)</span><br><span class="line">	    &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	  xhr.open(&quot;POST&quot;, url, true);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;octet-stream&quot;);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Authorization&quot;, &quot;UpToken &quot; + token);</span><br><span class="line">	  xhr.send(pic);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个注意点：</p>
+<ol>
+<li>key值不要混淆；<br>最终的url 带的参数key是七牛返回的responseText的key，不是后台传过来的key，这个混淆了要找半天。</li>
+<li>七牛地址分为http跟https，两个路径是不一样的，需要判断；</li>
+<li>传过去的需要转换base64，须填写base64之后的字符串 ，除去MIME和base64以及逗号</li>
+<li>UpToken 与后面的字符串保留一个空格 后跟上在服务端请求的token的字符串。</li>
+</ol>
+<p><a href="https://github.com/smilewalker/projects/tree/master/imgHandle" target="_blank" rel="noopener">github</a>上有部分代码，可以参考，不过七牛云要加上自己的七牛云地址，暂且先这些吧。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>base64</tag>
+        <tag>七牛云</tag>
       </tags>
   </entry>
   <entry>
@@ -565,8 +619,8 @@
       <tags>
         <tag>技术</tag>
         <tag>web</tag>
-        <tag>canvas</tag>
         <tag>JavaScript</tag>
+        <tag>canvas</tag>
       </tags>
   </entry>
   <entry>
@@ -635,39 +689,8 @@
       <tags>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>JavaScript</tag>
         <tag>canvas</tag>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js实现base64获图片url的坑-七牛云</title>
-    <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
-    <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
-<a id="more"></a>
-
-<p>“Base64：数据界的云存储是个便利小器，某一天他踩着白色祥云来渡我，我猜中了前后，可是我却走岔了路。”<br>——题记，改编源自《大话西游》</p>
-<p>###前文<br>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-4fb9c8406ecf732d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5理论图"><br>至于H5如何上传显示图片，可采取FileReader ，readAsDataURL() 读取指定File对象中的内容，利用exif获取旋转参数，目前自我总结ios是右1,左3,正6,倒8，这个可以自己测试看看，主要用法如下：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8faa2f665f9e5cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="部分读取图片代码"><br>读取图片及获得旋转参数这里不多说了，大致是获取旋转参数后，利用canvas重新生成一张图，得base64路径。不过需要canvas将图摆正，然后得到一个新的base64，获得旋转之后的新图base64。而有时候我们是需要使用这个图片路径的，总不可能用base64，太大，转换以下链接，也就有了下文，这里选择七牛进行转换。</p>
-<p>###正文<br>base64转换七牛链接一般流程为：web请求后台接口 ——&gt; 后台返回数据，获取相应的token（上传权限）、key（文件名），urlTpl（文件的模板格式），这些参数建议后台生成 ——&gt; 请求七牛云空间地址，带上后台获取的key，以及添加HTTP请求头（content-type，Authorization身份验证带token），发送需转化的base64 url ——&gt; 获取responseText响应数据（来自七牛云），将传过来的key值带入之前的urlTpl模板，新url完成。代码如下，<a href="https://qiniu.kf5.com/hc/kb/article/69078/" target="_blank" rel="noopener">七牛云文档</a>也可以查看。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">putb64: function(token, key, urlTpl, imageBase64) &#123;</span><br><span class="line">	  var pic &#x3D; imageBase64.replace(&#x2F;^.*?,&#x2F;, &#39;&#39;);</span><br><span class="line">          var url &#x3D; location.protocol &#x3D;&#x3D; &#39;http:&#39; </span><br><span class="line">	          ? &quot;http:&#x2F;&#x2F;up.qiniu.com&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key </span><br><span class="line">	          : &quot;https:&#x2F;&#x2F;up.qbox.me&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key;</span><br><span class="line">	  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	  xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">	    if (xhr.readyState &#x3D;&#x3D; 4)&#123;</span><br><span class="line">	    	var response &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">	    	var result_url &#x3D; urlTpl.replace(&#39;%QiniuUploadImg%&#39;, response.key);</span><br><span class="line">	    	console.log(result_url)</span><br><span class="line">				$(&#39;#show&#39;).attr(&#39;src&#39;, result_url)</span><br><span class="line">	    &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	  xhr.open(&quot;POST&quot;, url, true);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;octet-stream&quot;);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Authorization&quot;, &quot;UpToken &quot; + token);</span><br><span class="line">	  xhr.send(pic);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里有几个注意点：</p>
-<ol>
-<li>key值不要混淆；<br>最终的url 带的参数key是七牛返回的responseText的key，不是后台传过来的key，这个混淆了要找半天。</li>
-<li>七牛地址分为http跟https，两个路径是不一样的，需要判断；</li>
-<li>传过去的需要转换base64，须填写base64之后的字符串 ，除去MIME和base64以及逗号</li>
-<li>UpToken 与后面的字符串保留一个空格 后跟上在服务端请求的token的字符串。</li>
-</ol>
-<p><a href="https://github.com/smilewalker/projects/tree/master/imgHandle" target="_blank" rel="noopener">github</a>上有部分代码，可以参考，不过七牛云要加上自己的七牛云地址，暂且先这些吧。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>base64</tag>
-        <tag>七牛云</tag>
       </tags>
   </entry>
   <entry>
@@ -727,8 +750,8 @@
       <tags>
         <tag>技术</tag>
         <tag>web</tag>
-        <tag>canvas</tag>
         <tag>JavaScript</tag>
+        <tag>canvas</tag>
       </tags>
   </entry>
   <entry>
@@ -864,6 +887,88 @@
       </tags>
   </entry>
   <entry>
+    <title>node-sass安装的小坑</title>
+    <url>/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
+<a id="more"></a>
+<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
+<p>网上有说利用taobao，然而并没成功：<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+<p>那就换个方法吧，成功：<br>cnpm install –save-dev node-sass</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-fa60ed5cf5dd4e0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>node-sass</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web前端收藏的网站</title>
+    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<a id="more"></a>
+<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<ol>
+<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
+</li>
+<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
+</li>
+<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
+</li>
+<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
+</li>
+<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
+</li>
+<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
+</li>
+<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
+</li>
+<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
+</li>
+<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
+</li>
+<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
+</li>
+<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
+</li>
+<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
+</li>
+</ol>
+<p>下面罗列的偏向设计，前端可以看看：</p>
+<ol>
+<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
+</li>
+<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
+</li>
+<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
+</li>
+<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
+</li>
+<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
+</li>
+<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
+</li>
+</ol>
+<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web audio api实现你的音乐·下</title>
     <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
     <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
@@ -922,51 +1027,6 @@
         <tag>web</tag>
         <tag>JavaScript</tag>
         <tag>web audio api</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>node-sass安装的小坑</title>
-    <url>/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
-<a id="more"></a>
-<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
-<p>网上有说利用taobao，然而并没成功：<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
-<p>那就换个方法吧，成功：<br>cnpm install –save-dev node-sass</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-fa60ed5cf5dd4e0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>node-sass</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac Mail绑定QQ邮箱</title>
-    <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
-    <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
-<a id="more"></a>
-
-<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？其实并不难。</p>
-<p>邮件——添加帐户——QQ邮箱——配置邮箱（输入账号密码），提示错误；<br><img src="http://upload-images.jianshu.io/upload_images/2320147-314949ed89a3cf61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="错误"></p>
-<p>错在该mail的密码非自己邮箱账号的密码，而是qq生成的授权码，正确姿势应是：首先进入QQ邮箱，设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-db7c0ce8d022da7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1ede29e2b3925cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="密码"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aaa600eb5daa17c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="输入授权码"></p>
-<p>配置成功！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-25ee52b0ccf8065a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置成功"></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
       </tags>
   </entry>
   <entry>
@@ -1203,66 +1263,6 @@
         <tag>技术</tag>
         <tag>web</tag>
         <tag>gpu动画</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web前端收藏的网站</title>
-    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<a id="more"></a>
-<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<ol>
-<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
-</li>
-<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
-</li>
-<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
-</li>
-<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
-</li>
-<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
-</li>
-<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
-</li>
-<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
-</li>
-<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
-</li>
-<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
-</li>
-<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
-</li>
-<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
-</li>
-<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
-</li>
-<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
-</li>
-</ol>
-<p>下面罗列的偏向设计，前端可以看看：</p>
-<ol>
-<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
-</li>
-<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
-</li>
-<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
-</li>
-<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
-</li>
-<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
-</li>
-<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
-</li>
-</ol>
-<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
       </tags>
   </entry>
 </search>
