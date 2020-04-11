@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="技术,web,JavaScript,七牛云,base64," />
+  <meta name="keywords" content="技术,web,JavaScript,base64,七牛云," />
 
 
 
@@ -96,8 +96,8 @@
 <meta property="article:tag" content="技术">
 <meta property="article:tag" content="web">
 <meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="七牛云">
 <meta property="article:tag" content="base64">
+<meta property="article:tag" content="七牛云">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300">
 
@@ -379,6 +379,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -531,9 +541,9 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag"># 七牛云</a>
-          
             <a href="/tags/base64/" rel="tag"># base64</a>
+          
+            <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" rel="tag"># 七牛云</a>
           
         </div>
       
@@ -918,6 +928,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/valine.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '3jxuVavCwVeAtrjKQDj5J0hA-gzGzoHsz',
+        appKey: 'Ljg967ra3eJTcrTKTSVxIrbi',
+        placeholder: 'Just go go',
+        avatar:'robohash',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

@@ -377,6 +377,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -905,6 +915,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/valine.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '3jxuVavCwVeAtrjKQDj5J0hA-gzGzoHsz',
+        appKey: 'Ljg967ra3eJTcrTKTSVxIrbi',
+        placeholder: 'Just go go',
+        avatar:'robohash',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

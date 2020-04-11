@@ -24,82 +24,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac Mail绑定QQ邮箱</title>
-    <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
-    <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
-<a id="more"></a>
-
-<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？其实并不难。</p>
-<p>邮件——添加帐户——QQ邮箱——配置邮箱（输入账号密码），提示错误；<br><img src="http://upload-images.jianshu.io/upload_images/2320147-314949ed89a3cf61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="错误"></p>
-<p>错在该mail的密码非自己邮箱账号的密码，而是qq生成的授权码，正确姿势应是：首先进入QQ邮箱，设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-db7c0ce8d022da7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1ede29e2b3925cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="密码"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aaa600eb5daa17c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="输入授权码"></p>
-<p>配置成功！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-25ee52b0ccf8065a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置成功"></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac实现Adobe Indesign CC快速切换中英</title>
-    <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
-    <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
-<a id="more"></a>
-
-<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-13d58a46211db1da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>点击应用程序，如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d07d36c00206192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-4b3a8130e6265c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
-<p>将“Find-Change Queries”里的的三个包：GREP 与 Object 与 Text 的文件名的“en_US”都换成“zh_CN”</p>
-<p>同理，再将“InDesign Shortcut Sets” 的 “en_US”换成“zh_CN”，再将“InDesign_Workspaces” 的 “en_US”换成“zh_CN”，重新打开Indesign CC，成功完成了英文en_US转化成了中文zh_CN，是不是很简单呢～</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-        <tag>办公</tag>
-        <tag>adobe</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css利用mask实现奇葩形状</title>
-    <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
-    <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<a id="more"></a>
-
-<p>“mask-image”看着“图片”：“你想变啊！图片，你要是想变的话你就来找我嘛，你不找我怎么知道你想变呢？固然你不太懂跟我怎么相处，然则你照旧得找我，我会带你的嘛，不相处你说你想变我不给你变，你不想变我也不给你变，要讲沟通嘛！你想改头换面就来找我，我肯定给你想要的诶，你是真的想整型吧？”。<br>——题记，改编源自《大话西游之仙履奇缘》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<p>这个css可以怎么实现，之前的“我”说“clip-path”，本文的“我”当然说“mask-image”。mask-image，也就是遮罩图片的意思，它的作用相当于利用PS的alpha通道。一张原图，一张需要显示的区域图，两个结合在一起，就显示为“区域图形状的原图”。且看：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a5294b1788eb9d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f44619493ce9e7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="frame.png，非JPG格式"></p>
-<p>然后使用mask-image属性，读取遮罩图片透明信息，应用到元素图片上，如 -webkit-mask-image: url(../images/frame.png);</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3c4bd2f2b9d4759e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="mask-image结合图"></p>
-<p>一行代码，一张图片，我们就可以看到效果图了，这样够了么？当然不够。有时候在iphone7显示会有点问题，可能会导致重复性，保险起见，最好设置mask-size: 宽度 高度 及mask-repeat: no-repeat，这个跟background很相似，同样可以简写。<br>然后到这里完了么？点点头：完了。反问：真的完了？眼尖的人可能发现，好像跟效果图不太一样，呀，少了边框。这个边框怎么处理，我们换个思路就可以解决了，平时常用的一个方法，外面套个标签，设置下background，外级图片如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aa29499f3b1112ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="边框.png"></p>
-<p>over，附上最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*html*&#x2F;</span><br><span class="line">&lt;div class&#x3D;&quot;pic-frame&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;pic&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*css*&#x2F;</span><br><span class="line">.pic-frame &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	margin: auto;</span><br><span class="line">  	background-image: url(..&#x2F;images&#x2F;frame3.png);</span><br><span class="line">  	background-repeat: no-repeat;</span><br><span class="line">  	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.pic &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;pic.jpg) no-repeat center;</span><br><span class="line">	background-size: cover;</span><br><span class="line">    &#x2F;*background-image: url(..&#x2F;images&#x2F;pic.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;*&#x2F;</span><br><span class="line">    -webkit-mask: url(..&#x2F;images&#x2F;frame2.png) no-repeat;</span><br><span class="line">    -webkit-mask-size: 564px 732px ;</span><br><span class="line">&#x2F;*	-webkit-mask-size: 564px 732px ;</span><br><span class="line">    -webkit-mask-image: url(..&#x2F;images&#x2F;frame2.png);</span><br><span class="line">    -webkit-mask-repeat: no-repeat;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果实现，不过这个属性还没有写进w3c里，webkit内核可以使用，基本包括了移动端，具体也可看<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask" target="_blank" rel="noopener">MDN</a>的介绍。个人觉得颇有意思的属性，来实现各种奇葩形状~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac快捷键指南</title>
     <url>/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>Mac快捷指南集合，先收藏着：<br><em>注释： Command（或 Cmd）⌘；Shift ⇧；Option（或 Alt）⌥；Control（或 Ctrl）⌃；Caps Lock ⇪；Fn</em></p>
@@ -275,54 +199,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css实现progress进度条美化</title>
-    <url>/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-<a id="more"></a>
-
-<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
-<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-<p><strong>语法</strong></p>
-<blockquote>
-<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
-</blockquote>
-<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
-<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
-<p>看代码：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
-<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
-<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
-<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
-<p>为啥，我们以w3c的线图来解读。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
-<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
-<p>接下来切换end：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
-<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
-<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
-<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
-<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css之神奇的渐变效果</title>
     <url>/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
@@ -367,9 +243,87 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css利用mask实现奇葩形状</title>
+    <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
+    <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<a id="more"></a>
+
+<p>“mask-image”看着“图片”：“你想变啊！图片，你要是想变的话你就来找我嘛，你不找我怎么知道你想变呢？固然你不太懂跟我怎么相处，然则你照旧得找我，我会带你的嘛，不相处你说你想变我不给你变，你不想变我也不给你变，要讲沟通嘛！你想改头换面就来找我，我肯定给你想要的诶，你是真的想整型吧？”。<br>——题记，改编源自《大话西游之仙履奇缘》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<p>这个css可以怎么实现，之前的“我”说“clip-path”，本文的“我”当然说“mask-image”。mask-image，也就是遮罩图片的意思，它的作用相当于利用PS的alpha通道。一张原图，一张需要显示的区域图，两个结合在一起，就显示为“区域图形状的原图”。且看：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a5294b1788eb9d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f44619493ce9e7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="frame.png，非JPG格式"></p>
+<p>然后使用mask-image属性，读取遮罩图片透明信息，应用到元素图片上，如 -webkit-mask-image: url(../images/frame.png);</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3c4bd2f2b9d4759e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="mask-image结合图"></p>
+<p>一行代码，一张图片，我们就可以看到效果图了，这样够了么？当然不够。有时候在iphone7显示会有点问题，可能会导致重复性，保险起见，最好设置mask-size: 宽度 高度 及mask-repeat: no-repeat，这个跟background很相似，同样可以简写。<br>然后到这里完了么？点点头：完了。反问：真的完了？眼尖的人可能发现，好像跟效果图不太一样，呀，少了边框。这个边框怎么处理，我们换个思路就可以解决了，平时常用的一个方法，外面套个标签，设置下background，外级图片如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aa29499f3b1112ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="边框.png"></p>
+<p>over，附上最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*html*&#x2F;</span><br><span class="line">&lt;div class&#x3D;&quot;pic-frame&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;pic&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*css*&#x2F;</span><br><span class="line">.pic-frame &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	margin: auto;</span><br><span class="line">  	background-image: url(..&#x2F;images&#x2F;frame3.png);</span><br><span class="line">  	background-repeat: no-repeat;</span><br><span class="line">  	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.pic &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;pic.jpg) no-repeat center;</span><br><span class="line">	background-size: cover;</span><br><span class="line">    &#x2F;*background-image: url(..&#x2F;images&#x2F;pic.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;*&#x2F;</span><br><span class="line">    -webkit-mask: url(..&#x2F;images&#x2F;frame2.png) no-repeat;</span><br><span class="line">    -webkit-mask-size: 564px 732px ;</span><br><span class="line">&#x2F;*	-webkit-mask-size: 564px 732px ;</span><br><span class="line">    -webkit-mask-image: url(..&#x2F;images&#x2F;frame2.png);</span><br><span class="line">    -webkit-mask-repeat: no-repeat;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果实现，不过这个属性还没有写进w3c里，webkit内核可以使用，基本包括了移动端，具体也可看<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask" target="_blank" rel="noopener">MDN</a>的介绍。个人觉得颇有意思的属性，来实现各种奇葩形状~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
         <tag>css</tag>
+        <tag>技术</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css实现progress进度条美化</title>
+    <url>/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<a id="more"></a>
+
+<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
+<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<p><strong>语法</strong></p>
+<blockquote>
+<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
+</blockquote>
+<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
+<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
+<p>看代码：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
+<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
+<p>为啥，我们以w3c的线图来解读。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
+<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
+<p>接下来切换end：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
+<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
+<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
+<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
+<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>技术</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -407,9 +361,32 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
-        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac实现Adobe Indesign CC快速切换中英</title>
+    <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
+    <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+<a id="more"></a>
+
+<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-13d58a46211db1da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>点击应用程序，如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d07d36c00206192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-4b3a8130e6265c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>将“Find-Change Queries”里的的三个包：GREP 与 Object 与 Text 的文件名的“en_US”都换成“zh_CN”</p>
+<p>同理，再将“InDesign Shortcut Sets” 的 “en_US”换成“zh_CN”，再将“InDesign_Workspaces” 的 “en_US”换成“zh_CN”，重新打开Indesign CC，成功完成了英文en_US转化成了中文zh_CN，是不是很简单呢～</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+        <tag>办公</tag>
+        <tag>adobe</tag>
       </tags>
   </entry>
   <entry>
@@ -440,9 +417,9 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -478,10 +455,58 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
-        <tag>css</tag>
         <tag>margin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css读懂动画steps</title>
+    <url>/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/</url>
+    <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<a id="more"></a>
+
+<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
+<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<p><strong>语法</strong></p>
+<blockquote>
+<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
+</blockquote>
+<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
+<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
+<p>看代码：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
+<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
+<p>为啥，我们以w3c的线图来解读。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
+<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
+<p>接下来切换end：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
+<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
+<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
+<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
+<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>技术</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -542,111 +567,6 @@
         <tag>web</tag>
         <tag>canvas</tag>
         <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css读懂动画steps</title>
-    <url>/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/</url>
-    <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-<a id="more"></a>
-
-<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
-<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-<p><strong>语法</strong></p>
-<blockquote>
-<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
-</blockquote>
-<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
-<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
-<p>看代码：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
-<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
-<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
-<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
-<p>为啥，我们以w3c的线图来解读。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
-<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
-<p>接下来切换end：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
-<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
-<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
-<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
-<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js实现七牛云上传图片视频</title>
-    <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<a id="more"></a>
-
-<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
-<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>七牛云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js实现base64获图片url的坑-七牛云</title>
-    <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
-    <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
-<a id="more"></a>
-
-<p>“Base64：数据界的云存储是个便利小器，某一天他踩着白色祥云来渡我，我猜中了前后，可是我却走岔了路。”<br>——题记，改编源自《大话西游》</p>
-<p>###前文<br>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-4fb9c8406ecf732d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5理论图"><br>至于H5如何上传显示图片，可采取FileReader ，readAsDataURL() 读取指定File对象中的内容，利用exif获取旋转参数，目前自我总结ios是右1,左3,正6,倒8，这个可以自己测试看看，主要用法如下：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8faa2f665f9e5cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="部分读取图片代码"><br>读取图片及获得旋转参数这里不多说了，大致是获取旋转参数后，利用canvas重新生成一张图，得base64路径。不过需要canvas将图摆正，然后得到一个新的base64，获得旋转之后的新图base64。而有时候我们是需要使用这个图片路径的，总不可能用base64，太大，转换以下链接，也就有了下文，这里选择七牛进行转换。</p>
-<p>###正文<br>base64转换七牛链接一般流程为：web请求后台接口 ——&gt; 后台返回数据，获取相应的token（上传权限）、key（文件名），urlTpl（文件的模板格式），这些参数建议后台生成 ——&gt; 请求七牛云空间地址，带上后台获取的key，以及添加HTTP请求头（content-type，Authorization身份验证带token），发送需转化的base64 url ——&gt; 获取responseText响应数据（来自七牛云），将传过来的key值带入之前的urlTpl模板，新url完成。代码如下，<a href="https://qiniu.kf5.com/hc/kb/article/69078/" target="_blank" rel="noopener">七牛云文档</a>也可以查看。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">putb64: function(token, key, urlTpl, imageBase64) &#123;</span><br><span class="line">	  var pic &#x3D; imageBase64.replace(&#x2F;^.*?,&#x2F;, &#39;&#39;);</span><br><span class="line">          var url &#x3D; location.protocol &#x3D;&#x3D; &#39;http:&#39; </span><br><span class="line">	          ? &quot;http:&#x2F;&#x2F;up.qiniu.com&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key </span><br><span class="line">	          : &quot;https:&#x2F;&#x2F;up.qbox.me&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key;</span><br><span class="line">	  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	  xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">	    if (xhr.readyState &#x3D;&#x3D; 4)&#123;</span><br><span class="line">	    	var response &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">	    	var result_url &#x3D; urlTpl.replace(&#39;%QiniuUploadImg%&#39;, response.key);</span><br><span class="line">	    	console.log(result_url)</span><br><span class="line">				$(&#39;#show&#39;).attr(&#39;src&#39;, result_url)</span><br><span class="line">	    &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	  xhr.open(&quot;POST&quot;, url, true);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;octet-stream&quot;);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Authorization&quot;, &quot;UpToken &quot; + token);</span><br><span class="line">	  xhr.send(pic);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里有几个注意点：</p>
-<ol>
-<li>key值不要混淆；<br>最终的url 带的参数key是七牛返回的responseText的key，不是后台传过来的key，这个混淆了要找半天。</li>
-<li>七牛地址分为http跟https，两个路径是不一样的，需要判断；</li>
-<li>传过去的需要转换base64，须填写base64之后的字符串 ，除去MIME和base64以及逗号</li>
-<li>UpToken 与后面的字符串保留一个空格 后跟上在服务端请求的token的字符串。</li>
-</ol>
-<p><a href="https://github.com/smilewalker/projects/tree/master/imgHandle" target="_blank" rel="noopener">github</a>上有部分代码，可以参考，不过七牛云要加上自己的七牛云地址，暂且先这些吧。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>七牛云</tag>
-        <tag>base64</tag>
       </tags>
   </entry>
   <entry>
@@ -720,6 +640,63 @@
       </tags>
   </entry>
   <entry>
+    <title>js实现base64获图片url的坑-七牛云</title>
+    <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
+    <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
+<a id="more"></a>
+
+<p>“Base64：数据界的云存储是个便利小器，某一天他踩着白色祥云来渡我，我猜中了前后，可是我却走岔了路。”<br>——题记，改编源自《大话西游》</p>
+<p>###前文<br>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-4fb9c8406ecf732d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5理论图"><br>至于H5如何上传显示图片，可采取FileReader ，readAsDataURL() 读取指定File对象中的内容，利用exif获取旋转参数，目前自我总结ios是右1,左3,正6,倒8，这个可以自己测试看看，主要用法如下：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8faa2f665f9e5cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="部分读取图片代码"><br>读取图片及获得旋转参数这里不多说了，大致是获取旋转参数后，利用canvas重新生成一张图，得base64路径。不过需要canvas将图摆正，然后得到一个新的base64，获得旋转之后的新图base64。而有时候我们是需要使用这个图片路径的，总不可能用base64，太大，转换以下链接，也就有了下文，这里选择七牛进行转换。</p>
+<p>###正文<br>base64转换七牛链接一般流程为：web请求后台接口 ——&gt; 后台返回数据，获取相应的token（上传权限）、key（文件名），urlTpl（文件的模板格式），这些参数建议后台生成 ——&gt; 请求七牛云空间地址，带上后台获取的key，以及添加HTTP请求头（content-type，Authorization身份验证带token），发送需转化的base64 url ——&gt; 获取responseText响应数据（来自七牛云），将传过来的key值带入之前的urlTpl模板，新url完成。代码如下，<a href="https://qiniu.kf5.com/hc/kb/article/69078/" target="_blank" rel="noopener">七牛云文档</a>也可以查看。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">putb64: function(token, key, urlTpl, imageBase64) &#123;</span><br><span class="line">	  var pic &#x3D; imageBase64.replace(&#x2F;^.*?,&#x2F;, &#39;&#39;);</span><br><span class="line">          var url &#x3D; location.protocol &#x3D;&#x3D; &#39;http:&#39; </span><br><span class="line">	          ? &quot;http:&#x2F;&#x2F;up.qiniu.com&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key </span><br><span class="line">	          : &quot;https:&#x2F;&#x2F;up.qbox.me&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key;</span><br><span class="line">	  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	  xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">	    if (xhr.readyState &#x3D;&#x3D; 4)&#123;</span><br><span class="line">	    	var response &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">	    	var result_url &#x3D; urlTpl.replace(&#39;%QiniuUploadImg%&#39;, response.key);</span><br><span class="line">	    	console.log(result_url)</span><br><span class="line">				$(&#39;#show&#39;).attr(&#39;src&#39;, result_url)</span><br><span class="line">	    &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	  xhr.open(&quot;POST&quot;, url, true);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;octet-stream&quot;);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Authorization&quot;, &quot;UpToken &quot; + token);</span><br><span class="line">	  xhr.send(pic);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里有几个注意点：</p>
+<ol>
+<li>key值不要混淆；<br>最终的url 带的参数key是七牛返回的responseText的key，不是后台传过来的key，这个混淆了要找半天。</li>
+<li>七牛地址分为http跟https，两个路径是不一样的，需要判断；</li>
+<li>传过去的需要转换base64，须填写base64之后的字符串 ，除去MIME和base64以及逗号</li>
+<li>UpToken 与后面的字符串保留一个空格 后跟上在服务端请求的token的字符串。</li>
+</ol>
+<p><a href="https://github.com/smilewalker/projects/tree/master/imgHandle" target="_blank" rel="noopener">github</a>上有部分代码，可以参考，不过七牛云要加上自己的七牛云地址，暂且先这些吧。</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>base64</tag>
+        <tag>七牛云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js实现七牛云上传图片视频</title>
+    <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<a id="more"></a>
+
+<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
+<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>七牛云</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js解决canvas绘制多图</title>
     <url>/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/</url>
     <content><![CDATA[<p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
@@ -752,89 +729,6 @@
         <tag>web</tag>
         <tag>canvas</tag>
         <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web audio api实现你的音乐·下</title>
-    <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
-    <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
-<a id="more"></a>
-
-<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
-<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
-<ol>
-<li>创建音频环境</li>
-<li>获取音频，创建buffer节点</li>
-<li>解码音频，分析音频</li>
-<li>连接音频输入输出</li>
-<li>canvas绘制频谱</li>
-<li>连接播放</li>
-</ol>
-<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
-
-<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
-
-<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
-<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
-<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
-<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
-<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
-<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>web audio api</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>node-sass安装的小坑</title>
-    <url>/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/</url>
-    <content><![CDATA[<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
-<a id="more"></a>
-<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
-<p>网上有说利用taobao，然而并没成功：<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
-<p>那就换个方法吧，成功：<br>cnpm install –save-dev node-sass</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-fa60ed5cf5dd4e0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>node-sass</tag>
       </tags>
   </entry>
   <entry>
@@ -970,56 +864,55 @@
       </tags>
   </entry>
   <entry>
-    <title>web前端收藏的网站</title>
-    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+    <title>web audio api实现你的音乐·下</title>
+    <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
+    <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
 <a id="more"></a>
-<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+
+<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
 <ol>
-<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
-</li>
-<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
-</li>
-<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
-</li>
-<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
-</li>
-<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
-</li>
-<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
-</li>
-<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
-</li>
-<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
-</li>
-<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
-</li>
-<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
-</li>
-<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
-</li>
-<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
-</li>
-<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
-</li>
+<li>创建音频环境</li>
+<li>获取音频，创建buffer节点</li>
+<li>解码音频，分析音频</li>
+<li>连接音频输入输出</li>
+<li>canvas绘制频谱</li>
+<li>连接播放</li>
 </ol>
-<p>下面罗列的偏向设计，前端可以看看：</p>
-<ol>
-<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
-</li>
-<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
-</li>
-<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
-</li>
-<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
-</li>
-<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
-</li>
-<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
-</li>
-</ol>
-<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
+<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
+
+<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
+
+<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
+<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
+<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
+<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
+<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
+<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -1027,6 +920,53 @@
       <tags>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>web audio api</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>node-sass安装的小坑</title>
+    <url>/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
+<a id="more"></a>
+<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
+<p>网上有说利用taobao，然而并没成功：<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+<p>那就换个方法吧，成功：<br>cnpm install –save-dev node-sass</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-fa60ed5cf5dd4e0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>node-sass</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac Mail绑定QQ邮箱</title>
+    <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+<a id="more"></a>
+
+<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？其实并不难。</p>
+<p>邮件——添加帐户——QQ邮箱——配置邮箱（输入账号密码），提示错误；<br><img src="http://upload-images.jianshu.io/upload_images/2320147-314949ed89a3cf61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="错误"></p>
+<p>错在该mail的密码非自己邮箱账号的密码，而是qq生成的授权码，正确姿势应是：首先进入QQ邮箱，设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-db7c0ce8d022da7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1ede29e2b3925cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="密码"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aaa600eb5daa17c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="输入授权码"></p>
+<p>配置成功！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-25ee52b0ccf8065a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置成功"></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
       </tags>
   </entry>
   <entry>
@@ -1263,6 +1203,66 @@
         <tag>技术</tag>
         <tag>web</tag>
         <tag>gpu动画</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web前端收藏的网站</title>
+    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<a id="more"></a>
+<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<ol>
+<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
+</li>
+<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
+</li>
+<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
+</li>
+<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
+</li>
+<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
+</li>
+<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
+</li>
+<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
+</li>
+<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
+</li>
+<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
+</li>
+<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
+</li>
+<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
+</li>
+<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
+</li>
+</ol>
+<p>下面罗列的偏向设计，前端可以看看：</p>
+<ol>
+<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
+</li>
+<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
+</li>
+<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
+</li>
+<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
+</li>
+<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
+</li>
+<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
+</li>
+</ol>
+<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
       </tags>
   </entry>
 </search>
