@@ -1,49 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Mac Mail绑定QQ邮箱</title>
-    <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
-    <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+    <title>Hexo+NexT的进阶配置</title>
+    <url>/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>完成博客网站的基本搭建后，这篇文章是对于Hexo配置的进阶设置，可自定义选择。以下主题配置文件皆为Hexo主题themes目录下的_config.yml，网站配置文件皆为hexo根目录下的_config.yml。</p>
 <a id="more"></a>
 
-<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？其实并不难。</p>
-<p>邮件——添加帐户——QQ邮箱——配置邮箱（输入账号密码），提示错误；<br><img src="http://upload-images.jianshu.io/upload_images/2320147-314949ed89a3cf61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="错误"></p>
-<p>错在该mail的密码非自己邮箱账号的密码，而是qq生成的授权码，正确姿势应是：首先进入QQ邮箱，设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-db7c0ce8d022da7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1ede29e2b3925cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="密码"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aaa600eb5daa17c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="输入授权码"></p>
-<p>配置成功！</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-25ee52b0ccf8065a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置成功"></p>
+<ul>
+<li>更改头像</li>
+<li>侧边栏社交信息设置</li>
+<li>摘要自动生成</li>
+<li>添加字数统计、阅读时长</li>
+<li>文章底部添加版权信息</li>
+<li>设置动态背景</li>
+<li>添加网页进度加载条</li>
+<li>底部隐藏由Hexo强力驱动、主题–NexT.Mist</li>
+<li>显示当前浏览进度</li>
+<li>设置网站的图标Favicon</li>
+<li>Hexo博客添加站内搜索</li>
+</ul>
+<h2 id="更改头像"><a href="#更改头像" class="headerlink" title="更改头像"></a>更改头像</h2><p>编辑主题配置文件，修改 avatar，值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏社交链接设置"><a href="#侧边栏社交链接设置" class="headerlink" title="侧边栏社交链接设置"></a>侧边栏社交链接设置</h2><p>编辑主题配置文件_config.yml，修改social字段的值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social Links</span><br><span class="line"># Key is the link label showing to end users.</span><br><span class="line"># Value is the target link (E.g. GitHub: https:&#x2F;&#x2F;github.com&#x2F;iissnan)</span><br><span class="line">social:</span><br><span class="line">  #LinkLabel: Link</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com&#x2F;yourgithub</span><br><span class="line">  E-Mail: mailto:dawnxu96@gmail.com</span><br><span class="line">  Instagram: https:&#x2F;&#x2F;instagram.com&#x2F;yourins</span><br></pre></td></tr></table></figure>
+
+<h2 id="摘要设置"><a href="#摘要设置" class="headerlink" title="摘要设置"></a>摘要设置</h2><p>编辑主题配置文件_config.yml，修改auto_excerpt字段为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true	# 置为true则自动截取100字当做首页摘要</span><br><span class="line">  length: 100	# 自动截取的字数</span><br></pre></td></tr></table></figure>
+
+<p>上述的方式并不推荐，推荐是手动设置文章摘要，手动设置文章摘要，我们只需在想显示为摘要的内容之后添 <!-- more --> 即可。像下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hello hexo markdown</span><br><span class="line">date: 2016-11-16 18:11:25</span><br><span class="line">tags:</span><br><span class="line">- hello</span><br><span class="line">- hexo</span><br><span class="line">- markdown</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">文章摘要内容</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">紧接着文章摘要的正文内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章底部添加版权信息"><a href="#文章底部添加版权信息" class="headerlink" title="文章底部添加版权信息"></a>文章底部添加版权信息</h2><p>修改主题配置文件_config.yml中字段的值为true即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  enable: true</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加网页进度加载条"><a href="#添加网页进度加载条" class="headerlink" title="添加网页进度加载条"></a>添加网页进度加载条</h2><p>编辑主题配置文件，搜索pace，将其值改为ture就可以，之后选择一款你喜欢的样式即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
+<h2 id="底部隐藏由Hexo强力驱动"><a href="#底部隐藏由Hexo强力驱动" class="headerlink" title="底部隐藏由Hexo强力驱动"></a>底部隐藏由Hexo强力驱动</h2><ul>
+<li>方法1<br>直接修改主题配置文件_config.yml中的copyright配置项为false，假如没有该配置项，可以通过方法2<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Footer &#96;powered-by&#96; and &#96;theme-info&#96; copyright</span><br><span class="line">copyright: false</span><br></pre></td></tr></table></figure></li>
+<li>方法2<br>打开./themes/next/layout/_partials/footer.swig，注释掉相应代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 用下面的符号注释，注释代码用下面括号括起来</span><br><span class="line">&#x2F;&#x2F; &lt;!-- --&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&#123;% if theme.copyright %&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.powered&#39;, &#39;&lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;&#39;) &#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">​</span><br><span class="line">&lt;div class&#x3D;&quot;theme-info&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.theme&#39;) &#125;&#125; -</span><br><span class="line">  &lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&quot;&gt;</span><br><span class="line"> NexT.&#123;&#123; theme.scheme &#125;&#125;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><p>修改主题配置文件，把 false 改为 true：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">b2t: true</span><br><span class="line">​</span><br><span class="line"># Scroll percent label in b2t button</span><br><span class="line">scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p>修改主题配置文件_config.yml中的favicon配置项，指定图标所在路径即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Put your favicon.ico into &#96;hexo-site&#x2F;source&#x2F;&#96; directory.</span><br><span class="line">favicon: &#x2F;favicon-32x32.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo博客添加站内搜索"><a href="#Hexo博客添加站内搜索" class="headerlink" title="Hexo博客添加站内搜索"></a>Hexo博客添加站内搜索</h2><p>NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia。我安装的是Local Search的安装。<br>安装 hexo-generator-search<br><code>$ npm install hexo-generator-search --save</code><br>安装 hexo-generator-searchdb<br><code>$ npm install hexo-generator-searchdb --save</code><br>编辑主题配置文件，设置local_searchenable为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;flashlab&#x2F;hexo-generator-search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
+<h2 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h2><p>注册登陆leanCloud官网，点击存储，查看是否有Comment，没有则创建，权限设为无限制。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870193229416.jpg" alt="-w1194"></p>
+<p>进入主题配置文件修改为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https:&#x2F;&#x2F;leancloud.cn</span><br><span class="line"># more info please open https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  leancloudn你自己的id  appkey:  leancloudn你自己的key  </span><br><span class="line">  notify: false # mail notifier , https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: robohash # gravatar style</span><br><span class="line">  guest_info: nick,mail,link # custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
+<p>进入leancloud即可看到评论<br>～</p>
 ]]></content>
       <categories>
         <category>工具</category>
       </categories>
       <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>博客</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
-    <title>Mac安装office365</title>
-    <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
-    <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
-<a id="more"></a>
+    <title>Hexo(MacOS)+Github快速搭建博客</title>
+    <url>/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<blockquote>
+<p>信息化时代的我们有许多平台去写文章，比如心得，护肤，经验，学习，技术。每个平台都有自己的主打方向，可能我们管理着不同的平台，规划这里写什么主题，那里写什么主题。作为希望拥有自己的文章汇集处，能够全局看自己的文章，折腾捣鼓下，建立自己的博客是非常因吹斯汀以及捎带一些成就感。那么这篇文章就是带着Geek精神来从0到1快速搭建自己的博客系统，动手试试吧！</p>
+</blockquote>
+<h1 id="Hexo是什么"><a href="#Hexo是什么" class="headerlink" title="Hexo是什么"></a>Hexo是什么</h1><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a> 是一个快速、简洁且高效的基于Node.js博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页，进而托管在Github上。</p>
+<p>这是我的个人博客效果，可浏览：<a href="https://smilewalker.github.io/">Smilewalker</a></p>
+<h1 id="如何搭建"><a href="#如何搭建" class="headerlink" title="如何搭建"></a>如何搭建</h1><ul>
+<li>安装git</li>
+<li>安装node</li>
+<li>安装Hexo</li>
+<li>Github创建个人仓库</li>
+<li>Hexo 基本配置 </li>
+<li>Hexo 更换主题</li>
+<li>Hexo 设置打赏</li>
+<li>Hexo 菜单设置</li>
+<li>Hexo 添加标签</li>
+<li>Hexo 添加分类</li>
+<li>Hexo 设置背景动画</li>
+<li>Hexo 简单命令</li>
+</ul>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>首先查看电脑是否安装Git，终端输入：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git --version</span><br></pre></td></tr></table></figure>
+<p>如果没有安装过命令行开发者工具，将会提示你安装。<br>如果你想安装更新的版本，可以使用二进制安装程序。 官方维护的 macOS Git 安装程序可以在 Git 官方网站下载，网址为 <a href="https://git-scm.com/download/mac。" target="_blank" rel="noopener">https://git-scm.com/download/mac。</a></p>
+<h2 id="安装node"><a href="#安装node" class="headerlink" title="安装node"></a>安装node</h2><p>可直接官网下载Node.js，一步步安装完成即可。<br>安装好之后查询是否成功，进入Mac终端，输入代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>如果错误，则显示not found<br>如果正确，则显示版本号<br>node安装会顺带着npm一起，同时可查询npm版本号</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<p>直接输出版本号成功</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>本地创建Blog文件夹，Hexo是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog/myBlog，自由定义</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>如果长久停留没安装完成，退出重新安装，换代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>会有提示输入密码，新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">├── _config.yml &#x2F;&#x2F;网站的配置信息，您以在此配置大部分的参数。</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source &#x2F;&#x2F;资源文件夹是存放用户资源的地方。除 _posts 文件夹之外，开头命名为 _ (下划线)的文件 &#x2F; 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件会被拷贝过去。</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes &#x2F;&#x2F;主题 文件夹。Hexo 会根据主题来生成静态页面。</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-a2415d8c7cb8514b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h3 id="2-资源分享："><a href="#2-资源分享：" class="headerlink" title="2. 资源分享："></a>2. 资源分享：</h3><p><img src="https://upload-images.jianshu.io/upload_images/2320147-6c50d6b03939caa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>office365下载链接:<a href="https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ</a>  密码:u05s</p>
-<p>破解补丁下载链接:<a href="https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg</a>  密码:tss5</p>
-<h3 id="3-“傻瓜式”安装"><a href="#3-“傻瓜式”安装" class="headerlink" title="3. “傻瓜式”安装"></a>3. “傻瓜式”安装</h3><p>下载完成后，按照提示正常安装，“傻瓜式”操作。<br>（1）先安装office365，不需要打开；<br>（2）office完成后，安装补丁工具。<br>（3）最后完成。<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d8b4d41c310695a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>😄</p>
+<h3 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h3><p>进入创建的本地文件夹，在终端窗口下，定位到 Hexo 站点目录下，比如建立在documents下的myBlog,利用cd进入：<br><code>cd ~/documents/myBlog</code><br>输入代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h3 id="本地运行"><a href="#本地运行" class="headerlink" title="本地运行"></a>本地运行</h3><p>终端输入:hexo g &amp;&amp; hexo s<br>进入<a href="http://localhost:4000/，可以看到hexo的基本网站。" target="_blank" rel="noopener">http://localhost:4000/，可以看到hexo的基本网站。</a></p>
+<h2 id="Github创建个人仓库"><a href="#Github创建个人仓库" class="headerlink" title="Github创建个人仓库"></a>Github创建个人仓库</h2><p>登陆github网站，注册并登陆GitHub账号后，新建仓库，名称必须为 user.github.io，这里的user是github的用户名，如我是smilewalker.github.io。 右上角点击创建<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/githubRepro.jpg" alt="-w758"><br>测试下仓库是否搭建成功，进入index.html，输入Hello world～<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/hexoInit2.jpg" alt="-w1096"><br>这个时候打开 http://你的用户名.github.io 就可以看到你的站点啦，<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/hexoInit3.jpg" alt="-w445"><br>index.html 内容只是暂时的预览效果，后面把 Hexo 的文件部署上去就可以在 http://你的用户名.github.io 看到你自己的博客啦！</p>
+<h2 id="Hexo部署到Github"><a href="#Hexo部署到Github" class="headerlink" title="Hexo部署到Github"></a>Hexo部署到Github</h2><p>然后继续操作终端，ctrl+c停止本地localhost，查看自己的ssh，这个与github部署有关</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cat ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>出现一串长字符，复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/githubSSH.jpg" alt="-w575"></p>
+<p>进入github的设置，输入自己的Key，会要求输入github的密码，输入即可，一步步操作<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/githubSsh2.jpg" alt="-w1084"><br>完成配置<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/githubSsh3.jpg" alt="-w815"></p>
+<p>验证是否连接成功，进入终端输入</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>enter pass是指mac你自己的密码；刚开始我出现错误是因为没有在github添加ssh，正常出现结果：<br>You’ve successfully authenticated, but GitHub does not provide shell access </p>
+<p>进入本地创建的文件夹， 打开文件_config.yml，翻到最底下，将下面代码复制进去。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:  type: git  repository: https:&#x2F;&#x2F;github.com&#x2F;smilewalker&#x2F;smilewalker.github.io.git  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>其中将repository中smilewalker改为自己的用户名，注意type、repository、branch后均有空格，注意保存。通过如下命令在你的博客文件夹下生成静态文件并上传到服务器。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/blogConfig.jpg" alt="-w660"><br>终端输入：<br>hexo g &amp;&amp; hexo d<br>进入自己的github网址，查看，成功部署<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/githubInit.jpg" alt="-w1241"></p>
+<h2 id="Hexo-基本配置"><a href="#Hexo-基本配置" class="headerlink" title="Hexo 基本配置"></a>Hexo 基本配置</h2><p>可以在创建的hexo博客目录下的_config.yml 中修改大部分的配置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">参数	描述</span><br><span class="line">title	网站标题</span><br><span class="line">subtitle	网站副标题</span><br><span class="line">description	网站描述,主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词</span><br><span class="line">keywords	网站的关键词。使用半角逗号 , 分隔多个关键词。</span><br><span class="line">author	您的名字,用于主题显示文章的作者</span><br><span class="line">language	网站使用的 d语言。对于简体中文用户来说，使用不同的主题可能需要设置成不同的值，请参考你的主题的文档自行设置，常见的有 zh-Hans和 zh-CN。</span><br><span class="line">timezone	网站时区。Hexo 默认使用您电脑的时区。请参考 时区列表 进行设置，如 America&#x2F;New_York, Japan, 和 UTC 。一般的，对于中国大陆地区可以使用 Asia&#x2F;Shanghai。</span><br></pre></td></tr></table></figure>
+
+<p>比如<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870085249990.jpg" alt="-w647"></p>
+<h2 id="Hexo-更换主题"><a href="#Hexo-更换主题" class="headerlink" title="Hexo 更换主题"></a>Hexo 更换主题</h2><p>主题不好看，换！这里换了经典版的next</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<p>打开站点的_config.yml配置文件，修改主题为next，可以看到原来是landscape主题，修改为next<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870081220268.jpg" alt="-w384"><br>打开主题的_config.yml配置文件，不是站点主题文件，找到Scheme Settings<br>next主题有三个样式，我用的是Pisces，你们可以自己试试看，选择你自己喜欢的样式（只需要把行首的#去除，#是注释），选择好后，再次部署网站，hexo g、hexo d，查看效果。选择其他主题，按照上述过程即可实现。</p>
+<p>选择 Scheme，NexT提供了多种不同的外观，目前NexT支持以下三种：<br>    • Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白<br>    • Mist - Muse 的紧凑版本，整洁有序的单栏外观<br>    • Pisces - 双栏 Scheme，小家碧玉似的清新<br>    <img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870082855906.jpg" alt="-w420"></p>
+<p>检测是否成功，开启调试模式（即加上 –debug），整个命令是： hexo s –debug。 在服务启动的过程，注意观察命令行输出是否有任何异常信息， 当命令行输出中提示出：<br>INFO  Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="noopener">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>此时即可使用浏览器访问 <a href="http://localhost:4000，检查站点是否正确运行。">http://localhost:4000，检查站点是否正确运行。</a></p>
+<h2 id="Hexo-设置打赏"><a href="#Hexo-设置打赏" class="headerlink" title="Hexo 设置打赏"></a>Hexo 设置打赏</h2><p>博文打赏的微信、支付宝二维码图片，这里是直接把这两张放在根目录的source文件夹中，并没有使用图床外链。<br>在主题配置文件_config.yml修改基本的主题信息，如：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870085785596.jpg" alt="-w372"></p>
+<h2 id="Hexo-菜单设置"><a href="#Hexo-菜单设置" class="headerlink" title="Hexo 菜单设置"></a>Hexo 菜单设置</h2><p>进入主题的配置文件<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870122448185.jpg" alt="-w479"><br>⚠️ 如果报错 cannot get /catgories%20/，我的解决方法：去掉空格，不要/ 也不用空格 直接+｜｜</p>
+<h2 id="Hexo-添加标签"><a href="#Hexo-添加标签" class="headerlink" title="Hexo 添加标签"></a>Hexo 添加标签</h2><p>在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 tags ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>编辑刚新建的页面，将页面的类型设置为 tags ，主题将自动为这个页面显示标签云。页面内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>在菜单中添加链接。编辑 主题配置文件 ， 添加 tags 到 menu 中，如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F;</span><br><span class="line">  archives: &#x2F;archives</span><br><span class="line">  tags: &#x2F;tags</span><br></pre></td></tr></table></figure>
+<p>新建「标签」页面，并在菜单中显示「标签」链接。「标签」页面将展示站点的所有标签，若你的所有文章都未包含标签，此页面将是空的。 底下代码是一篇包含标签的文章的例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 标签测试文章</span><br><span class="line">tags:</span><br><span class="line">  - Testing</span><br><span class="line">  - Another Tag</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>注意：如果有集成评论服务，页面也会带有评论。 若需要关闭的话，请添加字段 comments 并将值设置为 false，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">禁用评论示例</span><br><span class="line">title: 标签</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">comments: false</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-添加分类"><a href="#Hexo-添加分类" class="headerlink" title="Hexo 添加分类"></a>Hexo 添加分类</h2><p>在终端窗口下，定位到 Hexo 站点目录下。使用 hexo new page 新建一个页面，命名为 categories ：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>编辑刚新建的页面，将页面的 type 设置为 categories ，主题将自动为这个页面显示分类。页面内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>编辑刚新建的页面，将页面的 type 设置为 categories ，主题将自动为这个页面显示分类。页面内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 分类</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>添加「分类」页面<br>新建「分类」页面，并在菜单中显示「分类」链接。「分类」页面将展示站点的所有分类，若你的所有文章都未包含分类，此页面将是空的。 底下代码是一篇包含分类的文章的例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">title: 分类测试文章</span><br><span class="line">categories: Testing</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-设置背景动画"><a href="#Hexo-设置背景动画" class="headerlink" title="Hexo 设置背景动画"></a>Hexo 设置背景动画</h2><p>设置「背景动画」,NexT 自带两种背景动画效果,编辑 主题配置文件， 搜索 canvas_nest 或 three_waves，根据您的需求设置值为 true 或者 false 即可：<br>注意： three_waves 在版本 5.1.1 中引入。只能同时开启一种背景动画效果。<br>canvas_nest 配置示例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># canvas_nest</span><br><span class="line">canvas_nest: true &#x2F;&#x2F;开启动画</span><br><span class="line">canvas_nest: false &#x2F;&#x2F;关闭动画</span><br><span class="line">three_waves 配置示例</span><br><span class="line"># three_waves</span><br><span class="line">three_waves: true &#x2F;&#x2F;开启动画</span><br><span class="line">three_waves: false &#x2F;&#x2F;关闭动画</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-简单命令"><a href="#Hexo-简单命令" class="headerlink" title="Hexo 简单命令"></a>Hexo 简单命令</h2><p>我们开始正式发布上线博客文章，在命令行中输入：<br>hexo n “博客名字”<br>我们会发现在blog根目录下的source文件夹中的_post文件夹中多了一个 博客名字.md 文件，使用Markdown编辑器打开，就可以开始你的个人博客之旅了，这是我的一篇博文内容示例：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870084908747.jpg" alt="-w194"><br>通过带有预览样式的Markdown编辑器实时预览书写的博文样式，也可以通过命令 hexo s –debug 在本地浏览器的localhost:4000 预览博文效果。写好博文并且样式无误后，通过hexo g、hexo d 生成、部署网页。随后可以在浏览器中输入域名浏览。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &quot;我的博客&quot; &#x3D;&#x3D; hexo new &quot;我的博客&quot; #新建文章</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate #生成</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server #启动服务预览</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy #部署</span><br><span class="line"></span><br><span class="line">hexo server #Hexo会监视文件变动并自动更新，无须重启服务器</span><br><span class="line">hexo server -s #静态模式</span><br><span class="line">hexo server -p 5000 #更改端口</span><br><span class="line">hexo server -i 192.168.1.1 #自定义 IP</span><br><span class="line">hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令</span><br></pre></td></tr></table></figure>
+<p>恭喜你拥有一个拥有喜欢的主题的基本博客～</p>
+<p>⚠️ <em>更多进阶设置可查阅 <a href="https://smilewalker.github.io/2020/04/16/Hexo+NexT的进阶配置/#more">《Hexo+NexT的进阶设置》</a></em></p>
 ]]></content>
       <categories>
         <category>工具</category>
       </categories>
       <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-        <tag>office</tag>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MWeb+七牛云图床</title>
+    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
+<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
+<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
+<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
+<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
+<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
+<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -245,6 +381,82 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac Mail绑定QQ邮箱</title>
+    <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+<a id="more"></a>
+
+<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？其实并不难。</p>
+<p>邮件——添加帐户——QQ邮箱——配置邮箱（输入账号密码），提示错误；<br><img src="http://upload-images.jianshu.io/upload_images/2320147-314949ed89a3cf61.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="错误"></p>
+<p>错在该mail的密码非自己邮箱账号的密码，而是qq生成的授权码，正确姿势应是：首先进入QQ邮箱，设置——账户——POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV服务</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-db7c0ce8d022da7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1ede29e2b3925cd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="密码"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aaa600eb5daa17c0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="输入授权码"></p>
+<p>配置成功！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-25ee52b0ccf8065a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="配置成功"></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css利用mask实现奇葩形状</title>
+    <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
+    <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<a id="more"></a>
+
+<p>“mask-image”看着“图片”：“你想变啊！图片，你要是想变的话你就来找我嘛，你不找我怎么知道你想变呢？固然你不太懂跟我怎么相处，然则你照旧得找我，我会带你的嘛，不相处你说你想变我不给你变，你不想变我也不给你变，要讲沟通嘛！你想改头换面就来找我，我肯定给你想要的诶，你是真的想整型吧？”。<br>——题记，改编源自《大话西游之仙履奇缘》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<p>这个css可以怎么实现，之前的“我”说“clip-path”，本文的“我”当然说“mask-image”。mask-image，也就是遮罩图片的意思，它的作用相当于利用PS的alpha通道。一张原图，一张需要显示的区域图，两个结合在一起，就显示为“区域图形状的原图”。且看：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a5294b1788eb9d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f44619493ce9e7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="frame.png，非JPG格式"></p>
+<p>然后使用mask-image属性，读取遮罩图片透明信息，应用到元素图片上，如 -webkit-mask-image: url(../images/frame.png);</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3c4bd2f2b9d4759e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="mask-image结合图"></p>
+<p>一行代码，一张图片，我们就可以看到效果图了，这样够了么？当然不够。有时候在iphone7显示会有点问题，可能会导致重复性，保险起见，最好设置mask-size: 宽度 高度 及mask-repeat: no-repeat，这个跟background很相似，同样可以简写。<br>然后到这里完了么？点点头：完了。反问：真的完了？眼尖的人可能发现，好像跟效果图不太一样，呀，少了边框。这个边框怎么处理，我们换个思路就可以解决了，平时常用的一个方法，外面套个标签，设置下background，外级图片如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aa29499f3b1112ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="边框.png"></p>
+<p>over，附上最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*html*&#x2F;</span><br><span class="line">&lt;div class&#x3D;&quot;pic-frame&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;pic&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*css*&#x2F;</span><br><span class="line">.pic-frame &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	margin: auto;</span><br><span class="line">  	background-image: url(..&#x2F;images&#x2F;frame3.png);</span><br><span class="line">  	background-repeat: no-repeat;</span><br><span class="line">  	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.pic &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;pic.jpg) no-repeat center;</span><br><span class="line">	background-size: cover;</span><br><span class="line">    &#x2F;*background-image: url(..&#x2F;images&#x2F;pic.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;*&#x2F;</span><br><span class="line">    -webkit-mask: url(..&#x2F;images&#x2F;frame2.png) no-repeat;</span><br><span class="line">    -webkit-mask-size: 564px 732px ;</span><br><span class="line">&#x2F;*	-webkit-mask-size: 564px 732px ;</span><br><span class="line">    -webkit-mask-image: url(..&#x2F;images&#x2F;frame2.png);</span><br><span class="line">    -webkit-mask-repeat: no-repeat;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果实现，不过这个属性还没有写进w3c里，webkit内核可以使用，基本包括了移动端，具体也可看<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask" target="_blank" rel="noopener">MDN</a>的介绍。个人觉得颇有意思的属性，来实现各种奇葩形状~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac安装office365</title>
+    <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
+    <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+<a id="more"></a>
+
+<h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-a2415d8c7cb8514b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="2-资源分享："><a href="#2-资源分享：" class="headerlink" title="2. 资源分享："></a>2. 资源分享：</h3><p><img src="https://upload-images.jianshu.io/upload_images/2320147-6c50d6b03939caa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>office365下载链接:<a href="https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ</a>  密码:u05s</p>
+<p>破解补丁下载链接:<a href="https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg</a>  密码:tss5</p>
+<h3 id="3-“傻瓜式”安装"><a href="#3-“傻瓜式”安装" class="headerlink" title="3. “傻瓜式”安装"></a>3. “傻瓜式”安装</h3><p>下载完成后，按照提示正常安装，“傻瓜式”操作。<br>（1）先安装office365，不需要打开；<br>（2）office完成后，安装补丁工具。<br>（3）最后完成。<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d8b4d41c310695a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>😄</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+        <tag>office</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css之神奇的渐变效果</title>
     <url>/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
@@ -289,79 +501,68 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
-    <title>css利用mask实现奇葩形状</title>
-    <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
-    <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<a id="more"></a>
+    <title>Markdown语法大全</title>
+    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
+<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
 
-<p>“mask-image”看着“图片”：“你想变啊！图片，你要是想变的话你就来找我嘛，你不找我怎么知道你想变呢？固然你不太懂跟我怎么相处，然则你照旧得找我，我会带你的嘛，不相处你说你想变我不给你变，你不想变我也不给你变，要讲沟通嘛！你想改头换面就来找我，我肯定给你想要的诶，你是真的想整型吧？”。<br>——题记，改编源自《大话西游之仙履奇缘》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4a74e287b32b09da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<p>这个css可以怎么实现，之前的“我”说“clip-path”，本文的“我”当然说“mask-image”。mask-image，也就是遮罩图片的意思，它的作用相当于利用PS的alpha通道。一张原图，一张需要显示的区域图，两个结合在一起，就显示为“区域图形状的原图”。且看：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a5294b1788eb9d72.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f44619493ce9e7ff.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="frame.png，非JPG格式"></p>
-<p>然后使用mask-image属性，读取遮罩图片透明信息，应用到元素图片上，如 -webkit-mask-image: url(../images/frame.png);</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3c4bd2f2b9d4759e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="mask-image结合图"></p>
-<p>一行代码，一张图片，我们就可以看到效果图了，这样够了么？当然不够。有时候在iphone7显示会有点问题，可能会导致重复性，保险起见，最好设置mask-size: 宽度 高度 及mask-repeat: no-repeat，这个跟background很相似，同样可以简写。<br>然后到这里完了么？点点头：完了。反问：真的完了？眼尖的人可能发现，好像跟效果图不太一样，呀，少了边框。这个边框怎么处理，我们换个思路就可以解决了，平时常用的一个方法，外面套个标签，设置下background，外级图片如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-aa29499f3b1112ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="边框.png"></p>
-<p>over，附上最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;*html*&#x2F;</span><br><span class="line">&lt;div class&#x3D;&quot;pic-frame&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;pic&quot;&gt;&lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;*css*&#x2F;</span><br><span class="line">.pic-frame &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	margin: auto;</span><br><span class="line">  	background-image: url(..&#x2F;images&#x2F;frame3.png);</span><br><span class="line">  	background-repeat: no-repeat;</span><br><span class="line">  	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.pic &#123;</span><br><span class="line">	width: 564px;</span><br><span class="line">	height: 732px;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;pic.jpg) no-repeat center;</span><br><span class="line">	background-size: cover;</span><br><span class="line">    &#x2F;*background-image: url(..&#x2F;images&#x2F;pic.jpg);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;*&#x2F;</span><br><span class="line">    -webkit-mask: url(..&#x2F;images&#x2F;frame2.png) no-repeat;</span><br><span class="line">    -webkit-mask-size: 564px 732px ;</span><br><span class="line">&#x2F;*	-webkit-mask-size: 564px 732px ;</span><br><span class="line">    -webkit-mask-image: url(..&#x2F;images&#x2F;frame2.png);</span><br><span class="line">    -webkit-mask-repeat: no-repeat;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果实现，不过这个属性还没有写进w3c里，webkit内核可以使用，基本包括了移动端，具体也可看<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/mask" target="_blank" rel="noopener">MDN</a>的介绍。个人觉得颇有意思的属性，来实现各种奇葩形状~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css搞定input-checkbox的美化</title>
-    <url>/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<blockquote>
-<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
+
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
+
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+<p>有序列表使用数字并加上 . 号来表示,如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+
+<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<blockquote>
+<p>区块引用</p>
 </blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
-<a id="more"></a>
-
-<h3 id="开头语"><a href="#开头语" class="headerlink" title="开头语"></a>开头语</h3><p>“web, 我觉得刚才秀的姿势不够纠结，缺乏了一点点内涵，无法表现input内心的复杂情感，请允许我再来一次，我会拿出百分百的状态，争取做到深刻而不深沉，平淡而不平庸，演好我的角色。其实，我是一名演员。”<br>—— 改编源自《喜剧之王》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c74aad3cba988b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<p>交互效果是当用户点击文字行或者圈圈，都可以选择打钩或去掉钩，多选框或单选框效果。</p>
-<p>咋实现，一步一步来，先来个最基本的样子：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c80edd25a0651877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
-<p>怎么让选择框变美，首先，身材比例调一下（width，height），瞬间小家碧玉变得大气：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d1fc6b67b403e883.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<p>然后稍微的隆一下border-radius，变得温婉些，前提要加上-webkit-appearance: none，才能改变：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a9ee7e20f6ecc52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<p>这时候选中效果是看不见的，因为默认样式已经去除，接下来修整下选中的状态，对勾怎么弄，利用隐士Unicode编码。’\2713’代表对钩，利用content来加入，并改变位置，颜色，实现了自我的展示。<br>主样式代码如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-831eea27eb2cfcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
-<p>主要是-webkit-appearance: none以及利用unicode编码，伪元素实现。</p>
-<p>附上最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">		.input-wrap &#123;</span><br><span class="line">			width: 20rem;</span><br><span class="line">			height: 10rem;</span><br><span class="line">			padding-top: 5rem;</span><br><span class="line">			margin: auto;</span><br><span class="line">			background-color: #f99;</span><br><span class="line">			color: #fff;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 23px;</span><br><span class="line">		&#125;</span><br><span class="line">		input[type&#x3D;&#39;checkbox&#39;] &#123;</span><br><span class="line">			position: relative;</span><br><span class="line">			width: 20px;</span><br><span class="line">			height: 20px;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	        margin-right: 10px;</span><br><span class="line">	        border: 2px solid #fff;</span><br><span class="line">	        border-radius: 50%;</span><br><span class="line">	    &#125;</span><br><span class="line">&#x2F;*	    input[type&#x3D;&#39;checkbox&#39;]:checked &#123;</span><br><span class="line">	        clip: (0,0,0,0);</span><br><span class="line">	        outline: 0;</span><br><span class="line">	        background-color: transparent;</span><br><span class="line">	    &#125;*&#x2F;</span><br><span class="line">	    input[type&#x3D;&#39;checkbox&#39;]:checked:after &#123;</span><br><span class="line">	        content: &#39;\2713&#39;;</span><br><span class="line">	        position: absolute;</span><br><span class="line">	        left: 3px;</span><br><span class="line">	        color: #fff;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">---html---</span><br><span class="line">	&lt;div class&#x3D;&quot;input-wrap&quot;&gt;</span><br><span class="line">		&lt;label class&#x3D;&quot;btn-admit admit&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;save-in&quot; name&#x3D;&quot;saveIn&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;Bike&quot; &#x2F;&gt;我愿意 Yes,I do&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>题外话，unicode编码还是很有用的，比如说实现下面的：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-52f810d6831a77d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-401a635697b5a3b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正确.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8a176b42fec3ae11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="unicode源自网络"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
+        <tag>markdown</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -407,9 +608,49 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css搞定input-checkbox的美化</title>
+    <url>/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<blockquote>
+<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+<a id="more"></a>
+
+<h3 id="开头语"><a href="#开头语" class="headerlink" title="开头语"></a>开头语</h3><p>“web, 我觉得刚才秀的姿势不够纠结，缺乏了一点点内涵，无法表现input内心的复杂情感，请允许我再来一次，我会拿出百分百的状态，争取做到深刻而不深沉，平淡而不平庸，演好我的角色。其实，我是一名演员。”<br>—— 改编源自《喜剧之王》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c74aad3cba988b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<p>交互效果是当用户点击文字行或者圈圈，都可以选择打钩或去掉钩，多选框或单选框效果。</p>
+<p>咋实现，一步一步来，先来个最基本的样子：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c80edd25a0651877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
+<p>怎么让选择框变美，首先，身材比例调一下（width，height），瞬间小家碧玉变得大气：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d1fc6b67b403e883.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<p>然后稍微的隆一下border-radius，变得温婉些，前提要加上-webkit-appearance: none，才能改变：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a9ee7e20f6ecc52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<p>这时候选中效果是看不见的，因为默认样式已经去除，接下来修整下选中的状态，对勾怎么弄，利用隐士Unicode编码。’\2713’代表对钩，利用content来加入，并改变位置，颜色，实现了自我的展示。<br>主样式代码如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-831eea27eb2cfcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>主要是-webkit-appearance: none以及利用unicode编码，伪元素实现。</p>
+<p>附上最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">		.input-wrap &#123;</span><br><span class="line">			width: 20rem;</span><br><span class="line">			height: 10rem;</span><br><span class="line">			padding-top: 5rem;</span><br><span class="line">			margin: auto;</span><br><span class="line">			background-color: #f99;</span><br><span class="line">			color: #fff;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 23px;</span><br><span class="line">		&#125;</span><br><span class="line">		input[type&#x3D;&#39;checkbox&#39;] &#123;</span><br><span class="line">			position: relative;</span><br><span class="line">			width: 20px;</span><br><span class="line">			height: 20px;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	        margin-right: 10px;</span><br><span class="line">	        border: 2px solid #fff;</span><br><span class="line">	        border-radius: 50%;</span><br><span class="line">	    &#125;</span><br><span class="line">&#x2F;*	    input[type&#x3D;&#39;checkbox&#39;]:checked &#123;</span><br><span class="line">	        clip: (0,0,0,0);</span><br><span class="line">	        outline: 0;</span><br><span class="line">	        background-color: transparent;</span><br><span class="line">	    &#125;*&#x2F;</span><br><span class="line">	    input[type&#x3D;&#39;checkbox&#39;]:checked:after &#123;</span><br><span class="line">	        content: &#39;\2713&#39;;</span><br><span class="line">	        position: absolute;</span><br><span class="line">	        left: 3px;</span><br><span class="line">	        color: #fff;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">---html---</span><br><span class="line">	&lt;div class&#x3D;&quot;input-wrap&quot;&gt;</span><br><span class="line">		&lt;label class&#x3D;&quot;btn-admit admit&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;save-in&quot; name&#x3D;&quot;saveIn&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;Bike&quot; &#x2F;&gt;我愿意 Yes,I do&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>题外话，unicode编码还是很有用的，比如说实现下面的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-52f810d6831a77d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-401a635697b5a3b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正确.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8a176b42fec3ae11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="unicode源自网络"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -440,79 +681,9 @@
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
         <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js实现base64获图片url的坑-七牛云</title>
-    <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
-    <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
-<a id="more"></a>
-
-<p>“Base64：数据界的云存储是个便利小器，某一天他踩着白色祥云来渡我，我猜中了前后，可是我却走岔了路。”<br>——题记，改编源自《大话西游》</p>
-<p>###前文<br>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-4fb9c8406ecf732d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5理论图"><br>至于H5如何上传显示图片，可采取FileReader ，readAsDataURL() 读取指定File对象中的内容，利用exif获取旋转参数，目前自我总结ios是右1,左3,正6,倒8，这个可以自己测试看看，主要用法如下：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8faa2f665f9e5cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="部分读取图片代码"><br>读取图片及获得旋转参数这里不多说了，大致是获取旋转参数后，利用canvas重新生成一张图，得base64路径。不过需要canvas将图摆正，然后得到一个新的base64，获得旋转之后的新图base64。而有时候我们是需要使用这个图片路径的，总不可能用base64，太大，转换以下链接，也就有了下文，这里选择七牛进行转换。</p>
-<p>###正文<br>base64转换七牛链接一般流程为：web请求后台接口 ——&gt; 后台返回数据，获取相应的token（上传权限）、key（文件名），urlTpl（文件的模板格式），这些参数建议后台生成 ——&gt; 请求七牛云空间地址，带上后台获取的key，以及添加HTTP请求头（content-type，Authorization身份验证带token），发送需转化的base64 url ——&gt; 获取responseText响应数据（来自七牛云），将传过来的key值带入之前的urlTpl模板，新url完成。代码如下，<a href="https://qiniu.kf5.com/hc/kb/article/69078/" target="_blank" rel="noopener">七牛云文档</a>也可以查看。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">putb64: function(token, key, urlTpl, imageBase64) &#123;</span><br><span class="line">	  var pic &#x3D; imageBase64.replace(&#x2F;^.*?,&#x2F;, &#39;&#39;);</span><br><span class="line">          var url &#x3D; location.protocol &#x3D;&#x3D; &#39;http:&#39; </span><br><span class="line">	          ? &quot;http:&#x2F;&#x2F;up.qiniu.com&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key </span><br><span class="line">	          : &quot;https:&#x2F;&#x2F;up.qbox.me&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key;</span><br><span class="line">	  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	  xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">	    if (xhr.readyState &#x3D;&#x3D; 4)&#123;</span><br><span class="line">	    	var response &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">	    	var result_url &#x3D; urlTpl.replace(&#39;%QiniuUploadImg%&#39;, response.key);</span><br><span class="line">	    	console.log(result_url)</span><br><span class="line">				$(&#39;#show&#39;).attr(&#39;src&#39;, result_url)</span><br><span class="line">	    &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	  xhr.open(&quot;POST&quot;, url, true);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;octet-stream&quot;);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Authorization&quot;, &quot;UpToken &quot; + token);</span><br><span class="line">	  xhr.send(pic);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里有几个注意点：</p>
-<ol>
-<li>key值不要混淆；<br>最终的url 带的参数key是七牛返回的responseText的key，不是后台传过来的key，这个混淆了要找半天。</li>
-<li>七牛地址分为http跟https，两个路径是不一样的，需要判断；</li>
-<li>传过去的需要转换base64，须填写base64之后的字符串 ，除去MIME和base64以及逗号</li>
-<li>UpToken 与后面的字符串保留一个空格 后跟上在服务端请求的token的字符串。</li>
-</ol>
-<p><a href="https://github.com/smilewalker/projects/tree/master/imgHandle" target="_blank" rel="noopener">github</a>上有部分代码，可以参考，不过七牛云要加上自己的七牛云地址，暂且先这些吧。</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>base64</tag>
-        <tag>七牛云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css读懂margin</title>
-    <url>/2016/12/13/css%E8%AF%BB%E6%87%82margin/</url>
-    <content><![CDATA[<p>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
-<a id="more"></a>
-
-<p>“margin，我开始明白你的内心了。以前我看效果都是用肉眼来看，但是在我理解的那一刹那，我开始用更深的逻辑来理解页面展示，所有的元素排布真的可以看的深入原理般的清楚……原来你也有里层的绕指柔”<br>——题记，改编源自《大圣娶亲》</p>
-<p>###正文<br>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
-<p>好的，我们先来看margin为0的情况，正常，木有空隙：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9d5db650106761e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1.margin全为0"></p>
-<p>然后设置第一个p为margin-top:1rem情况：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2.第一个p为margin-top: 1rem;"></p>
-<p>section为margin-top: 1rem的情况，也就是p的父容器：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3.section为margin-top: 1rem;"></p>
-<p>有没有发现图2和图3是一样的，继续看section和第一个p的margin-top: 1rem的情况：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4.section和第一个p为margin-top: 1rem"></p>
-<p>图2,3,4间距是一样的，继续看section为1rem，第一个p为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-94ad0d9ecb83408a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5.section margin-top: 1rem；和第一个p为 margin-top: 2rem；"></p>
-<p>发现事实上显示结果是父容器与第一个子元素的margin-top值是最大的那个值，也就是例子的2rem。看第一二两个p的margin-top值为1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-067e9d2184cc086b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图6.一二两个p“margin”为margin-top: 1rem;"></p>
-<p>并无特别，继续看第一个p的margin-top：1rem；margin-bottom：1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e96a763a4479ef09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图7.第一个p：margin上下值为1rem"></p>
-<p>设置第二个p的margin-top: 1rem</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-466ffa9d0474ae0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图8.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第2个p为margin-top: 1rem; "></p>
-<p>发现第一个p的margin-bottom跟第二个p的margin-top合并成一个，改变第二个的margin-top值为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e75c9f7002a10f00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图9.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第二个p为margin-top: 2rem;"><br>发现事实上显示的是2rem，显示最大的那个值，咋说，我们可以发现：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2be6bc591eeda352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图10.两个同级元素的外边距合并"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-77300536fbe2883d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图11.父元素与第一个子元素外边距合并"></p>
-<p>而如果其中有负值，则是两个margin值的相加，而不是取最大值。</p>
-<p>【只有普通文档流中块框的垂直外边距才会发生合并，行内框、浮动框或绝对定位之间的外边距不会合并。】解决方法：利用padding来代替margin，或巧妙的利用margin值，或改为行内元素，或采用同一方向的margin，或浮动元素等</p>
-<p>还有一点，margin若设为百分比值，相对的参照物是其父元素的宽度，这个不知道的话开发的时候可能会有坑，本文运行环境是chrome，以及不同浏览器的margin的坑是不一样的，这个网上的<a href="http://www.hicss.net/do-not-tell-me-you-understand-margin/" target="_blank" rel="noopener">一篇文章</a>写的还是可以参考的。</p>
-<p>该篇文章主要说明垂直外边距的合并，可能在你遇到问题的时候印象会深些，不过本文还是一步步把它写出来，如果你在某个时刻看到，知道，诶，原来margin还有这样的一面，那这篇文章也就开心了~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>margin</tag>
       </tags>
   </entry>
   <entry>
@@ -558,26 +729,69 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
-    <title>js实现七牛云上传图片视频</title>
-    <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+    <title>css读懂margin</title>
+    <url>/2016/12/13/css%E8%AF%BB%E6%87%82margin/</url>
+    <content><![CDATA[<p>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
 <a id="more"></a>
 
-<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
-<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>“margin，我开始明白你的内心了。以前我看效果都是用肉眼来看，但是在我理解的那一刹那，我开始用更深的逻辑来理解页面展示，所有的元素排布真的可以看的深入原理般的清楚……原来你也有里层的绕指柔”<br>——题记，改编源自《大圣娶亲》</p>
+<p>###正文<br>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
+<p>好的，我们先来看margin为0的情况，正常，木有空隙：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9d5db650106761e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1.margin全为0"></p>
+<p>然后设置第一个p为margin-top:1rem情况：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2.第一个p为margin-top: 1rem;"></p>
+<p>section为margin-top: 1rem的情况，也就是p的父容器：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3.section为margin-top: 1rem;"></p>
+<p>有没有发现图2和图3是一样的，继续看section和第一个p的margin-top: 1rem的情况：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4.section和第一个p为margin-top: 1rem"></p>
+<p>图2,3,4间距是一样的，继续看section为1rem，第一个p为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-94ad0d9ecb83408a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5.section margin-top: 1rem；和第一个p为 margin-top: 2rem；"></p>
+<p>发现事实上显示结果是父容器与第一个子元素的margin-top值是最大的那个值，也就是例子的2rem。看第一二两个p的margin-top值为1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-067e9d2184cc086b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图6.一二两个p“margin”为margin-top: 1rem;"></p>
+<p>并无特别，继续看第一个p的margin-top：1rem；margin-bottom：1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e96a763a4479ef09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图7.第一个p：margin上下值为1rem"></p>
+<p>设置第二个p的margin-top: 1rem</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-466ffa9d0474ae0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图8.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第2个p为margin-top: 1rem; "></p>
+<p>发现第一个p的margin-bottom跟第二个p的margin-top合并成一个，改变第二个的margin-top值为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e75c9f7002a10f00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图9.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第二个p为margin-top: 2rem;"><br>发现事实上显示的是2rem，显示最大的那个值，咋说，我们可以发现：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2be6bc591eeda352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图10.两个同级元素的外边距合并"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-77300536fbe2883d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图11.父元素与第一个子元素外边距合并"></p>
+<p>而如果其中有负值，则是两个margin值的相加，而不是取最大值。</p>
+<p>【只有普通文档流中块框的垂直外边距才会发生合并，行内框、浮动框或绝对定位之间的外边距不会合并。】解决方法：利用padding来代替margin，或巧妙的利用margin值，或改为行内元素，或采用同一方向的margin，或浮动元素等</p>
+<p>还有一点，margin若设为百分比值，相对的参照物是其父元素的宽度，这个不知道的话开发的时候可能会有坑，本文运行环境是chrome，以及不同浏览器的margin的坑是不一样的，这个网上的<a href="http://www.hicss.net/do-not-tell-me-you-understand-margin/" target="_blank" rel="noopener">一篇文章</a>写的还是可以参考的。</p>
+<p>该篇文章主要说明垂直外边距的合并，可能在你遇到问题的时候印象会深些，不过本文还是一步步把它写出来，如果你在某个时刻看到，知道，诶，原来margin还有这样的一面，那这篇文章也就开心了~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
+        <tag>margin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js实现base64获图片url的坑-七牛云</title>
+    <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
+    <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
+<a id="more"></a>
 
+<p>“Base64：数据界的云存储是个便利小器，某一天他踩着白色祥云来渡我，我猜中了前后，可是我却走岔了路。”<br>——题记，改编源自《大话西游》</p>
+<p>###前文<br>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"><br><img src="http://upload-images.jianshu.io/upload_images/2320147-4fb9c8406ecf732d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5理论图"><br>至于H5如何上传显示图片，可采取FileReader ，readAsDataURL() 读取指定File对象中的内容，利用exif获取旋转参数，目前自我总结ios是右1,左3,正6,倒8，这个可以自己测试看看，主要用法如下：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8faa2f665f9e5cfd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="部分读取图片代码"><br>读取图片及获得旋转参数这里不多说了，大致是获取旋转参数后，利用canvas重新生成一张图，得base64路径。不过需要canvas将图摆正，然后得到一个新的base64，获得旋转之后的新图base64。而有时候我们是需要使用这个图片路径的，总不可能用base64，太大，转换以下链接，也就有了下文，这里选择七牛进行转换。</p>
+<p>###正文<br>base64转换七牛链接一般流程为：web请求后台接口 ——&gt; 后台返回数据，获取相应的token（上传权限）、key（文件名），urlTpl（文件的模板格式），这些参数建议后台生成 ——&gt; 请求七牛云空间地址，带上后台获取的key，以及添加HTTP请求头（content-type，Authorization身份验证带token），发送需转化的base64 url ——&gt; 获取responseText响应数据（来自七牛云），将传过来的key值带入之前的urlTpl模板，新url完成。代码如下，<a href="https://qiniu.kf5.com/hc/kb/article/69078/" target="_blank" rel="noopener">七牛云文档</a>也可以查看。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">putb64: function(token, key, urlTpl, imageBase64) &#123;</span><br><span class="line">	  var pic &#x3D; imageBase64.replace(&#x2F;^.*?,&#x2F;, &#39;&#39;);</span><br><span class="line">          var url &#x3D; location.protocol &#x3D;&#x3D; &#39;http:&#39; </span><br><span class="line">	          ? &quot;http:&#x2F;&#x2F;up.qiniu.com&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key </span><br><span class="line">	          : &quot;https:&#x2F;&#x2F;up.qbox.me&#x2F;putb64&#x2F;-1&#x2F;key&#x2F;&quot; + key;</span><br><span class="line">	  var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line">	  xhr.onreadystatechange&#x3D;function()&#123;</span><br><span class="line">	    if (xhr.readyState &#x3D;&#x3D; 4)&#123;</span><br><span class="line">	    	var response &#x3D; JSON.parse(xhr.responseText);</span><br><span class="line">	    	var result_url &#x3D; urlTpl.replace(&#39;%QiniuUploadImg%&#39;, response.key);</span><br><span class="line">	    	console.log(result_url)</span><br><span class="line">				$(&#39;#show&#39;).attr(&#39;src&#39;, result_url)</span><br><span class="line">	    &#125;</span><br><span class="line">	  &#125;</span><br><span class="line">	  xhr.open(&quot;POST&quot;, url, true);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Content-Type&quot;, &quot;application&#x2F;octet-stream&quot;);</span><br><span class="line">	  xhr.setRequestHeader(&quot;Authorization&quot;, &quot;UpToken &quot; + token);</span><br><span class="line">	  xhr.send(pic);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
-<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
+<p>这里有几个注意点：</p>
+<ol>
+<li>key值不要混淆；<br>最终的url 带的参数key是七牛返回的responseText的key，不是后台传过来的key，这个混淆了要找半天。</li>
+<li>七牛地址分为http跟https，两个路径是不一样的，需要判断；</li>
+<li>传过去的需要转换base64，须填写base64之后的字符串 ，除去MIME和base64以及逗号</li>
+<li>UpToken 与后面的字符串保留一个空格 后跟上在服务端请求的token的字符串。</li>
+</ol>
+<p><a href="https://github.com/smilewalker/projects/tree/master/imgHandle" target="_blank" rel="noopener">github</a>上有部分代码，可以参考，不过七牛云要加上自己的七牛云地址，暂且先这些吧。</p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -586,6 +800,7 @@
         <tag>技术</tag>
         <tag>web</tag>
         <tag>JavaScript</tag>
+        <tag>base64</tag>
         <tag>七牛云</tag>
       </tags>
   </entry>
@@ -647,6 +862,32 @@
         <tag>web</tag>
         <tag>JavaScript</tag>
         <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js实现七牛云上传图片视频</title>
+    <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<a id="more"></a>
+
+<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
+<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>七牛云</tag>
       </tags>
   </entry>
   <entry>
@@ -774,6 +1015,67 @@
       <tags>
         <tag>技术</tag>
         <tag>node-sass</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web audio api实现你的音乐·下</title>
+    <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
+    <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+<a id="more"></a>
+
+<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
+<ol>
+<li>创建音频环境</li>
+<li>获取音频，创建buffer节点</li>
+<li>解码音频，分析音频</li>
+<li>连接音频输入输出</li>
+<li>canvas绘制频谱</li>
+<li>连接播放</li>
+</ol>
+<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
+
+<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
+
+<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
+<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
+<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
+<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
+<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
+<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>web audio api</tag>
       </tags>
   </entry>
   <entry>
@@ -909,55 +1211,56 @@
       </tags>
   </entry>
   <entry>
-    <title>web audio api实现你的音乐·下</title>
-    <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
-    <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+    <title>web前端收藏的网站</title>
+    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
 <a id="more"></a>
-
-<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
-<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
+<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
 <ol>
-<li>创建音频环境</li>
-<li>获取音频，创建buffer节点</li>
-<li>解码音频，分析音频</li>
-<li>连接音频输入输出</li>
-<li>canvas绘制频谱</li>
-<li>连接播放</li>
+<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
+</li>
+<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
+</li>
+<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
+</li>
+<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
+</li>
+<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
+</li>
+<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
+</li>
+<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
+</li>
+<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
+</li>
+<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
+</li>
+<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
+</li>
+<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
+</li>
+<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
+</li>
 </ol>
-<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
-
-<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
-
-<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
-<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
-<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
-<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
-<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
-<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
+<p>下面罗列的偏向设计，前端可以看看：</p>
+<ol>
+<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
+</li>
+<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
+</li>
+<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
+</li>
+<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
+</li>
+<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
+</li>
+<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
+</li>
+</ol>
+<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -965,8 +1268,6 @@
       <tags>
         <tag>技术</tag>
         <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>web audio api</tag>
       </tags>
   </entry>
   <entry>
@@ -1203,66 +1504,6 @@
         <tag>技术</tag>
         <tag>web</tag>
         <tag>gpu动画</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web前端收藏的网站</title>
-    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<a id="more"></a>
-<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<ol>
-<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
-</li>
-<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
-</li>
-<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
-</li>
-<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
-</li>
-<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
-</li>
-<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
-</li>
-<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
-</li>
-<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
-</li>
-<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
-</li>
-<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
-</li>
-<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
-</li>
-<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
-</li>
-<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
-</li>
-</ol>
-<p>下面罗列的偏向设计，前端可以看看：</p>
-<ol>
-<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
-</li>
-<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
-</li>
-<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
-</li>
-<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
-</li>
-<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
-</li>
-<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
-</li>
-</ol>
-<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
       </tags>
   </entry>
 </search>
