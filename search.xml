@@ -1,15 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MWeb+七牛云图床</title>
-    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
-<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
-<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
-<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
-<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
-<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
-<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
+    <title>Hexo+NexT的进阶配置</title>
+    <url>/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>完成博客网站的基本搭建后，这篇文章是对于Hexo配置的进阶设置，可自定义选择。以下主题配置文件皆为Hexo主题themes目录下的_config.yml，网站配置文件皆为hexo根目录下的_config.yml。</p>
+<a id="more"></a>
+
+<ul>
+<li>更改头像</li>
+<li>侧边栏社交信息设置</li>
+<li>摘要自动生成</li>
+<li>添加字数统计、阅读时长</li>
+<li>文章底部添加版权信息</li>
+<li>设置动态背景</li>
+<li>添加网页进度加载条</li>
+<li>底部隐藏由Hexo强力驱动、主题–NexT.Mist</li>
+<li>显示当前浏览进度</li>
+<li>设置网站的图标Favicon</li>
+<li>Hexo博客添加站内搜索</li>
+</ul>
+<h2 id="更改头像"><a href="#更改头像" class="headerlink" title="更改头像"></a>更改头像</h2><p>编辑主题配置文件，修改 avatar，值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏社交链接设置"><a href="#侧边栏社交链接设置" class="headerlink" title="侧边栏社交链接设置"></a>侧边栏社交链接设置</h2><p>编辑主题配置文件_config.yml，修改social字段的值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social Links</span><br><span class="line"># Key is the link label showing to end users.</span><br><span class="line"># Value is the target link (E.g. GitHub: https:&#x2F;&#x2F;github.com&#x2F;iissnan)</span><br><span class="line">social:</span><br><span class="line">  #LinkLabel: Link</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com&#x2F;yourgithub</span><br><span class="line">  E-Mail: mailto:dawnxu96@gmail.com</span><br><span class="line">  Instagram: https:&#x2F;&#x2F;instagram.com&#x2F;yourins</span><br></pre></td></tr></table></figure>
+
+<h2 id="摘要设置"><a href="#摘要设置" class="headerlink" title="摘要设置"></a>摘要设置</h2><p>编辑主题配置文件_config.yml，修改auto_excerpt字段为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true	# 置为true则自动截取100字当做首页摘要</span><br><span class="line">  length: 100	# 自动截取的字数</span><br></pre></td></tr></table></figure>
+
+<p>上述的方式并不推荐，推荐是手动设置文章摘要，手动设置文章摘要，我们只需在想显示为摘要的内容之后添 <!-- more --> 即可。像下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hello hexo markdown</span><br><span class="line">date: 2016-11-16 18:11:25</span><br><span class="line">tags:</span><br><span class="line">- hello</span><br><span class="line">- hexo</span><br><span class="line">- markdown</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">文章摘要内容</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">紧接着文章摘要的正文内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章底部添加版权信息"><a href="#文章底部添加版权信息" class="headerlink" title="文章底部添加版权信息"></a>文章底部添加版权信息</h2><p>修改主题配置文件_config.yml中字段的值为true即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  enable: true</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加网页进度加载条"><a href="#添加网页进度加载条" class="headerlink" title="添加网页进度加载条"></a>添加网页进度加载条</h2><p>编辑主题配置文件，搜索pace，将其值改为ture就可以，之后选择一款你喜欢的样式即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
+<h2 id="底部隐藏由Hexo强力驱动"><a href="#底部隐藏由Hexo强力驱动" class="headerlink" title="底部隐藏由Hexo强力驱动"></a>底部隐藏由Hexo强力驱动</h2><ul>
+<li>方法1<br>直接修改主题配置文件_config.yml中的copyright配置项为false，假如没有该配置项，可以通过方法2<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Footer &#96;powered-by&#96; and &#96;theme-info&#96; copyright</span><br><span class="line">copyright: false</span><br></pre></td></tr></table></figure></li>
+<li>方法2<br>打开./themes/next/layout/_partials/footer.swig，注释掉相应代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 用下面的符号注释，注释代码用下面括号括起来</span><br><span class="line">&#x2F;&#x2F; &lt;!-- --&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&#123;% if theme.copyright %&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.powered&#39;, &#39;&lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;&#39;) &#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">​</span><br><span class="line">&lt;div class&#x3D;&quot;theme-info&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.theme&#39;) &#125;&#125; -</span><br><span class="line">  &lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&quot;&gt;</span><br><span class="line"> NexT.&#123;&#123; theme.scheme &#125;&#125;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><p>修改主题配置文件，把 false 改为 true：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">b2t: true</span><br><span class="line">​</span><br><span class="line"># Scroll percent label in b2t button</span><br><span class="line">scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p>修改主题配置文件_config.yml中的favicon配置项，指定图标所在路径即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Put your favicon.ico into &#96;hexo-site&#x2F;source&#x2F;&#96; directory.</span><br><span class="line">favicon: &#x2F;favicon-32x32.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo博客添加站内搜索"><a href="#Hexo博客添加站内搜索" class="headerlink" title="Hexo博客添加站内搜索"></a>Hexo博客添加站内搜索</h2><p>NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia。我安装的是Local Search的安装。<br>安装 hexo-generator-search<br><code>$ npm install hexo-generator-search --save</code><br>安装 hexo-generator-searchdb<br><code>$ npm install hexo-generator-searchdb --save</code><br>编辑主题配置文件，设置local_searchenable为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;flashlab&#x2F;hexo-generator-search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
+<h2 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h2><p>注册登陆leanCloud官网，点击存储，查看是否有Comment，没有则创建，权限设为无限制。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870193229416.jpg" alt="-w1194"></p>
+<p>进入主题配置文件修改为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https:&#x2F;&#x2F;leancloud.cn</span><br><span class="line"># more info please open https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  leancloudn你自己的id  appkey:  leancloudn你自己的key  </span><br><span class="line">  notify: false # mail notifier , https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: robohash # gravatar style</span><br><span class="line">  guest_info: nick,mail,link # custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
+<p>进入leancloud即可看到评论<br>～</p>
 ]]></content>
       <categories>
         <category>工具</category>
@@ -18,6 +62,7 @@
         <tag>hexo</tag>
         <tag>github</tag>
         <tag>博客</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -118,59 +163,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo+NexT的进阶配置</title>
-    <url>/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>完成博客网站的基本搭建后，这篇文章是对于Hexo配置的进阶设置，可自定义选择。以下主题配置文件皆为Hexo主题themes目录下的_config.yml，网站配置文件皆为hexo根目录下的_config.yml。</p>
-<a id="more"></a>
-
-<ul>
-<li>更改头像</li>
-<li>侧边栏社交信息设置</li>
-<li>摘要自动生成</li>
-<li>添加字数统计、阅读时长</li>
-<li>文章底部添加版权信息</li>
-<li>设置动态背景</li>
-<li>添加网页进度加载条</li>
-<li>底部隐藏由Hexo强力驱动、主题–NexT.Mist</li>
-<li>显示当前浏览进度</li>
-<li>设置网站的图标Favicon</li>
-<li>Hexo博客添加站内搜索</li>
-</ul>
-<h2 id="更改头像"><a href="#更改头像" class="headerlink" title="更改头像"></a>更改头像</h2><p>编辑主题配置文件，修改 avatar，值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
-
-<h2 id="侧边栏社交链接设置"><a href="#侧边栏社交链接设置" class="headerlink" title="侧边栏社交链接设置"></a>侧边栏社交链接设置</h2><p>编辑主题配置文件_config.yml，修改social字段的值</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social Links</span><br><span class="line"># Key is the link label showing to end users.</span><br><span class="line"># Value is the target link (E.g. GitHub: https:&#x2F;&#x2F;github.com&#x2F;iissnan)</span><br><span class="line">social:</span><br><span class="line">  #LinkLabel: Link</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com&#x2F;yourgithub</span><br><span class="line">  E-Mail: mailto:dawnxu96@gmail.com</span><br><span class="line">  Instagram: https:&#x2F;&#x2F;instagram.com&#x2F;yourins</span><br></pre></td></tr></table></figure>
-
-<h2 id="摘要设置"><a href="#摘要设置" class="headerlink" title="摘要设置"></a>摘要设置</h2><p>编辑主题配置文件_config.yml，修改auto_excerpt字段为true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true	# 置为true则自动截取100字当做首页摘要</span><br><span class="line">  length: 100	# 自动截取的字数</span><br></pre></td></tr></table></figure>
-
-<p>上述的方式并不推荐，推荐是手动设置文章摘要，手动设置文章摘要，我们只需在想显示为摘要的内容之后添 <!-- more --> 即可。像下面这样：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hello hexo markdown</span><br><span class="line">date: 2016-11-16 18:11:25</span><br><span class="line">tags:</span><br><span class="line">- hello</span><br><span class="line">- hexo</span><br><span class="line">- markdown</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">文章摘要内容</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">紧接着文章摘要的正文内容</span><br></pre></td></tr></table></figure>
-
-<h2 id="文章底部添加版权信息"><a href="#文章底部添加版权信息" class="headerlink" title="文章底部添加版权信息"></a>文章底部添加版权信息</h2><p>修改主题配置文件_config.yml中字段的值为true即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  enable: true</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加网页进度加载条"><a href="#添加网页进度加载条" class="headerlink" title="添加网页进度加载条"></a>添加网页进度加载条</h2><p>编辑主题配置文件，搜索pace，将其值改为ture就可以，之后选择一款你喜欢的样式即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
-<h2 id="底部隐藏由Hexo强力驱动"><a href="#底部隐藏由Hexo强力驱动" class="headerlink" title="底部隐藏由Hexo强力驱动"></a>底部隐藏由Hexo强力驱动</h2><ul>
-<li>方法1<br>直接修改主题配置文件_config.yml中的copyright配置项为false，假如没有该配置项，可以通过方法2<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Footer &#96;powered-by&#96; and &#96;theme-info&#96; copyright</span><br><span class="line">copyright: false</span><br></pre></td></tr></table></figure></li>
-<li>方法2<br>打开./themes/next/layout/_partials/footer.swig，注释掉相应代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 用下面的符号注释，注释代码用下面括号括起来</span><br><span class="line">&#x2F;&#x2F; &lt;!-- --&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&#123;% if theme.copyright %&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.powered&#39;, &#39;&lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;&#39;) &#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">​</span><br><span class="line">&lt;div class&#x3D;&quot;theme-info&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.theme&#39;) &#125;&#125; -</span><br><span class="line">  &lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&quot;&gt;</span><br><span class="line"> NexT.&#123;&#123; theme.scheme &#125;&#125;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><p>修改主题配置文件，把 false 改为 true：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">b2t: true</span><br><span class="line">​</span><br><span class="line"># Scroll percent label in b2t button</span><br><span class="line">scrollpercent: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p>修改主题配置文件_config.yml中的favicon配置项，指定图标所在路径即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Put your favicon.ico into &#96;hexo-site&#x2F;source&#x2F;&#96; directory.</span><br><span class="line">favicon: &#x2F;favicon-32x32.png</span><br></pre></td></tr></table></figure>
-
-<h2 id="Hexo博客添加站内搜索"><a href="#Hexo博客添加站内搜索" class="headerlink" title="Hexo博客添加站内搜索"></a>Hexo博客添加站内搜索</h2><p>NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia。我安装的是Local Search的安装。<br>安装 hexo-generator-search<br><code>$ npm install hexo-generator-search --save</code><br>安装 hexo-generator-searchdb<br><code>$ npm install hexo-generator-searchdb --save</code><br>编辑主题配置文件，设置local_searchenable为true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;flashlab&#x2F;hexo-generator-search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
-<h2 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h2><p>注册登陆leanCloud官网，点击存储，查看是否有Comment，没有则创建，权限设为无限制。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870193229416.jpg" alt="-w1194"></p>
-<p>进入主题配置文件修改为true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https:&#x2F;&#x2F;leancloud.cn</span><br><span class="line"># more info please open https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  leancloudn你自己的id  appkey:  leancloudn你自己的key  </span><br><span class="line">  notify: false # mail notifier , https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: robohash # gravatar style</span><br><span class="line">  guest_info: nick,mail,link # custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
-<p>进入leancloud即可看到评论<br>～</p>
+    <title>MWeb+七牛云图床</title>
+    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
+<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
+<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
+<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
+<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
+<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
+<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
 ]]></content>
       <categories>
         <category>工具</category>
@@ -179,7 +180,6 @@
         <tag>hexo</tag>
         <tag>github</tag>
         <tag>博客</tag>
-        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -249,65 +249,6 @@
         <tag>app</tag>
         <tag>办公</tag>
         <tag>adobe</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown语法大全</title>
-    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
-<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
-<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
-
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
-
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
-<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-<p>有序列表使用数字并加上 . 号来表示,如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
-<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
-
-<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
-<blockquote>
-<p>区块引用</p>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
-<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
-<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
-<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -486,53 +427,62 @@
       </tags>
   </entry>
   <entry>
-    <title>css之神奇的渐变效果</title>
-    <url>/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/</url>
-    <content><![CDATA[<p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1adaee5592d8c46d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<a id="more"></a>
+    <title>Markdown语法大全</title>
+    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
+<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>“你以为你这么低调我就找不到你了吗？没有用的，像你这样拉风的属性，只要有你在的地方，就好像黑夜中的萤火虫一样，那样的鲜明，那样的出众；你那委婉的形状，奇特的写法，神乎其技的思路，还有那百转千回……都深深地迷住了我。”<br>——题记，改自《国产凌凌漆》</p>
-</blockquote>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1adaee5592d8c46d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<h5 id="1-linear-gradient"><a href="#1-linear-gradient" class="headerlink" title="1. linear-gradient"></a>1. linear-gradient</h5><p><strong>语法</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f6c218d4fb4c9960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引自MDN"></p>
-<blockquote>
-<side-or-corner>
-描述渐变线的起始点位置。它包含两个关键词：第一个指出垂直位置left or right，第二个指出水平位置top or bottom。关键词的先后顺序无影响，且都是可选的。to top, to bottom, to left 和 to right这些值会被转换成角度0度、180度、270度和90度。其余值会被转换为一个以向顶部中央方向为起点顺时针旋转的角度。**渐变线的结束点与其起点中心对称**。
-<angle>
-用角度值指定渐变的方向（或角度）。 See [<angle>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/angle).
-<color-stop>
-由一个[ <color>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value)值组成，并且跟随着一个可选的终点位置（可以是一个百分比值或者是沿着渐变轴的[<length>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/length)）。
-</blockquote>
-<p>比如说<code>linear-gradient( 45deg, blue, red )</code>，效果如下，具体用法可以看下<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener"> MDN </a> 或者W3C。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6107658627622bb8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="图例"></p>
-<p>再来看<code>background: linear-gradient(135deg, transparent 50%, red );</code><br><img src="http://upload-images.jianshu.io/upload_images/2320147-e4b52f62af5fbc84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="图例"></p>
-<p>如此一来，那实现刚开始的第一张效果图，可有想法？<br>我们继续看<code>background: linear-gradient(135deg, transparent 15px, red 0)</code>：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-30cbdbf68818e21f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
-<p>而background是允许有多背景的，结合<code>background-size</code>（避免渐变图案覆盖）， <code>background-repeat</code>（避免渐变图案平铺），利用<code>background-position</code>设置图片位置，最终第一张效果图实现代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.bevel &#123;</span><br><span class="line">	width: <span class="number">10</span>rem;</span><br><span class="line">	height: <span class="number">10</span>rem;</span><br><span class="line">	margin: <span class="number">30</span>px auto;</span><br><span class="line">	background: #58a;</span><br><span class="line">	background: linear-gradient(135deg, transparent 15px, #6cc 0) top left, linear-gradient(-135deg, transparent 15px, #6cc 0) top right,linear-gradient(-45deg, transparent 15px, #6cc 0) bottom right, linear-gradient(45deg, transparent 15px, #6cc 0) bottom left;</span><br><span class="line">	background-size: <span class="number">50</span>% <span class="number">50</span>%;</span><br><span class="line">	background-repeat: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1e4a436da663f3ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图.png"></p>
-<h5 id="2-radial-gradient"><a href="#2-radial-gradient" class="headerlink" title="2. radial-gradient"></a>2. radial-gradient</h5><p><strong>语法</strong></p>
-<blockquote>
-<p>// 定义结束的形状<br>radial-gradient( circle, … ) /* Synonym of radial-gradient( circle farthest-corner, … ) */<br>radial-gradient( ellipse, … ) /* Synonym of radial-gradient( ellipse farthest-corner, … ) */<br>radial-gradient( <extent-keyword>, … ) /* It draws a circle */<br>radial-gradient( circle radius, … ) /* A centered circle of the given length. It can’t be a percentage */<br>radial-gradient( ellipse x-axis y-axis, … ) /* The two semi-major axes are given, horizontal, then vertical */<br>// 定义形状的位置<br>radial-gradient ( … at <position>, … )// Definition of the color stops<br>radial-gradient ( …, <color-stop>, … )<br>radial-gradient ( …, <color-stop>, <color-stop> )</p>
-</blockquote>
-<p>了解了radial-gradient的语法后，实质上实现边角的道理跟linear-gradient是一样样的。</p>
-<p>具体就不说了，直接看第二张图效果的代码，如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.concave &#123;</span><br><span class="line">	width: <span class="number">10</span>rem;</span><br><span class="line">	height: <span class="number">10</span>rem;</span><br><span class="line">	margin: <span class="number">30</span>px auto;</span><br><span class="line">	background: #58a;</span><br><span class="line">	background: radial-gradient(circle at top left, transparent 15px, #58a 0) top left, radial-gradient(circle at top right, transparent 15px, #58a 0) top right, radial-gradient(circle at  bottom right, transparent 15px, #58a 0) bottom right, radial-gradient(circle at bottom left, transparent 15px, #58a 0) bottom left;</span><br><span class="line">	background-size: <span class="number">50</span>% <span class="number">50</span>%;</span><br><span class="line">	background-repeat: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
 
-<p>了解了这个奇特的用法，你是不是可以创造出更多有意思的形状呢~<br>暂此，敬请交流~</p>
-<p><em>参考文章</em><br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds</a></p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
+
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+<p>有序列表使用数字并加上 . 号来表示,如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+
+<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>技术</category>
+        <category>工具</category>
       </categories>
       <tags>
-        <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
+        <tag>markdown</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -560,9 +510,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -608,9 +558,59 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css之神奇的渐变效果</title>
+    <url>/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1adaee5592d8c46d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<a id="more"></a>
+
+<blockquote>
+<p>“你以为你这么低调我就找不到你了吗？没有用的，像你这样拉风的属性，只要有你在的地方，就好像黑夜中的萤火虫一样，那样的鲜明，那样的出众；你那委婉的形状，奇特的写法，神乎其技的思路，还有那百转千回……都深深地迷住了我。”<br>——题记，改自《国产凌凌漆》</p>
+</blockquote>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1adaee5592d8c46d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<h5 id="1-linear-gradient"><a href="#1-linear-gradient" class="headerlink" title="1. linear-gradient"></a>1. linear-gradient</h5><p><strong>语法</strong></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-f6c218d4fb4c9960.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="引自MDN"></p>
+<blockquote>
+<side-or-corner>
+描述渐变线的起始点位置。它包含两个关键词：第一个指出垂直位置left or right，第二个指出水平位置top or bottom。关键词的先后顺序无影响，且都是可选的。to top, to bottom, to left 和 to right这些值会被转换成角度0度、180度、270度和90度。其余值会被转换为一个以向顶部中央方向为起点顺时针旋转的角度。**渐变线的结束点与其起点中心对称**。
+<angle>
+用角度值指定渐变的方向（或角度）。 See [<angle>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/angle).
+<color-stop>
+由一个[ <color>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value)值组成，并且跟随着一个可选的终点位置（可以是一个百分比值或者是沿着渐变轴的[<length>](https://developer.mozilla.org/zh-CN/docs/Web/CSS/length)）。
+</blockquote>
+<p>比如说<code>linear-gradient( 45deg, blue, red )</code>，效果如下，具体用法可以看下<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener"> MDN </a> 或者W3C。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6107658627622bb8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="图例"></p>
+<p>再来看<code>background: linear-gradient(135deg, transparent 50%, red );</code><br><img src="http://upload-images.jianshu.io/upload_images/2320147-e4b52f62af5fbc84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="图例"></p>
+<p>如此一来，那实现刚开始的第一张效果图，可有想法？<br>我们继续看<code>background: linear-gradient(135deg, transparent 15px, red 0)</code>：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-30cbdbf68818e21f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
+<p>而background是允许有多背景的，结合<code>background-size</code>（避免渐变图案覆盖）， <code>background-repeat</code>（避免渐变图案平铺），利用<code>background-position</code>设置图片位置，最终第一张效果图实现代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.bevel &#123;</span><br><span class="line">	width: <span class="number">10</span>rem;</span><br><span class="line">	height: <span class="number">10</span>rem;</span><br><span class="line">	margin: <span class="number">30</span>px auto;</span><br><span class="line">	background: #58a;</span><br><span class="line">	background: linear-gradient(135deg, transparent 15px, #6cc 0) top left, linear-gradient(-135deg, transparent 15px, #6cc 0) top right,linear-gradient(-45deg, transparent 15px, #6cc 0) bottom right, linear-gradient(45deg, transparent 15px, #6cc 0) bottom left;</span><br><span class="line">	background-size: <span class="number">50</span>% <span class="number">50</span>%;</span><br><span class="line">	background-repeat: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1e4a436da663f3ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图.png"></p>
+<h5 id="2-radial-gradient"><a href="#2-radial-gradient" class="headerlink" title="2. radial-gradient"></a>2. radial-gradient</h5><p><strong>语法</strong></p>
+<blockquote>
+<p>// 定义结束的形状<br>radial-gradient( circle, … ) /* Synonym of radial-gradient( circle farthest-corner, … ) */<br>radial-gradient( ellipse, … ) /* Synonym of radial-gradient( ellipse farthest-corner, … ) */<br>radial-gradient( <extent-keyword>, … ) /* It draws a circle */<br>radial-gradient( circle radius, … ) /* A centered circle of the given length. It can’t be a percentage */<br>radial-gradient( ellipse x-axis y-axis, … ) /* The two semi-major axes are given, horizontal, then vertical */<br>// 定义形状的位置<br>radial-gradient ( … at <position>, … )// Definition of the color stops<br>radial-gradient ( …, <color-stop>, … )<br>radial-gradient ( …, <color-stop>, <color-stop> )</p>
+</blockquote>
+<p>了解了radial-gradient的语法后，实质上实现边角的道理跟linear-gradient是一样样的。</p>
+<p>具体就不说了，直接看第二张图效果的代码，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.concave &#123;</span><br><span class="line">	width: <span class="number">10</span>rem;</span><br><span class="line">	height: <span class="number">10</span>rem;</span><br><span class="line">	margin: <span class="number">30</span>px auto;</span><br><span class="line">	background: #58a;</span><br><span class="line">	background: radial-gradient(circle at top left, transparent 15px, #58a 0) top left, radial-gradient(circle at top right, transparent 15px, #58a 0) top right, radial-gradient(circle at  bottom right, transparent 15px, #58a 0) bottom right, radial-gradient(circle at bottom left, transparent 15px, #58a 0) bottom left;</span><br><span class="line">	background-size: <span class="number">50</span>% <span class="number">50</span>%;</span><br><span class="line">	background-repeat: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>了解了这个奇特的用法，你是不是可以创造出更多有意思的形状呢~<br>暂此，敬请交流~</p>
+<p><em>参考文章</em><br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-image</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -641,9 +641,48 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css读懂margin</title>
+    <url>/2016/12/13/css%E8%AF%BB%E6%87%82margin/</url>
+    <content><![CDATA[<p>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
+<a id="more"></a>
+
+<p>“margin，我开始明白你的内心了。以前我看效果都是用肉眼来看，但是在我理解的那一刹那，我开始用更深的逻辑来理解页面展示，所有的元素排布真的可以看的深入原理般的清楚……原来你也有里层的绕指柔”<br>——题记，改编源自《大圣娶亲》</p>
+<p>###正文<br>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
+<p>好的，我们先来看margin为0的情况，正常，木有空隙：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9d5db650106761e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1.margin全为0"></p>
+<p>然后设置第一个p为margin-top:1rem情况：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2.第一个p为margin-top: 1rem;"></p>
+<p>section为margin-top: 1rem的情况，也就是p的父容器：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3.section为margin-top: 1rem;"></p>
+<p>有没有发现图2和图3是一样的，继续看section和第一个p的margin-top: 1rem的情况：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4.section和第一个p为margin-top: 1rem"></p>
+<p>图2,3,4间距是一样的，继续看section为1rem，第一个p为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-94ad0d9ecb83408a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5.section margin-top: 1rem；和第一个p为 margin-top: 2rem；"></p>
+<p>发现事实上显示结果是父容器与第一个子元素的margin-top值是最大的那个值，也就是例子的2rem。看第一二两个p的margin-top值为1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-067e9d2184cc086b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图6.一二两个p“margin”为margin-top: 1rem;"></p>
+<p>并无特别，继续看第一个p的margin-top：1rem；margin-bottom：1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e96a763a4479ef09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图7.第一个p：margin上下值为1rem"></p>
+<p>设置第二个p的margin-top: 1rem</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-466ffa9d0474ae0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图8.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第2个p为margin-top: 1rem; "></p>
+<p>发现第一个p的margin-bottom跟第二个p的margin-top合并成一个，改变第二个的margin-top值为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e75c9f7002a10f00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图9.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第二个p为margin-top: 2rem;"><br>发现事实上显示的是2rem，显示最大的那个值，咋说，我们可以发现：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2be6bc591eeda352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图10.两个同级元素的外边距合并"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-77300536fbe2883d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图11.父元素与第一个子元素外边距合并"></p>
+<p>而如果其中有负值，则是两个margin值的相加，而不是取最大值。</p>
+<p>【只有普通文档流中块框的垂直外边距才会发生合并，行内框、浮动框或绝对定位之间的外边距不会合并。】解决方法：利用padding来代替margin，或巧妙的利用margin值，或改为行内元素，或采用同一方向的margin，或浮动元素等</p>
+<p>还有一点，margin若设为百分比值，相对的参照物是其父元素的宽度，这个不知道的话开发的时候可能会有坑，本文运行环境是chrome，以及不同浏览器的margin的坑是不一样的，这个网上的<a href="http://www.hicss.net/do-not-tell-me-you-understand-margin/" target="_blank" rel="noopener">一篇文章</a>写的还是可以参考的。</p>
+<p>该篇文章主要说明垂直外边距的合并，可能在你遇到问题的时候印象会深些，不过本文还是一步步把它写出来，如果你在某个时刻看到，知道，诶，原来margin还有这样的一面，那这篇文章也就开心了~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
+        <tag>margin</tag>
       </tags>
   </entry>
   <entry>
@@ -681,48 +720,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css读懂margin</title>
-    <url>/2016/12/13/css%E8%AF%BB%E6%87%82margin/</url>
-    <content><![CDATA[<p>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
-<a id="more"></a>
-
-<p>“margin，我开始明白你的内心了。以前我看效果都是用肉眼来看，但是在我理解的那一刹那，我开始用更深的逻辑来理解页面展示，所有的元素排布真的可以看的深入原理般的清楚……原来你也有里层的绕指柔”<br>——题记，改编源自《大圣娶亲》</p>
-<p>###正文<br>在接触margin的时候，知道它是个外边距，用来距离其他元素的名词。当遇到margin没达到效果的时候，那就用padding，实现效果还不容易。可是，你就不想知道为什么没有出现想要的效果，这到底为啥？今天便来总结一番，一个一个来。<br>先上html，看下web结构：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5f2ba2b0a6daa2c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="html结构"></p>
-<p>好的，我们先来看margin为0的情况，正常，木有空隙：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9d5db650106761e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1.margin全为0"></p>
-<p>然后设置第一个p为margin-top:1rem情况：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2.第一个p为margin-top: 1rem;"></p>
-<p>section为margin-top: 1rem的情况，也就是p的父容器：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3.section为margin-top: 1rem;"></p>
-<p>有没有发现图2和图3是一样的，继续看section和第一个p的margin-top: 1rem的情况：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-edab0ad1e0afa9af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4.section和第一个p为margin-top: 1rem"></p>
-<p>图2,3,4间距是一样的，继续看section为1rem，第一个p为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-94ad0d9ecb83408a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5.section margin-top: 1rem；和第一个p为 margin-top: 2rem；"></p>
-<p>发现事实上显示结果是父容器与第一个子元素的margin-top值是最大的那个值，也就是例子的2rem。看第一二两个p的margin-top值为1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-067e9d2184cc086b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图6.一二两个p“margin”为margin-top: 1rem;"></p>
-<p>并无特别，继续看第一个p的margin-top：1rem；margin-bottom：1rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e96a763a4479ef09.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图7.第一个p：margin上下值为1rem"></p>
-<p>设置第二个p的margin-top: 1rem</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-466ffa9d0474ae0e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图8.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第2个p为margin-top: 1rem; "></p>
-<p>发现第一个p的margin-bottom跟第二个p的margin-top合并成一个，改变第二个的margin-top值为2rem：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e75c9f7002a10f00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图9.第一个p为margin-top: 1rem; margin-bottom: 1rem; 第二个p为margin-top: 2rem;"><br>发现事实上显示的是2rem，显示最大的那个值，咋说，我们可以发现：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2be6bc591eeda352.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图10.两个同级元素的外边距合并"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-77300536fbe2883d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图11.父元素与第一个子元素外边距合并"></p>
-<p>而如果其中有负值，则是两个margin值的相加，而不是取最大值。</p>
-<p>【只有普通文档流中块框的垂直外边距才会发生合并，行内框、浮动框或绝对定位之间的外边距不会合并。】解决方法：利用padding来代替margin，或巧妙的利用margin值，或改为行内元素，或采用同一方向的margin，或浮动元素等</p>
-<p>还有一点，margin若设为百分比值，相对的参照物是其父元素的宽度，这个不知道的话开发的时候可能会有坑，本文运行环境是chrome，以及不同浏览器的margin的坑是不一样的，这个网上的<a href="http://www.hicss.net/do-not-tell-me-you-understand-margin/" target="_blank" rel="noopener">一篇文章</a>写的还是可以参考的。</p>
-<p>该篇文章主要说明垂直外边距的合并，可能在你遇到问题的时候印象会深些，不过本文还是一步步把它写出来，如果你在某个时刻看到，知道，诶，原来margin还有这样的一面，那这篇文章也就开心了~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
         <tag>css</tag>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>margin</tag>
       </tags>
   </entry>
   <entry>
@@ -768,9 +768,9 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>css</tag>
         <tag>技术</tag>
         <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -1211,6 +1211,82 @@
       </tags>
   </entry>
   <entry>
+    <title>谈谈英语/美/的元音</title>
+    <url>/2020/04/17/%E8%B0%88%E8%B0%88%E7%BE%8E%E5%BC%8F%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%85%83%E9%9F%B3/</url>
+    <content><![CDATA[<p>平时我们经常说元音辅音，常念叨的aeiou，那么什么是元音呢？<br>现在一起来看看美音音标中的元音：</p>
+<p><strong>/æ/</strong>: fat, bad, dad  //嘴角向两边张开，上下齿高度为食指中指指尖叠加高度；舌头下贴，向后收紧<br><strong>/e/</strong>: check, bed<br><strong>/i:/</strong>:feed, sheet //嘴唇向两边收紧，扁唇；舌头在口腔里向后收紧<br><strong>/I/</strong>: sick, it, sit //嘴唇放松，舌头处于正常位置，放松，⚠️/i：/与/I/的主要区别不是长短，而是紧松<br><strong>/ɔ/</strong>: law, wall, lord, short //上下张口，口型呈椭圆形，像鸡蛋，略撅嘴<br><strong>/a/</strong>: boss, lock, cop, hot //上下张大嘴巴，把舌头贴在口腔底部，舌尖触碰下齿<br><strong>/∂/</strong>: first, sir, curse, herd //嘴唇放松，舌头位于正常位置，放松<br><strong>/u:/</strong>:fool, shoe, whose, food //双唇收圆，小圆唇<br><strong>/ʊ/</strong>: good, look, full //双唇稍撅<br><strong>/ei/</strong>: claim, fate, sake<br><strong>/ai/</strong>: fire, I ,might, like<br><strong>/ɔi/</strong>: boy, boil, noise<br><strong>/∂u/</strong>: spoke, show, low, most<br><strong>/au/</strong>: announcement, down, ouch<br><strong>/i∂/</strong>: ear, here, atmosphere<br><strong>/e∂/</strong>: where, share, there<br><strong>/u∂/</strong>: sure, tourist</p>
+<p>美式发音中不存在的音： /^/，/∂：/，/ɔ：/</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>元音</tag>
+        <tag>美音</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web前端收藏的网站</title>
+    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<a id="more"></a>
+<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<ol>
+<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
+</li>
+<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
+</li>
+<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
+</li>
+<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
+</li>
+<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
+</li>
+<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
+</li>
+<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
+</li>
+<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
+</li>
+<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
+</li>
+<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
+</li>
+<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
+</li>
+<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
+</li>
+</ol>
+<p>下面罗列的偏向设计，前端可以看看：</p>
+<ol>
+<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
+</li>
+<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
+</li>
+<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
+</li>
+<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
+</li>
+<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
+</li>
+<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
+</li>
+</ol>
+<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>web之GPU 动画：正确的打开方式</title>
     <url>/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/</url>
     <content><![CDATA[<p>译者序：原文<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">GPU Animation: Doing It Right</a>，发表于2016年12月6日，本文是对该篇的中文翻译，如有帮助，作为译者，也深感欣慰。<br>附原文链接：<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/</a></p>
@@ -1489,66 +1565,6 @@
       <tags>
         <tag>英语</tag>
         <tag>重读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web前端收藏的网站</title>
-    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<a id="more"></a>
-<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<ol>
-<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
-</li>
-<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
-</li>
-<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
-</li>
-<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
-</li>
-<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
-</li>
-<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
-</li>
-<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
-</li>
-<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
-</li>
-<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
-</li>
-<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
-</li>
-<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
-</li>
-<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
-</li>
-<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
-</li>
-</ol>
-<p>下面罗列的偏向设计，前端可以看看：</p>
-<ol>
-<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
-</li>
-<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
-</li>
-<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
-</li>
-<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
-</li>
-<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
-</li>
-<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
-</li>
-</ol>
-<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
