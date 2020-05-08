@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>英语·快速记单词之词根联想法</title>
-    <url>/2020/05/08/%E8%8B%B1%E8%AF%AD%C2%B7%E5%BF%AB%E9%80%9F%E8%AE%B0%E5%8D%95%E8%AF%8D%E4%B9%8B%E8%AF%8D%E6%A0%B9%E8%81%94%E6%83%B3%E6%B3%95/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>MWeb+七牛云图床</title>
-    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
-<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
-<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
-<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
-<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
-<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
-<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo(MacOS)+Github快速搭建博客</title>
     <url>/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<blockquote>
@@ -123,6 +98,26 @@
       </tags>
   </entry>
   <entry>
+    <title>MWeb+七牛云图床</title>
+    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
+<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
+<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
+<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
+<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
+<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
+<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac Mail绑定QQ邮箱</title>
     <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
     <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
@@ -143,6 +138,29 @@
       <tags>
         <tag>Mac</tag>
         <tag>app</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac安装office365</title>
+    <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
+    <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+<a id="more"></a>
+
+<h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-a2415d8c7cb8514b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="2-资源分享："><a href="#2-资源分享：" class="headerlink" title="2. 资源分享："></a>2. 资源分享：</h3><p><img src="https://upload-images.jianshu.io/upload_images/2320147-6c50d6b03939caa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>office365下载链接:<a href="https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ</a>  密码:u05s</p>
+<p>破解补丁下载链接:<a href="https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg</a>  密码:tss5</p>
+<h3 id="3-“傻瓜式”安装"><a href="#3-“傻瓜式”安装" class="headerlink" title="3. “傻瓜式”安装"></a>3. “傻瓜式”安装</h3><p>下载完成后，按照提示正常安装，“傻瓜式”操作。<br>（1）先安装office365，不需要打开；<br>（2）office完成后，安装补丁工具。<br>（3）最后完成。<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d8b4d41c310695a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>😄</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+        <tag>office</tag>
       </tags>
   </entry>
   <entry>
@@ -321,29 +339,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac安装office365</title>
-    <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
-    <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
-<a id="more"></a>
-
-<h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-a2415d8c7cb8514b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h3 id="2-资源分享："><a href="#2-资源分享：" class="headerlink" title="2. 资源分享："></a>2. 资源分享：</h3><p><img src="https://upload-images.jianshu.io/upload_images/2320147-6c50d6b03939caa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>office365下载链接:<a href="https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ</a>  密码:u05s</p>
-<p>破解补丁下载链接:<a href="https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg</a>  密码:tss5</p>
-<h3 id="3-“傻瓜式”安装"><a href="#3-“傻瓜式”安装" class="headerlink" title="3. “傻瓜式”安装"></a>3. “傻瓜式”安装</h3><p>下载完成后，按照提示正常安装，“傻瓜式”操作。<br>（1）先安装office365，不需要打开；<br>（2）office完成后，安装补丁工具。<br>（3）最后完成。<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d8b4d41c310695a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>😄</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-        <tag>office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac实现Adobe Indesign CC快速切换中英</title>
     <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
     <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
@@ -364,6 +359,65 @@
         <tag>app</tag>
         <tag>办公</tag>
         <tag>adobe</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown语法大全</title>
+    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
+<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
+
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
+
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+<p>有序列表使用数字并加上 . 号来表示,如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+
+<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -495,65 +549,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown语法大全</title>
-    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
-<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
-<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
-
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
-
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
-<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-<p>有序列表使用数字并加上 . 号来表示,如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
-<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
-
-<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
-<blockquote>
-<p>区块引用</p>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
-<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
-<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
-<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>语法</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css美化scrollbar滚动条</title>
     <url>/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
     <content><![CDATA[<p>在布局页面样式的时候，可能会遇到显示滚动条的需要，默认滚动条样式普通也不具备自认为的美感，想打造自己的滚动条，咋破？按例我们先上效果图：</p>
@@ -576,46 +571,6 @@
 <p>scrollbar属性目前并不通用，一般用于webkit较多，移动端可用。</p>
 <p><img src="http://upload-images.jianshu.io/upload_images/2320147-a45d20ffa74c4de3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="适用"></p>
 <p>参考链接：<br><a href="https://css-tricks.com/custom-scrollbars-in-webkit/" target="_blank" rel="noopener">https://css-tricks.com/custom-scrollbars-in-webkit/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>css搞定input-checkbox的美化</title>
-    <url>/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<blockquote>
-<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
-<a id="more"></a>
-
-<h3 id="开头语"><a href="#开头语" class="headerlink" title="开头语"></a>开头语</h3><p>“web, 我觉得刚才秀的姿势不够纠结，缺乏了一点点内涵，无法表现input内心的复杂情感，请允许我再来一次，我会拿出百分百的状态，争取做到深刻而不深沉，平淡而不平庸，演好我的角色。其实，我是一名演员。”<br>—— 改编源自《喜剧之王》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c74aad3cba988b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<p>交互效果是当用户点击文字行或者圈圈，都可以选择打钩或去掉钩，多选框或单选框效果。</p>
-<p>咋实现，一步一步来，先来个最基本的样子：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c80edd25a0651877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
-<p>怎么让选择框变美，首先，身材比例调一下（width，height），瞬间小家碧玉变得大气：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d1fc6b67b403e883.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<p>然后稍微的隆一下border-radius，变得温婉些，前提要加上-webkit-appearance: none，才能改变：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a9ee7e20f6ecc52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<p>这时候选中效果是看不见的，因为默认样式已经去除，接下来修整下选中的状态，对勾怎么弄，利用隐士Unicode编码。’\2713’代表对钩，利用content来加入，并改变位置，颜色，实现了自我的展示。<br>主样式代码如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-831eea27eb2cfcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
-<p>主要是-webkit-appearance: none以及利用unicode编码，伪元素实现。</p>
-<p>附上最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">		.input-wrap &#123;</span><br><span class="line">			width: 20rem;</span><br><span class="line">			height: 10rem;</span><br><span class="line">			padding-top: 5rem;</span><br><span class="line">			margin: auto;</span><br><span class="line">			background-color: #f99;</span><br><span class="line">			color: #fff;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 23px;</span><br><span class="line">		&#125;</span><br><span class="line">		input[type&#x3D;&#39;checkbox&#39;] &#123;</span><br><span class="line">			position: relative;</span><br><span class="line">			width: 20px;</span><br><span class="line">			height: 20px;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	        margin-right: 10px;</span><br><span class="line">	        border: 2px solid #fff;</span><br><span class="line">	        border-radius: 50%;</span><br><span class="line">	    &#125;</span><br><span class="line">&#x2F;*	    input[type&#x3D;&#39;checkbox&#39;]:checked &#123;</span><br><span class="line">	        clip: (0,0,0,0);</span><br><span class="line">	        outline: 0;</span><br><span class="line">	        background-color: transparent;</span><br><span class="line">	    &#125;*&#x2F;</span><br><span class="line">	    input[type&#x3D;&#39;checkbox&#39;]:checked:after &#123;</span><br><span class="line">	        content: &#39;\2713&#39;;</span><br><span class="line">	        position: absolute;</span><br><span class="line">	        left: 3px;</span><br><span class="line">	        color: #fff;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">---html---</span><br><span class="line">	&lt;div class&#x3D;&quot;input-wrap&quot;&gt;</span><br><span class="line">		&lt;label class&#x3D;&quot;btn-admit admit&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;save-in&quot; name&#x3D;&quot;saveIn&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;Bike&quot; &#x2F;&gt;我愿意 Yes,I do&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>题外话，unicode编码还是很有用的，比如说实现下面的：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-52f810d6831a77d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-401a635697b5a3b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正确.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8a176b42fec3ae11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="unicode源自网络"></p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -663,6 +618,46 @@
         <tag>web</tag>
         <tag>css</tag>
         <tag>margin</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css搞定input-checkbox的美化</title>
+    <url>/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<blockquote>
+<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+<a id="more"></a>
+
+<h3 id="开头语"><a href="#开头语" class="headerlink" title="开头语"></a>开头语</h3><p>“web, 我觉得刚才秀的姿势不够纠结，缺乏了一点点内涵，无法表现input内心的复杂情感，请允许我再来一次，我会拿出百分百的状态，争取做到深刻而不深沉，平淡而不平庸，演好我的角色。其实，我是一名演员。”<br>—— 改编源自《喜剧之王》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c74aad3cba988b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<p>交互效果是当用户点击文字行或者圈圈，都可以选择打钩或去掉钩，多选框或单选框效果。</p>
+<p>咋实现，一步一步来，先来个最基本的样子：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c80edd25a0651877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
+<p>怎么让选择框变美，首先，身材比例调一下（width，height），瞬间小家碧玉变得大气：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d1fc6b67b403e883.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<p>然后稍微的隆一下border-radius，变得温婉些，前提要加上-webkit-appearance: none，才能改变：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a9ee7e20f6ecc52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<p>这时候选中效果是看不见的，因为默认样式已经去除，接下来修整下选中的状态，对勾怎么弄，利用隐士Unicode编码。’\2713’代表对钩，利用content来加入，并改变位置，颜色，实现了自我的展示。<br>主样式代码如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-831eea27eb2cfcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>主要是-webkit-appearance: none以及利用unicode编码，伪元素实现。</p>
+<p>附上最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">		.input-wrap &#123;</span><br><span class="line">			width: 20rem;</span><br><span class="line">			height: 10rem;</span><br><span class="line">			padding-top: 5rem;</span><br><span class="line">			margin: auto;</span><br><span class="line">			background-color: #f99;</span><br><span class="line">			color: #fff;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 23px;</span><br><span class="line">		&#125;</span><br><span class="line">		input[type&#x3D;&#39;checkbox&#39;] &#123;</span><br><span class="line">			position: relative;</span><br><span class="line">			width: 20px;</span><br><span class="line">			height: 20px;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	        margin-right: 10px;</span><br><span class="line">	        border: 2px solid #fff;</span><br><span class="line">	        border-radius: 50%;</span><br><span class="line">	    &#125;</span><br><span class="line">&#x2F;*	    input[type&#x3D;&#39;checkbox&#39;]:checked &#123;</span><br><span class="line">	        clip: (0,0,0,0);</span><br><span class="line">	        outline: 0;</span><br><span class="line">	        background-color: transparent;</span><br><span class="line">	    &#125;*&#x2F;</span><br><span class="line">	    input[type&#x3D;&#39;checkbox&#39;]:checked:after &#123;</span><br><span class="line">	        content: &#39;\2713&#39;;</span><br><span class="line">	        position: absolute;</span><br><span class="line">	        left: 3px;</span><br><span class="line">	        color: #fff;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">---html---</span><br><span class="line">	&lt;div class&#x3D;&quot;input-wrap&quot;&gt;</span><br><span class="line">		&lt;label class&#x3D;&quot;btn-admit admit&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;save-in&quot; name&#x3D;&quot;saveIn&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;Bike&quot; &#x2F;&gt;我愿意 Yes,I do&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>题外话，unicode编码还是很有用的，比如说实现下面的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-52f810d6831a77d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-401a635697b5a3b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正确.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8a176b42fec3ae11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="unicode源自网络"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -745,6 +740,32 @@
       </tags>
   </entry>
   <entry>
+    <title>js实现七牛云上传图片视频</title>
+    <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
+    <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<a id="more"></a>
+
+<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
+<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>七牛云</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js实现canvas画笔效果</title>
     <url>/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<p>“别看我只是支画笔，我有雄心志气高”，今天便来讲讲canvas的画笔。之前做H5 canvas绘画时，思考如何让画出来的线条有纹理，翻找半天找不出个所以然，机缘巧合得知有个<code>createPattern</code>属性，嘿，成了，效果图如下。索性总结下画笔的属性，列个大概。</p>
@@ -793,67 +814,6 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
 <p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
 <p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>canvas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js实现七牛云上传图片视频</title>
-    <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
-    <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<a id="more"></a>
-
-<p>“无言独上西楼，月如钩，寂寞梧桐深院锁清秋。剪不断，理还乱，是离愁，别是一般滋味在心头。”<br>—— 题记，引自《相见欢》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><hr>
-<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-3f3a99a0d0aeb4bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var option1 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;pickfiles&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Video files&quot;, extensions : &quot;flv,mpg,mpeg,avi,wmv,mov,asf,rm,rmvb,mkv,m4v,mp4&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      console.log(res)</span><br><span class="line">      if (res.data &amp;&amp; res.data.video &amp;&amp; res.data.video.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.video.qiniu.upToken; </span><br><span class="line">        console.log(res.data);</span><br><span class="line">        self.keys &#x3D; res.data.video.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;video01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      plupload.each(files, function(file) &#123;</span><br><span class="line">        var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">        progress.setStatus(&quot;等待...&quot;);</span><br><span class="line">        progress.bindUploadCancel(up);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      if (up.runtime &#x3D;&#x3D;&#x3D; &#39;html5&#39; &amp;&amp; chunk_size) &#123;</span><br><span class="line">          progress.setChunkProgess(chunk_size);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      var chunk_size &#x3D; plupload.parseSize(this.getOption(&#39;chunk_size&#39;));</span><br><span class="line">      progress.setProgress(file.percent + &quot;%&quot;, file.speed, chunk_size);</span><br><span class="line">      console.log(file)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.video_info &#x3D; info;</span><br><span class="line">      var cover_info &#x3D; $.parseJSON(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; self.data.video_hash &#x3D; k.hash;</span><br><span class="line">      console.log(info)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(info.key)</span><br><span class="line">      &#x2F;&#x2F; console.log(k.key)</span><br><span class="line"></span><br><span class="line">      &#x2F;&#x2F; console.log(self.data.video_info)</span><br><span class="line"></span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">      var progress &#x3D; new FileProgress(file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setComplete(up, info);</span><br><span class="line">      $(&#39;#pickfiles span&#39;).html(&#39;重新上传&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">      $(&#39;table&#39;).show();</span><br><span class="line">      var progress &#x3D; new FileProgress(err.file, &#39;fsUploadProgress&#39;);</span><br><span class="line">      progress.setError();</span><br><span class="line">      progress.setStatus(errTip);</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.keys.shift();</span><br><span class="line">      &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader &#x3D; Qiniu.uploader(option1);</span><br><span class="line"></span><br><span class="line">uploader.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Qiniu2 &#x3D; new QiniuJsSDK();</span><br><span class="line">var option2 &#x3D; &#123;</span><br><span class="line">  runtimes: &#39;html5,flash,html4&#39;,</span><br><span class="line">  browse_button: &#39;info-cover&#39;,</span><br><span class="line">  container: &#39;container&#39;,</span><br><span class="line">  drop_element: &#39;container&#39;,</span><br><span class="line">  max_file_size: &#39;1000mb&#39;,</span><br><span class="line">  filters : &#123; mime_types: [ &#123;title: &quot;Image files&quot;, extensions : &quot;jpg,png,jpeg&quot;&#125;] &#125;,</span><br><span class="line">  flash_swf_url: &#39;&#x2F;static&#x2F;js&#x2F;Moxie.swf&#39;,</span><br><span class="line">  dragdrop: true,</span><br><span class="line">  chunk_size: &#39;4mb&#39;,</span><br><span class="line">  multi_selection: false,</span><br><span class="line">  uptoken_func: function()&#123;</span><br><span class="line">    var ajax &#x3D; new XMLHttpRequest();</span><br><span class="line">    ajax.open(&#39;GET&#39;, location.origin + &#39;&#x2F;cloud&#x2F;video&#x2F;uploadtoken&#39;, false);</span><br><span class="line">    ajax.setRequestHeader(&quot;If-Modified-Since&quot;, &quot;0&quot;);</span><br><span class="line">    ajax.send();</span><br><span class="line">    if (ajax.status &#x3D;&#x3D;&#x3D; 200) &#123;</span><br><span class="line">      var res &#x3D; JSON.parse(ajax.responseText);</span><br><span class="line">      if (res.data &amp;&amp; res.data.cover &amp;&amp; res.data.cover.qiniu) &#123;</span><br><span class="line">        var token &#x3D; res.data.cover.qiniu.upToken;</span><br><span class="line">        console.log(res.data) </span><br><span class="line">        self.coverkeys &#x3D; res.data.cover.qiniu.key;</span><br><span class="line">        return token;</span><br><span class="line">      &#125;</span><br><span class="line">      return &#39;&#39;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  domain: &#39;http:&#x2F;&#x2F;inimg01.jiuyan.info&#x2F;&#39;,</span><br><span class="line">  get_new_uptoken: false,</span><br><span class="line">  auto_start: true,</span><br><span class="line">  log_level: 5,</span><br><span class="line">  init: &#123;</span><br><span class="line">    &#39;FilesAdded&#39;: function(up, files) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;BeforeUpload&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;UploadProgress&#39;: function(up, file) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#x2F;&#x2F; &#39;UploadComplete&#39;: function() &#123; $(&#39;#success&#39;).show(); &#125;,</span><br><span class="line">    &#39;FileUploaded&#39;: function(up, file, info) &#123;</span><br><span class="line">      &#x2F;&#x2F; var k &#x3D; info;</span><br><span class="line">      self.cover_info &#x3D; info;</span><br><span class="line">      console.log(info)</span><br><span class="line">      var result_url &#x3D; up.getOption(&#39;domain&#39;) + $.parseJSON(info).key</span><br><span class="line">      document.getElementById(&#39;loader-wrap&#39;).className &#x3D; &#39;loader-wrap&#39;</span><br><span class="line">      var coverWrap &#x3D; document.getElementById(&#39;cover-wrap&#39;)</span><br><span class="line">      coverWrap.style.backgroundImage &#x3D; &quot;url(&quot; + result_url + &quot;)&quot;;</span><br><span class="line">      self.isActive &#x3D; true;</span><br><span class="line">      console.log(&#39;success&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Error&#39;: function(up, err, errTip) &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#39;Key&#39;: function(up, file) &#123;</span><br><span class="line">      var key &#x3D; self.coverkeys.shift();</span><br><span class="line">      &#x2F;&#x2F; &#x2F;&#x2F; do something with key</span><br><span class="line">      return key</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">var uploader2 &#x3D; Qiniu2.uploader(option2);</span><br><span class="line"></span><br><span class="line">uploader2.bind(&#39;FileUploaded&#39;, function() &#123;</span><br><span class="line">  console.log(&#39;hello man 2,a file is uploaded&#39;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&#39;#info-cover&#39;).on(&#39;click&#39;, function()&#123;</span><br><span class="line">  uploader2.start();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-
-<p>参考文章：<br><a href="https://developer.qiniu.com/kodo/sdk/javascript#8" target="_blank" rel="noopener">https://developer.qiniu.com/kodo/sdk/javascript#8</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>七牛云</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js解决canvas绘制多图</title>
-    <url>/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/</url>
-    <content><![CDATA[<p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
-<a id="more"></a>
-
-<p>“处理图片是我们普通市民的责任，积累跬步是我本身的兴趣，所以加载图片我每次都跑一次，如果遇到多张图片的话我还会多跑几次。”<br>——题记，改自《破坏之王》</p>
-<h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
-<p>原始做法：<br>前提多张图片，本地开发的时候，通过改变HTML img元素的路径<code>src</code>（多个img元素在H5已有），进行绘制<code>drawImage</code>，比如说<code>drawImage(document.getElementById(&#39;img1&#39;), 0, 0)</code>，没问题，多图合成图片效果正常；到了线上，报出一长串红文，不好意思，您的图片没有权限，绘制失败。ok，跨域么，翻资料，加个<code>crossOrigin</code>，允许跨域请求资源。这个可以一试。</p>
-<blockquote>
-<p><strong>使用其它域名下的图片</strong><br>在<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLImageElement" target="_blank" rel="noopener">HTMLImageElement</a>上使用<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes" target="_blank" rel="noopener">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染canvas，否则，使用这个图片将会<a href="https://developer.mozilla.org/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas" target="_blank" rel="noopener">污染canvas</a>。</p>
-</blockquote>
-<blockquote>
-<p><strong>什么是“被污染”的 canvas?</strong><br>尽管不通过 CORS 就可以在画布中使用图片，但是这会<strong>污染</strong>画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData()方法，调用它们会抛出安全错误。<br>这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。<br><em>[引自MDN]</em></p>
-</blockquote>
-<p>最后方案（不在H5显示img元素，从零创建）：<br>通过js创建image对象，对于多张图片，建立数组，<strong>加载完成多张图片后</strong>，进行canvas绘制，后再进行合成图片。这里有个强调，必须要在加载完成后，方可绘制，也就是说有先后顺序，顺序没处理好，可能导致合成的图片缺头少尾，甚至空白。这里利用jquery的deffered来处理先后顺序问题。</p>
-<blockquote>
-<p>若调用 drawImage时，图片没加载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。</p>
-</blockquote>
-<p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;预加载</span><br><span class="line">function preloadImg(list, imgs) &#123;</span><br><span class="line">  var def &#x3D; $.Deferred(),</span><br><span class="line">      len &#x3D; list.length;</span><br><span class="line">  $(list).each(function(i,e) &#123;    </span><br><span class="line">    var img &#x3D; new Image(); </span><br><span class="line">    img.crossOrigin &#x3D; &quot;&quot;; &#x2F;&#x2F;跨域请求资源</span><br><span class="line">    img.onload &#x3D; (function(j) &#123;</span><br><span class="line">      return function() &#123;</span><br><span class="line">        imgs[j] &#x3D; img</span><br><span class="line">        len--;</span><br><span class="line">        if(len &#x3D;&#x3D; 0) &#123;  def.resolve();  &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">    img.onerror &#x3D; function() &#123;</span><br><span class="line">      len--;</span><br><span class="line">      alert(&#39;fail to load image&#39;);</span><br><span class="line">    &#125;;</span><br><span class="line">    img.src &#x3D; e; &#x2F;&#x2F; 确保缓存的图片也触发 load 事件</span><br><span class="line">  &#125;);</span><br><span class="line">  console.log(def.promise())</span><br><span class="line">  return def.promise();</span><br><span class="line">&#125;</span><br><span class="line">$.when(preloadImg(list, imgs)).done(</span><br><span class="line">  function() &#123;</span><br><span class="line">    draw事件</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p><em>参考文章</em><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1bc92ad1bb33afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="image.png"></p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -936,6 +896,41 @@
       </tags>
   </entry>
   <entry>
+    <title>js解决canvas绘制多图</title>
+    <url>/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/</url>
+    <content><![CDATA[<p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
+<a id="more"></a>
+
+<p>“处理图片是我们普通市民的责任，积累跬步是我本身的兴趣，所以加载图片我每次都跑一次，如果遇到多张图片的话我还会多跑几次。”<br>——题记，改自《破坏之王》</p>
+<h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
+<p>原始做法：<br>前提多张图片，本地开发的时候，通过改变HTML img元素的路径<code>src</code>（多个img元素在H5已有），进行绘制<code>drawImage</code>，比如说<code>drawImage(document.getElementById(&#39;img1&#39;), 0, 0)</code>，没问题，多图合成图片效果正常；到了线上，报出一长串红文，不好意思，您的图片没有权限，绘制失败。ok，跨域么，翻资料，加个<code>crossOrigin</code>，允许跨域请求资源。这个可以一试。</p>
+<blockquote>
+<p><strong>使用其它域名下的图片</strong><br>在<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLImageElement" target="_blank" rel="noopener">HTMLImageElement</a>上使用<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes" target="_blank" rel="noopener">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染canvas，否则，使用这个图片将会<a href="https://developer.mozilla.org/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas" target="_blank" rel="noopener">污染canvas</a>。</p>
+</blockquote>
+<blockquote>
+<p><strong>什么是“被污染”的 canvas?</strong><br>尽管不通过 CORS 就可以在画布中使用图片，但是这会<strong>污染</strong>画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData()方法，调用它们会抛出安全错误。<br>这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。<br><em>[引自MDN]</em></p>
+</blockquote>
+<p>最后方案（不在H5显示img元素，从零创建）：<br>通过js创建image对象，对于多张图片，建立数组，<strong>加载完成多张图片后</strong>，进行canvas绘制，后再进行合成图片。这里有个强调，必须要在加载完成后，方可绘制，也就是说有先后顺序，顺序没处理好，可能导致合成的图片缺头少尾，甚至空白。这里利用jquery的deffered来处理先后顺序问题。</p>
+<blockquote>
+<p>若调用 drawImage时，图片没加载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;预加载</span><br><span class="line">function preloadImg(list, imgs) &#123;</span><br><span class="line">  var def &#x3D; $.Deferred(),</span><br><span class="line">      len &#x3D; list.length;</span><br><span class="line">  $(list).each(function(i,e) &#123;    </span><br><span class="line">    var img &#x3D; new Image(); </span><br><span class="line">    img.crossOrigin &#x3D; &quot;&quot;; &#x2F;&#x2F;跨域请求资源</span><br><span class="line">    img.onload &#x3D; (function(j) &#123;</span><br><span class="line">      return function() &#123;</span><br><span class="line">        imgs[j] &#x3D; img</span><br><span class="line">        len--;</span><br><span class="line">        if(len &#x3D;&#x3D; 0) &#123;  def.resolve();  &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">    img.onerror &#x3D; function() &#123;</span><br><span class="line">      len--;</span><br><span class="line">      alert(&#39;fail to load image&#39;);</span><br><span class="line">    &#125;;</span><br><span class="line">    img.src &#x3D; e; &#x2F;&#x2F; 确保缓存的图片也触发 load 事件</span><br><span class="line">  &#125;);</span><br><span class="line">  console.log(def.promise())</span><br><span class="line">  return def.promise();</span><br><span class="line">&#125;</span><br><span class="line">$.when(preloadImg(list, imgs)).done(</span><br><span class="line">  function() &#123;</span><br><span class="line">    draw事件</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><em>参考文章</em><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1bc92ad1bb33afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>canvas</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>node-sass安装的小坑</title>
     <url>/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
@@ -955,6 +950,66 @@
       <tags>
         <tag>技术</tag>
         <tag>node-sass</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>web前端收藏的网站</title>
+    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<a id="more"></a>
+<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
+<ol>
+<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
+</li>
+<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
+</li>
+<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
+</li>
+<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
+</li>
+<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
+</li>
+<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
+</li>
+<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
+</li>
+<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
+</li>
+<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
+</li>
+<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
+</li>
+<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
+</li>
+<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
+</li>
+<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
+</li>
+</ol>
+<p>下面罗列的偏向设计，前端可以看看：</p>
+<ol>
+<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
+</li>
+<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
+</li>
+<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
+</li>
+<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
+</li>
+<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
+</li>
+<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
+</li>
+</ol>
+<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -1148,66 +1203,6 @@
         <tag>web</tag>
         <tag>JavaScript</tag>
         <tag>web audio api</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web前端收藏的网站</title>
-    <url>/2017/03/13/web%E5%89%8D%E7%AB%AF%E6%94%B6%E8%97%8F%E7%9A%84%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<a id="more"></a>
-<p>“不要因为也许会改变<br>就不肯说出那句美丽的誓言<br>不要因为也许会分离<br>就不敢求一次倾心的相遇<br>总有一些什么<br>会留下来的吧<br>留下来作一件不灭的印记<br>好让 好让那些<br>不相识的人也能知道<br>我曾经怎样深深地爱过你”<br>—— 题记，引自 席慕容｀《印记》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>整理了目前自己在开发前端中收藏的网站，觉得不错的分享给大家，个人看法，若有更好，可以推荐交流：<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a3c8ca137a858497.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="Paste_Image.png"></p>
-<ol>
-<li><p><a href="https://www.w3.org/" target="_blank" rel="noopener">W3C</a><br>这个不解释，基本常识，w3cschool 也可以，阅读性可能会更高些<br><img src="http://upload-images.jianshu.io/upload_images/2320147-1da2ea86f261c490.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c.png"></p>
-</li>
-<li><p><a href="https://github.com/" target="_blank" rel="noopener">github</a><br>必备网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-fa0a2e2923ddc4b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="github.png"></p>
-</li>
-<li><p><a href="https://developer.mozilla.org/en-US/" target="_blank" rel="noopener">MDN</a><br>类似W3C，推荐，一些知识可能还没有中文，可以帮忙添加中文翻译，让更多的人看到<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5915a3934d3e5d48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="MDN.png"></p>
-</li>
-<li><p><a href="http://stackoverflow.com/" target="_blank" rel="noopener">stackoverflow</a><br>程序界的问答网站<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7d7cef0c7ef1d64b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="stackoverflow.png"></p>
-</li>
-<li><p><a href="http://caniuse.com/#home" target="_blank" rel="noopener">caniuse</a><br>检测浏览器对web属性方法的支持<br><img src="http://upload-images.jianshu.io/upload_images/2320147-897a98c74bf93849.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="caniuse.png"></p>
-</li>
-<li><p><a href="https://validator.w3.org/" target="_blank" rel="noopener">validator</a><br>W3C检查代码格式<br><img src="http://upload-images.jianshu.io/upload_images/2320147-39c0aad9b980b440.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="validator.png"></p>
-</li>
-<li><p><a href="https://tinypng.com/" target="_blank" rel="noopener">tinypng</a><br>图片压缩<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6a9b9974cec4ce53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tinypng.png"></p>
-</li>
-<li><p><a href="http://codepen.io/pens/" target="_blank" rel="noopener">codepen</a><br>前端设计开发平台，可展示，欣赏，开发，也可找效果灵感<br><img src="http://upload-images.jianshu.io/upload_images/2320147-9432bd47e24d8412.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="codepen.png"></p>
-</li>
-<li><p><a href="http://www.csdn.net/" target="_blank" rel="noopener">csdn</a><br>csdn也不错，技术交流，写博客<br><img src="http://upload-images.jianshu.io/upload_images/2320147-6f6890fa4c7b6b02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="csdn.png"></p>
-</li>
-<li><p><a href="https://ruby-china.org/" target="_blank" rel="noopener">ruby-china</a><br>ruby china 交流社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-8f4c8948856da196.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="ruby.png"></p>
-</li>
-<li><p><a href="https://jsfiddle.net/dzn23wrr/" target="_blank" rel="noopener">jsfiddle</a><br>在线开发代码平台<br><img src="http://upload-images.jianshu.io/upload_images/2320147-e6c050a85fc3c2ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="jsfiddle.png"></p>
-</li>
-<li><p><a href="https://css-tricks.com/" target="_blank" rel="noopener">css-tricks</a><br>围绕CSS，Tips, Tricks, and Techniques on using Cascading Style Sheets.<br><img src="http://upload-images.jianshu.io/upload_images/2320147-91d21e6db43a3e48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="css.png"></p>
-</li>
-<li><p><a href="http://www.jianshu.com/" target="_blank" rel="noopener">简书</a><br>文章方面推荐<br><img src="http://upload-images.jianshu.io/upload_images/2320147-afc298939a0622f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简书.png"></p>
-</li>
-</ol>
-<p>下面罗列的偏向设计，前端可以看看：</p>
-<ol>
-<li><p><a href="https://dribbble.com/" target="_blank" rel="noopener">dribbble</a><br>在线设计社区<br><img src="http://upload-images.jianshu.io/upload_images/2320147-a7657a37f01ac2bf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="dribbble.png"></p>
-</li>
-<li><p><a href="https://www.toptal.com/designers/subtlepatterns/" target="_blank" rel="noopener">subtlepatterns</a><br>背景素材网站，不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-24d786d40a231773.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="subtlepatterns.png"></p>
-</li>
-<li><p><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">iconfont</a><br>阿里巴巴旗下，icon<br><img src="http://upload-images.jianshu.io/upload_images/2320147-667e49568e53c5a6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfont.png"></p>
-</li>
-<li><p><a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a><br>icon网站，也可以<br><img src="http://upload-images.jianshu.io/upload_images/2320147-5bfa0c2932cb7396.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="iconfinder.png"></p>
-</li>
-<li><p><a href="http://www.lanrentuku.com/" target="_blank" rel="noopener">lanrentuku</a><br>懒人图库也不错<br><img src="http://upload-images.jianshu.io/upload_images/2320147-d6732526c5be3575.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="lanrentuku.png"></p>
-</li>
-<li><p><a href="http://huaban.com/" target="_blank" rel="noopener">huaban</a><br>花瓣网，设计<br><img src="http://upload-images.jianshu.io/upload_images/2320147-c96df3981791a306.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="花瓣.png"></p>
-</li>
-</ol>
-<p>当然可能还有更好的网站，以上是个人认为还不错的，敬请交流~</p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
       </tags>
   </entry>
   <entry>
@@ -1447,47 +1442,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语·有关重要的句式表达</title>
-    <url>/2020/05/02/%E8%8B%B1%E8%AF%AD%C2%B7%E5%85%B3%E4%BA%8E%E9%87%8D%E8%A6%81%E7%9A%84%E5%8F%A5%E5%BC%8F%E8%A1%A8%E8%BE%BE/</url>
-    <content><![CDATA[<p>​今天分享英语写作用到的句式，同一个意思，不同说法，同义转换给文章锦上添花，以下可用来表示重要/功能性的含义。<br>​</p>
-<h2 id="重要之类："><a href="#重要之类：" class="headerlink" title="重要之类："></a>重要之类：</h2><p>it is imperative for … to do…<br>… is obliged to do sth<br>… is required to do sth<br>… is supposed to do…<br>… ought to do…<br>… demand great attention from…<br>… plays a crucial/vital/critical/indispensable/essential/irreplaceable part of…<br>… attach great importance to doing …<br>… is of great importance/significance for…<br>great importance should be attached to doing…<br>but for…, never would us have access to…<br>spare no effort to do;<br>endeavor to do;<br>make (concerted) efforts to do<br>devote wholeheartedly to doing<br>…constitute a stepping stone to …<br>…lay a solid foundation for…<br>…pave the way for…<br>…is of top priority<br>…is the prerequisite of …</p>
-<h2 id="有利于之类："><a href="#有利于之类：" class="headerlink" title="有利于之类："></a>有利于之类：</h2><p>… be beneficial to/for<br>… is of great benefit to …<br>… is conductive to doing…<br>… contributes to doing/sth…<br>… experts a positive influence/impact/effect on…<br>… makes a great contribution to doing/sth …<br>it is easier for… to have access to …<br>it is worthwhile to do</p>
-<h2 id="不利于之类："><a href="#不利于之类：" class="headerlink" title="不利于之类："></a>不利于之类：</h2><p>… do harm to…<br>… is harmful for …<br>… is detrimental to doing…<br>… pose a threat to (health/environment/doing)<br>… exert a negative impact on …</p>
-<h2 id="必然之类："><a href="#必然之类：" class="headerlink" title="必然之类："></a>必然之类：</h2><p>there is no denying that…<br>it goes without saying that…<br>there is every reason to believe that…<br>it is widely/vastly acknowledged/accepted that…<br>needless to say, …<br>there is sufficient evidence to conclude that…<br>definitely/evidently/obviously/admittedly/inevitably</p>
-<p>好啦，这些句子可以在写作中变化应用，有你使用的句子吗^_^</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>句式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>英语·句子成分解析</title>
-    <url>/2020/05/04/%E8%8B%B1%E8%AF%AD%C2%B7%E5%8F%A5%E5%AD%90%E6%9E%84%E6%88%90%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90/</url>
-    <content><![CDATA[<p>​今天我们从基本的英语句子来说，拆分成分，英语句子基本结构为主+谓+宾，另外还有表语、状语、补语、同位语、插入语等成分。</p>
-<h2 id="1、主语"><a href="#1、主语" class="headerlink" title="1、主语"></a>1、主语</h2><p>名词，代词，不定式，动名词，句子</p>
-<h2 id="2、谓语：动词或动词短语"><a href="#2、谓语：动词或动词短语" class="headerlink" title="2、谓语：动词或动词短语"></a>2、谓语：动词或动词短语</h2><p>（1）跟不定式作宾语的常见动词：<br>want agree hope plan decide offer prefer wish intend fail desirerefuse afford choose manage expect aim promise consent pretend neglect ignoreomit happen determine demand threaten resolve decline propose undertakevolunteer。<br>（2）跟动名词作宾语的常见动词：<br>finishenjoy mind keep stop dislike consider suggest miss avoid regret admitacknowledge delay practice deny imagine postpone risk advocate recall resistappreciate cannot help confess escape fancy defer resent evade contemplate forgivepermit detest repent<br>（3）跟双宾语的常见动词：<br>asksent show teach give bring buy find get keep lend tell write wish offer deprive</p>
-<h2 id="3、宾语"><a href="#3、宾语" class="headerlink" title="3、宾语"></a>3、宾语</h2><p>名词，代词，不定式，动名词，句子</p>
-<h2 id="4、表语"><a href="#4、表语" class="headerlink" title="4、表语"></a>4、表语</h2><p>名词，形容词：某些形容词，如careless,absurd, brave, courageous, careful, careless, clever, wise, foolish, silly,stupid, good, nice, kind thoughtful, inconsiderate, greedy, money-orientedacquisitive materialistic  generous, honest, modest, polite, rude, cruel,selfish, self-centered egocentric wicked, wrong等不定式后可以加of来引导出其逻辑主语。代词，数词，不定式，动名词，分词，介词短语，句子</p>
-<h2 id="5、定语"><a href="#5、定语" class="headerlink" title="5、定语"></a>5、定语</h2><p>形容词，代词，数词，不定式，名词，动名词，分词，介词短语，句子</p>
-<h2 id="6、状语"><a href="#6、状语" class="headerlink" title="6、状语"></a>6、状语</h2><p>副词，形容词短语, 不定式，分词，介词短语，名词，句子</p>
-<h2 id="7、补语"><a href="#7、补语" class="headerlink" title="7、补语"></a>7、补语</h2><p>形容词，名词，不定式：下面的动词要求不定式做宾补：动词+宾语+动词不定式<br>ask get prompt allow forbidprefer announce  force press inspire  require assist  hate pronounce  advise  recommend bear implore remind beg induce reportcompel  invite command intend  show  drive mean train causeinstruct deserve leave  tell direct tempt entitle order warn enable needurge encourage  oblige condemn<br>teach entreat  permit wish，分词，介词短语）</p>
-<h2 id="8、同位语"><a href="#8、同位语" class="headerlink" title="8、同位语"></a>8、同位语</h2><p>名词，不定式，动名词, 句子，后跟同位语从句的常见词<br>news question proposal report altitude （latitude longitude  evidence proof suggestion request ideaconclusion thought notion value fiction fear）</p>
-<h2 id="9、插入语"><a href="#9、插入语" class="headerlink" title="9、插入语"></a>9、插入语</h2><p>不定式，分词，介词短语，句子。</p>
-<p>今天的句子成分暂时分享到这里啦～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>句子</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的黑眼圈，是因为私藏的“书库”</title>
     <url>/2020/04/23/%E6%88%91%E7%9A%84%E9%BB%91%E7%9C%BC%E5%9C%88%EF%BC%8C%E6%98%AF%E5%9B%A0%E4%B8%BA%E7%A7%81%E8%97%8F%E7%9A%84%E2%80%9C%E4%B9%A6%E5%BA%93%E2%80%9D/</url>
     <content><![CDATA[<p>今天是“世界图书日”——4月23日。越来越浮躁动荡，越难得静下心来看书，为什么常说工作后很难看得进书，一者时间少，二者不太愿意花时间在节奏慢的事情上，比如说书籍，相反可能更倾向于短时间获得结果的短视频、微博。<br>个人偏爱纸质书大于电子书，虽然信息化时代，但对于值得收藏的书一定会购买放入书架。一段时间不看书，就觉得哪里有点空空的，或许真应了“书是精神食粮”吧。列出个人私藏的书单，在这个“自带仪式感”的日子分享，书籍未完待续。不过看书跟时间段还是有些关系，比如说这个时间段看到了一本书，觉得无趣，过了段时间再翻，便觉得相见恨晚，书籍也讲“机缘”。</p>
@@ -1689,6 +1643,47 @@
       </tags>
   </entry>
   <entry>
+    <title>英语·有关重要的句式表达</title>
+    <url>/2020/05/02/%E8%8B%B1%E8%AF%AD%C2%B7%E5%85%B3%E4%BA%8E%E9%87%8D%E8%A6%81%E7%9A%84%E5%8F%A5%E5%BC%8F%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<p>​今天分享英语写作用到的句式，同一个意思，不同说法，同义转换给文章锦上添花，以下可用来表示重要/功能性的含义。<br>​</p>
+<h2 id="重要之类："><a href="#重要之类：" class="headerlink" title="重要之类："></a>重要之类：</h2><p>it is imperative for … to do…<br>… is obliged to do sth<br>… is required to do sth<br>… is supposed to do…<br>… ought to do…<br>… demand great attention from…<br>… plays a crucial/vital/critical/indispensable/essential/irreplaceable part of…<br>… attach great importance to doing …<br>… is of great importance/significance for…<br>great importance should be attached to doing…<br>but for…, never would us have access to…<br>spare no effort to do;<br>endeavor to do;<br>make (concerted) efforts to do<br>devote wholeheartedly to doing<br>…constitute a stepping stone to …<br>…lay a solid foundation for…<br>…pave the way for…<br>…is of top priority<br>…is the prerequisite of …</p>
+<h2 id="有利于之类："><a href="#有利于之类：" class="headerlink" title="有利于之类："></a>有利于之类：</h2><p>… be beneficial to/for<br>… is of great benefit to …<br>… is conductive to doing…<br>… contributes to doing/sth…<br>… experts a positive influence/impact/effect on…<br>… makes a great contribution to doing/sth …<br>it is easier for… to have access to …<br>it is worthwhile to do</p>
+<h2 id="不利于之类："><a href="#不利于之类：" class="headerlink" title="不利于之类："></a>不利于之类：</h2><p>… do harm to…<br>… is harmful for …<br>… is detrimental to doing…<br>… pose a threat to (health/environment/doing)<br>… exert a negative impact on …</p>
+<h2 id="必然之类："><a href="#必然之类：" class="headerlink" title="必然之类："></a>必然之类：</h2><p>there is no denying that…<br>it goes without saying that…<br>there is every reason to believe that…<br>it is widely/vastly acknowledged/accepted that…<br>needless to say, …<br>there is sufficient evidence to conclude that…<br>definitely/evidently/obviously/admittedly/inevitably</p>
+<p>好啦，这些句子可以在写作中变化应用，有你使用的句子吗^_^</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>句式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·句子成分解析</title>
+    <url>/2020/05/04/%E8%8B%B1%E8%AF%AD%C2%B7%E5%8F%A5%E5%AD%90%E6%9E%84%E6%88%90%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<p>​今天我们从基本的英语句子来说，拆分成分，英语句子基本结构为主+谓+宾，另外还有表语、状语、补语、同位语、插入语等成分。</p>
+<h2 id="1、主语"><a href="#1、主语" class="headerlink" title="1、主语"></a>1、主语</h2><p>名词，代词，不定式，动名词，句子</p>
+<h2 id="2、谓语：动词或动词短语"><a href="#2、谓语：动词或动词短语" class="headerlink" title="2、谓语：动词或动词短语"></a>2、谓语：动词或动词短语</h2><p>（1）跟不定式作宾语的常见动词：<br>want agree hope plan decide offer prefer wish intend fail desirerefuse afford choose manage expect aim promise consent pretend neglect ignoreomit happen determine demand threaten resolve decline propose undertakevolunteer。<br>（2）跟动名词作宾语的常见动词：<br>finishenjoy mind keep stop dislike consider suggest miss avoid regret admitacknowledge delay practice deny imagine postpone risk advocate recall resistappreciate cannot help confess escape fancy defer resent evade contemplate forgivepermit detest repent<br>（3）跟双宾语的常见动词：<br>asksent show teach give bring buy find get keep lend tell write wish offer deprive</p>
+<h2 id="3、宾语"><a href="#3、宾语" class="headerlink" title="3、宾语"></a>3、宾语</h2><p>名词，代词，不定式，动名词，句子</p>
+<h2 id="4、表语"><a href="#4、表语" class="headerlink" title="4、表语"></a>4、表语</h2><p>名词，形容词：某些形容词，如careless,absurd, brave, courageous, careful, careless, clever, wise, foolish, silly,stupid, good, nice, kind thoughtful, inconsiderate, greedy, money-orientedacquisitive materialistic  generous, honest, modest, polite, rude, cruel,selfish, self-centered egocentric wicked, wrong等不定式后可以加of来引导出其逻辑主语。代词，数词，不定式，动名词，分词，介词短语，句子</p>
+<h2 id="5、定语"><a href="#5、定语" class="headerlink" title="5、定语"></a>5、定语</h2><p>形容词，代词，数词，不定式，名词，动名词，分词，介词短语，句子</p>
+<h2 id="6、状语"><a href="#6、状语" class="headerlink" title="6、状语"></a>6、状语</h2><p>副词，形容词短语, 不定式，分词，介词短语，名词，句子</p>
+<h2 id="7、补语"><a href="#7、补语" class="headerlink" title="7、补语"></a>7、补语</h2><p>形容词，名词，不定式：下面的动词要求不定式做宾补：动词+宾语+动词不定式<br>ask get prompt allow forbidprefer announce  force press inspire  require assist  hate pronounce  advise  recommend bear implore remind beg induce reportcompel  invite command intend  show  drive mean train causeinstruct deserve leave  tell direct tempt entitle order warn enable needurge encourage  oblige condemn<br>teach entreat  permit wish，分词，介词短语）</p>
+<h2 id="8、同位语"><a href="#8、同位语" class="headerlink" title="8、同位语"></a>8、同位语</h2><p>名词，不定式，动名词, 句子，后跟同位语从句的常见词<br>news question proposal report altitude （latitude longitude  evidence proof suggestion request ideaconclusion thought notion value fiction fear）</p>
+<h2 id="9、插入语"><a href="#9、插入语" class="headerlink" title="9、插入语"></a>9、插入语</h2><p>不定式，分词，介词短语，句子。</p>
+<p>今天的句子成分暂时分享到这里啦～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>句式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>英语·工作类话题的遣词造句</title>
     <url>/2020/05/07/%E8%8B%B1%E8%AF%AD%C2%B7%E5%B7%A5%E4%BD%9C%E7%B1%BB%E8%AF%9D%E9%A2%98%E9%81%A3%E8%AF%8D%E9%80%A0%E5%8F%A5/</url>
     <content><![CDATA[<p>除了教育类话题外（《英语·“教育类”话题遣词造句education》），“工作”话题也是我们在英文写作或聊天经常遇到的话题，这里分享词句，供灵活运用。</p>
@@ -1720,6 +1715,27 @@
       <tags>
         <tag>英语</tag>
         <tag>话题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈表示逻辑关系的词句</title>
+    <url>/2020/04/28/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%86%99%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%AF%8D/</url>
+    <content><![CDATA[<p>如果备考过托福或GRE，我们会发现英语写作重逻辑，而在我们学习英文的过程中，逻辑关系这块并没有很大的重视，至少本人以前在学校学英语并没有关注。<br>今天来分享下英文写作当中，可用作逻辑关系的连接词，为英文文章增强逻辑性。</p>
+<p>导致：<br>give rise to doing/sth； result in; lead to doing/sth; so as to; bring about;  so that; enable(不能以人为主语)/urge/encourage/motivate sb to do; </p>
+<p>因果关系：<br>owing to; because; because of; lie in; thanks to；due to；this is because;<br>obviously, clearly, it is widely acknowledged that</p>
+<p>对比关系：<br>in contrast; contrast to; by comparison; comparing a with b; in comparison with; A  while/whereas B; on the contrary； on the other hand； instead；conversely；rather than；instead of；</p>
+<p>同级：<br>besides; moreover; in addition; what’s more; furthermore; additionally; for one thing, for another; apart from that; </p>
+<p>转折：<br>but，in contrast; on the contrary; instead; rather than; while（部分）；if……at all 就算（让步转折）<br>Indeed, Admittedly, it is true that, there is no denying that, we have to admit that；despite，notwithstanding, although</p>
+<p>进一步：<br>to be more specific; specifically speaking；to explain it further；in detail；</p>
+<p>举例：<br>for example/instance；here comes a concrete example；For one thing，for other thing</p>
+<p>这些可以运用到写作当中，使文章更有逻辑性。那今天的逻辑关系词分享先到这里～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>逻辑</tag>
       </tags>
   </entry>
   <entry>
@@ -1756,8 +1772,35 @@
         <category>英语</category>
       </categories>
       <tags>
+        <tag>语法</tag>
         <tag>英语</tag>
-        <tag>时态</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈单词的后缀-tion/sion/cian</title>
+    <url>/2020/04/27/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%8D%95%E8%AF%8D%E7%9A%84%E5%90%8E%E7%BC%80/</url>
+    <content><![CDATA[<p>英语有来自拉丁语、葡萄牙语、日语、中文等外来词，当我们去了解这些单词时，发现其中也是有规律的，通过规律我们可以更好地记住单词，就像小时候做规律题，选出哪个是同一组。</p>
+<p><strong>后缀 -tion vs -sion vs -cian</strong></p>
+<p>单词中出现频率高低分别为：-tion &gt; -sion &gt; -cian.</p>
+<ol>
+<li><p>通常用 <strong>-cian</strong> 作为后缀，表示一个人的职业或爱好，这样的词并不多，大概17个左右，eg：<br>music musician　音乐家<br>physic physician 内科医生<br>magic magician 魔术师<br>politic politician 政治家<br>electric electrician 电工<br>statistic statistician 统计学家<br>mathematic mathematician 数学家<br>logic logician 逻辑学家<br>arithmetic arithmetician 算术家<br>optic optician 眼镜(制造)商;配制眼镜技师<br>pediatric pediatrician 小儿科医师<br>obstetric obstetrician 产科医师<br>clinic clinician 临床医生<br>practice patrician (古罗马的)统治阶层成员<br>technique technician 技术人员, 专家<br>beauty beautician 美容师<br>diet dietician 营养学家；膳食学家（等于dietitian）<br>从中，我们可以发现，除了technique、beauty、diet，前面的单词的结尾都是字母 <strong>c</strong>.</p>
+</li>
+<li><p>-sion作为后缀，稍微复杂一些，一般是在单词以<strong>-ss</strong>结尾的时候，比如：<br>express expression 表示, 表现, 表达<br>impress impression 印象, 感想<br>recess recession 经济衰退; 不景气<br>discuss discussion 讨论, 商讨<br>confess confession 承认;自首, 供认<br>……</p>
+</li>
+</ol>
+<p>而下面的9个单词包含<strong>-mission</strong>, 须特别记忆：<br>mission 使命, 任务, 天职<br>admission 准许进入<br>intermission 间歇,停顿;(放映电影中)中间休息<br>transmission 传送, 传播, 传达<br>emission 排放物,散发物(尤指气体)<br>remission 缓和, 减轻<br>commission 授权, 委托<br>commissioner 专员, 长官<br>permission 允许, 许可, 准许</p>
+<p>另有8个单词以 <strong>-en</strong>结尾，2个以 <strong>-an</strong>结尾，也要加-sion:<br>tension 张力，拉力；紧张，不安；电压<br>intension 紧张<br>extension 延伸, 扩展<br>pretension 自负；要求；主张；借口；骄傲<br>pension 津贴；退休金，抚恤金；膳宿费<br>apprehension 忧虑,担心<br>comprehension 理解, 理解力<br>dimension 尺寸, 度量<br>mansion 宅第, 公馆; 大厦<br>expansion 扩大, 扩张, 扩展, 膨胀</p>
+<p>下面这4个单词须特别记忆：<br>suspicion 怀疑, 嫌疑<br>conclusion 结论<br>complexion 肤色, 面色<br>fashion 样式；时尚；时装；时髦人物<br>ocean 海洋<br>explosion：爆炸</p>
+<ol start="3">
+<li>后缀** -tion**则用于剩下的大部分单词：<br>operation 操作, 运转, 经营<br>evaluation 估价,评价;估算<br>education 教育; 培养, 训练<br>application 申请, 申请表, 申请书<br>intention 意图, 意向; 目的; 打算 (注意与intension 紧张的区别<br>convention (某一职业、政党等的人士召开的)大会<br>……</li>
+</ol>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>单词</tag>
       </tags>
   </entry>
   <entry>
@@ -1803,27 +1846,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语·谈谈表示逻辑关系的词句</title>
-    <url>/2020/04/28/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%86%99%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%AF%8D/</url>
-    <content><![CDATA[<p>如果备考过托福或GRE，我们会发现英语写作重逻辑，而在我们学习英文的过程中，逻辑关系这块并没有很大的重视，至少本人以前在学校学英语并没有关注。<br>今天来分享下英文写作当中，可用作逻辑关系的连接词，为英文文章增强逻辑性。</p>
-<p>导致：<br>give rise to doing/sth； result in; lead to doing/sth; so as to; bring about;  so that; enable(不能以人为主语)/urge/encourage/motivate sb to do; </p>
-<p>因果关系：<br>owing to; because; because of; lie in; thanks to；due to；this is because;<br>obviously, clearly, it is widely acknowledged that</p>
-<p>对比关系：<br>in contrast; contrast to; by comparison; comparing a with b; in comparison with; A  while/whereas B; on the contrary； on the other hand； instead；conversely；rather than；instead of；</p>
-<p>同级：<br>besides; moreover; in addition; what’s more; furthermore; additionally; for one thing, for another; apart from that; </p>
-<p>转折：<br>but，in contrast; on the contrary; instead; rather than; while（部分）；if……at all 就算（让步转折）<br>Indeed, Admittedly, it is true that, there is no denying that, we have to admit that；despite，notwithstanding, although</p>
-<p>进一步：<br>to be more specific; specifically speaking；to explain it further；in detail；</p>
-<p>举例：<br>for example/instance；here comes a concrete example；For one thing，for other thing</p>
-<p>这些可以运用到写作当中，使文章更有逻辑性。那今天的逻辑关系词分享先到这里～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>逻辑</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语·易混淆词组</title>
     <url>/2020/05/05/%E8%8B%B1%E8%AF%AD%C2%B7%E6%98%93%E6%B7%B7%E6%B7%86%E8%AF%8D%E7%BB%84/</url>
     <content><![CDATA[<p>英文短语数多，许多短语很容易混淆，记录几组短语：up to/end up/work out/a little……</p>
@@ -1860,33 +1882,6 @@
       </tags>
   </entry>
   <entry>
-    <title>英语·谈谈单词的后缀-tion/sion/cian</title>
-    <url>/2020/04/27/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%8D%95%E8%AF%8D%E7%9A%84%E5%90%8E%E7%BC%80/</url>
-    <content><![CDATA[<p>英语有来自拉丁语、葡萄牙语、日语、中文等外来词，当我们去了解这些单词时，发现其中也是有规律的，通过规律我们可以更好地记住单词，就像小时候做规律题，选出哪个是同一组。</p>
-<p><strong>后缀 -tion vs -sion vs -cian</strong></p>
-<p>单词中出现频率高低分别为：-tion &gt; -sion &gt; -cian.</p>
-<ol>
-<li><p>通常用 <strong>-cian</strong> 作为后缀，表示一个人的职业或爱好，这样的词并不多，大概17个左右，eg：<br>music musician　音乐家<br>physic physician 内科医生<br>magic magician 魔术师<br>politic politician 政治家<br>electric electrician 电工<br>statistic statistician 统计学家<br>mathematic mathematician 数学家<br>logic logician 逻辑学家<br>arithmetic arithmetician 算术家<br>optic optician 眼镜(制造)商;配制眼镜技师<br>pediatric pediatrician 小儿科医师<br>obstetric obstetrician 产科医师<br>clinic clinician 临床医生<br>practice patrician (古罗马的)统治阶层成员<br>technique technician 技术人员, 专家<br>beauty beautician 美容师<br>diet dietician 营养学家；膳食学家（等于dietitian）<br>从中，我们可以发现，除了technique、beauty、diet，前面的单词的结尾都是字母 <strong>c</strong>.</p>
-</li>
-<li><p>-sion作为后缀，稍微复杂一些，一般是在单词以<strong>-ss</strong>结尾的时候，比如：<br>express expression 表示, 表现, 表达<br>impress impression 印象, 感想<br>recess recession 经济衰退; 不景气<br>discuss discussion 讨论, 商讨<br>confess confession 承认;自首, 供认<br>……</p>
-</li>
-</ol>
-<p>而下面的9个单词包含<strong>-mission</strong>, 须特别记忆：<br>mission 使命, 任务, 天职<br>admission 准许进入<br>intermission 间歇,停顿;(放映电影中)中间休息<br>transmission 传送, 传播, 传达<br>emission 排放物,散发物(尤指气体)<br>remission 缓和, 减轻<br>commission 授权, 委托<br>commissioner 专员, 长官<br>permission 允许, 许可, 准许</p>
-<p>另有8个单词以 <strong>-en</strong>结尾，2个以 <strong>-an</strong>结尾，也要加-sion:<br>tension 张力，拉力；紧张，不安；电压<br>intension 紧张<br>extension 延伸, 扩展<br>pretension 自负；要求；主张；借口；骄傲<br>pension 津贴；退休金，抚恤金；膳宿费<br>apprehension 忧虑,担心<br>comprehension 理解, 理解力<br>dimension 尺寸, 度量<br>mansion 宅第, 公馆; 大厦<br>expansion 扩大, 扩张, 扩展, 膨胀</p>
-<p>下面这4个单词须特别记忆：<br>suspicion 怀疑, 嫌疑<br>conclusion 结论<br>complexion 肤色, 面色<br>fashion 样式；时尚；时装；时髦人物<br>ocean 海洋<br>explosion：爆炸</p>
-<ol start="3">
-<li>后缀** -tion**则用于剩下的大部分单词：<br>operation 操作, 运转, 经营<br>evaluation 估价,评价;估算<br>education 教育; 培养, 训练<br>application 申请, 申请表, 申请书<br>intention 意图, 意向; 目的; 打算 (注意与intension 紧张的区别<br>convention (某一职业、政党等的人士召开的)大会<br>……</li>
-</ol>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>单词</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>英语·理解英语的12种时态</title>
     <url>/2020/04/26/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%AE%BE%E8%AF%AD%E4%BB%8E%E5%8F%A5%E4%B8%8E%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
     <content><![CDATA[<p>今天谈谈英语语法中的2大从句：宾语从句与定语从句。</p>
@@ -1907,7 +1902,48 @@
       </categories>
       <tags>
         <tag>英语</tag>
-        <tag>从句</tag>
+        <tag>句式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语的基本语法理解技巧</title>
+    <url>/2020/04/24/%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>我们在学语法的时候，经常会有比如说to do sth，doing sth，那么如何去对这些基本且重要的语法进行巧记？</p>
+<ol>
+<li>v + doing sth vs v + to do sth<br>∆ to do 作宾语，表示未发生，可能在do之后将要发生<br>eg：intend to do sth，to do是在intend之后发生的<br>∆ doing 作宾语，表示在do之前发生，可能仍在发生<br>eg：finish doing homework，homework是在doing之前发生</li>
+</ol>
+<p>存在部分例外没有原因，“死记硬背”<br>v + to do：<br>fail to do sth：没有做某事<br>happen to do sth：碰巧做某事<br>struggle to do sth：努力做某事<br>fear to do sth：害怕做某事<br>pretend to do sth：假装做某事<br>v + doing sth：<br>allow doing sth：允许做某事<br>avoid doing sth：避免做某事<br>delay doing sth：推迟做某事<br>discuss doing sth：讨论做某事<br>mention doing sth：提及某事</p>
+<ol start="2">
+<li>v + sb doing sth vs v + sb to do sth<br>∆ to do 做宾补（不是宾语—），表示未发生，可能在do后将要发生<br>eg：ask sb to do sth，to do 是在ask后发生的<br>∆ doing 作宾语（不是宾语），表示正在进行，类似现在进行时，通常为<br>1）发现：find，observe，discover<br>2）感官：hear，see<br>举例：<br>//v sb to do sth<br>advise sb to do sth<br>allow sb to do sth<br>ask sb to do sth<br>beg sb to do sth<br>//v sb doing sth<br>catch sb doing sth<br>discover sb doing sth<br>feel sb doing sth<br>find sb doing sth</li>
+</ol>
+<p>存在部分例外没有原因，“死记硬背”，固定搭配<br>bear sb to do sth 忍受某人做某事<br>hate sb to do sth 讨厌某人做某事</p>
+<p>get sb doing sth 使某人做某事<br>have sb doing sth 使某人做某事<br>keep sb doing sth 使某人做某事<br>prevent sb doing sth 使某人做某事</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>语法</tag>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈强调句</title>
+    <url>/2020/04/29/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
+    <content><![CDATA[<p>强调表示着重突出想表达的事物。强调句在中文里，比如说，今天的天气真好啊！你太棒了！那在英语中，强调句不会强调谓语（如果非要强调，用助动词do），注意区分从句跟强调句，也有可能是that从句，且强调句的that不能省略。</p>
+<p>基本句型结构：<br>It is/was + 被强调部分 + that/who ……<br>⚠️注：强调句不是从句，不需要随机应变，去掉it is that仍然是一个句子。<br>eg：<br>原句：My mother bought meat in my aunt’s supermarket just now.<br>强调主语：It was my mother that/who bought meat in my aunt’s supermarket just now.<br>强调宾语：It was meat that my mother bought in my aunt’s supermarket just now.<br>强调时间：It was just now my mother bought meat in my aunt’s supermarket.</p>
+<p>否定的强调句句型结构：<br>It is/was + not + 被强调部分 + that/who ……<br>原句：My mother bought meat in my aunt’s supermarket just now.<br>否定强调宾语：It was not beef that my mother bought in my aunt’s supermarket just now.</p>
+<p>一般疑问句的强调句句型结构：<br>把Is/Was提前即可，Was/Is it + 被强调部分 + that/who……</p>
+<p>特殊疑问句的强调句句型结构：<br>被强调部分（通常是疑问代词或副词） + was/is it + 被强调部分 + that/who……<br>eg：where was it that my mother bought meat just now？</p>
+<p>谓语动词的强调<br>不能强调谓语，如果一定要强调，需要加do/does/did助动词<br>eg：Do be careful</p>
+<p>ps：<br>如果that后的强调句是原因状语从句，从句只能用because引导，不能用since/as/why</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>句式</tag>
       </tags>
   </entry>
   <entry>
@@ -1931,22 +1967,163 @@
       </tags>
   </entry>
   <entry>
-    <title>英语·谈谈强效句</title>
-    <url>/2020/04/28/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
-    <content><![CDATA[<p>强调表示着重突出想表达的事物。强调句在中文里，比如说，今天的天气真好啊！你太棒了！那在英语中，强调句不会强调谓语（如果非要强调，用助动词do），注意区分从句跟强调句，也有可能是that从句，且强调句的that不能省略。</p>
-<p>基本句型结构：<br>It is/was + 被强调部分 + that/who ……<br>⚠️注：强调句不是从句，不需要随机应变，去掉it is that仍然是一个句子。<br>eg：<br>原句：My mother bought meat in my aunt’s supermarket just now.<br>强调主语：It was my mother that/who bought meat in my aunt’s supermarket just now.<br>强调宾语：It was meat that my mother bought in my aunt’s supermarket just now.<br>强调时间：It was just now my mother bought meat in my aunt’s supermarket.</p>
-<p>否定的强调句句型结构：<br>It is/was + not + 被强调部分 + that/who ……<br>原句：My mother bought meat in my aunt’s supermarket just now.<br>否定强调宾语：It was not beef that my mother bought in my aunt’s supermarket just now.</p>
-<p>一般疑问句的强调句句型结构：<br>把Is/Was提前即可，Was/Is it + 被强调部分 + that/who……</p>
-<p>特殊疑问句的强调句句型结构：<br>被强调部分（通常是疑问代词或副词） + was/is it + 被强调部分 + that/who……<br>eg：where was it that my mother bought meat just now？</p>
-<p>谓语动词的强调<br>不能强调谓语，如果一定要强调，需要加do/does/did助动词<br>eg：Do be careful</p>
-<p>ps：<br>如果that后的强调句是原因状语从句，从句只能用because引导，不能用since/as/why</p>
+    <title>谈谈美式英语的重读技巧</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/</url>
+    <content><![CDATA[<p>英语中的单词与句子都有重弱读现象，重读音节的元音发音更响亮更长，那么一般如何对单词或句子进行重弱读分辨呢？</p>
+<h2 id="音节是什么？"><a href="#音节是什么？" class="headerlink" title="音节是什么？"></a>音节是什么？</h2><p>英语的单词至少包含一个音节。音节一般以元音为主进行划分，每个音节一般由一个元音字母或一个元音字母组合加上一个或几个辅音构成。<br>单音节：eg. bag, book<br>双音节：eg. borrow，letter，daughter，email</p>
+<h2 id="重读实词"><a href="#重读实词" class="headerlink" title="重读实词"></a>重读实词</h2><p>实词（表示实际意义）：主要动词，名词，adj，adv，否定词，wh词，感叹词，特殊重读</p>
+<h2 id="双音节词读音规则："><a href="#双音节词读音规则：" class="headerlink" title="双音节词读音规则："></a>双音节词读音规则：</h2><ul>
+<li>90%的名词，前一个音节重读。eg：office，problem，window，paper，building，mother，father</li>
+<li>60%～70%的动词，后一个音节重读。eg：apply，agree，create，relax，complain，enjoy</li>
+</ul>
+<h2 id="后缀的重读规则"><a href="#后缀的重读规则" class="headerlink" title="后缀的重读规则"></a>后缀的重读规则</h2><ul>
+<li>-ese重读后缀。eg：Chinese，Japanese</li>
+<li>-eer重读后缀。eg：pioneer，volunteer，engineer</li>
+<li>-ique重读后缀。eg：unique，antique，technique</li>
+<li>-ic重读后缀前的音节。eg：realistic，elastic，elastic，strategic，optimistic，terrific</li>
+</ul>
+<h2 id="句子中单词重读依据"><a href="#句子中单词重读依据" class="headerlink" title="句子中单词重读依据"></a>句子中单词重读依据</h2><ul>
+<li>实词重读，虚词（功能词）弱读</li>
+<li>实意词+实意词，后一词通常重读。eg：Let’s go for a walk（重读）</li>
+<li>谓语+宾语，宾语为代词时，动词要重读。<br>eg：Did you <strong>get</strong>（重读） it？ —— Did you get the <strong>job</strong>（重读）？<br>Who <strong>stole</strong> it？ —— Who stole my <strong>money</strong>？（升调）</li>
+</ul>
+<h2 id="形容词-名词：重读名词"><a href="#形容词-名词：重读名词" class="headerlink" title="形容词+名词：重读名词"></a>形容词+名词：重读名词</h2><p>eg： it’s a hot <strong>day</strong><br>双形容词+名词：重读前一形容词+名词。eg：<strong>big</strong> black <strong>dog</strong></p>
+<h2 id="短语重读"><a href="#短语重读" class="headerlink" title="短语重读"></a>短语重读</h2><ul>
+<li>名词短语和复合名词的重读：重读前一单词 【类似名词读法】<br>eg：credit card，eyelid，eyebrow，forehead</li>
+<li>动词短语：重读后一单词【类似大多数的动词读法】<br>eg：pick you <strong>up</strong>（重读）</li>
+<li>动词短语化的名词读法：重读前一音节【类似名词读法】<br>eg：work out-workout，make up-makeup</li>
+</ul>
+<h2 id="人名和地名重读：重读最后"><a href="#人名和地名重读：重读最后" class="headerlink" title="人名和地名重读：重读最后"></a>人名和地名重读：重读最后</h2><ul>
+<li>两个音节，重读第二个单词。eg：South American，United Kindom</li>
+<li>三个音节，重读最后一个。eg：Martin Luther King</li>
+</ul>
+<h2 id="缩写词和数字重读"><a href="#缩写词和数字重读" class="headerlink" title="缩写词和数字重读"></a>缩写词和数字重读</h2><ul>
+<li>缩写词，重读后一字母，注意连读。eg：CNN，PhD，PC，HTML，DVD</li>
+<li>数词：重读后一数词。eg：fifty eight</li>
+</ul>
+<p>这是一般情况，特殊情况特殊对待，比如说有特别想强调的信息。英语中的重弱读现象先分享到这里～</p>
 ]]></content>
       <categories>
         <category>英语</category>
       </categories>
       <tags>
         <tag>英语</tag>
-        <tag>强调句</tag>
+        <tag>发音</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语/美/的声调变化</title>
+    <url>/2020/04/17/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%A3%B0%E8%B0%83%E5%8F%98%E5%8C%96/</url>
+    <content><![CDATA[<p>中文有ā á ǎ à 四声变化，英文则是重读，弱读，连读，声调变化，好比如我们听外国人说中文似乎很奇怪，正如外国人听我们说英文也会觉得奇怪一样。那么如何对一般的英文句子进行有起有伏的声调变化呢，而不是中文中的字正腔圆，一个字一个字地发音，一起看看。</p>
+<h2 id="降调"><a href="#降调" class="headerlink" title="降调"></a>降调</h2><p>陈述句，祈使句，特殊疑问句，一般疑问句通常降调。<br>eg：All right. ↘︎<br>How are you? ↘︎<br>Where do you live? ↘︎<br>What do you do? ↘︎<br>Are you happy? ↘︎<br>Why did you buy it? ↘︎</p>
+<h2 id="句子里的语调变化"><a href="#句子里的语调变化" class="headerlink" title="句子里的语调变化"></a>句子里的语调变化</h2><ul>
+<li>多个物体的句子中，前几个词升调，最后一个词降调。<br>eg： I bought apples ↗︎ , chicken ↗︎ , pears ↗︎ and milk ↘︎ .</li>
+<li>句子中，前半句升调表示未说完<br>eg：I‘d love to eat that ↗︎ , but I’m on a diet ↘︎ .</li>
+<li>引导短语，使用升调。<br>eg: on the other hand ↗︎ , maybe I’ll buy it ↘︎ .<br>If I were you ↗︎ ,  I would buy it ↘︎.</li>
+<li>选择疑问句，前者升调，后者降调<br>eg： should I call you ↗︎ or I send you an email↘︎?<br>Do you like chicken ↗︎ or beef ↘︎ ? </li>
+</ul>
+<p>要想使自己的英语听起来不那么奇怪，掌握基本原则，最笨也是最好的方法是多做跟读咯～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>发音</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语/美/的元音</title>
+    <url>/2020/04/21/%E8%B0%88%E8%B0%88%E7%BE%8E%E5%BC%8F%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%85%83%E9%9F%B3/</url>
+    <content><![CDATA[<p>平时我们经常说元音辅音，常念叨的aeiou，那么什么是元音呢？<br>现在一起来看看美音音标中的元音：</p>
+<p><strong>/æ/</strong>: fat, bad, dad  //嘴角向两边张开，上下齿高度为食指中指指尖叠加高度；舌头下贴，向后收紧<br><strong>/e/</strong>: check, bed<br><strong>/i:/</strong>:feed, sheet //嘴唇向两边收紧，扁唇；舌头在口腔里向后收紧<br><strong>/I/</strong>: sick, it, sit //嘴唇放松，舌头处于正常位置，放松，⚠️/i：/与/I/的主要区别不是长短，而是紧松<br><strong>/ɔ/</strong>: law, wall, lord, short //上下张口，口型呈椭圆形，像鸡蛋，略撅嘴<br><strong>/a/</strong>: boss, lock, cop, hot //上下张大嘴巴，把舌头贴在口腔底部，舌尖触碰下齿<br><strong>/∂/</strong>: first, sir, curse, herd //嘴唇放松，舌头位于正常位置，放松<br><strong>/u:/</strong>:fool, shoe, whose, food //双唇收圆，小圆唇<br><strong>/ʊ/</strong>: good, look, full //双唇稍撅<br><strong>/ei/</strong>: claim, fate, sake<br><strong>/ai/</strong>: fire, I ,might, like<br><strong>/ɔi/</strong>: boy, boil, noise<br><strong>/∂u/</strong>: spoke, show, low, most<br><strong>/au/</strong>: announcement, down, ouch<br><strong>/i∂/</strong>: ear, here, atmosphere<br><strong>/e∂/</strong>: where, share, there<br><strong>/u∂/</strong>: sure, tourist</p>
+<p>美式发音中不存在的音： /^/，/∂：/，/ɔ：/</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>音标</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语/美/的弱读技巧</title>
+    <url>/2020/04/19/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%BC%B1%E8%AF%BB%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>英语的连词成句存在重读，也存在弱读，那么弱读有哪些技巧呢？</p>
+<p>⚠️注意：弱读不是读的快</p>
+<h2 id="连读时-元音读-e"><a href="#连读时-元音读-e" class="headerlink" title="连读时 元音读/ǝ/"></a>连读时 元音读/ǝ/</h2><p>像一些结构词（也叫功能词），没有单独完整的词汇意义，更多的作为语法意义或者语法功能词，<strong>连读时</strong>元音发/ǝ/的音<br>eg：<br>冠词：a，an，the<br>介词：as/ǝz/，on/ǝn/，at/ǝt/，to，for，from，of/ǝv/，than<br>连词：and，but，not，or<br>代词：she，our，it，that，some<br>其他：can/kǝn/，does/dǝz/，will/wǝl/<br>I’m at home = I’mǝt home<br>think of = thinkǝv</p>
+<h2 id="连读时-h击穿-相当于不发音"><a href="#连读时-h击穿-相当于不发音" class="headerlink" title="连读时 h击穿 相当于不发音"></a>连读时 h击穿 相当于不发音</h2><p>he/I/，him/Im/，her/ɚ/，them/ǝm/，have/ǝv/<br>eg：I told him ≈ I toldim<br>I’ll call him ≈ I‘ll callim<br>I’ll pick them up ≈ I’ll pic_kǝmu_p<br>⚠️注意：当这些词处于句首或被强调时，则不用进行弱读</p>
+<p>简单记2点：连读时功能词的元音发/ǝ/，h击穿相当于不读。</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>发音</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语中的辅音</title>
+    <url>/2020/04/22/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E4%B8%AD%E7%9A%84%E8%BE%85%E9%9F%B3/</url>
+    <content><![CDATA[<p>上文提到英语的元音，现在来看看英文的辅音有哪些？<br>辅音有：/p/ /b/ /t/ /d/ /k/ /g/ /f/ /v/ /𝟅/ /ð/ /s/ /z/ /ʃ/ /ʒ/ /ts/ /dz/ /tr/ /dr/ /tʃ/ /dʒ/ /h/ /m/ /n/ /ŋ/ /l/ /r/ /w/ /j/</p>
+<p>其中分类——<br><strong>清辅音</strong>：/p/ /t/ /k/ /f/ /𝟅/ /s/ /ʃ/ /ts/ /tr/ /tʃ/<br><strong>浊辅音</strong>：/b/ /d/ /g/ /v/ /ð/ /z/ /ʒ/ /dz/ /dr/ /dʒ/<br>⚠️注：清辅音前的元音发音较短，浊辅音前的元音发音较长<br>eg：ice-eyes, back-bag, safe-save, pick-pig, lock-log, light-lied, leaf-leave, cup-cub<br>⚠️注：<br>（1）动词以/t//d/结尾，ed读/id/。eg：waited，needed，painted<br>（2）动词以除了/t/的清辅音结尾，ed读/t/。eg：stopped，worked<br>（3）动词以除了/d/的浊辅音或元音结尾，ed读/d/。eg：robbed，loved，realized，called，played</p>
+<p><strong>爆破音</strong>：/p/ /b/ /t/ /d/ /k/ /g/<br>⚠️注：爆破音除了/r/ /h/ /w/ /j/之外的辅音时失去爆破。爆破音在句尾时失去爆破</p>
+<p><strong>鼻音</strong>：/m/ /n/ /ŋ/<br>/v/发音：上齿轻触上唇，浊辅音。eg：very， vote， five<br>/𝟅/ /ð/：舌头位于两齿间，轻触上齿，气流由舌尖和上齿间流出；eg：bath both math， father， mother<br>/r/：舌头卷曲，不接触口腔，向后面拉，英式英语元音后的/r/通常不发出来<br>/l/：尾音/l/时，释放舌头，让舌尖触碰上齿后面并停留，气流由舌头两侧出，要能听出音。eg：call， school， wall， feel<br>/w/：半元音，卷起嘴唇，肺部有大量的气流流出，声带振动。eg：wait， quick<br>/j/：半元音</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>音标</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语/美/的连读技巧</title>
+    <url>/2020/04/18/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E8%BF%9E%E8%AF%BB%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>刚开始进行英语听力的时候，有些音似乎听不清楚，一带而过，反反复复听几遍，怎么就听不出来呢？因为有些单词进行连读了，掌握连读规则，帮助理解英语的“发音”。</p>
+<p>⚠️注意：连读不是读得快，而是遵从弱读、重读的原则，不同信息块不用进行连读。</p>
+<h2 id="辅音-元音连读：像拼音一样拼起来"><a href="#辅音-元音连读：像拼音一样拼起来" class="headerlink" title="辅音+元音连读：像拼音一样拼起来"></a>辅音+元音连读：像拼音一样拼起来</h2><p>eg：build up = buil<u>du</u>p<br>Could I take it? = Coul<u>dI</u> tak<u>ei</u>t<br>an apple = a<u>nap</u>ple</p>
+<h2 id="相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿"><a href="#相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿" class="headerlink" title="相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿"></a>相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿</h2><p>eg：next time = nex<u>ti</u>me<br>bad day = ba<u>da</u>y<br>I used to smoke = I us<u>et</u>o smoke. //used to do sth的used发音/just/，如果used表示“用过的”，则发音/juzd/</p>
+<h2 id="元音连读：之间加-w-或者-y-，轻连读"><a href="#元音连读：之间加-w-或者-y-，轻连读" class="headerlink" title="元音连读：之间加/w/或者/y/，轻连读"></a>元音连读：之间加/w/或者/y/，轻连读</h2><p>eg: see it = see<u>yi</u>t<br>no answer = no<u>wan</u>swer<br>do it = do<u>wi</u>t</p>
+<h2 id="爆破音-除了-r-h-w-j-的辅音时，失去爆破-发而未出声的感觉-有个小停顿"><a href="#爆破音-除了-r-h-w-j-的辅音时，失去爆破-发而未出声的感觉-有个小停顿" class="headerlink" title="爆破音+除了/r/ /h/ /w/ /j/ 的辅音时，失去爆破,发而未出声的感觉,有个小停顿"></a>爆破音+除了/r/ /h/ /w/ /j/ 的辅音时，失去爆破,发而未出声的感觉,有个小停顿</h2><p>爆破音：/p/ /b/ /t/ /d/ /k/ /g/<br>eg: need to = nee_ to //<br>big beef = bi_ beef<br>talk to me = tal_ to me<br>work crazy = wor_ crazy</p>
+<h2 id="连读的同化"><a href="#连读的同化" class="headerlink" title="连读的同化"></a>连读的同化</h2><p>/t/ + /j/ = /t∫/<br>eg: Can’t you buy it? = Can/t∫/ou buy it?<br>/d/ + /j/ = /dƷ/<br>eg: would you buy it? = Woul/dƷ/ou buy it?</p>
+<h2 id="t-处于两元音间，发音像轻快的-d"><a href="#t-处于两元音间，发音像轻快的-d" class="headerlink" title="/t/处于两元音间，发音像轻快的/d/"></a>/t/处于两元音间，发音像轻快的/d/</h2><p>eg： better ≈ beder<br>city ≈ cidy<br>it is = idis<br>get out = gedout</p>
+<h2 id="同一音节，-t-n-发音类似-en：把舌头保持在上齿龈，然后直接发-n-，让气流从鼻腔流出，发出-en-声，这个有难度"><a href="#同一音节，-t-n-发音类似-en：把舌头保持在上齿龈，然后直接发-n-，让气流从鼻腔流出，发出-en-声，这个有难度" class="headerlink" title="同一音节，/t/+/n/ 发音类似 en：把舌头保持在上齿龈，然后直接发/n/，让气流从鼻腔流出，发出/en/声，这个有难度"></a>同一音节，/t/+/n/ 发音类似 en：把舌头保持在上齿龈，然后直接发/n/，让气流从鼻腔流出，发出/en/声，这个有难度</h2><p>written ≈ wri_en<br>moutain ≈ mou_en<br>certain ≈ cer_en</p>
+<p>多练，像学拼音一样学习美式英语的连读～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>发音</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语/美/的易错发音</title>
+    <url>/2020/04/20/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E6%98%93%E9%94%99%E5%8F%91%E9%9F%B3/</url>
+    <content><![CDATA[<p>英语发音发的奇怪，听起来就像是带了独特口音，成了外国人口中的“中国式英语”，那么有哪些发音我们容易发的奇怪呢？</p>
+<h2 id="音标-i：-ɪ"><a href="#音标-i：-ɪ" class="headerlink" title="音标 /i：/ /ɪ/"></a>音标 /i：/ /ɪ/</h2><p><strong>/i：/ vs /ɪ/</strong><br>/i：/ 长元音，微笑<br>/ɪ/ 嘴唇微微张开，舌头抵下齿，嘴巴扁平<br>sleep  slip<br>these  this<br>seat   sit<br>beach  bitch</p>
+<h2 id="音标-ae-e"><a href="#音标-ae-e" class="headerlink" title="音标 /ae/ /e/"></a>音标 /ae/ /e/</h2><p><strong>/ae/ vs /e/</strong><br>/ae/ 梅花音，舌头抵下齿，嘴巴张开放下两根手指竖放。注意man /mæn/不是“慢”<br>/e/ 一个手指竖放，注意when/wen/不是“闻”，men/men/不是“门”，enter/ˈen.t̬ɚ/不是“恩ter”<br>eg：apple，advertisement，campus，cafeteria<br>举例：<br><strong>/e/  /ae/  /ai/  /ei/</strong><br>bed  bad   bye   base<br>men  man   mine  main</p>
+<h2 id="音标-r"><a href="#音标-r" class="headerlink" title="音标 /r/"></a>音标 /r/</h2><p>r：卷舌，美国的r跟中国的r发音不同，中国是舌尖卷，美国是舌卷向后；没有r不要卷舌</p>
+<h2 id="音标-l"><a href="#音标-l" class="headerlink" title="音标 /l/"></a>音标 /l/</h2><p>l：舌头抵上颚，类似“啦啦啦”未出声的动作。如果在末尾也要有动作，通常我们都忽略不管，这个动作在连读时尤为明显</p>
+<h2 id="音标-t"><a href="#音标-t" class="headerlink" title="音标 /t/"></a>音标 /t/</h2><p>t：这个发音很轻，很快地让气流出去，不要拖音，非常急促的感觉</p>
+<h2 id="音标-th-ð"><a href="#音标-th-ð" class="headerlink" title="音标 th/ð/"></a>音标 th/ð/</h2><p>th：舌头抵住上齿，这个发音要多练，容易奇怪；the在元音前发的是/ði/</p>
+<h2 id="音标-au-eu"><a href="#音标-au-eu" class="headerlink" title="音标 /au/ /ǝu/"></a>音标 /au/ /ǝu/</h2><p>/au/：双元音要发完整，有个a-&gt;u的音，比如found这个发音要注意，不是fand，是faund<br>/ǝu/：同样发音要完整，有个o-&gt;u的音<br>eg： so ≈ /sou/</p>
+<h2 id="音标-ei-ai"><a href="#音标-ei-ai" class="headerlink" title="音标 /ei/ /ai/"></a>音标 /ei/ /ai/</h2><p>/ei/：i要发出来，拉长的感觉。eg：mistake<br>/ai/：i要发出来，拉长，类似“阿姨”，fight，嘴巴张大</p>
+<h2 id="音标-s-z"><a href="#音标-s-z" class="headerlink" title="音标 /s/ /z/"></a>音标 /s/ /z/</h2><p>/s/ /z/：名词复数及动词第三人称单数读法<br>清辅音读/s/<br>浊辅音或元音后读/z/<br>就是说除了清辅音都读/z/</p>
+<h2 id="清辅音浊化"><a href="#清辅音浊化" class="headerlink" title="清辅音浊化"></a>清辅音浊化</h2><p>/s/ + 清辅音 + 元音 -&gt; 清辅音浊化<br>eg：spoon，这里的 p -&gt; b;<br>distinguish, 这里的 t -&gt; d;<br>school, 这里的 k -&gt; g;<br>skirt, 这里的 k -&gt; g;</p>
+<p>最后注意辅音不要拖，平时练习可通过u，i发音来热身，活动活动，锻炼嘴巴～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>发音</tag>
       </tags>
   </entry>
   <entry>
@@ -2012,193 +2189,6 @@
         <tag>github</tag>
         <tag>博客</tag>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语的基本语法理解技巧</title>
-    <url>/2020/04/24/%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<p>我们在学语法的时候，经常会有比如说to do sth，doing sth，那么如何去对这些基本且重要的语法进行巧记？</p>
-<ol>
-<li>v + doing sth vs v + to do sth<br>∆ to do 作宾语，表示未发生，可能在do之后将要发生<br>eg：intend to do sth，to do是在intend之后发生的<br>∆ doing 作宾语，表示在do之前发生，可能仍在发生<br>eg：finish doing homework，homework是在doing之前发生</li>
-</ol>
-<p>存在部分例外没有原因，“死记硬背”<br>v + to do：<br>fail to do sth：没有做某事<br>happen to do sth：碰巧做某事<br>struggle to do sth：努力做某事<br>fear to do sth：害怕做某事<br>pretend to do sth：假装做某事<br>v + doing sth：<br>allow doing sth：允许做某事<br>avoid doing sth：避免做某事<br>delay doing sth：推迟做某事<br>discuss doing sth：讨论做某事<br>mention doing sth：提及某事</p>
-<ol start="2">
-<li>v + sb doing sth vs v + sb to do sth<br>∆ to do 做宾补（不是宾语—），表示未发生，可能在do后将要发生<br>eg：ask sb to do sth，to do 是在ask后发生的<br>∆ doing 作宾语（不是宾语），表示正在进行，类似现在进行时，通常为<br>1）发现：find，observe，discover<br>2）感官：hear，see<br>举例：<br>//v sb to do sth<br>advise sb to do sth<br>allow sb to do sth<br>ask sb to do sth<br>beg sb to do sth<br>//v sb doing sth<br>catch sb doing sth<br>discover sb doing sth<br>feel sb doing sth<br>find sb doing sth</li>
-</ol>
-<p>存在部分例外没有原因，“死记硬背”，固定搭配<br>bear sb to do sth 忍受某人做某事<br>hate sb to do sth 讨厌某人做某事</p>
-<p>get sb doing sth 使某人做某事<br>have sb doing sth 使某人做某事<br>keep sb doing sth 使某人做某事<br>prevent sb doing sth 使某人做某事</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>语法</tag>
-        <tag>英语</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈美式英语的重读技巧</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/</url>
-    <content><![CDATA[<p>英语中的单词与句子都有重弱读现象，重读音节的元音发音更响亮更长，那么一般如何对单词或句子进行重弱读分辨呢？</p>
-<h2 id="音节是什么？"><a href="#音节是什么？" class="headerlink" title="音节是什么？"></a>音节是什么？</h2><p>英语的单词至少包含一个音节。音节一般以元音为主进行划分，每个音节一般由一个元音字母或一个元音字母组合加上一个或几个辅音构成。<br>单音节：eg. bag, book<br>双音节：eg. borrow，letter，daughter，email</p>
-<h2 id="重读实词"><a href="#重读实词" class="headerlink" title="重读实词"></a>重读实词</h2><p>实词（表示实际意义）：主要动词，名词，adj，adv，否定词，wh词，感叹词，特殊重读</p>
-<h2 id="双音节词读音规则："><a href="#双音节词读音规则：" class="headerlink" title="双音节词读音规则："></a>双音节词读音规则：</h2><ul>
-<li>90%的名词，前一个音节重读。eg：office，problem，window，paper，building，mother，father</li>
-<li>60%～70%的动词，后一个音节重读。eg：apply，agree，create，relax，complain，enjoy</li>
-</ul>
-<h2 id="后缀的重读规则"><a href="#后缀的重读规则" class="headerlink" title="后缀的重读规则"></a>后缀的重读规则</h2><ul>
-<li>-ese重读后缀。eg：Chinese，Japanese</li>
-<li>-eer重读后缀。eg：pioneer，volunteer，engineer</li>
-<li>-ique重读后缀。eg：unique，antique，technique</li>
-<li>-ic重读后缀前的音节。eg：realistic，elastic，elastic，strategic，optimistic，terrific</li>
-</ul>
-<h2 id="句子中单词重读依据"><a href="#句子中单词重读依据" class="headerlink" title="句子中单词重读依据"></a>句子中单词重读依据</h2><ul>
-<li>实词重读，虚词（功能词）弱读</li>
-<li>实意词+实意词，后一词通常重读。eg：Let’s go for a walk（重读）</li>
-<li>谓语+宾语，宾语为代词时，动词要重读。<br>eg：Did you <strong>get</strong>（重读） it？ —— Did you get the <strong>job</strong>（重读）？<br>Who <strong>stole</strong> it？ —— Who stole my <strong>money</strong>？（升调）</li>
-</ul>
-<h2 id="形容词-名词：重读名词"><a href="#形容词-名词：重读名词" class="headerlink" title="形容词+名词：重读名词"></a>形容词+名词：重读名词</h2><p>eg： it’s a hot <strong>day</strong><br>双形容词+名词：重读前一形容词+名词。eg：<strong>big</strong> black <strong>dog</strong></p>
-<h2 id="短语重读"><a href="#短语重读" class="headerlink" title="短语重读"></a>短语重读</h2><ul>
-<li>名词短语和复合名词的重读：重读前一单词 【类似名词读法】<br>eg：credit card，eyelid，eyebrow，forehead</li>
-<li>动词短语：重读后一单词【类似大多数的动词读法】<br>eg：pick you <strong>up</strong>（重读）</li>
-<li>动词短语化的名词读法：重读前一音节【类似名词读法】<br>eg：work out-workout，make up-makeup</li>
-</ul>
-<h2 id="人名和地名重读：重读最后"><a href="#人名和地名重读：重读最后" class="headerlink" title="人名和地名重读：重读最后"></a>人名和地名重读：重读最后</h2><ul>
-<li>两个音节，重读第二个单词。eg：South American，United Kindom</li>
-<li>三个音节，重读最后一个。eg：Martin Luther King</li>
-</ul>
-<h2 id="缩写词和数字重读"><a href="#缩写词和数字重读" class="headerlink" title="缩写词和数字重读"></a>缩写词和数字重读</h2><ul>
-<li>缩写词，重读后一字母，注意连读。eg：CNN，PhD，PC，HTML，DVD</li>
-<li>数词：重读后一数词。eg：fifty eight</li>
-</ul>
-<p>这是一般情况，特殊情况特殊对待，比如说有特别想强调的信息。英语中的重弱读现象先分享到这里～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>重读</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语/美/的元音</title>
-    <url>/2020/04/21/%E8%B0%88%E8%B0%88%E7%BE%8E%E5%BC%8F%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%85%83%E9%9F%B3/</url>
-    <content><![CDATA[<p>平时我们经常说元音辅音，常念叨的aeiou，那么什么是元音呢？<br>现在一起来看看美音音标中的元音：</p>
-<p><strong>/æ/</strong>: fat, bad, dad  //嘴角向两边张开，上下齿高度为食指中指指尖叠加高度；舌头下贴，向后收紧<br><strong>/e/</strong>: check, bed<br><strong>/i:/</strong>:feed, sheet //嘴唇向两边收紧，扁唇；舌头在口腔里向后收紧<br><strong>/I/</strong>: sick, it, sit //嘴唇放松，舌头处于正常位置，放松，⚠️/i：/与/I/的主要区别不是长短，而是紧松<br><strong>/ɔ/</strong>: law, wall, lord, short //上下张口，口型呈椭圆形，像鸡蛋，略撅嘴<br><strong>/a/</strong>: boss, lock, cop, hot //上下张大嘴巴，把舌头贴在口腔底部，舌尖触碰下齿<br><strong>/∂/</strong>: first, sir, curse, herd //嘴唇放松，舌头位于正常位置，放松<br><strong>/u:/</strong>:fool, shoe, whose, food //双唇收圆，小圆唇<br><strong>/ʊ/</strong>: good, look, full //双唇稍撅<br><strong>/ei/</strong>: claim, fate, sake<br><strong>/ai/</strong>: fire, I ,might, like<br><strong>/ɔi/</strong>: boy, boil, noise<br><strong>/∂u/</strong>: spoke, show, low, most<br><strong>/au/</strong>: announcement, down, ouch<br><strong>/i∂/</strong>: ear, here, atmosphere<br><strong>/e∂/</strong>: where, share, there<br><strong>/u∂/</strong>: sure, tourist</p>
-<p>美式发音中不存在的音： /^/，/∂：/，/ɔ：/</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>元音</tag>
-        <tag>美音</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语中的辅音</title>
-    <url>/2020/04/22/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E4%B8%AD%E7%9A%84%E8%BE%85%E9%9F%B3/</url>
-    <content><![CDATA[<p>上文提到英语的元音，现在来看看英文的辅音有哪些？<br>辅音有：/p/ /b/ /t/ /d/ /k/ /g/ /f/ /v/ /𝟅/ /ð/ /s/ /z/ /ʃ/ /ʒ/ /ts/ /dz/ /tr/ /dr/ /tʃ/ /dʒ/ /h/ /m/ /n/ /ŋ/ /l/ /r/ /w/ /j/</p>
-<p>其中分类——<br><strong>清辅音</strong>：/p/ /t/ /k/ /f/ /𝟅/ /s/ /ʃ/ /ts/ /tr/ /tʃ/<br><strong>浊辅音</strong>：/b/ /d/ /g/ /v/ /ð/ /z/ /ʒ/ /dz/ /dr/ /dʒ/<br>⚠️注：清辅音前的元音发音较短，浊辅音前的元音发音较长<br>eg：ice-eyes, back-bag, safe-save, pick-pig, lock-log, light-lied, leaf-leave, cup-cub<br>⚠️注：<br>（1）动词以/t//d/结尾，ed读/id/。eg：waited，needed，painted<br>（2）动词以除了/t/的清辅音结尾，ed读/t/。eg：stopped，worked<br>（3）动词以除了/d/的浊辅音或元音结尾，ed读/d/。eg：robbed，loved，realized，called，played</p>
-<p><strong>爆破音</strong>：/p/ /b/ /t/ /d/ /k/ /g/<br>⚠️注：爆破音除了/r/ /h/ /w/ /j/之外的辅音时失去爆破。爆破音在句尾时失去爆破</p>
-<p><strong>鼻音</strong>：/m/ /n/ /ŋ/<br>/v/发音：上齿轻触上唇，浊辅音。eg：very， vote， five<br>/𝟅/ /ð/：舌头位于两齿间，轻触上齿，气流由舌尖和上齿间流出；eg：bath both math， father， mother<br>/r/：舌头卷曲，不接触口腔，向后面拉，英式英语元音后的/r/通常不发出来<br>/l/：尾音/l/时，释放舌头，让舌尖触碰上齿后面并停留，气流由舌头两侧出，要能听出音。eg：call， school， wall， feel<br>/w/：半元音，卷起嘴唇，肺部有大量的气流流出，声带振动。eg：wait， quick<br>/j/：半元音</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>辅音</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语/美/的声调变化</title>
-    <url>/2020/04/17/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%A3%B0%E8%B0%83%E5%8F%98%E5%8C%96/</url>
-    <content><![CDATA[<p>中文有ā á ǎ à 四声变化，英文则是重读，弱读，连读，声调变化，好比如我们听外国人说中文似乎很奇怪，正如外国人听我们说英文也会觉得奇怪一样。那么如何对一般的英文句子进行有起有伏的声调变化呢，而不是中文中的字正腔圆，一个字一个字地发音，一起看看。</p>
-<h2 id="降调"><a href="#降调" class="headerlink" title="降调"></a>降调</h2><p>陈述句，祈使句，特殊疑问句，一般疑问句通常降调。<br>eg：All right. ↘︎<br>How are you? ↘︎<br>Where do you live? ↘︎<br>What do you do? ↘︎<br>Are you happy? ↘︎<br>Why did you buy it? ↘︎</p>
-<h2 id="句子里的语调变化"><a href="#句子里的语调变化" class="headerlink" title="句子里的语调变化"></a>句子里的语调变化</h2><ul>
-<li>多个物体的句子中，前几个词升调，最后一个词降调。<br>eg： I bought apples ↗︎ , chicken ↗︎ , pears ↗︎ and milk ↘︎ .</li>
-<li>句子中，前半句升调表示未说完<br>eg：I‘d love to eat that ↗︎ , but I’m on a diet ↘︎ .</li>
-<li>引导短语，使用升调。<br>eg: on the other hand ↗︎ , maybe I’ll buy it ↘︎ .<br>If I were you ↗︎ ,  I would buy it ↘︎.</li>
-<li>选择疑问句，前者升调，后者降调<br>eg： should I call you ↗︎ or I send you an email↘︎?<br>Do you like chicken ↗︎ or beef ↘︎ ? </li>
-</ul>
-<p>要想使自己的英语听起来不那么奇怪，掌握基本原则，最笨也是最好的方法是多做跟读咯～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>美音</tag>
-        <tag>语调</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语/美/的弱读技巧</title>
-    <url>/2020/04/19/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%BC%B1%E8%AF%BB%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>英语的连词成句存在重读，也存在弱读，那么弱读有哪些技巧呢？</p>
-<p>⚠️注意：弱读不是读的快</p>
-<h2 id="连读时-元音读-e"><a href="#连读时-元音读-e" class="headerlink" title="连读时 元音读/ǝ/"></a>连读时 元音读/ǝ/</h2><p>像一些结构词（也叫功能词），没有单独完整的词汇意义，更多的作为语法意义或者语法功能词，<strong>连读时</strong>元音发/ǝ/的音<br>eg：<br>冠词：a，an，the<br>介词：as/ǝz/，on/ǝn/，at/ǝt/，to，for，from，of/ǝv/，than<br>连词：and，but，not，or<br>代词：she，our，it，that，some<br>其他：can/kǝn/，does/dǝz/，will/wǝl/<br>I’m at home = I’mǝt home<br>think of = thinkǝv</p>
-<h2 id="连读时-h击穿-相当于不发音"><a href="#连读时-h击穿-相当于不发音" class="headerlink" title="连读时 h击穿 相当于不发音"></a>连读时 h击穿 相当于不发音</h2><p>he/I/，him/Im/，her/ɚ/，them/ǝm/，have/ǝv/<br>eg：I told him ≈ I toldim<br>I’ll call him ≈ I‘ll callim<br>I’ll pick them up ≈ I’ll pic_kǝmu_p<br>⚠️注意：当这些词处于句首或被强调时，则不用进行弱读</p>
-<p>简单记2点：连读时功能词的元音发/ǝ/，h击穿相当于不读。</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>美音</tag>
-        <tag>弱读</tag>
-        <tag>技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语/美/的易错发音</title>
-    <url>/2020/04/20/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E6%98%93%E9%94%99%E5%8F%91%E9%9F%B3/</url>
-    <content><![CDATA[<p>英语发音发的奇怪，听起来就像是带了独特口音，成了外国人口中的“中国式英语”，那么有哪些发音我们容易发的奇怪呢？</p>
-<h2 id="音标-i：-ɪ"><a href="#音标-i：-ɪ" class="headerlink" title="音标 /i：/ /ɪ/"></a>音标 /i：/ /ɪ/</h2><p><strong>/i：/ vs /ɪ/</strong><br>/i：/ 长元音，微笑<br>/ɪ/ 嘴唇微微张开，舌头抵下齿，嘴巴扁平<br>sleep  slip<br>these  this<br>seat   sit<br>beach  bitch</p>
-<h2 id="音标-ae-e"><a href="#音标-ae-e" class="headerlink" title="音标 /ae/ /e/"></a>音标 /ae/ /e/</h2><p><strong>/ae/ vs /e/</strong><br>/ae/ 梅花音，舌头抵下齿，嘴巴张开放下两根手指竖放。注意man /mæn/不是“慢”<br>/e/ 一个手指竖放，注意when/wen/不是“闻”，men/men/不是“门”，enter/ˈen.t̬ɚ/不是“恩ter”<br>eg：apple，advertisement，campus，cafeteria<br>举例：<br><strong>/e/  /ae/  /ai/  /ei/</strong><br>bed  bad   bye   base<br>men  man   mine  main</p>
-<h2 id="音标-r"><a href="#音标-r" class="headerlink" title="音标 /r/"></a>音标 /r/</h2><p>r：卷舌，美国的r跟中国的r发音不同，中国是舌尖卷，美国是舌卷向后；没有r不要卷舌</p>
-<h2 id="音标-l"><a href="#音标-l" class="headerlink" title="音标 /l/"></a>音标 /l/</h2><p>l：舌头抵上颚，类似“啦啦啦”未出声的动作。如果在末尾也要有动作，通常我们都忽略不管，这个动作在连读时尤为明显</p>
-<h2 id="音标-t"><a href="#音标-t" class="headerlink" title="音标 /t/"></a>音标 /t/</h2><p>t：这个发音很轻，很快地让气流出去，不要拖音，非常急促的感觉</p>
-<h2 id="音标-th-ð"><a href="#音标-th-ð" class="headerlink" title="音标 th/ð/"></a>音标 th/ð/</h2><p>th：舌头抵住上齿，这个发音要多练，容易奇怪；the在元音前发的是/ði/</p>
-<h2 id="音标-au-eu"><a href="#音标-au-eu" class="headerlink" title="音标 /au/ /ǝu/"></a>音标 /au/ /ǝu/</h2><p>/au/：双元音要发完整，有个a-&gt;u的音，比如found这个发音要注意，不是fand，是faund<br>/ǝu/：同样发音要完整，有个o-&gt;u的音<br>eg： so ≈ /sou/</p>
-<h2 id="音标-ei-ai"><a href="#音标-ei-ai" class="headerlink" title="音标 /ei/ /ai/"></a>音标 /ei/ /ai/</h2><p>/ei/：i要发出来，拉长的感觉。eg：mistake<br>/ai/：i要发出来，拉长，类似“阿姨”，fight，嘴巴张大</p>
-<h2 id="音标-s-z"><a href="#音标-s-z" class="headerlink" title="音标 /s/ /z/"></a>音标 /s/ /z/</h2><p>/s/ /z/：名词复数及动词第三人称单数读法<br>清辅音读/s/<br>浊辅音或元音后读/z/<br>就是说除了清辅音都读/z/</p>
-<h2 id="清辅音浊化"><a href="#清辅音浊化" class="headerlink" title="清辅音浊化"></a>清辅音浊化</h2><p>/s/ + 清辅音 + 元音 -&gt; 清辅音浊化<br>eg：spoon，这里的 p -&gt; b;<br>distinguish, 这里的 t -&gt; d;<br>school, 这里的 k -&gt; g;<br>skirt, 这里的 k -&gt; g;</p>
-<p>最后注意辅音不要拖，平时练习可通过u，i发音来热身，活动活动，锻炼嘴巴～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>美音</tag>
-        <tag>发音</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈英语/美/的连读技巧</title>
-    <url>/2020/04/18/%E8%B0%88%E8%B0%88%E8%8B%B1%E8%AF%AD%E7%9A%84%E8%BF%9E%E8%AF%BB%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>刚开始进行英语听力的时候，有些音似乎听不清楚，一带而过，反反复复听几遍，怎么就听不出来呢？因为有些单词进行连读了，掌握连读规则，帮助理解英语的“发音”。</p>
-<p>⚠️注意：连读不是读得快，而是遵从弱读、重读的原则，不同信息块不用进行连读。</p>
-<h2 id="辅音-元音连读：像拼音一样拼起来"><a href="#辅音-元音连读：像拼音一样拼起来" class="headerlink" title="辅音+元音连读：像拼音一样拼起来"></a>辅音+元音连读：像拼音一样拼起来</h2><p>eg：build up = buil<u>du</u>p<br>Could I take it? = Coul<u>dI</u> tak<u>ei</u>t<br>an apple = a<u>nap</u>ple</p>
-<h2 id="相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿"><a href="#相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿" class="headerlink" title="相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿"></a>相同辅音：相当于只读后一个辅音，稍延长后一辅音，不停顿</h2><p>eg：next time = nex<u>ti</u>me<br>bad day = ba<u>da</u>y<br>I used to smoke = I us<u>et</u>o smoke. //used to do sth的used发音/just/，如果used表示“用过的”，则发音/juzd/</p>
-<h2 id="元音连读：之间加-w-或者-y-，轻连读"><a href="#元音连读：之间加-w-或者-y-，轻连读" class="headerlink" title="元音连读：之间加/w/或者/y/，轻连读"></a>元音连读：之间加/w/或者/y/，轻连读</h2><p>eg: see it = see<u>yi</u>t<br>no answer = no<u>wan</u>swer<br>do it = do<u>wi</u>t</p>
-<h2 id="爆破音-除了-r-h-w-j-的辅音时，失去爆破-发而未出声的感觉-有个小停顿"><a href="#爆破音-除了-r-h-w-j-的辅音时，失去爆破-发而未出声的感觉-有个小停顿" class="headerlink" title="爆破音+除了/r/ /h/ /w/ /j/ 的辅音时，失去爆破,发而未出声的感觉,有个小停顿"></a>爆破音+除了/r/ /h/ /w/ /j/ 的辅音时，失去爆破,发而未出声的感觉,有个小停顿</h2><p>爆破音：/p/ /b/ /t/ /d/ /k/ /g/<br>eg: need to = nee_ to //<br>big beef = bi_ beef<br>talk to me = tal_ to me<br>work crazy = wor_ crazy</p>
-<h2 id="连读的同化"><a href="#连读的同化" class="headerlink" title="连读的同化"></a>连读的同化</h2><p>/t/ + /j/ = /t∫/<br>eg: Can’t you buy it? = Can/t∫/ou buy it?<br>/d/ + /j/ = /dƷ/<br>eg: would you buy it? = Woul/dƷ/ou buy it?</p>
-<h2 id="t-处于两元音间，发音像轻快的-d"><a href="#t-处于两元音间，发音像轻快的-d" class="headerlink" title="/t/处于两元音间，发音像轻快的/d/"></a>/t/处于两元音间，发音像轻快的/d/</h2><p>eg： better ≈ beder<br>city ≈ cidy<br>it is = idis<br>get out = gedout</p>
-<h2 id="同一音节，-t-n-发音类似-en：把舌头保持在上齿龈，然后直接发-n-，让气流从鼻腔流出，发出-en-声，这个有难度"><a href="#同一音节，-t-n-发音类似-en：把舌头保持在上齿龈，然后直接发-n-，让气流从鼻腔流出，发出-en-声，这个有难度" class="headerlink" title="同一音节，/t/+/n/ 发音类似 en：把舌头保持在上齿龈，然后直接发/n/，让气流从鼻腔流出，发出/en/声，这个有难度"></a>同一音节，/t/+/n/ 发音类似 en：把舌头保持在上齿龈，然后直接发/n/，让气流从鼻腔流出，发出/en/声，这个有难度</h2><p>written ≈ wri_en<br>moutain ≈ mou_en<br>certain ≈ cer_en</p>
-<p>多练，像学拼音一样学习美式英语的连读～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>连读</tag>
       </tags>
   </entry>
 </search>
