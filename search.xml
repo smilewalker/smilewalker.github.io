@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>英语·快速记单词之词根联想法</title>
+    <url>/2020/05/08/%E8%8B%B1%E8%AF%AD%C2%B7%E5%BF%AB%E9%80%9F%E8%AE%B0%E5%8D%95%E8%AF%8D%E4%B9%8B%E8%AF%8D%E6%A0%B9%E8%81%94%E6%83%B3%E6%B3%95/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>MWeb+七牛云图床</title>
+    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
+<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
+<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
+<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
+<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
+<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
+<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo(MacOS)+Github快速搭建博客</title>
     <url>/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<blockquote>
@@ -98,71 +123,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo+NexT的进阶配置</title>
-    <url>/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<p>完成博客网站的基本搭建后，这篇文章是对于Hexo配置的进阶设置，可自定义选择。以下主题配置文件皆为Hexo主题themes目录下的_config.yml，网站配置文件皆为hexo根目录下的_config.yml。</p>
-<a id="more"></a>
-
-<ul>
-<li>更改头像</li>
-<li>侧边栏社交信息设置</li>
-<li>摘要自动生成</li>
-<li>添加字数统计、阅读时长</li>
-<li>文章底部添加版权信息</li>
-<li>设置动态背景</li>
-<li>添加网页进度加载条</li>
-<li>底部隐藏由Hexo强力驱动、主题–NexT.Mist</li>
-<li>显示当前浏览进度</li>
-<li>设置网站的图标Favicon</li>
-<li>Hexo博客添加站内搜索</li>
-</ul>
-<h2 id="更改头像"><a href="#更改头像" class="headerlink" title="更改头像"></a>更改头像</h2><p>编辑主题配置文件，修改 avatar，值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
-
-<h2 id="侧边栏社交链接设置"><a href="#侧边栏社交链接设置" class="headerlink" title="侧边栏社交链接设置"></a>侧边栏社交链接设置</h2><p>编辑主题配置文件_config.yml，修改social字段的值</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social Links</span><br><span class="line"># Key is the link label showing to end users.</span><br><span class="line"># Value is the target link (E.g. GitHub: https:&#x2F;&#x2F;github.com&#x2F;iissnan)</span><br><span class="line">social:</span><br><span class="line">  #LinkLabel: Link</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com&#x2F;yourgithub</span><br><span class="line">  E-Mail: mailto:dawnxu96@gmail.com</span><br><span class="line">  Instagram: https:&#x2F;&#x2F;instagram.com&#x2F;yourins</span><br></pre></td></tr></table></figure>
-
-<h2 id="摘要设置"><a href="#摘要设置" class="headerlink" title="摘要设置"></a>摘要设置</h2><p>编辑主题配置文件_config.yml，修改auto_excerpt字段为true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true	# 置为true则自动截取100字当做首页摘要</span><br><span class="line">  length: 100	# 自动截取的字数</span><br></pre></td></tr></table></figure>
-
-<p>上述的方式并不推荐，推荐是手动设置文章摘要，手动设置文章摘要，我们只需在想显示为摘要的内容之后添 <!-- more --> 即可。像下面这样：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hello hexo markdown</span><br><span class="line">date: 2016-11-16 18:11:25</span><br><span class="line">tags:</span><br><span class="line">- hello</span><br><span class="line">- hexo</span><br><span class="line">- markdown</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">文章摘要内容</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">紧接着文章摘要的正文内容</span><br></pre></td></tr></table></figure>
-
-<h2 id="文章底部添加版权信息"><a href="#文章底部添加版权信息" class="headerlink" title="文章底部添加版权信息"></a>文章底部添加版权信息</h2><p>修改主题配置文件_config.yml中字段的值为true即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  enable: true</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加网页进度加载条"><a href="#添加网页进度加载条" class="headerlink" title="添加网页进度加载条"></a>添加网页进度加载条</h2><p>编辑主题配置文件，搜索pace，将其值改为ture就可以，之后选择一款你喜欢的样式即可。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
-<h2 id="底部隐藏由Hexo强力驱动"><a href="#底部隐藏由Hexo强力驱动" class="headerlink" title="底部隐藏由Hexo强力驱动"></a>底部隐藏由Hexo强力驱动</h2><ul>
-<li>方法1<br>直接修改主题配置文件_config.yml中的copyright配置项为false，假如没有该配置项，可以通过方法2<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Footer &#96;powered-by&#96; and &#96;theme-info&#96; copyright</span><br><span class="line">copyright: false</span><br></pre></td></tr></table></figure></li>
-<li>方法2<br>打开./themes/next/layout/_partials/footer.swig，注释掉相应代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 用下面的符号注释，注释代码用下面括号括起来</span><br><span class="line">&#x2F;&#x2F; &lt;!-- --&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&#123;% if theme.copyright %&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.powered&#39;, &#39;&lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;&#39;) &#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">​</span><br><span class="line">&lt;div class&#x3D;&quot;theme-info&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.theme&#39;) &#125;&#125; -</span><br><span class="line">  &lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&quot;&gt;</span><br><span class="line"> NexT.&#123;&#123; theme.scheme &#125;&#125;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><p>修改主题配置文件，把 false 改为 true：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">b2t: true</span><br><span class="line">​</span><br><span class="line"># Scroll percent label in b2t button</span><br><span class="line">scrollpercent: true</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p>修改主题配置文件_config.yml中的favicon配置项，指定图标所在路径即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Put your favicon.ico into &#96;hexo-site&#x2F;source&#x2F;&#96; directory.</span><br><span class="line">favicon: &#x2F;favicon-32x32.png</span><br></pre></td></tr></table></figure>
-
-<h2 id="Hexo博客添加站内搜索"><a href="#Hexo博客添加站内搜索" class="headerlink" title="Hexo博客添加站内搜索"></a>Hexo博客添加站内搜索</h2><p>NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia。我安装的是Local Search的安装。<br>安装 hexo-generator-search<br><code>$ npm install hexo-generator-search --save</code><br>安装 hexo-generator-searchdb<br><code>$ npm install hexo-generator-searchdb --save</code><br>编辑主题配置文件，设置local_searchenable为true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;flashlab&#x2F;hexo-generator-search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
-<h2 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h2><p>注册登陆leanCloud官网，点击存储，查看是否有Comment，没有则创建，权限设为无限制。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870193229416.jpg" alt="-w1194"></p>
-<p>进入主题配置文件修改为true</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https:&#x2F;&#x2F;leancloud.cn</span><br><span class="line"># more info please open https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  leancloudn你自己的id  appkey:  leancloudn你自己的key  </span><br><span class="line">  notify: false # mail notifier , https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: robohash # gravatar style</span><br><span class="line">  guest_info: nick,mail,link # custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
-<p>进入leancloud即可看到评论<br>～</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-        <tag>博客</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Mac Mail绑定QQ邮箱</title>
     <url>/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/</url>
     <content><![CDATA[<p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
@@ -183,131 +143,6 @@
       <tags>
         <tag>Mac</tag>
         <tag>app</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MWeb+七牛云图床</title>
-    <url>/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<h2 id="拥有七牛云账号"><a href="#拥有七牛云账号" class="headerlink" title="拥有七牛云账号"></a>拥有七牛云账号</h2><p>注册<a href="https://www.qiniu.com/" target="_blank" rel="noopener">七牛云</a>就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选<code>公开空间</code>，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870136570806.jpg" alt="-w1049"></p>
-<h2 id="MWeb设置七牛云发布"><a href="#MWeb设置七牛云发布" class="headerlink" title="MWeb设置七牛云发布"></a>MWeb设置七牛云发布</h2><p>进入Mweb—偏好设置-发布服务，选择七牛云<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870144093612.jpg" alt="-w616"></p>
-<p>AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870158968891.jpg" alt="-w610"></p>
-<p>名称：填入自定的名称即可。<br>API 地址：用默认这个即可<br>空间名称：你在七牛中新增的空间的名称。<br>Access Key 和 Secret Key：在 七牛个人首页 - 帐号 - 密钥 中可以找到。<br>文件保存路径：自己空间的七牛云路径，这个要去到空间，随便上传一张图，选中后就可以看到外链地址，这样就知道路径前缀了</p>
-<h2 id="上传发布"><a href="#上传发布" class="headerlink" title="上传发布"></a>上传发布</h2><p>填写完成后可点验证按钮，选择一张图片去七牛云空间验证一下是否设置成功。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870159287038.jpg" alt="-w985"></p>
-<p>设置成功后，打开要把本地图片上传到图床的文档，点软件右上角的 分享 按钮，在弹出的菜单中选择 把本地图片上传至图床 ，如下图：<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870162275230.jpg" alt="-w1070"></p>
-<p>点击上传图片即可，这时候针对的是该篇文档的图片，这样就可以实现图片上传到七牛云了，另外上传图片前可进行图片的压缩，以免文件过大而造成加载慢。</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac实现Adobe Indesign CC快速切换中英</title>
-    <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
-    <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
-<a id="more"></a>
-
-<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-13d58a46211db1da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>点击应用程序，如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d07d36c00206192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-4b3a8130e6265c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
-<p>将“Find-Change Queries”里的的三个包：GREP 与 Object 与 Text 的文件名的“en_US”都换成“zh_CN”</p>
-<p>同理，再将“InDesign Shortcut Sets” 的 “en_US”换成“zh_CN”，再将“InDesign_Workspaces” 的 “en_US”换成“zh_CN”，重新打开Indesign CC，成功完成了英文en_US转化成了中文zh_CN，是不是很简单呢～</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-        <tag>办公</tag>
-        <tag>adobe</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac安装office365</title>
-    <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
-    <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
-<a id="more"></a>
-
-<h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
-<p><img src="https://upload-images.jianshu.io/upload_images/2320147-a2415d8c7cb8514b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h3 id="2-资源分享："><a href="#2-资源分享：" class="headerlink" title="2. 资源分享："></a>2. 资源分享：</h3><p><img src="https://upload-images.jianshu.io/upload_images/2320147-6c50d6b03939caa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>office365下载链接:<a href="https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ</a>  密码:u05s</p>
-<p>破解补丁下载链接:<a href="https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg</a>  密码:tss5</p>
-<h3 id="3-“傻瓜式”安装"><a href="#3-“傻瓜式”安装" class="headerlink" title="3. “傻瓜式”安装"></a>3. “傻瓜式”安装</h3><p>下载完成后，按照提示正常安装，“傻瓜式”操作。<br>（1）先安装office365，不需要打开；<br>（2）office完成后，安装补丁工具。<br>（3）最后完成。<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d8b4d41c310695a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>😄</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Mac</tag>
-        <tag>app</tag>
-        <tag>office</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown语法大全</title>
-    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
-<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-
-<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
-
-<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
-
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
-<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-<p>有序列表使用数字并加上 . 号来表示,如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
-<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
-
-<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
-<blockquote>
-<p>区块引用</p>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
-<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
-<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
-<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
-<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-        <tag>语法</tag>
       </tags>
   </entry>
   <entry>
@@ -486,6 +321,52 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac安装office365</title>
+    <url>/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/</url>
+    <content><![CDATA[<p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+<a id="more"></a>
+
+<h3 id="1-前言："><a href="#1-前言：" class="headerlink" title="1. 前言："></a>1. 前言：</h3><p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-a2415d8c7cb8514b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="2-资源分享："><a href="#2-资源分享：" class="headerlink" title="2. 资源分享："></a>2. 资源分享：</h3><p><img src="https://upload-images.jianshu.io/upload_images/2320147-6c50d6b03939caa9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>office365下载链接:<a href="https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1gNxk0P5GEzqVbHyFt8OmVQ</a>  密码:u05s</p>
+<p>破解补丁下载链接:<a href="https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg" target="_blank" rel="noopener">https://pan.baidu.com/s/1xRX65K5vhXF9X9pB8VdSSg</a>  密码:tss5</p>
+<h3 id="3-“傻瓜式”安装"><a href="#3-“傻瓜式”安装" class="headerlink" title="3. “傻瓜式”安装"></a>3. “傻瓜式”安装</h3><p>下载完成后，按照提示正常安装，“傻瓜式”操作。<br>（1）先安装office365，不需要打开；<br>（2）office完成后，安装补丁工具。<br>（3）最后完成。<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d8b4d41c310695a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>😄</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+        <tag>office</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac实现Adobe Indesign CC快速切换中英</title>
+    <url>/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/</url>
+    <content><![CDATA[<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+<a id="more"></a>
+
+<p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-13d58a46211db1da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>点击应用程序，如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/2320147-d07d36c00206192e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2320147-4b3a8130e6265c99.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="2.png"></p>
+<p>将“Find-Change Queries”里的的三个包：GREP 与 Object 与 Text 的文件名的“en_US”都换成“zh_CN”</p>
+<p>同理，再将“InDesign Shortcut Sets” 的 “en_US”换成“zh_CN”，再将“InDesign_Workspaces” 的 “en_US”换成“zh_CN”，重新打开Indesign CC，成功完成了英文en_US转化成了中文zh_CN，是不是很简单呢～</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>app</tag>
+        <tag>办公</tag>
+        <tag>adobe</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>css利用mask实现奇葩形状</title>
     <url>/2016/11/21/css%E5%88%A9%E7%94%A8mask%E5%AE%9E%E7%8E%B0%E5%A5%87%E8%91%A9%E5%BD%A2%E7%8A%B6/</url>
     <content><![CDATA[<p>我们在写前端样式的时候，css中实现不规则的图片可以利用border，或者clip-path（<a href="http://www.jianshu.com/p/1c241fdca3a1" target="_blank" rel="noopener">之前文章</a>介绍过），今天来说说另一种方法，也是比较简单的，可以实现各种奇葩形状，秀各种百变图片，照例先上张效果图：</p>
@@ -566,46 +447,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css搞定input-checkbox的美化</title>
-    <url>/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<blockquote>
-<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
-<a id="more"></a>
-
-<h3 id="开头语"><a href="#开头语" class="headerlink" title="开头语"></a>开头语</h3><p>“web, 我觉得刚才秀的姿势不够纠结，缺乏了一点点内涵，无法表现input内心的复杂情感，请允许我再来一次，我会拿出百分百的状态，争取做到深刻而不深沉，平淡而不平庸，演好我的角色。其实，我是一名演员。”<br>—— 改编源自《喜剧之王》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c74aad3cba988b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
-<p>交互效果是当用户点击文字行或者圈圈，都可以选择打钩或去掉钩，多选框或单选框效果。</p>
-<p>咋实现，一步一步来，先来个最基本的样子：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c80edd25a0651877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
-<p>怎么让选择框变美，首先，身材比例调一下（width，height），瞬间小家碧玉变得大气：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d1fc6b67b403e883.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<p>然后稍微的隆一下border-radius，变得温婉些，前提要加上-webkit-appearance: none，才能改变：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a9ee7e20f6ecc52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-<p>这时候选中效果是看不见的，因为默认样式已经去除，接下来修整下选中的状态，对勾怎么弄，利用隐士Unicode编码。’\2713’代表对钩，利用content来加入，并改变位置，颜色，实现了自我的展示。<br>主样式代码如下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-831eea27eb2cfcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
-<p>主要是-webkit-appearance: none以及利用unicode编码，伪元素实现。</p>
-<p>附上最终代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">		.input-wrap &#123;</span><br><span class="line">			width: 20rem;</span><br><span class="line">			height: 10rem;</span><br><span class="line">			padding-top: 5rem;</span><br><span class="line">			margin: auto;</span><br><span class="line">			background-color: #f99;</span><br><span class="line">			color: #fff;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 23px;</span><br><span class="line">		&#125;</span><br><span class="line">		input[type&#x3D;&#39;checkbox&#39;] &#123;</span><br><span class="line">			position: relative;</span><br><span class="line">			width: 20px;</span><br><span class="line">			height: 20px;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	        margin-right: 10px;</span><br><span class="line">	        border: 2px solid #fff;</span><br><span class="line">	        border-radius: 50%;</span><br><span class="line">	    &#125;</span><br><span class="line">&#x2F;*	    input[type&#x3D;&#39;checkbox&#39;]:checked &#123;</span><br><span class="line">	        clip: (0,0,0,0);</span><br><span class="line">	        outline: 0;</span><br><span class="line">	        background-color: transparent;</span><br><span class="line">	    &#125;*&#x2F;</span><br><span class="line">	    input[type&#x3D;&#39;checkbox&#39;]:checked:after &#123;</span><br><span class="line">	        content: &#39;\2713&#39;;</span><br><span class="line">	        position: absolute;</span><br><span class="line">	        left: 3px;</span><br><span class="line">	        color: #fff;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">---html---</span><br><span class="line">	&lt;div class&#x3D;&quot;input-wrap&quot;&gt;</span><br><span class="line">		&lt;label class&#x3D;&quot;btn-admit admit&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;save-in&quot; name&#x3D;&quot;saveIn&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;Bike&quot; &#x2F;&gt;我愿意 Yes,I do&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>题外话，unicode编码还是很有用的，比如说实现下面的：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-52f810d6831a77d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-401a635697b5a3b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正确.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8a176b42fec3ae11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="unicode源自网络"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>css实现progress进度条美化</title>
     <url>/2017/03/17/css%E5%AE%9E%E7%8E%B0progress%E8%BF%9B%E5%BA%A6%E6%9D%A1%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
@@ -643,6 +484,138 @@
 <p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
 <p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
 <p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown语法大全</title>
+    <url>/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Markdown-是什么"><a href="#Markdown-是什么" class="headerlink" title="Markdown 是什么"></a>Markdown 是什么</h1><p>Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编写的文档后缀为 .md, .markdown。</p>
+<h1 id="markdown-基本语法"><a href="#markdown-基本语法" class="headerlink" title="markdown 基本语法"></a>markdown 基本语法</h1><h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
+
+<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><p>Markdown 可以使用以下几种字体：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
+
+<h2 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h2><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">***</span><br><span class="line">* * *</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 ~~ 即可，实例如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">RUNOOB.COM</span><br><span class="line">GOOGLE.COM</span><br><span class="line">~~BAIDU.COM~~</span><br></pre></td></tr></table></figure>
+
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><p>下划线可以通过 HTML标签来实现：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;u&gt;带下划线文本&lt;&#x2F;u&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h2><p>脚注是对文本的补充说明。Markdown 脚注的格式如下:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[^要注明的文本]</span><br><span class="line">以下实例演示了脚注的用法：</span><br></pre></td></tr></table></figure>
+<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在当前行的结尾加 2 个空格<br>这行就会新起一行</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>Markdown 支持有序列表和无序列表。<br>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
+<p>有序列表使用数字并加上 . 号来表示,如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
+<p>列表嵌套只需在子列表中的选项添加四个空格即可：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
+
+<h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
+<blockquote>
+<p>区块引用</p>
+</blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>可以用 ``` 包裹一段代码，并指定一种语言（也可以不指定）：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">$(document).ready(function () &#123;</span><br><span class="line">    alert(&#39;RUNOOB&#39;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>链接使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line">或者&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>Markdown 图片语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
+<p>开头一个感叹号 !<br>接着一个方括号，里面放上图片的替代文字<br>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</p>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p>制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。语法格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
+<h2 id="支持的HTML元素"><a href="#支持的HTML元素" class="headerlink" title="支持的HTML元素"></a>支持的HTML元素</h2><p>目前支持的 HTML 元素有<br><code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Alt&lt;&#x2F;kbd&gt;+&lt;kbd&gt;Del&lt;&#x2F;kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><p>如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<p>支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">&#96;   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
+<h2 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h2><p>当你需要在编辑器中插入数学公式时，可以使用两个美元符 $$ 包裹 TeX 或 LaTeX 格式的数学公式来实现。提交后，问答和文章页会根据需要加载 Mathjax 对数学公式进行渲染。如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;_1 \times \mathbf&#123;V&#125;_2 &#x3D;  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$&#123;$tep1&#125;&#123;\style&#123;visibility:hidden&#125;&#123;(x+1)(x+1)&#125;&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+        <tag>语法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css美化scrollbar滚动条</title>
+    <url>/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
+    <content><![CDATA[<p>在布局页面样式的时候，可能会遇到显示滚动条的需要，默认滚动条样式普通也不具备自认为的美感，想打造自己的滚动条，咋破？按例我们先上效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a6b0a82851599a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图"></p>
+<a id="more"></a>
+
+<p>-webkit-scrollbar：“你要知道美容这个东西，跟鲜花一样需要有绿叶来衬托才会显出她的娇媚。”<br>——题记，源自《唐伯虎点秋香》</p>
+<p>###正文<br>在布局页面样式的时候，可能会遇到显示滚动条的需要，默认滚动条样式普通也不具备自认为的美感，想打造自己的滚动条，咋破？按例我们先上效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a6b0a82851599a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图"></p>
+<p>看起来这个效果，是相当简单呀，没啥难度，原始效果是怎样呢？我们也一起来看下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9bb47fc7e2b21584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原始图"></p>
+<p>效果图与原始图相比，变化的有：上下箭头，滑块样式及轨道。咋变？在这里，我们介绍下scrollbar的朋友：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">::-webkit-scrollbar 滚动条整体部分</span><br><span class="line">::-webkit-scrollbar-button 滚动条两端的按钮</span><br><span class="line">::-webkit-scrollbar-track 外层轨道</span><br><span class="line">::-webkit-scrollbar-track-piece 内层轨道，即外层轨道除去拖动滑块</span><br><span class="line">::-webkit-scrollbar-thumb 拖动滑块</span><br><span class="line">::-webkit-scrollbar-corner 边角</span><br><span class="line">::-webkit-resizer 定义右下角拖动块的样式</span><br></pre></td></tr></table></figure>
+<p>下面是部分相对应的图例，加深印象：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e333a1f51b8f587d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
+<p>以及伪元素，其中start与end偶尔可能用得到：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:horizontal</span><br><span class="line">:vertical</span><br><span class="line">:decrement</span><br><span class="line">:increment</span><br><span class="line">:start</span><br><span class="line">:end </span><br><span class="line">:double-button</span><br><span class="line">:single-button</span><br><span class="line">:no-button</span><br><span class="line">:corner-present</span><br><span class="line">:window-inactive</span><br></pre></td></tr></table></figure>
+<p>属性视情况而定，一般美化样式<br>::-webkit-scrollbar 滚动条整体部分<br>::-webkit-scrollbar-track 外层轨道<br>::-webkit-scrollbar-thumb 拖动滑块<br>这三个够了，基本都可以满足，其他看自己需求。使用前期准备的话，相信应该都知道，需要添加<em>overflow-x/overflow-y/overflow: scroll 及 定高</em>。<br>示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.txt-wrap &#123;</span><br><span class="line">	width: 25rem;</span><br><span class="line">	height: 20rem;</span><br><span class="line">	margin: auto;</span><br><span class="line">	padding: 10px 20px 10px 20px;</span><br><span class="line">	background-color: #fcc;</span><br><span class="line">	overflow-y: scroll;</span><br><span class="line">	line-height: 30px;</span><br><span class="line">	text-align: left;</span><br><span class="line">	font-family: &#39;microsoft yahei&#39;;</span><br><span class="line">&#125;</span><br><span class="line">.txt-wrap::-webkit-scrollbar &#123;</span><br><span class="line">    width: 10px;</span><br><span class="line">    background-color: rgba(213,213,213,.8);</span><br><span class="line">&#125;</span><br><span class="line"> .txt-wrap::-webkit-scrollbar-track &#123;</span><br><span class="line">    background-color: rgba(213,213,213,.8);</span><br><span class="line">    border-radius: .5rem;</span><br><span class="line">&#125;</span><br><span class="line"> .txt-wrap::-webkit-scrollbar-thumb &#123;</span><br><span class="line"> 	&#x2F;*width: 30px;*&#x2F;</span><br><span class="line">    background-color: #969696; </span><br><span class="line">    border-radius: .5rem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.txt-wrap::-webkit-scrollbar-button:start &#123;</span><br><span class="line">	width: 100%;</span><br><span class="line">	height: auto;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;top.png) no-repeat;</span><br><span class="line">	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.txt-wrap::-webkit-scrollbar-button:end &#123;</span><br><span class="line">	width: 100%;</span><br><span class="line">	height: auto;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;down.png) no-repeat;</span><br><span class="line">	background-size: contain;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>scrollbar属性目前并不通用，一般用于webkit较多，移动端可用。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a45d20ffa74c4de3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="适用"></p>
+<p>参考链接：<br><a href="https://css-tricks.com/custom-scrollbars-in-webkit/" target="_blank" rel="noopener">https://css-tricks.com/custom-scrollbars-in-webkit/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css搞定input-checkbox的美化</title>
+    <url>/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<blockquote>
+<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+</blockquote>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+<a id="more"></a>
+
+<h3 id="开头语"><a href="#开头语" class="headerlink" title="开头语"></a>开头语</h3><p>“web, 我觉得刚才秀的姿势不够纠结，缺乏了一点点内涵，无法表现input内心的复杂情感，请允许我再来一次，我会拿出百分百的状态，争取做到深刻而不深沉，平淡而不平庸，演好我的角色。其实，我是一名演员。”<br>—— 改编源自《喜剧之王》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c74aad3cba988b7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图.png"></p>
+<p>交互效果是当用户点击文字行或者圈圈，都可以选择打钩或去掉钩，多选框或单选框效果。</p>
+<p>咋实现，一步一步来，先来个最基本的样子：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c80edd25a0651877.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="原图"></p>
+<p>怎么让选择框变美，首先，身材比例调一下（width，height），瞬间小家碧玉变得大气：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-d1fc6b67b403e883.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<p>然后稍微的隆一下border-radius，变得温婉些，前提要加上-webkit-appearance: none，才能改变：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a9ee7e20f6ecc52.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
+<p>这时候选中效果是看不见的，因为默认样式已经去除，接下来修整下选中的状态，对勾怎么弄，利用隐士Unicode编码。’\2713’代表对钩，利用content来加入，并改变位置，颜色，实现了自我的展示。<br>主样式代码如下：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-831eea27eb2cfcd6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>主要是-webkit-appearance: none以及利用unicode编码，伪元素实现。</p>
+<p>附上最终代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	&lt;style type&#x3D;&quot;text&#x2F;css&quot;&gt;</span><br><span class="line">		.input-wrap &#123;</span><br><span class="line">			width: 20rem;</span><br><span class="line">			height: 10rem;</span><br><span class="line">			padding-top: 5rem;</span><br><span class="line">			margin: auto;</span><br><span class="line">			background-color: #f99;</span><br><span class="line">			color: #fff;</span><br><span class="line">			text-align: center;</span><br><span class="line">			font-size: 23px;</span><br><span class="line">		&#125;</span><br><span class="line">		input[type&#x3D;&#39;checkbox&#39;] &#123;</span><br><span class="line">			position: relative;</span><br><span class="line">			width: 20px;</span><br><span class="line">			height: 20px;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	        margin-right: 10px;</span><br><span class="line">	        border: 2px solid #fff;</span><br><span class="line">	        border-radius: 50%;</span><br><span class="line">	    &#125;</span><br><span class="line">&#x2F;*	    input[type&#x3D;&#39;checkbox&#39;]:checked &#123;</span><br><span class="line">	        clip: (0,0,0,0);</span><br><span class="line">	        outline: 0;</span><br><span class="line">	        background-color: transparent;</span><br><span class="line">	    &#125;*&#x2F;</span><br><span class="line">	    input[type&#x3D;&#39;checkbox&#39;]:checked:after &#123;</span><br><span class="line">	        content: &#39;\2713&#39;;</span><br><span class="line">	        position: absolute;</span><br><span class="line">	        left: 3px;</span><br><span class="line">	        color: #fff;</span><br><span class="line">	        -webkit-appearance: none;</span><br><span class="line">	    &#125;</span><br><span class="line"></span><br><span class="line">	&lt;&#x2F;style&gt;</span><br><span class="line">---html---</span><br><span class="line">	&lt;div class&#x3D;&quot;input-wrap&quot;&gt;</span><br><span class="line">		&lt;label class&#x3D;&quot;btn-admit admit&quot;&gt;&lt;input type&#x3D;&quot;checkbox&quot; id&#x3D;&quot;save-in&quot; name&#x3D;&quot;saveIn&quot; checked&#x3D;&quot;checked&quot; value&#x3D;&quot;Bike&quot; &#x2F;&gt;我愿意 Yes,I do&lt;&#x2F;label&gt;</span><br><span class="line">	&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>题外话，unicode编码还是很有用的，比如说实现下面的：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-52f810d6831a77d1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="错误.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-401a635697b5a3b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="正确.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-8a176b42fec3ae11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="unicode源自网络"></p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -693,39 +666,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css美化scrollbar滚动条</title>
-    <url>/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/</url>
-    <content><![CDATA[<p>在布局页面样式的时候，可能会遇到显示滚动条的需要，默认滚动条样式普通也不具备自认为的美感，想打造自己的滚动条，咋破？按例我们先上效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a6b0a82851599a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图"></p>
-<a id="more"></a>
-
-<p>-webkit-scrollbar：“你要知道美容这个东西，跟鲜花一样需要有绿叶来衬托才会显出她的娇媚。”<br>——题记，源自《唐伯虎点秋香》</p>
-<p>###正文<br>在布局页面样式的时候，可能会遇到显示滚动条的需要，默认滚动条样式普通也不具备自认为的美感，想打造自己的滚动条，咋破？按例我们先上效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a6b0a82851599a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图"></p>
-<p>看起来这个效果，是相当简单呀，没啥难度，原始效果是怎样呢？我们也一起来看下：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-9bb47fc7e2b21584.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原始图"></p>
-<p>效果图与原始图相比，变化的有：上下箭头，滑块样式及轨道。咋变？在这里，我们介绍下scrollbar的朋友：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">::-webkit-scrollbar 滚动条整体部分</span><br><span class="line">::-webkit-scrollbar-button 滚动条两端的按钮</span><br><span class="line">::-webkit-scrollbar-track 外层轨道</span><br><span class="line">::-webkit-scrollbar-track-piece 内层轨道，即外层轨道除去拖动滑块</span><br><span class="line">::-webkit-scrollbar-thumb 拖动滑块</span><br><span class="line">::-webkit-scrollbar-corner 边角</span><br><span class="line">::-webkit-resizer 定义右下角拖动块的样式</span><br></pre></td></tr></table></figure>
-<p>下面是部分相对应的图例，加深印象：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e333a1f51b8f587d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例"></p>
-<p>以及伪元素，其中start与end偶尔可能用得到：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">:horizontal</span><br><span class="line">:vertical</span><br><span class="line">:decrement</span><br><span class="line">:increment</span><br><span class="line">:start</span><br><span class="line">:end </span><br><span class="line">:double-button</span><br><span class="line">:single-button</span><br><span class="line">:no-button</span><br><span class="line">:corner-present</span><br><span class="line">:window-inactive</span><br></pre></td></tr></table></figure>
-<p>属性视情况而定，一般美化样式<br>::-webkit-scrollbar 滚动条整体部分<br>::-webkit-scrollbar-track 外层轨道<br>::-webkit-scrollbar-thumb 拖动滑块<br>这三个够了，基本都可以满足，其他看自己需求。使用前期准备的话，相信应该都知道，需要添加<em>overflow-x/overflow-y/overflow: scroll 及 定高</em>。<br>示例代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.txt-wrap &#123;</span><br><span class="line">	width: 25rem;</span><br><span class="line">	height: 20rem;</span><br><span class="line">	margin: auto;</span><br><span class="line">	padding: 10px 20px 10px 20px;</span><br><span class="line">	background-color: #fcc;</span><br><span class="line">	overflow-y: scroll;</span><br><span class="line">	line-height: 30px;</span><br><span class="line">	text-align: left;</span><br><span class="line">	font-family: &#39;microsoft yahei&#39;;</span><br><span class="line">&#125;</span><br><span class="line">.txt-wrap::-webkit-scrollbar &#123;</span><br><span class="line">    width: 10px;</span><br><span class="line">    background-color: rgba(213,213,213,.8);</span><br><span class="line">&#125;</span><br><span class="line"> .txt-wrap::-webkit-scrollbar-track &#123;</span><br><span class="line">    background-color: rgba(213,213,213,.8);</span><br><span class="line">    border-radius: .5rem;</span><br><span class="line">&#125;</span><br><span class="line"> .txt-wrap::-webkit-scrollbar-thumb &#123;</span><br><span class="line"> 	&#x2F;*width: 30px;*&#x2F;</span><br><span class="line">    background-color: #969696; </span><br><span class="line">    border-radius: .5rem;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.txt-wrap::-webkit-scrollbar-button:start &#123;</span><br><span class="line">	width: 100%;</span><br><span class="line">	height: auto;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;top.png) no-repeat;</span><br><span class="line">	background-size: contain;</span><br><span class="line">&#125;</span><br><span class="line">.txt-wrap::-webkit-scrollbar-button:end &#123;</span><br><span class="line">	width: 100%;</span><br><span class="line">	height: auto;</span><br><span class="line">	background: url(..&#x2F;images&#x2F;down.png) no-repeat;</span><br><span class="line">	background-size: contain;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>scrollbar属性目前并不通用，一般用于webkit较多，移动端可用。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a45d20ffa74c4de3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="适用"></p>
-<p>参考链接：<br><a href="https://css-tricks.com/custom-scrollbars-in-webkit/" target="_blank" rel="noopener">https://css-tricks.com/custom-scrollbars-in-webkit/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js实现base64获图片url的坑-七牛云</title>
     <url>/2016/12/07/js%E5%AE%9E%E7%8E%B0base64%E8%8E%B7%E5%9B%BE%E7%89%87url%E7%9A%84%E5%9D%91-%E4%B8%83%E7%89%9B%E4%BA%91/</url>
     <content><![CDATA[<p>近期做H5项目的时候，遇到上传图片的问题：手机里拍摄后看着明明是正的照片，在H5显示之后，就上下左右“乱跳”了。究其原因是原始图片会有自己的参数，而相机当时的拍摄旋转方向不同，则会导致旋转参数不同，进而显示的图片方向不正。未来语：如果之后手机照片能自动设置的话，H5就省事不少了。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-7e837ea6492a0fc4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300" alt="H5显示图"></p>
@@ -754,6 +694,54 @@
         <tag>JavaScript</tag>
         <tag>base64</tag>
         <tag>七牛云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>css读懂动画steps</title>
+    <url>/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/</url>
+    <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<a id="more"></a>
+
+<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
+<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
+<p><strong>语法</strong></p>
+<blockquote>
+<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
+</blockquote>
+<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
+<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
+<p>看代码：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
+<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
+<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
+<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
+<p>为啥，我们以w3c的线图来解读。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
+<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
+<p>接下来切换end：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
+<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
+<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
+<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
+<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -817,54 +805,6 @@
       </tags>
   </entry>
   <entry>
-    <title>css读懂动画steps</title>
-    <url>/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/</url>
-    <content><![CDATA[<p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-<a id="more"></a>
-
-<p>“我要一步一步往前跳，在最远方乘着web往前飞；<br>小小的天……我有属于我的天”<br>——题记，改编源自《蜗牛》</p>
-<p>###正文<br>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-<p><strong>语法</strong></p>
-<blockquote>
-<p>steps(number, direction)<br>//number指间隔数，必须为正整数，必选<br>//directoin接受start和end值，指定在每个间隔的起点或是终点发生阶跃变化，默认end，可选</p>
-</blockquote>
-<p><em>steps</em>作为<code>timing-function</code>的一个属性，将操作的区域划分为相同等分的间隔，也就是说<strong>每步</strong>分成n段，注意，这里是步，不是共。比如说0，50%，100%，则会0<del>50%分成n步，50%</del>100%分成n步。上2张<a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">W3C</a>上对于steps图文并茂的介绍：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6742b6f9f557429c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍文字"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-bb3ba9d25bb4c184.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="w3c关于steps的介绍图例"></p>
-<p>可能我们看了还是不太清楚，直接上例子：<br>比如说小鸟啄地的3帧动画，用steps实现，改变background-position切换。<br><img src="http://upload-images.jianshu.io/upload_images/2320147-89b316452664160a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="原图.png"></p>
-<p>看代码：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c533016b1de03a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="代码"></p>
-<p>steps(2, start)效果如下，仅在鸟2鸟3中切换（鸟1咋不见了）：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-561efc1832d4a195.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟3.png"></p>
-<p>而steps(2,end)或者steps(2)，仅在鸟1鸟2中切换（鸟3咋不见了）：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7b15664d882fdc53.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟1"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1c0265bc2e69ef11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="鸟2.png"></p>
-<p>（代码放在了<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">codepen上</a>，可远观可亵玩，看看是不是我说的这个事儿。）</p>
-<p>为啥，我们以w3c的线图来解读。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-623875c3066a7d78.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, start)"></p>
-<p>因为只有一个100%，steps 的<code>2</code>将该动画分成2步，当选择start时，也就是刚开始的时候0s一跳跳到1，相当于作为一个跃点，完成阶跃，这一切来的那么快，以至于我看不见，所以我们看到的就是鸟2鸟3不断切换。</p>
-<p>接下来切换end：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-6c8f3b886df0ff2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="steps(2, end)"></p>
-<p>当跃点为end时，则动画在终点发生阶跃，也就是说最后一步的最后一点，这一瞬间猝不及防，致使我啥也都看不见。steps的默认状态是end。这也就导致平时我们可能会产生这样的错觉：它不会运行到最后一张，事实上是有，但阶跃的我压根看不到。但是，我们可以利用forwards来查看，发现它最后定的图是鸟3，如果infinite无限循环，鸟3的毛还是看不到的。</p>
-<p><strong>解决方法</strong><br>方法1：在多张图片拼合的成果图（雪碧图）的末尾或开头处再加一张一样大小的空白图，如此便解决了。有时候可能加跟第一张或第一张一样的图，具体问题具体分析~<br>方法2： 图还是原始图，改变动画keyframes，需要多加一步50%。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">@-webkit-keyframes stepsA &#123;</span><br><span class="line">	50% &#123; background-position: 0 100%; &#125;</span><br><span class="line"></span><br><span class="line">	to &#123; background-position: 0 0; &#125;</span><br><span class="line">	&#x2F;*to &#123; background-position: 0 100%; &#125;*&#x2F;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>猜想</strong>：<br>step-start， start-end显示的是啥？<br>step-start = start(1, start)<br>step-end = start(1, end)</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-254f7453336081ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="回顾"></p>
-<p>可以动手试一试~<a href="http://codepen.io/smilewalker/pen/QGXZxP" target="_blank" rel="noopener">答案，别戳我</a></p>
-<p>参考文章：<br><a href="https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property" target="_blank" rel="noopener">https://www.w3.org/TR/2012/WD-css3-transitions-20120403/#transition-timing-function-property</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function</a><br><a href="https://idiotwu.me/understanding-css3-timing-function-steps/" target="_blank" rel="noopener">https://idiotwu.me/understanding-css3-timing-function-steps/</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>css</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js实现七牛云上传图片视频</title>
     <url>/2017/03/12/js%E5%AE%9E%E7%8E%B0%E4%B8%83%E7%89%9B%E4%BA%91%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91/</url>
     <content><![CDATA[<p>最近新写个项目，需要上传视频，用了七牛的JavaScriptSDK，七牛云文档其实讲的很清楚，引用代码记录下。</p>
@@ -888,6 +828,41 @@
         <tag>web</tag>
         <tag>JavaScript</tag>
         <tag>七牛云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js解决canvas绘制多图</title>
+    <url>/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/</url>
+    <content><![CDATA[<p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
+<a id="more"></a>
+
+<p>“处理图片是我们普通市民的责任，积累跬步是我本身的兴趣，所以加载图片我每次都跑一次，如果遇到多张图片的话我还会多跑几次。”<br>——题记，改自《破坏之王》</p>
+<h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
+<p>原始做法：<br>前提多张图片，本地开发的时候，通过改变HTML img元素的路径<code>src</code>（多个img元素在H5已有），进行绘制<code>drawImage</code>，比如说<code>drawImage(document.getElementById(&#39;img1&#39;), 0, 0)</code>，没问题，多图合成图片效果正常；到了线上，报出一长串红文，不好意思，您的图片没有权限，绘制失败。ok，跨域么，翻资料，加个<code>crossOrigin</code>，允许跨域请求资源。这个可以一试。</p>
+<blockquote>
+<p><strong>使用其它域名下的图片</strong><br>在<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLImageElement" target="_blank" rel="noopener">HTMLImageElement</a>上使用<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes" target="_blank" rel="noopener">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染canvas，否则，使用这个图片将会<a href="https://developer.mozilla.org/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas" target="_blank" rel="noopener">污染canvas</a>。</p>
+</blockquote>
+<blockquote>
+<p><strong>什么是“被污染”的 canvas?</strong><br>尽管不通过 CORS 就可以在画布中使用图片，但是这会<strong>污染</strong>画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData()方法，调用它们会抛出安全错误。<br>这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。<br><em>[引自MDN]</em></p>
+</blockquote>
+<p>最后方案（不在H5显示img元素，从零创建）：<br>通过js创建image对象，对于多张图片，建立数组，<strong>加载完成多张图片后</strong>，进行canvas绘制，后再进行合成图片。这里有个强调，必须要在加载完成后，方可绘制，也就是说有先后顺序，顺序没处理好，可能导致合成的图片缺头少尾，甚至空白。这里利用jquery的deffered来处理先后顺序问题。</p>
+<blockquote>
+<p>若调用 drawImage时，图片没加载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。</p>
+</blockquote>
+<p>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;预加载</span><br><span class="line">function preloadImg(list, imgs) &#123;</span><br><span class="line">  var def &#x3D; $.Deferred(),</span><br><span class="line">      len &#x3D; list.length;</span><br><span class="line">  $(list).each(function(i,e) &#123;    </span><br><span class="line">    var img &#x3D; new Image(); </span><br><span class="line">    img.crossOrigin &#x3D; &quot;&quot;; &#x2F;&#x2F;跨域请求资源</span><br><span class="line">    img.onload &#x3D; (function(j) &#123;</span><br><span class="line">      return function() &#123;</span><br><span class="line">        imgs[j] &#x3D; img</span><br><span class="line">        len--;</span><br><span class="line">        if(len &#x3D;&#x3D; 0) &#123;  def.resolve();  &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">    img.onerror &#x3D; function() &#123;</span><br><span class="line">      len--;</span><br><span class="line">      alert(&#39;fail to load image&#39;);</span><br><span class="line">    &#125;;</span><br><span class="line">    img.src &#x3D; e; &#x2F;&#x2F; 确保缓存的图片也触发 load 事件</span><br><span class="line">  &#125;);</span><br><span class="line">  console.log(def.promise())</span><br><span class="line">  return def.promise();</span><br><span class="line">&#125;</span><br><span class="line">$.when(preloadImg(list, imgs)).done(</span><br><span class="line">  function() &#123;</span><br><span class="line">    draw事件</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p><em>参考文章</em><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images</a></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1bc92ad1bb33afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="image.png"></p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>canvas</tag>
       </tags>
   </entry>
   <entry>
@@ -980,102 +955,6 @@
       <tags>
         <tag>技术</tag>
         <tag>node-sass</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js解决canvas绘制多图</title>
-    <url>/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/</url>
-    <content><![CDATA[<p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
-<a id="more"></a>
-
-<p>“处理图片是我们普通市民的责任，积累跬步是我本身的兴趣，所以加载图片我每次都跑一次，如果遇到多张图片的话我还会多跑几次。”<br>——题记，改自《破坏之王》</p>
-<h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
-<p>原始做法：<br>前提多张图片，本地开发的时候，通过改变HTML img元素的路径<code>src</code>（多个img元素在H5已有），进行绘制<code>drawImage</code>，比如说<code>drawImage(document.getElementById(&#39;img1&#39;), 0, 0)</code>，没问题，多图合成图片效果正常；到了线上，报出一长串红文，不好意思，您的图片没有权限，绘制失败。ok，跨域么，翻资料，加个<code>crossOrigin</code>，允许跨域请求资源。这个可以一试。</p>
-<blockquote>
-<p><strong>使用其它域名下的图片</strong><br>在<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLImageElement" target="_blank" rel="noopener">HTMLImageElement</a>上使用<a href="https://developer.mozilla.org/en-US/docs/HTML/CORS_settings_attributes" target="_blank" rel="noopener">crossOrigin</a>属性，你可以请求加载其它域名上的图片。如果图片的服务器允许跨域访问这个图片，那么你可以使用这个图片而不污染canvas，否则，使用这个图片将会<a href="https://developer.mozilla.org/zh-CN/docs/CORS_Enabled_Image#.E4.BB.80.E4.B9.88.E6.98.AF.22.E8.A2.AB.E6.B1.A1.E6.9F.93.22.E7.9A.84canvas" target="_blank" rel="noopener">污染canvas</a>。</p>
-</blockquote>
-<blockquote>
-<p><strong>什么是“被污染”的 canvas?</strong><br>尽管不通过 CORS 就可以在画布中使用图片，但是这会<strong>污染</strong>画布。一旦画布被污染，你就无法读取其数据。例如，你不能再使用画布的 toBlob(), toDataURL() 或 getImageData()方法，调用它们会抛出安全错误。<br>这种机制可以避免未经许可拉取远程网站信息而导致的用户隐私泄露。<br><em>[引自MDN]</em></p>
-</blockquote>
-<p>最后方案（不在H5显示img元素，从零创建）：<br>通过js创建image对象，对于多张图片，建立数组，<strong>加载完成多张图片后</strong>，进行canvas绘制，后再进行合成图片。这里有个强调，必须要在加载完成后，方可绘制，也就是说有先后顺序，顺序没处理好，可能导致合成的图片缺头少尾，甚至空白。这里利用jquery的deffered来处理先后顺序问题。</p>
-<blockquote>
-<p>若调用 drawImage时，图片没加载完，那什么都不会发生（在一些旧的浏览器中可能会抛出异常）。</p>
-</blockquote>
-<p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;预加载</span><br><span class="line">function preloadImg(list, imgs) &#123;</span><br><span class="line">  var def &#x3D; $.Deferred(),</span><br><span class="line">      len &#x3D; list.length;</span><br><span class="line">  $(list).each(function(i,e) &#123;    </span><br><span class="line">    var img &#x3D; new Image(); </span><br><span class="line">    img.crossOrigin &#x3D; &quot;&quot;; &#x2F;&#x2F;跨域请求资源</span><br><span class="line">    img.onload &#x3D; (function(j) &#123;</span><br><span class="line">      return function() &#123;</span><br><span class="line">        imgs[j] &#x3D; img</span><br><span class="line">        len--;</span><br><span class="line">        if(len &#x3D;&#x3D; 0) &#123;  def.resolve();  &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;)(i);</span><br><span class="line">    img.onerror &#x3D; function() &#123;</span><br><span class="line">      len--;</span><br><span class="line">      alert(&#39;fail to load image&#39;);</span><br><span class="line">    &#125;;</span><br><span class="line">    img.src &#x3D; e; &#x2F;&#x2F; 确保缓存的图片也触发 load 事件</span><br><span class="line">  &#125;);</span><br><span class="line">  console.log(def.promise())</span><br><span class="line">  return def.promise();</span><br><span class="line">&#125;</span><br><span class="line">$.when(preloadImg(list, imgs)).done(</span><br><span class="line">  function() &#123;</span><br><span class="line">    draw事件</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p><em>参考文章</em><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images</a></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-a1bc92ad1bb33afe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/400" alt="image.png"></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>canvas</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>web audio api实现你的音乐·下</title>
-    <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
-    <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
-<a id="more"></a>
-
-<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
-<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
-<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
-<ol>
-<li>创建音频环境</li>
-<li>获取音频，创建buffer节点</li>
-<li>解码音频，分析音频</li>
-<li>连接音频输入输出</li>
-<li>canvas绘制频谱</li>
-<li>连接播放</li>
-</ol>
-<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
-
-<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
-
-<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
-<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
-<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
-<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
-<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
-<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-        <tag>web</tag>
-        <tag>JavaScript</tag>
-        <tag>web audio api</tag>
       </tags>
   </entry>
   <entry>
@@ -1211,204 +1090,64 @@
       </tags>
   </entry>
   <entry>
-    <title>我的黑眼圈，是因为私藏的“书库”</title>
-    <url>/2020/04/23/%E6%88%91%E7%9A%84%E9%BB%91%E7%9C%BC%E5%9C%88%EF%BC%8C%E6%98%AF%E5%9B%A0%E4%B8%BA%E7%A7%81%E8%97%8F%E7%9A%84%E2%80%9C%E4%B9%A6%E5%BA%93%E2%80%9D/</url>
-    <content><![CDATA[<p>今天是“世界图书日”——4月23日。越来越浮躁动荡，越难得静下心来看书，为什么常说工作后很难看得进书，一者时间少，二者不太愿意花时间在节奏慢的事情上，比如说书籍，相反可能更倾向于短时间获得结果的短视频、微博。<br>个人偏爱纸质书大于电子书，虽然信息化时代，但对于值得收藏的书一定会购买放入书架。一段时间不看书，就觉得哪里有点空空的，或许真应了“书是精神食粮”吧。列出个人私藏的书单，在这个“自带仪式感”的日子分享，书籍未完待续。不过看书跟时间段还是有些关系，比如说这个时间段看到了一本书，觉得无趣，过了段时间再翻，便觉得相见恨晚，书籍也讲“机缘”。</p>
-<table>
-<thead>
-<tr>
-<th>心里类书籍</th>
-<th>短评</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>《天才在左疯子在右》</td>
-<td>访谈性的故事文，天才疯子，谁模糊了谁的界限，各有各的“哲学”</td>
-</tr>
-<tr>
-<td>《遇见未知的自己》</td>
-<td>带故事型的心理书籍，高中看了这本书，对当时高中的我获益匪浅。</td>
-</tr>
-<tr>
-<td>《向前一步》</td>
-<td>女性成长文，“勇敢”</td>
-</tr>
-<tr>
-<td>《梦的解析》</td>
-<td>从“科学”上分析梦与现实的联系</td>
-</tr>
-<tr>
-<td>《秘密》</td>
-<td>“只要你真的想做，全世界都会帮助你”</td>
-</tr>
-<tr>
-<td>《怪诞行为学》</td>
-<td>浅显易懂地用经济学来解释日常行为</td>
-</tr>
-<tr>
-<td>《少有人走的路》</td>
-<td>年轻人若感到迷茫的时候可以看看的一本书</td>
-</tr>
-<tr>
-<td>《断舍离》</td>
-<td>从整理房间来整理内心</td>
-</tr>
-<tr>
-<td>《社会心理学》</td>
-<td>人是社会性动物，解释社会心理与行为</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>文学类书籍</th>
-<th>短评</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>《平凡的世界》</td>
-<td>朴实，感受平凡</td>
-</tr>
-<tr>
-<td>《三体》</td>
-<td>想象力丰富的科幻文</td>
-</tr>
-<tr>
-<td>《目送》</td>
-<td>散文集，没有华丽词藻，看的时候对写父母间的文字深刻</td>
-</tr>
-<tr>
-<td>《看见》</td>
-<td>文字朴实地展示故事，小故事见道理</td>
-</tr>
-<tr>
-<td>《沉默的大多数》</td>
-<td>王小波的文字还挺有意思</td>
-</tr>
-<tr>
-<td>《围城》</td>
-<td>经典名言，“城外的人想进来，城里的人想进去”，一般皆如此</td>
-</tr>
-<tr>
-<td>《撒哈拉的故事》</td>
-<td>三毛与荷西的故事，感受三毛的洒脱</td>
-</tr>
-<tr>
-<td>《活着》</td>
-<td>第一遍故事文，第二遍：“活着本身就是意义”</td>
-</tr>
-<tr>
-<td>《红楼梦》</td>
-<td>小学老师要求背诵章回名，“第一回 甄士隐梦幻识通灵……”，反反复复红楼梦看了几回，真是“真作假时假亦真，假作真时真亦假”。</td>
-</tr>
-<tr>
-<td>《牧羊少年的奇幻之旅》</td>
-<td>回归“要做什么”的拷问内心的问题</td>
-</tr>
-<tr>
-<td>《白夜行》</td>
-<td>第二本接触东野圭吾的书，光明与黑暗的故事</td>
-</tr>
-<tr>
-<td>《嫌疑人X的献身》</td>
-<td>第一个接触东野圭吾的书，之后入“坑”</td>
-</tr>
-<tr>
-<td>《人间失格》</td>
-<td>太宰治的一本书，电影《被嫌弃的松子的一生》与之类似，可以看看不同的看法，但更愿意说，”生而为人，谢谢“</td>
-</tr>
-<tr>
-<td>《沙丘》1，2，3，4</td>
-<td>想象力丰富的科幻文，震惊如此的想象力，“恐惧是思维杀手”</td>
-</tr>
-<tr>
-<td>《24个比利》</td>
-<td>描写不同人格的书</td>
-</tr>
-<tr>
-<td>《月亮与六便士》</td>
-<td>上海译文出版社，月亮与六便士的选择</td>
-</tr>
-<tr>
-<td>《那些回不去的年少时光》</td>
-<td>高中第一本接触桐华的书，怀旧感</td>
-</tr>
-<tr>
-<td>《悟空传》</td>
-<td>“大话西游”之感</td>
-</tr>
-<tr>
-<td>《花千骨》</td>
-<td>高中毕业所看，大女主的仙侠文，虽然翻拍电视剧，但个人没看</td>
-</tr>
-<tr>
-<td>《基督山伯爵》</td>
-<td>三天看完周克希翻译的，想起电影《肖申克的救赎》，愈长大，“坚持”愈发难能可贵</td>
-</tr>
-<tr>
-<td>《职场动物进化论》</td>
-<td>通过动物的故事来描写职场，动物跟人的相通之处</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>其他类书籍</th>
-<th>短评</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>《小家，越住越大》</td>
-<td>打开对于户型小的家布置的思维</td>
-</tr>
-<tr>
-<td>《机器学习》</td>
-<td>机器学习教科书，想学习可以入手</td>
-</tr>
-<tr>
-<td>《写给大家看的设计书》</td>
-<td>当时设计网站看的参考书，还有一本简洁之美</td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>英文类书籍</th>
-<th>短评</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>《hunger games》</td>
-<td>饥饿的游戏，独立女主</td>
-</tr>
-<tr>
-<td>《harry potter》</td>
-<td>想看英文，不知从何看起，哈利波特总是不会错的</td>
-</tr>
-<tr>
-<td>《pride and prejudice》</td>
-<td>傲慢与偏见，看过电影，学习英文</td>
-</tr>
-<tr>
-<td>《twilight》</td>
-<td>暮光之城原版，学习英文</td>
-</tr>
-<tr>
-<td>《animal farm》</td>
-<td>动物农场，通过描写动物农场的故事来折射国家</td>
-</tr>
-<tr>
-<td>《different seasons》</td>
-<td>肖申克的救赎原版书，个人喜欢这电影</td>
-</tr>
-</tbody></table>
-<p>未完待续……</p>
+    <title>web audio api实现你的音乐·下</title>
+    <url>/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/</url>
+    <content><![CDATA[<p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+<a id="more"></a>
+
+<p>“沧海一声唱  滔滔两岸潮<br>浮沉随浪歌舞今朝<br>苍天唱  纷纷世上潮<br>谁负谁胜出天知晓<br>江山唱  烟雨遥<br>涛浪淘尽红尘俗世几多娇<br>清风唱  竟惹寂寥<br>豪情还剩了一襟晚照<br>苍生唱  不再寂寥<br>豪情仍在痴痴唱唱”<br>—— 题记，《沧海一声唱》</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
+<p>这种音波似的效果，我们可能会在音乐室或音乐人或音乐播放器那儿看到，并不少见，当第一次发现可以实现时，ohMyGod，震撼，神奇，而对于喜欢的事物，总会想为我所用，闲话不多说，一起看看它是怎么实现的吧。根据已有的web audio API知识，实践音频可视化，自我总结，步骤大致分为以下几步：</p>
+<ol>
+<li>创建音频环境</li>
+<li>获取音频，创建buffer节点</li>
+<li>解码音频，分析音频</li>
+<li>连接音频输入输出</li>
+<li>canvas绘制频谱</li>
+<li>连接播放</li>
+</ol>
+<h5 id="创建音频环境AudioContext"><a href="#创建音频环境AudioContext" class="headerlink" title="创建音频环境AudioContext"></a>创建音频环境AudioContext</h5><p>音频环境是所有音效操作的前提，好比canvas的画布，先有个做画之地，再来笔墨横姿</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; Webkit&#x2F;blink browser require a prefix, and it needs the window object specifically declared to work in Safari</span><br><span class="line">window.AudioContext &#x3D; window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;</span><br><span class="line">window.requestAnimationFrame &#x3D; window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; declare new audio context</span><br><span class="line">try &#123;</span><br><span class="line">    var audioCtx &#x3D; new AudioContext();</span><br><span class="line">&#125; catch (e) &#123;</span><br><span class="line">    alert(&#39;Your browser does not support AudioContext!&#39;);</span><br><span class="line">    console.log(e);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="获取音频，创建buffer节点"><a href="#获取音频，创建buffer节点" class="headerlink" title="获取音频，创建buffer节点"></a>获取音频，创建buffer节点</h5><p>首先获取音频，也就是说拿到这个素材输入之后，我们可以赶制加工，这里通过XMLHttpRequest获取，将请求的返回类型设为<strong>“arraybuffer”</strong>，方便音频数据处理；另外，创建音频节点<strong>createBufferSource</strong>，来获取输入的音频。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; use XHR to load an audio track, and</span><br><span class="line">&#x2F;&#x2F; decodeAudioData to decode it and stick it in a buffer.</span><br><span class="line">&#x2F;&#x2F; Then we put the buffer into the source</span><br><span class="line">var xhr &#x3D; new XMLHttpRequest();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化 HTTP 请求参数, 配置请求类型，文件路径等</span><br><span class="line">xhr.open(&#39;GET&#39;, &#39;audio&#x2F;music1.mp3&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 将responseType设为arraybuffer,二进制数据</span><br><span class="line">xhr.responseType &#x3D; &quot;arraybuffer&quot;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 获取完成，对音频进一步操作，解码</span><br><span class="line">xhr.onload &#x3D; function() &#123;</span><br><span class="line">    var audioData &#x3D; xhr.response;</span><br><span class="line">    &#x2F;&#x2F; Get an AudioBufferSourceNode.</span><br><span class="line">    &#x2F;&#x2F; This is the AudioNode to use when we want to play an AudioBuffer</span><br><span class="line">    var source &#x3D; audioCtx.createBufferSource();</span><br><span class="line">    ……</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="解码音频，分析音频"><a href="#解码音频，分析音频" class="headerlink" title="解码音频，分析音频"></a>解码音频，分析音频</h5><p>好的，现在我们拿到了音乐，但计算机仍然不懂，需要对其进行解码<strong>decodeAudioData</strong>。<br>一看到解码后的数据，我们不能让计算机“啪啪啪”就来吧，观个全局，做个自我分析，<strong>createAnalyser</strong>。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">audioCtx.decodeAudioData(audioData, function(buffer) &#123;</span><br><span class="line">        &#x2F;&#x2F; set the buffer in the AudioBufferSourceNode</span><br><span class="line">        source.buffer &#x3D; buffer;</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; create audio node to play the audio in the buffer</span><br><span class="line">        var analyser &#x3D; audioCtx.createAnalyser();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="连接音频输入输出"><a href="#连接音频输入输出" class="headerlink" title="连接音频输入输出"></a>连接音频输入输出</h5><p>必经之路，input ——&gt; 音频处理 ——&gt; 输出，connect连接。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; connect the analyser to the destination(the speaker), or we won&#39;t hear the sound</span><br><span class="line">&#x2F;&#x2F; from audioCtx.createBuffer, or audioCtx.decodeAudioData</span><br><span class="line">source.connect(analyser);</span><br><span class="line">analyser.connect(audioCtx.destination);</span><br></pre></td></tr></table></figure>
+
+<h5 id="canvas绘制频谱"><a href="#canvas绘制频谱" class="headerlink" title="canvas绘制频谱"></a>canvas绘制频谱</h5><p>大头戏，音乐播放捣鼓捣鼓还是有声音的，频谱怎么着，一头雾水。不着急，慢慢来，首先我们需要数据，数据怎么来：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">    dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">analyser.getByteFrequencyData(dataArray);</span><br></pre></td></tr></table></figure>
+
+<p>好，数据有了，计算机也能懂，怎么画，先说个简单的：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var canvas &#x3D; document.getElementById(&#39;audio_canvas&#39;),</span><br><span class="line">    ctx &#x3D; canvas.getContext(&quot;2d&quot;),</span><br><span class="line">    c_width &#x3D; canvas.width,</span><br><span class="line">    c_height &#x3D; canvas.height;</span><br><span class="line"></span><br><span class="line">**************</span><br><span class="line">for(var i &#x3D; 0; i &lt; bufferLength; i++) &#123;</span><br><span class="line">     value &#x3D; dataArray[i];</span><br><span class="line">     ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">     ctx.fillRect(i, c_height - value, 1, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好了，频谱图有了，但没有动效，不会变化，别急，利用<strong>requestAnimationFrame</strong>，同时这侧面反应了获取的dataArray数组的数值，出来的效果如此这般：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-c4a900a3dbf48d0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="数值"></p>
+<p>可是我们想，如果把所有的数值都展现出来，一来太多，二来更耗资源，而且频率邻值是相似的，非智者所为，怎么处理呢？数学中有学过<strong>采样频率</strong>的方法，采样对于信息信号来说，是个常用的方式。根据画布长度，美观起见，让每一频占据一定宽度，各个频之间留些空隙，同时用数学逻辑思维换算，计算出画布可放的频数，也就是说画布上选择哪几个频率值显示，取相对应“编号”的频率，进行绘制。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 条形的宽度</span><br><span class="line">var bar_width &#x3D; 10,</span><br><span class="line">    bar_gap &#x3D; 2,</span><br><span class="line">    bar_part &#x3D; bar_width + bar_gap,</span><br><span class="line">    bar_num &#x3D; Math.round(c_width &#x2F; bar_part);</span><br><span class="line"></span><br><span class="line">***************************************</span><br><span class="line">      function drawVisual() &#123;</span><br><span class="line">            var i &#x3D; 0, value;</span><br><span class="line">            </span><br><span class="line">            var bufferLength &#x3D; analyser.frequencyBinCount,</span><br><span class="line">                dataArray &#x3D; new Uint8Array(bufferLength);</span><br><span class="line"></span><br><span class="line">            &#x2F;&#x2F; 每段包含的频谱宽</span><br><span class="line">            var array_width &#x3D; Math.round(bufferLength &#x2F; bar_num);</span><br><span class="line"></span><br><span class="line">            analyser.getByteFrequencyData(dataArray);</span><br><span class="line"></span><br><span class="line">            ctx.clearRect(0,0,c_width,c_height)</span><br><span class="line"></span><br><span class="line">            for(i; i &lt; bar_num; i++) &#123;</span><br><span class="line">                value &#x3D; dataArray[i * array_width];</span><br><span class="line">               </span><br><span class="line">                ctx.fillStyle &#x3D; &#39;#f99&#39;;</span><br><span class="line">                ctx.fillRect(bar_part * i, c_height - value, bar_width, value);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            animation_id &#x3D; requestAnimationFrame(drawVisual);</span><br><span class="line">            &#x2F;&#x2F; console.log(animation_id)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-e1415bd4e2861d3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="类似"></p>
+<h5 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h5><p>如此一来，大致效果已经实现。在做的过程中，有一个问题需要思考： 动画什么时候停止，也就是说，如何在音乐播放结束的情况下，页面频谱流畅地回归空白，浏览器也不会继续动画，做到“该停止时就停止”。【实践结果证明，如果在音乐播放结束就停止动画或者清空，达不到想要的效果】</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-4f9e218932103d11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="立刻停止页面"></p>
+<p>为了美观及更有趣味性，我们可以加个缓慢降落的条形；甚者，采取上传文件的形式，根据上传的音乐“舞动”自己的音浪，因频制浪。这里有个稍难的点：已经播放一首音乐的时候，如何做到继续上传，原音乐停止，新音乐播放并出现相应的频谱。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-2244d7d980289bd3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="加条形.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-da6c6e64a176e345.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="上传文件形式.png"></p>
+<p>【代码存在于 <a href="https://github.com/smilewalker/audioVisual" target="_blank" rel="noopener">github</a>，仅供参考，敬请交流】</p>
+<p>参考文章：<br><a href="https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA" target="_blank" rel="noopener">https://www.google.com.hk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0ahUKEwj9xpzE2K_SAhUNtJQKHQQMCu4QFggaMAA&amp;url=https%3a%2f%2fdeveloper%2emozilla%2eorg%2fzh-CN%2fdocs%2fWeb%2fAPI%2fFileReader&amp;usg=AFQjCNGz5Veo8Ux5iQ_w_1oFQc3fqNlynA</a><br><a href="http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html" target="_blank" rel="noopener">http://www.cnblogs.com/Wayou/p/html5_audio_api_visualizer.html</a><br><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API</a><br><a href="https://forestmist.org/blog/web-audio-api-loops#source" target="_blank" rel="noopener">https://forestmist.org/blog/web-audio-api-loops#source</a></p>
 ]]></content>
       <categories>
-        <category>书单</category>
+        <category>技术</category>
       </categories>
       <tags>
-        <tag>书单</tag>
+        <tag>技术</tag>
+        <tag>web</tag>
+        <tag>JavaScript</tag>
+        <tag>web audio api</tag>
       </tags>
   </entry>
   <entry>
@@ -1469,51 +1208,6 @@
       <tags>
         <tag>技术</tag>
         <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谈谈美式英语的重读技巧</title>
-    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/</url>
-    <content><![CDATA[<p>英语中的单词与句子都有重弱读现象，重读音节的元音发音更响亮更长，那么一般如何对单词或句子进行重弱读分辨呢？</p>
-<h2 id="音节是什么？"><a href="#音节是什么？" class="headerlink" title="音节是什么？"></a>音节是什么？</h2><p>英语的单词至少包含一个音节。音节一般以元音为主进行划分，每个音节一般由一个元音字母或一个元音字母组合加上一个或几个辅音构成。<br>单音节：eg. bag, book<br>双音节：eg. borrow，letter，daughter，email</p>
-<h2 id="重读实词"><a href="#重读实词" class="headerlink" title="重读实词"></a>重读实词</h2><p>实词（表示实际意义）：主要动词，名词，adj，adv，否定词，wh词，感叹词，特殊重读</p>
-<h2 id="双音节词读音规则："><a href="#双音节词读音规则：" class="headerlink" title="双音节词读音规则："></a>双音节词读音规则：</h2><ul>
-<li>90%的名词，前一个音节重读。eg：office，problem，window，paper，building，mother，father</li>
-<li>60%～70%的动词，后一个音节重读。eg：apply，agree，create，relax，complain，enjoy</li>
-</ul>
-<h2 id="后缀的重读规则"><a href="#后缀的重读规则" class="headerlink" title="后缀的重读规则"></a>后缀的重读规则</h2><ul>
-<li>-ese重读后缀。eg：Chinese，Japanese</li>
-<li>-eer重读后缀。eg：pioneer，volunteer，engineer</li>
-<li>-ique重读后缀。eg：unique，antique，technique</li>
-<li>-ic重读后缀前的音节。eg：realistic，elastic，elastic，strategic，optimistic，terrific</li>
-</ul>
-<h2 id="句子中单词重读依据"><a href="#句子中单词重读依据" class="headerlink" title="句子中单词重读依据"></a>句子中单词重读依据</h2><ul>
-<li>实词重读，虚词（功能词）弱读</li>
-<li>实意词+实意词，后一词通常重读。eg：Let’s go for a walk（重读）</li>
-<li>谓语+宾语，宾语为代词时，动词要重读。<br>eg：Did you <strong>get</strong>（重读） it？ —— Did you get the <strong>job</strong>（重读）？<br>Who <strong>stole</strong> it？ —— Who stole my <strong>money</strong>？（升调）</li>
-</ul>
-<h2 id="形容词-名词：重读名词"><a href="#形容词-名词：重读名词" class="headerlink" title="形容词+名词：重读名词"></a>形容词+名词：重读名词</h2><p>eg： it’s a hot <strong>day</strong><br>双形容词+名词：重读前一形容词+名词。eg：<strong>big</strong> black <strong>dog</strong></p>
-<h2 id="短语重读"><a href="#短语重读" class="headerlink" title="短语重读"></a>短语重读</h2><ul>
-<li>名词短语和复合名词的重读：重读前一单词 【类似名词读法】<br>eg：credit card，eyelid，eyebrow，forehead</li>
-<li>动词短语：重读后一单词【类似大多数的动词读法】<br>eg：pick you <strong>up</strong>（重读）</li>
-<li>动词短语化的名词读法：重读前一音节【类似名词读法】<br>eg：work out-workout，make up-makeup</li>
-</ul>
-<h2 id="人名和地名重读：重读最后"><a href="#人名和地名重读：重读最后" class="headerlink" title="人名和地名重读：重读最后"></a>人名和地名重读：重读最后</h2><ul>
-<li>两个音节，重读第二个单词。eg：South American，United Kindom</li>
-<li>三个音节，重读最后一个。eg：Martin Luther King</li>
-</ul>
-<h2 id="缩写词和数字重读"><a href="#缩写词和数字重读" class="headerlink" title="缩写词和数字重读"></a>缩写词和数字重读</h2><ul>
-<li>缩写词，重读后一字母，注意连读。eg：CNN，PhD，PC，HTML，DVD</li>
-<li>数词：重读后一数词。eg：fifty eight</li>
-</ul>
-<p>这是一般情况，特殊情况特殊对待，比如说有特别想强调的信息。英语中的重弱读现象先分享到这里～</p>
-]]></content>
-      <categories>
-        <category>英语</category>
-      </categories>
-      <tags>
-        <tag>英语</tag>
-        <tag>重读</tag>
       </tags>
   </entry>
   <entry>
@@ -1750,6 +1444,641 @@
         <tag>技术</tag>
         <tag>web</tag>
         <tag>gpu动画</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·有关重要的句式表达</title>
+    <url>/2020/05/02/%E8%8B%B1%E8%AF%AD%C2%B7%E5%85%B3%E4%BA%8E%E9%87%8D%E8%A6%81%E7%9A%84%E5%8F%A5%E5%BC%8F%E8%A1%A8%E8%BE%BE/</url>
+    <content><![CDATA[<p>​今天分享英语写作用到的句式，同一个意思，不同说法，同义转换给文章锦上添花，以下可用来表示重要/功能性的含义。<br>​</p>
+<h2 id="重要之类："><a href="#重要之类：" class="headerlink" title="重要之类："></a>重要之类：</h2><p>it is imperative for … to do…<br>… is obliged to do sth<br>… is required to do sth<br>… is supposed to do…<br>… ought to do…<br>… demand great attention from…<br>… plays a crucial/vital/critical/indispensable/essential/irreplaceable part of…<br>… attach great importance to doing …<br>… is of great importance/significance for…<br>great importance should be attached to doing…<br>but for…, never would us have access to…<br>spare no effort to do;<br>endeavor to do;<br>make (concerted) efforts to do<br>devote wholeheartedly to doing<br>…constitute a stepping stone to …<br>…lay a solid foundation for…<br>…pave the way for…<br>…is of top priority<br>…is the prerequisite of …</p>
+<h2 id="有利于之类："><a href="#有利于之类：" class="headerlink" title="有利于之类："></a>有利于之类：</h2><p>… be beneficial to/for<br>… is of great benefit to …<br>… is conductive to doing…<br>… contributes to doing/sth…<br>… experts a positive influence/impact/effect on…<br>… makes a great contribution to doing/sth …<br>it is easier for… to have access to …<br>it is worthwhile to do</p>
+<h2 id="不利于之类："><a href="#不利于之类：" class="headerlink" title="不利于之类："></a>不利于之类：</h2><p>… do harm to…<br>… is harmful for …<br>… is detrimental to doing…<br>… pose a threat to (health/environment/doing)<br>… exert a negative impact on …</p>
+<h2 id="必然之类："><a href="#必然之类：" class="headerlink" title="必然之类："></a>必然之类：</h2><p>there is no denying that…<br>it goes without saying that…<br>there is every reason to believe that…<br>it is widely/vastly acknowledged/accepted that…<br>needless to say, …<br>there is sufficient evidence to conclude that…<br>definitely/evidently/obviously/admittedly/inevitably</p>
+<p>好啦，这些句子可以在写作中变化应用，有你使用的句子吗^_^</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>句式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·句子成分解析</title>
+    <url>/2020/05/04/%E8%8B%B1%E8%AF%AD%C2%B7%E5%8F%A5%E5%AD%90%E6%9E%84%E6%88%90%E9%83%A8%E5%88%86%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<p>​今天我们从基本的英语句子来说，拆分成分，英语句子基本结构为主+谓+宾，另外还有表语、状语、补语、同位语、插入语等成分。</p>
+<h2 id="1、主语"><a href="#1、主语" class="headerlink" title="1、主语"></a>1、主语</h2><p>名词，代词，不定式，动名词，句子</p>
+<h2 id="2、谓语：动词或动词短语"><a href="#2、谓语：动词或动词短语" class="headerlink" title="2、谓语：动词或动词短语"></a>2、谓语：动词或动词短语</h2><p>（1）跟不定式作宾语的常见动词：<br>want agree hope plan decide offer prefer wish intend fail desirerefuse afford choose manage expect aim promise consent pretend neglect ignoreomit happen determine demand threaten resolve decline propose undertakevolunteer。<br>（2）跟动名词作宾语的常见动词：<br>finishenjoy mind keep stop dislike consider suggest miss avoid regret admitacknowledge delay practice deny imagine postpone risk advocate recall resistappreciate cannot help confess escape fancy defer resent evade contemplate forgivepermit detest repent<br>（3）跟双宾语的常见动词：<br>asksent show teach give bring buy find get keep lend tell write wish offer deprive</p>
+<h2 id="3、宾语"><a href="#3、宾语" class="headerlink" title="3、宾语"></a>3、宾语</h2><p>名词，代词，不定式，动名词，句子</p>
+<h2 id="4、表语"><a href="#4、表语" class="headerlink" title="4、表语"></a>4、表语</h2><p>名词，形容词：某些形容词，如careless,absurd, brave, courageous, careful, careless, clever, wise, foolish, silly,stupid, good, nice, kind thoughtful, inconsiderate, greedy, money-orientedacquisitive materialistic  generous, honest, modest, polite, rude, cruel,selfish, self-centered egocentric wicked, wrong等不定式后可以加of来引导出其逻辑主语。代词，数词，不定式，动名词，分词，介词短语，句子</p>
+<h2 id="5、定语"><a href="#5、定语" class="headerlink" title="5、定语"></a>5、定语</h2><p>形容词，代词，数词，不定式，名词，动名词，分词，介词短语，句子</p>
+<h2 id="6、状语"><a href="#6、状语" class="headerlink" title="6、状语"></a>6、状语</h2><p>副词，形容词短语, 不定式，分词，介词短语，名词，句子</p>
+<h2 id="7、补语"><a href="#7、补语" class="headerlink" title="7、补语"></a>7、补语</h2><p>形容词，名词，不定式：下面的动词要求不定式做宾补：动词+宾语+动词不定式<br>ask get prompt allow forbidprefer announce  force press inspire  require assist  hate pronounce  advise  recommend bear implore remind beg induce reportcompel  invite command intend  show  drive mean train causeinstruct deserve leave  tell direct tempt entitle order warn enable needurge encourage  oblige condemn<br>teach entreat  permit wish，分词，介词短语）</p>
+<h2 id="8、同位语"><a href="#8、同位语" class="headerlink" title="8、同位语"></a>8、同位语</h2><p>名词，不定式，动名词, 句子，后跟同位语从句的常见词<br>news question proposal report altitude （latitude longitude  evidence proof suggestion request ideaconclusion thought notion value fiction fear）</p>
+<h2 id="9、插入语"><a href="#9、插入语" class="headerlink" title="9、插入语"></a>9、插入语</h2><p>不定式，分词，介词短语，句子。</p>
+<p>今天的句子成分暂时分享到这里啦～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>句子</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的黑眼圈，是因为私藏的“书库”</title>
+    <url>/2020/04/23/%E6%88%91%E7%9A%84%E9%BB%91%E7%9C%BC%E5%9C%88%EF%BC%8C%E6%98%AF%E5%9B%A0%E4%B8%BA%E7%A7%81%E8%97%8F%E7%9A%84%E2%80%9C%E4%B9%A6%E5%BA%93%E2%80%9D/</url>
+    <content><![CDATA[<p>今天是“世界图书日”——4月23日。越来越浮躁动荡，越难得静下心来看书，为什么常说工作后很难看得进书，一者时间少，二者不太愿意花时间在节奏慢的事情上，比如说书籍，相反可能更倾向于短时间获得结果的短视频、微博。<br>个人偏爱纸质书大于电子书，虽然信息化时代，但对于值得收藏的书一定会购买放入书架。一段时间不看书，就觉得哪里有点空空的，或许真应了“书是精神食粮”吧。列出个人私藏的书单，在这个“自带仪式感”的日子分享，书籍未完待续。不过看书跟时间段还是有些关系，比如说这个时间段看到了一本书，觉得无趣，过了段时间再翻，便觉得相见恨晚，书籍也讲“机缘”。</p>
+<table>
+<thead>
+<tr>
+<th>心里类书籍</th>
+<th>短评</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>《天才在左疯子在右》</td>
+<td>访谈性的故事文，天才疯子，谁模糊了谁的界限，各有各的“哲学”</td>
+</tr>
+<tr>
+<td>《遇见未知的自己》</td>
+<td>带故事型的心理书籍，高中看了这本书，对当时高中的我获益匪浅。</td>
+</tr>
+<tr>
+<td>《向前一步》</td>
+<td>女性成长文，“勇敢”</td>
+</tr>
+<tr>
+<td>《梦的解析》</td>
+<td>从“科学”上分析梦与现实的联系</td>
+</tr>
+<tr>
+<td>《秘密》</td>
+<td>“只要你真的想做，全世界都会帮助你”</td>
+</tr>
+<tr>
+<td>《怪诞行为学》</td>
+<td>浅显易懂地用经济学来解释日常行为</td>
+</tr>
+<tr>
+<td>《少有人走的路》</td>
+<td>年轻人若感到迷茫的时候可以看看的一本书</td>
+</tr>
+<tr>
+<td>《断舍离》</td>
+<td>从整理房间来整理内心</td>
+</tr>
+<tr>
+<td>《社会心理学》</td>
+<td>人是社会性动物，解释社会心理与行为</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>文学类书籍</th>
+<th>短评</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>《平凡的世界》</td>
+<td>朴实，感受平凡</td>
+</tr>
+<tr>
+<td>《三体》</td>
+<td>想象力丰富的科幻文</td>
+</tr>
+<tr>
+<td>《目送》</td>
+<td>散文集，没有华丽词藻，看的时候对写父母间的文字深刻</td>
+</tr>
+<tr>
+<td>《看见》</td>
+<td>文字朴实地展示故事，小故事见道理</td>
+</tr>
+<tr>
+<td>《沉默的大多数》</td>
+<td>王小波的文字还挺有意思</td>
+</tr>
+<tr>
+<td>《围城》</td>
+<td>经典名言，“城外的人想进来，城里的人想进去”，一般皆如此</td>
+</tr>
+<tr>
+<td>《撒哈拉的故事》</td>
+<td>三毛与荷西的故事，感受三毛的洒脱</td>
+</tr>
+<tr>
+<td>《活着》</td>
+<td>第一遍故事文，第二遍：“活着本身就是意义”</td>
+</tr>
+<tr>
+<td>《红楼梦》</td>
+<td>小学老师要求背诵章回名，“第一回 甄士隐梦幻识通灵……”，反反复复红楼梦看了几回，真是“真作假时假亦真，假作真时真亦假”。</td>
+</tr>
+<tr>
+<td>《牧羊少年的奇幻之旅》</td>
+<td>回归“要做什么”的拷问内心的问题</td>
+</tr>
+<tr>
+<td>《白夜行》</td>
+<td>第二本接触东野圭吾的书，光明与黑暗的故事</td>
+</tr>
+<tr>
+<td>《嫌疑人X的献身》</td>
+<td>第一个接触东野圭吾的书，之后入“坑”</td>
+</tr>
+<tr>
+<td>《人间失格》</td>
+<td>太宰治的一本书，电影《被嫌弃的松子的一生》与之类似，可以看看不同的看法，但更愿意说，”生而为人，谢谢“</td>
+</tr>
+<tr>
+<td>《沙丘》1，2，3，4</td>
+<td>想象力丰富的科幻文，震惊如此的想象力，“恐惧是思维杀手”</td>
+</tr>
+<tr>
+<td>《24个比利》</td>
+<td>描写不同人格的书</td>
+</tr>
+<tr>
+<td>《月亮与六便士》</td>
+<td>上海译文出版社，月亮与六便士的选择</td>
+</tr>
+<tr>
+<td>《那些回不去的年少时光》</td>
+<td>高中第一本接触桐华的书，怀旧感</td>
+</tr>
+<tr>
+<td>《悟空传》</td>
+<td>“大话西游”之感</td>
+</tr>
+<tr>
+<td>《花千骨》</td>
+<td>高中毕业所看，大女主的仙侠文，虽然翻拍电视剧，但个人没看</td>
+</tr>
+<tr>
+<td>《基督山伯爵》</td>
+<td>三天看完周克希翻译的，想起电影《肖申克的救赎》，愈长大，“坚持”愈发难能可贵</td>
+</tr>
+<tr>
+<td>《职场动物进化论》</td>
+<td>通过动物的故事来描写职场，动物跟人的相通之处</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>其他类书籍</th>
+<th>短评</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>《小家，越住越大》</td>
+<td>打开对于户型小的家布置的思维</td>
+</tr>
+<tr>
+<td>《机器学习》</td>
+<td>机器学习教科书，想学习可以入手</td>
+</tr>
+<tr>
+<td>《写给大家看的设计书》</td>
+<td>当时设计网站看的参考书，还有一本简洁之美</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>英文类书籍</th>
+<th>短评</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>《hunger games》</td>
+<td>饥饿的游戏，独立女主</td>
+</tr>
+<tr>
+<td>《harry potter》</td>
+<td>想看英文，不知从何看起，哈利波特总是不会错的</td>
+</tr>
+<tr>
+<td>《pride and prejudice》</td>
+<td>傲慢与偏见，看过电影，学习英文</td>
+</tr>
+<tr>
+<td>《twilight》</td>
+<td>暮光之城原版，学习英文</td>
+</tr>
+<tr>
+<td>《animal farm》</td>
+<td>动物农场，通过描写动物农场的故事来折射国家</td>
+</tr>
+<tr>
+<td>《different seasons》</td>
+<td>肖申克的救赎原版书，个人喜欢这电影</td>
+</tr>
+</tbody></table>
+<p>未完待续……</p>
+]]></content>
+      <categories>
+        <category>书单</category>
+      </categories>
+      <tags>
+        <tag>书单</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·工作类话题的遣词造句</title>
+    <url>/2020/05/07/%E8%8B%B1%E8%AF%AD%C2%B7%E5%B7%A5%E4%BD%9C%E7%B1%BB%E8%AF%9D%E9%A2%98%E9%81%A3%E8%AF%8D%E9%80%A0%E5%8F%A5/</url>
+    <content><![CDATA[<p>除了教育类话题外（《英语·“教育类”话题遣词造句education》），“工作”话题也是我们在英文写作或聊天经常遇到的话题，这里分享词句，供灵活运用。</p>
+<h2 id="good-好的表达"><a href="#good-好的表达" class="headerlink" title="good  好的表达"></a>good  好的表达</h2><p>优势<br>be at a advantage when hunting jobs in the job market and are more likely to acquire satisfying jobs<br>constitute a stepping stone to the future career<br>is an indispensable part of their career development<br>hunt a decent job<br>boost success</p>
+<p>更有竞争力 have more time to improve themselves in work becoming more competitive and achieving professional success<br>脱颖而出 people who always cope with work with high quality definitely achieve the recognition from his boss and colleagues</p>
+<p>获得机会 obtain more precious opportunities and cooperation respectively</p>
+<p>学习新事物：<br>with appropriate time management, people make full use of their time to learn new things. For instance, if one manages time better, he may have more time to master a sport skill and read books, which contribute to a robust body and fresh mind, laying a solid foundation for future development</p>
+<p>管理时间 but for the ability of managing time, people would not be capable of living fully and colorfully</p>
+<p>高薪 high salaries are beneficial for people to improve their life quality</p>
+<p>物质 purchase things that they like so as to fulfill their requirement</p>
+<p>旅游 drive their cars to have a road trip, which is conductive to broadening their horizons and release pressure</p>
+<p>教育 enough money helps their children  have easier access to get advanced education which constitutes a stepping stone to their future development</p>
+<p>医疗 their older parents are prone to disease, so a great amount of money guarantee some better health care to their parents</p>
+<h2 id="成就感"><a href="#成就感" class="headerlink" title="成就感"></a>成就感</h2><p>obtain a strong sense of achievements through a job with high salary but high risk of loss</p>
+<p>知识 they spare no efforts to learn more knowledge and overcome obstacles in order to be qualified for the job</p>
+<p>机会 can be approved by leaderships, which means they gain more opportunities from their bosses instead of losing jobs</p>
+<p>同事 obtain praise from their coworkers, which is beneficial for expanding social networks</p>
+<p>客户 not to mention that customers’ desires are quickly met by those people owing to their remarkable abilities</p>
+<p>地位 receive better positions<br>not only secure their jobs but also provide them with a sense of achievement</p>
+<h2 id="bad-不利的表达"><a href="#bad-不利的表达" class="headerlink" title="bad 不利的表达"></a>bad 不利的表达</h2><p>竞争 lose competitive edges when hunting jobs<br>竞争 due to fierce competition in modern society<br>竞争 face the grim reality that they would meet fierce competition when they hunt a job<br>竞争 although they make the most of a variety of opportunities and resources to enrich themselves, there are not enough posts to meet so many graduates</p>
+<p>压力<br>加班 citizens are frequently overwork and keep sedentary in the office for a long time<br>加班 people are frequently overwork under high pressure and live a fast-paced life<br>压力 modern people are usually exposed to great pressure from work and family<br>压力 render them stressful</p>
+<p>拖延 exposed a large amount of work, people are likely to procrastinate, which leads to a huge pressure of work and a bad temper<br>encounter obstacles about hunting a decent hob</p>
+<h2 id="社会性词句开头"><a href="#社会性词句开头" class="headerlink" title="社会性词句开头"></a>社会性词句开头</h2><p>with the rising of life standard<br>owing to development of technology and transportation<br>due to the fierce competition of society<br>with the purpose of acquiring more salaries and higher positions<br>having a glimpse of the current situation</p>
+<p>“工作类”话题词句先到这里啦～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>话题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·理解英语的12种时态</title>
+    <url>/2020/04/25/%E8%8B%B1%E8%AF%AD%C2%B7%E5%B7%A7%E8%AE%B0%E8%8B%B1%E8%AF%AD%E7%9A%8412%E7%A7%8D%E6%97%B6%E6%80%81/</url>
+    <content><![CDATA[<p>英语语法中有12种时态，那么如何理解这些时态呢？</p>
+<p>∆ 一般时态<br>表示动作发生一次或多次，强调动作的发生</p>
+<ol>
+<li>一般过去时：过去发生1次，在现在之前</li>
+<li>一般现在时：发生多次，表示现在</li>
+<li>一般将来：<br> （1）will：<br> 表示 a.即时决定；b.请求/提供/承诺； c. 预测（不太确定）<br> （2）be going to：<br> 表示a. 已经做好的决定（深思熟虑）； b. 预测（确定，证据），eg 天气预报；c. 预测（不太确定）= will<br> （3）be doing：<br> 表示将来，plan activity<br> （4）v动词：规划好的，在具体时间的活动，eg飞机，火车，会议</li>
+</ol>
+<p>∆ 进行状态<br>表示正在做，且持续的一个工作</p>
+<ol>
+<li>过去进行时：发生在过去持续</li>
+<li>现在进行时：发生在现在</li>
+<li>将来进行时：发生在将来，will be doing将来持续<br>⚠️ 重点是在 “正在做，表持续”</li>
+</ol>
+<p>∆ 完成状态<br>表示过去一段时间，动作发生1次</p>
+<ol>
+<li>过去完成时：had done，表示“已经完成”，在过去的某个时间点之前</li>
+<li>现在完成时：have/had done，是在现在的时间点前</li>
+<li>将来完成时：would have done，现在的时间点后</li>
+</ol>
+<p>∆ 完成进行时<br>表示过去一段时间，正在发生持续的工作，可能刚结束，可能还在继续，强调“一直”</p>
+<ol>
+<li>过去完成进行时：had been doing 在过去的过去的时间段，可加时间段。eg for 2 days</li>
+<li>现在完成进行时：have/has been doing，之前到现在的时间段</li>
+<li>将来完成进行时：would have been doing，现在以后的时间段</li>
+</ol>
+<p>对于时态的区分可以简单理解为是时间点还是时间段，是否是持续状态，这样分解是否有帮你理解呢？</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>时态</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·教育类话题的遣词造句</title>
+    <url>/2020/05/06/%E8%8B%B1%E8%AF%AD%C2%B7%E6%95%99%E8%82%B2%E7%B1%BB%E8%AF%9D%E9%A2%98%E7%9A%84%E9%81%A3%E8%AF%8D%E9%80%A0%E5%8F%A5/</url>
+    <content><![CDATA[<p>在英文写作时，我们经常会遇到教育类的话题来构思作文，尤其是在托福中。这里分享自己的有关教育类的词句，如果能为写作“锦上添花” 当然最好。</p>
+<h2 id="知识-knowledge-what-has-been-taught"><a href="#知识-knowledge-what-has-been-taught" class="headerlink" title="知识 knowledge/what has been taught"></a>知识 knowledge/what has been taught</h2><p>have/take a good/broad command of<br>master/grasp/command solid/relevant knowledge<br>have a deep and comprehensive understanding of knowledge<br>be well equipped with a vast range of knowledge and a broadened mind<br>consolidate knowledge they have learned<br>comprehend theoretical knowledge<br>put theoretical knowledge into practice<br>a wide scope of knowledge<br>pass on/impart  knowledge 传授<br>dabble in different subjects 涉猎不同知识<br>more than knowledge just acquired from books<br>search for various kinds of information related to their favorite subjects<br>a solid foundation for<br>broaden one’s horizons</p>
+<h2 id="效率-efficiency"><a href="#效率-efficiency" class="headerlink" title="效率 efficiency"></a>效率 efficiency</h2><p>pay much attention to what teachers talk about and finish assignments with high quality<br>the time for students to study is precious due to excessive assignments<br>enhance their study efficiency<br>catch the essentials easily<br>feel exhausted and have little time to accomplish assignments with high quality</p>
+<h2 id="学业-academic"><a href="#学业-academic" class="headerlink" title="学业 academic"></a>学业 academic</h2><p>lead to excellent academic performance<br>taking various courses will occupy most of students time previewing and reviewing their specialty courses<br>achieve high grades during final exams<br>some elective courses have no relationship with their major<br>being compelled to participate in such insignificant courses<br>specialize in one subject<br>having a glimpse of current education situation, we are marvel at plenty of homework students may deal with every day<br>devote enough time to previewing in order to have a thorough understanding of difficult points</p>
+<h2 id="热情-enthusiasm"><a href="#热情-enthusiasm" class="headerlink" title="热情 enthusiasm"></a>热情 enthusiasm</h2><p>greatly boost students’ learning<br>take the initiative to do sth instead of just accepting teachers’ opinions<br>be motivated to do sth<br>draw pupils’ attention<br>create/form a constructive learning atmosphere in class<br>participate in discussion actively, including listening carefully and thinking positively<br>feel dull and lose study interest; are likely to fall asleep and chat with others in class<br>give teachers more inspiration when they receive students’ feedback in class<br>render pupils more motivated and engaged in class<br>provided that students just take notes, they tend to be reluctant to analyze and solve problems by themselves</p>
+<h2 id="能力-skills"><a href="#能力-skills" class="headerlink" title="能力 skills"></a>能力 skills</h2><ul>
+<li><p>独立思考：<br>think critically/independently<br>accepting other’s opinions exposes us to various kinds of opinions</p>
+</li>
+<li><p>创造性思维：<br>creative thinking</p>
+</li>
+<li><p>分析与解决问题能力：<br>analyzing and problem-solving ability</p>
+</li>
+<li><p>交流能力：<br>communication and social skills</p>
+</li>
+<li><p>课外活动: extracurricular activities<br>expand people’s social networks<br>for an expanded social network is the prerequisite for future success<br>instead of enrolling in many classes<br>conduct a harmonious relationship with others<br>it is possible for them to keep in touch with each other<br>get acquainted with more peers who share similar interests comparing with just an activity<br>leave a favorable impression on others<br>consider from different perspectives<br>reconnect and socialize with their friends</p>
+</li>
+<li><p>教学能力<br>enhancing teachers’ quality is of top priority<br>possess brilliant abilities<br>pay more attention to quality-oriented education rather than exam-oriented education</p>
+</li>
+<li><p>毅力：<br>perseverance and diligence can be learned from<br>spare no effort and never give up even if they are tired/exhausted</p>
+</li>
+<li><p>团队精神：<br>team spirit</p>
+</li>
+<li><p>经济能力：<br>improve/develop the ability to manage their finance</p>
+</li>
+<li><p>摆脱孤独：<br>git rid of loneliness</p>
+</li>
+<li><p>提高自己<br>be more competitive<br>be more comprehensive<br>make up/compensate for our drawbacks/weaknesses<br>pave the way to achieve greater accomplishments<br>discover their potential</p>
+</li>
+</ul>
+<p>这些词句对你有用吗^_^</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>话题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈表示逻辑关系的词句</title>
+    <url>/2020/04/28/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%86%99%E4%BD%9C%E4%B8%AD%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%AF%8D/</url>
+    <content><![CDATA[<p>如果备考过托福或GRE，我们会发现英语写作重逻辑，而在我们学习英文的过程中，逻辑关系这块并没有很大的重视，至少本人以前在学校学英语并没有关注。<br>今天来分享下英文写作当中，可用作逻辑关系的连接词，为英文文章增强逻辑性。</p>
+<p>导致：<br>give rise to doing/sth； result in; lead to doing/sth; so as to; bring about;  so that; enable(不能以人为主语)/urge/encourage/motivate sb to do; </p>
+<p>因果关系：<br>owing to; because; because of; lie in; thanks to；due to；this is because;<br>obviously, clearly, it is widely acknowledged that</p>
+<p>对比关系：<br>in contrast; contrast to; by comparison; comparing a with b; in comparison with; A  while/whereas B; on the contrary； on the other hand； instead；conversely；rather than；instead of；</p>
+<p>同级：<br>besides; moreover; in addition; what’s more; furthermore; additionally; for one thing, for another; apart from that; </p>
+<p>转折：<br>but，in contrast; on the contrary; instead; rather than; while（部分）；if……at all 就算（让步转折）<br>Indeed, Admittedly, it is true that, there is no denying that, we have to admit that；despite，notwithstanding, although</p>
+<p>进一步：<br>to be more specific; specifically speaking；to explain it further；in detail；</p>
+<p>举例：<br>for example/instance；here comes a concrete example；For one thing，for other thing</p>
+<p>这些可以运用到写作当中，使文章更有逻辑性。那今天的逻辑关系词分享先到这里～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>逻辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·易混淆词组</title>
+    <url>/2020/05/05/%E8%8B%B1%E8%AF%AD%C2%B7%E6%98%93%E6%B7%B7%E6%B7%86%E8%AF%8D%E7%BB%84/</url>
+    <content><![CDATA[<p>英文短语数多，许多短语很容易混淆，记录几组短语：up to/end up/work out/a little……</p>
+<h2 id="up-to"><a href="#up-to" class="headerlink" title="up to"></a>up to</h2><p>“ up to ”：“多达”。<br>​eg：I can take up to four people in my car. （我的车能载 4 个人。）<br>​<br> “ up to ”：“不多于，不迟于”。<br>eg：Read up to page 109. （读到第 100 页。）</p>
+<p> “ up to ”：“可与某事物相比，比得上”。<br>eg：As a doctor， he is not up to Mr Smith.（作为一名医生，他不能与史密斯先生相比。）</p>
+<p> “ up to ”：“有某种能力的，能胜任的”。<br>eg：He’s not up to the part of Othello.（他演不了奥赛罗这个角色。）</p>
+<p> “ up to ”：“从事于，忙于”。<br>eg：What’s he up to？（他要干什么？）</p>
+<p>“ up to ”：“由……决定，由……负责”。<br>eg：It’s up to you whether we accept the present or not.（要不要这份礼物由你决定。）</p>
+<p> “ up to ”：“（时间）直到”。<br>eg：Up to now he’s been quiet. （他直到现在还保持沉默。）</p>
+<p>“ up to ”后面接表示时间、日期的名词时，意为“跟得上形势，时髦”。<br>eg：Most of her clothes are up to date. （她的大多数衣服都很时髦。）</p>
+<p> “ up to ”后面接表示刻度、标准的词语时，意为“达到某种要求或水平”。<br>eg：Is their spoken English up to the company’s standard？（他们的英语口语达到公司的水平了吗？）</p>
+<h2 id="end-up-结束-死亡"><a href="#end-up-结束-死亡" class="headerlink" title="end up 结束,死亡"></a>end up 结束,死亡</h2><p>to find yourself in a place or situation that you didn’t expect to be in 最终成为,最后处于<br>eg：If you go on like this you will end up in prison.<br>如果你继续这样，早晚得进监狱。</p>
+<p>〈非正〉(以…)结束; 最终成为〔变得〕<br>eg：How does the story end up?这篇故事是怎么结尾的?</p>
+<p>end up + 动词[ing]  以……告终<br>eg：end up getting married </p>
+<p>end up + [adj]<br>eg：end up dead</p>
+<h2 id="work-out"><a href="#work-out" class="headerlink" title="work out"></a>work out</h2><p>v. 做出<br>eg：I believe that you can work out this problem by yourself.我相信你自己能做出这道题的</p>
+<p>v. 可以解决<br>eg：We can find a way to work out this problem.我们可以找到解决这个问题的方法</p>
+<p>v. 设计出<br>eg：The police worked out a plan to catch the thief.警察制定出了策略捉</p>
+<p>v. 制定出<br>eg：The general worked out a new plan of attack.将军制定了新的进攻方案</p>
+<p>v. 锻炼<br>eg：I work out regularly to keep fit.我经常做运动以保持健康。</p>
+<p>v. 开采完<br>eg：The mine has been worked out.这个矿已经被开采完了。</p>
+<h2 id="a-bit-和-a-little"><a href="#a-bit-和-a-little" class="headerlink" title="a bit 和 a little"></a>a bit 和 a little</h2><p>两个都作”一点儿”，但用法不同。<br>a bit和a little在肯定句中修饰动词、形容词、副词和比较级时可以互换，表示”一点儿”的意思.<br>eg: That’s a bit too expensive.那有点太贵了.<br>The speaker spoke up a bit/a little so as to make himself heard more clearly.演讲者把嗓门提高了一点儿,以便使别人听得更清楚.</p>
+<p>a bit和a little在否定句中的意思恰恰相反，not a bit相当于”not at all”(一点儿都不);not a little相当于”very(much)”或”extremely”(很、非常)。</p>
+<p>eg: She is not a bit tired.(=She is not tired at all.)她一点都不累.<br>She is not a little tired.她很累</p>
+<p>a bit用作定语时,意为“一点儿”,不能直接修饰不可数名词，但可用“a bit of ＋不可数名词”结构,此时a bit of ＝ a little。<br>eg：He has a bit of／a little money left．（他剩下的钱很少.）<br>She knows a bit of ／a little French．（她懂一点儿法语.） </p>
+<p>a bit of a/an 口语,稍微,颇有几分,有点<br>eg：He is a bit of a coward.他有点胆小。</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>词组</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈单词的后缀-tion/sion/cian</title>
+    <url>/2020/04/27/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%8D%95%E8%AF%8D%E7%9A%84%E5%90%8E%E7%BC%80/</url>
+    <content><![CDATA[<p>英语有来自拉丁语、葡萄牙语、日语、中文等外来词，当我们去了解这些单词时，发现其中也是有规律的，通过规律我们可以更好地记住单词，就像小时候做规律题，选出哪个是同一组。</p>
+<p><strong>后缀 -tion vs -sion vs -cian</strong></p>
+<p>单词中出现频率高低分别为：-tion &gt; -sion &gt; -cian.</p>
+<ol>
+<li><p>通常用 <strong>-cian</strong> 作为后缀，表示一个人的职业或爱好，这样的词并不多，大概17个左右，eg：<br>music musician　音乐家<br>physic physician 内科医生<br>magic magician 魔术师<br>politic politician 政治家<br>electric electrician 电工<br>statistic statistician 统计学家<br>mathematic mathematician 数学家<br>logic logician 逻辑学家<br>arithmetic arithmetician 算术家<br>optic optician 眼镜(制造)商;配制眼镜技师<br>pediatric pediatrician 小儿科医师<br>obstetric obstetrician 产科医师<br>clinic clinician 临床医生<br>practice patrician (古罗马的)统治阶层成员<br>technique technician 技术人员, 专家<br>beauty beautician 美容师<br>diet dietician 营养学家；膳食学家（等于dietitian）<br>从中，我们可以发现，除了technique、beauty、diet，前面的单词的结尾都是字母 <strong>c</strong>.</p>
+</li>
+<li><p>-sion作为后缀，稍微复杂一些，一般是在单词以<strong>-ss</strong>结尾的时候，比如：<br>express expression 表示, 表现, 表达<br>impress impression 印象, 感想<br>recess recession 经济衰退; 不景气<br>discuss discussion 讨论, 商讨<br>confess confession 承认;自首, 供认<br>……</p>
+</li>
+</ol>
+<p>而下面的9个单词包含<strong>-mission</strong>, 须特别记忆：<br>mission 使命, 任务, 天职<br>admission 准许进入<br>intermission 间歇,停顿;(放映电影中)中间休息<br>transmission 传送, 传播, 传达<br>emission 排放物,散发物(尤指气体)<br>remission 缓和, 减轻<br>commission 授权, 委托<br>commissioner 专员, 长官<br>permission 允许, 许可, 准许</p>
+<p>另有8个单词以 <strong>-en</strong>结尾，2个以 <strong>-an</strong>结尾，也要加-sion:<br>tension 张力，拉力；紧张，不安；电压<br>intension 紧张<br>extension 延伸, 扩展<br>pretension 自负；要求；主张；借口；骄傲<br>pension 津贴；退休金，抚恤金；膳宿费<br>apprehension 忧虑,担心<br>comprehension 理解, 理解力<br>dimension 尺寸, 度量<br>mansion 宅第, 公馆; 大厦<br>expansion 扩大, 扩张, 扩展, 膨胀</p>
+<p>下面这4个单词须特别记忆：<br>suspicion 怀疑, 嫌疑<br>conclusion 结论<br>complexion 肤色, 面色<br>fashion 样式；时尚；时装；时髦人物<br>ocean 海洋<br>explosion：爆炸</p>
+<ol start="3">
+<li>后缀** -tion**则用于剩下的大部分单词：<br>operation 操作, 运转, 经营<br>evaluation 估价,评价;估算<br>education 教育; 培养, 训练<br>application 申请, 申请表, 申请书<br>intention 意图, 意向; 目的; 打算 (注意与intension 紧张的区别<br>convention (某一职业、政党等的人士召开的)大会<br>……</li>
+</ol>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>单词</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·理解英语的12种时态</title>
+    <url>/2020/04/26/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%AE%BE%E8%AF%AD%E4%BB%8E%E5%8F%A5%E4%B8%8E%E5%AE%9A%E8%AF%AD%E4%BB%8E%E5%8F%A5/</url>
+    <content><![CDATA[<p>今天谈谈英语语法中的2大从句：宾语从句与定语从句。</p>
+<p>∆ 宾语从句：“修饰”谓语<br>先说说常见的简单句子，宾语所处的位置：<br>（1）主谓宾：主语+谓语+宾语<br>（2）主谓双宾：主语+谓语+间接宾语+直接宾语。比如说：He gives her an apple.<br>=&gt; 引申宾语从句的结构：that/which/who + 完整句子 ⚠️</p>
+<p>在陈述句中：that，语法分析可忽略，但有时为了避免过于复杂，不忽略<br>在一般疑问句中：if = whether<br>只能用whether：选择/介词（eg：interested in whether he will come）<br>在特殊疑问句中：what/where/how many/why<br>eg：I don’t know where it is</p>
+<p>定语从句：“形容词”性从句，that/which/who/whom<br>(1)限制性定语从句：<br>修饰名词（主语/宾语），没有“，”隔开！！！<br>结构：n + 连接词 + 完整句子 （svo；vo）<br>who：修饰人<br>that vs which ，以下情况只能用that：</p>
+<ul>
+<li>不定代词</li>
+<li>all，few，little，many，much</li>
+<li>出现过which</li>
+<li>the only</li>
+<li>fact/theory<br>（2）非限制性定语从句：<br>不是修饰，而是补充说明，只能用which / as<br>结构：n/句子，which （svo/vo）<br>which跟前面可以没有关系，单单只是连接词<br>which vs as：as 引导定语从句，在句首，as is known to all</li>
+</ul>
+<p>关于从句的语法分享到这里啦～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>从句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈表示逻辑取反的潜台词</title>
+    <url>/2020/05/03/%E8%8B%B1%E8%AF%AD%C2%B7%E9%80%BB%E8%BE%91%E5%8F%96%E5%8F%8D/</url>
+    <content><![CDATA[<p>“逻辑取反”，简单说，是在英语逻辑中取相反的关系，类似中文的“但是”，比如说“你很好，但是你不是我的菜”，这个就是取反逻辑，A是“你很好”，B是“你不是我的菜”，A与B两者关系取反。在英文中，某个词出来，暗含接下来是相反的意思，依旧拿“但是”举例，这个词好比如“但是，不过，虽然”的存在</p>
+<p>but，yet，however，not，anything but,<br>otherwise, opposite, no longer,<br>in contrast, by contrast, on the contrary, compared to, contrast to<br>keep … at bay（远离）</p>
+<p>it is true that……，<br>although，though，notwithstanding，nevertheless，albeit，despite，even if，even though，even so，if……at all（就算）</p>
+<p>not A but B 不是A，而是B<br>doesn’t A， but instead B<br>hardly/seldom A rather B<br>not A， on the contrary， B<br>more than A and prefer to B 倾向B<br>prefer A to B 倾向A，而不是B<br>choose A over B 选择A而不是B<br>replace A with B 用B取代A<br>supplant A with B 用B取代A<br>A take the place of B A取代B<br>A make up of B A弥补B<br>reconcile A with B 用B调和A<br>distinguish A from B 区分A与B<br>transform A to B 把A变成B<br>whether A or B 要么A要么B</p>
+<p>“掩饰”，A与B取反，比如说“他凶恶的外表下藏着一颗温柔的心”，类似掩盖，掩饰，面具之类，也是逻辑取反<br>belie, veil, mask, ironic twist, paradox, contradictory,</p>
+<p>情绪含义，A与B取反<br>surprising, startle, astonish</p>
+<p>时空含义，逻辑取反，比如说，“曾经他很凶，现在他很温柔”<br>once，ago，past，initially<br>now，recently，present，later</p>
+<p>这些在GRE逻辑中也是非常适用，不过是否逻辑取反更加依据情况而定，避免出现“他虽然很聪明，但是很笨”的逻辑矛盾。</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>逻辑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>英语·谈谈强效句</title>
+    <url>/2020/04/28/%E8%8B%B1%E8%AF%AD%C2%B7%E8%B0%88%E8%B0%88%E5%BC%BA%E8%B0%83%E5%8F%A5/</url>
+    <content><![CDATA[<p>强调表示着重突出想表达的事物。强调句在中文里，比如说，今天的天气真好啊！你太棒了！那在英语中，强调句不会强调谓语（如果非要强调，用助动词do），注意区分从句跟强调句，也有可能是that从句，且强调句的that不能省略。</p>
+<p>基本句型结构：<br>It is/was + 被强调部分 + that/who ……<br>⚠️注：强调句不是从句，不需要随机应变，去掉it is that仍然是一个句子。<br>eg：<br>原句：My mother bought meat in my aunt’s supermarket just now.<br>强调主语：It was my mother that/who bought meat in my aunt’s supermarket just now.<br>强调宾语：It was meat that my mother bought in my aunt’s supermarket just now.<br>强调时间：It was just now my mother bought meat in my aunt’s supermarket.</p>
+<p>否定的强调句句型结构：<br>It is/was + not + 被强调部分 + that/who ……<br>原句：My mother bought meat in my aunt’s supermarket just now.<br>否定强调宾语：It was not beef that my mother bought in my aunt’s supermarket just now.</p>
+<p>一般疑问句的强调句句型结构：<br>把Is/Was提前即可，Was/Is it + 被强调部分 + that/who……</p>
+<p>特殊疑问句的强调句句型结构：<br>被强调部分（通常是疑问代词或副词） + was/is it + 被强调部分 + that/who……<br>eg：where was it that my mother bought meat just now？</p>
+<p>谓语动词的强调<br>不能强调谓语，如果一定要强调，需要加do/does/did助动词<br>eg：Do be careful</p>
+<p>ps：<br>如果that后的强调句是原因状语从句，从句只能用because引导，不能用since/as/why</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>强调句</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+NexT的进阶配置</title>
+    <url>/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<p>完成博客网站的基本搭建后，这篇文章是对于Hexo配置的进阶设置，可自定义选择。以下主题配置文件皆为Hexo主题themes目录下的_config.yml，网站配置文件皆为hexo根目录下的_config.yml。</p>
+<a id="more"></a>
+
+<ul>
+<li>更改头像</li>
+<li>侧边栏社交信息设置</li>
+<li>摘要自动生成</li>
+<li>添加字数统计、阅读时长</li>
+<li>文章底部添加版权信息</li>
+<li>设置动态背景</li>
+<li>添加网页进度加载条</li>
+<li>底部隐藏由Hexo强力驱动、主题–NexT.Mist</li>
+<li>显示当前浏览进度</li>
+<li>设置网站的图标Favicon</li>
+<li>Hexo博客添加站内搜索</li>
+</ul>
+<h2 id="更改头像"><a href="#更改头像" class="headerlink" title="更改头像"></a>更改头像</h2><p>编辑主题配置文件，修改 avatar，值设置成头像的链接地址。其中，头像的链接地址可以是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">avatar: &#x2F;images&#x2F;avatar.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="侧边栏社交链接设置"><a href="#侧边栏社交链接设置" class="headerlink" title="侧边栏社交链接设置"></a>侧边栏社交链接设置</h2><p>编辑主题配置文件_config.yml，修改social字段的值</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Social Links</span><br><span class="line"># Key is the link label showing to end users.</span><br><span class="line"># Value is the target link (E.g. GitHub: https:&#x2F;&#x2F;github.com&#x2F;iissnan)</span><br><span class="line">social:</span><br><span class="line">  #LinkLabel: Link</span><br><span class="line">  Github: https:&#x2F;&#x2F;github.com&#x2F;yourgithub</span><br><span class="line">  E-Mail: mailto:dawnxu96@gmail.com</span><br><span class="line">  Instagram: https:&#x2F;&#x2F;instagram.com&#x2F;yourins</span><br></pre></td></tr></table></figure>
+
+<h2 id="摘要设置"><a href="#摘要设置" class="headerlink" title="摘要设置"></a>摘要设置</h2><p>编辑主题配置文件_config.yml，修改auto_excerpt字段为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true	# 置为true则自动截取100字当做首页摘要</span><br><span class="line">  length: 100	# 自动截取的字数</span><br></pre></td></tr></table></figure>
+
+<p>上述的方式并不推荐，推荐是手动设置文章摘要，手动设置文章摘要，我们只需在想显示为摘要的内容之后添 <!-- more --> 即可。像下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hello hexo markdown</span><br><span class="line">date: 2016-11-16 18:11:25</span><br><span class="line">tags:</span><br><span class="line">- hello</span><br><span class="line">- hexo</span><br><span class="line">- markdown</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">文章摘要内容</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">紧接着文章摘要的正文内容</span><br></pre></td></tr></table></figure>
+
+<h2 id="文章底部添加版权信息"><a href="#文章底部添加版权信息" class="headerlink" title="文章底部添加版权信息"></a>文章底部添加版权信息</h2><p>修改主题配置文件_config.yml中字段的值为true即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Declare license on posts</span><br><span class="line">post_copyright:</span><br><span class="line">  enable: true</span><br><span class="line">  license: CC BY-NC-SA 3.0</span><br><span class="line">  license_url: https:&#x2F;&#x2F;creativecommons.org&#x2F;licenses&#x2F;by-nc-sa&#x2F;3.0&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加网页进度加载条"><a href="#添加网页进度加载条" class="headerlink" title="添加网页进度加载条"></a>添加网页进度加载条</h2><p>编辑主题配置文件，搜索pace，将其值改为ture就可以，之后选择一款你喜欢的样式即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Progress bar in the top during page loading.</span><br><span class="line">pace: true</span><br><span class="line"># Themes list:</span><br><span class="line">#pace-theme-big-counter</span><br><span class="line">#pace-theme-bounce</span><br><span class="line">#pace-theme-barber-shop</span><br><span class="line">#pace-theme-center-atom</span><br><span class="line">#pace-theme-center-circle</span><br><span class="line">#pace-theme-center-radar</span><br><span class="line">#pace-theme-center-simple</span><br><span class="line">#pace-theme-corner-indicator</span><br><span class="line">#pace-theme-fill-left</span><br><span class="line">#pace-theme-flash</span><br><span class="line">#pace-theme-loading-bar</span><br><span class="line">#pace-theme-mac-osx</span><br><span class="line">#pace-theme-minimal</span><br><span class="line"># For example</span><br><span class="line"># pace_theme: pace-theme-center-simple</span><br><span class="line">pace_theme: pace-theme-minimal</span><br></pre></td></tr></table></figure>
+<h2 id="底部隐藏由Hexo强力驱动"><a href="#底部隐藏由Hexo强力驱动" class="headerlink" title="底部隐藏由Hexo强力驱动"></a>底部隐藏由Hexo强力驱动</h2><ul>
+<li>方法1<br>直接修改主题配置文件_config.yml中的copyright配置项为false，假如没有该配置项，可以通过方法2<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Footer &#96;powered-by&#96; and &#96;theme-info&#96; copyright</span><br><span class="line">copyright: false</span><br></pre></td></tr></table></figure></li>
+<li>方法2<br>打开./themes/next/layout/_partials/footer.swig，注释掉相应代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 用下面的符号注释，注释代码用下面括号括起来</span><br><span class="line">&#x2F;&#x2F; &lt;!-- --&gt;</span><br><span class="line">&lt;!--</span><br><span class="line">&#123;% if theme.copyright %&#125;</span><br><span class="line">&lt;div class&#x3D;&quot;powered-by&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.powered&#39;, &#39;&lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;&#39;) &#125;&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">​</span><br><span class="line">&lt;div class&#x3D;&quot;theme-info&quot;&gt;</span><br><span class="line">  &#123;&#123; __(&#39;footer.theme&#39;) &#125;&#125; -</span><br><span class="line">  &lt;a class&#x3D;&quot;theme-link&quot; href&#x3D;&quot;https:&#x2F;&#x2F;github.com&#x2F;iissnan&#x2F;hexo-theme-next&quot;&gt;</span><br><span class="line"> NexT.&#123;&#123; theme.scheme &#125;&#125;</span><br><span class="line">  &lt;&#x2F;a&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line">--&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="显示当前浏览进度"><a href="#显示当前浏览进度" class="headerlink" title="显示当前浏览进度"></a>显示当前浏览进度</h2><p>修改主题配置文件，把 false 改为 true：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">b2t: true</span><br><span class="line">​</span><br><span class="line"># Scroll percent label in b2t button</span><br><span class="line">scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h2><p>修改主题配置文件_config.yml中的favicon配置项，指定图标所在路径即可</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Put your favicon.ico into &#96;hexo-site&#x2F;source&#x2F;&#96; directory.</span><br><span class="line">favicon: &#x2F;favicon-32x32.png</span><br></pre></td></tr></table></figure>
+
+<h2 id="Hexo博客添加站内搜索"><a href="#Hexo博客添加站内搜索" class="headerlink" title="Hexo博客添加站内搜索"></a>Hexo博客添加站内搜索</h2><p>NexT主题支持集成 Swiftype、 微搜索、Local Search 和 Algolia。我安装的是Local Search的安装。<br>安装 hexo-generator-search<br><code>$ npm install hexo-generator-search --save</code><br>安装 hexo-generator-searchdb<br><code>$ npm install hexo-generator-searchdb --save</code><br>编辑主题配置文件，设置local_searchenable为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line"># Dependencies: https:&#x2F;&#x2F;github.com&#x2F;flashlab&#x2F;hexo-generator-search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  # if auto, trigger search by changing input</span><br><span class="line">  # if manual, trigger search by pressing enter key or search button</span><br><span class="line">  trigger: auto</span><br><span class="line">  # show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br></pre></td></tr></table></figure>
+<h2 id="评论功能"><a href="#评论功能" class="headerlink" title="评论功能"></a>评论功能</h2><p>注册登陆leanCloud官网，点击存储，查看是否有Comment，没有则创建，权限设为无限制。<br><img src="http://q8v8xdx6p.bkt.clouddn.com/mweb/15870193229416.jpg" alt="-w1194"></p>
+<p>进入主题配置文件修改为true</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Valine.</span><br><span class="line"># You can get your appid and appkey from https:&#x2F;&#x2F;leancloud.cn</span><br><span class="line"># more info please open https:&#x2F;&#x2F;valine.js.org</span><br><span class="line">valine:</span><br><span class="line">  enable: true</span><br><span class="line">  appid:  leancloudn你自己的id  appkey:  leancloudn你自己的key  </span><br><span class="line">  notify: false # mail notifier , https:&#x2F;&#x2F;github.com&#x2F;xCss&#x2F;Valine&#x2F;wiki</span><br><span class="line">  verify: false # Verification code</span><br><span class="line">  placeholder: Just go go # comment box placeholder</span><br><span class="line">  avatar: robohash # gravatar style</span><br><span class="line">  guest_info: nick,mail,link # custom comment header</span><br><span class="line">  pageSize: 10 # pagination size</span><br></pre></td></tr></table></figure>
+<p>进入leancloud即可看到评论<br>～</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>博客</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈英语的基本语法理解技巧</title>
+    <url>/2020/04/24/%E8%8B%B1%E8%AF%AD%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<p>我们在学语法的时候，经常会有比如说to do sth，doing sth，那么如何去对这些基本且重要的语法进行巧记？</p>
+<ol>
+<li>v + doing sth vs v + to do sth<br>∆ to do 作宾语，表示未发生，可能在do之后将要发生<br>eg：intend to do sth，to do是在intend之后发生的<br>∆ doing 作宾语，表示在do之前发生，可能仍在发生<br>eg：finish doing homework，homework是在doing之前发生</li>
+</ol>
+<p>存在部分例外没有原因，“死记硬背”<br>v + to do：<br>fail to do sth：没有做某事<br>happen to do sth：碰巧做某事<br>struggle to do sth：努力做某事<br>fear to do sth：害怕做某事<br>pretend to do sth：假装做某事<br>v + doing sth：<br>allow doing sth：允许做某事<br>avoid doing sth：避免做某事<br>delay doing sth：推迟做某事<br>discuss doing sth：讨论做某事<br>mention doing sth：提及某事</p>
+<ol start="2">
+<li>v + sb doing sth vs v + sb to do sth<br>∆ to do 做宾补（不是宾语—），表示未发生，可能在do后将要发生<br>eg：ask sb to do sth，to do 是在ask后发生的<br>∆ doing 作宾语（不是宾语），表示正在进行，类似现在进行时，通常为<br>1）发现：find，observe，discover<br>2）感官：hear，see<br>举例：<br>//v sb to do sth<br>advise sb to do sth<br>allow sb to do sth<br>ask sb to do sth<br>beg sb to do sth<br>//v sb doing sth<br>catch sb doing sth<br>discover sb doing sth<br>feel sb doing sth<br>find sb doing sth</li>
+</ol>
+<p>存在部分例外没有原因，“死记硬背”，固定搭配<br>bear sb to do sth 忍受某人做某事<br>hate sb to do sth 讨厌某人做某事</p>
+<p>get sb doing sth 使某人做某事<br>have sb doing sth 使某人做某事<br>keep sb doing sth 使某人做某事<br>prevent sb doing sth 使某人做某事</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>语法</tag>
+        <tag>英语</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谈谈美式英语的重读技巧</title>
+    <url>/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/</url>
+    <content><![CDATA[<p>英语中的单词与句子都有重弱读现象，重读音节的元音发音更响亮更长，那么一般如何对单词或句子进行重弱读分辨呢？</p>
+<h2 id="音节是什么？"><a href="#音节是什么？" class="headerlink" title="音节是什么？"></a>音节是什么？</h2><p>英语的单词至少包含一个音节。音节一般以元音为主进行划分，每个音节一般由一个元音字母或一个元音字母组合加上一个或几个辅音构成。<br>单音节：eg. bag, book<br>双音节：eg. borrow，letter，daughter，email</p>
+<h2 id="重读实词"><a href="#重读实词" class="headerlink" title="重读实词"></a>重读实词</h2><p>实词（表示实际意义）：主要动词，名词，adj，adv，否定词，wh词，感叹词，特殊重读</p>
+<h2 id="双音节词读音规则："><a href="#双音节词读音规则：" class="headerlink" title="双音节词读音规则："></a>双音节词读音规则：</h2><ul>
+<li>90%的名词，前一个音节重读。eg：office，problem，window，paper，building，mother，father</li>
+<li>60%～70%的动词，后一个音节重读。eg：apply，agree，create，relax，complain，enjoy</li>
+</ul>
+<h2 id="后缀的重读规则"><a href="#后缀的重读规则" class="headerlink" title="后缀的重读规则"></a>后缀的重读规则</h2><ul>
+<li>-ese重读后缀。eg：Chinese，Japanese</li>
+<li>-eer重读后缀。eg：pioneer，volunteer，engineer</li>
+<li>-ique重读后缀。eg：unique，antique，technique</li>
+<li>-ic重读后缀前的音节。eg：realistic，elastic，elastic，strategic，optimistic，terrific</li>
+</ul>
+<h2 id="句子中单词重读依据"><a href="#句子中单词重读依据" class="headerlink" title="句子中单词重读依据"></a>句子中单词重读依据</h2><ul>
+<li>实词重读，虚词（功能词）弱读</li>
+<li>实意词+实意词，后一词通常重读。eg：Let’s go for a walk（重读）</li>
+<li>谓语+宾语，宾语为代词时，动词要重读。<br>eg：Did you <strong>get</strong>（重读） it？ —— Did you get the <strong>job</strong>（重读）？<br>Who <strong>stole</strong> it？ —— Who stole my <strong>money</strong>？（升调）</li>
+</ul>
+<h2 id="形容词-名词：重读名词"><a href="#形容词-名词：重读名词" class="headerlink" title="形容词+名词：重读名词"></a>形容词+名词：重读名词</h2><p>eg： it’s a hot <strong>day</strong><br>双形容词+名词：重读前一形容词+名词。eg：<strong>big</strong> black <strong>dog</strong></p>
+<h2 id="短语重读"><a href="#短语重读" class="headerlink" title="短语重读"></a>短语重读</h2><ul>
+<li>名词短语和复合名词的重读：重读前一单词 【类似名词读法】<br>eg：credit card，eyelid，eyebrow，forehead</li>
+<li>动词短语：重读后一单词【类似大多数的动词读法】<br>eg：pick you <strong>up</strong>（重读）</li>
+<li>动词短语化的名词读法：重读前一音节【类似名词读法】<br>eg：work out-workout，make up-makeup</li>
+</ul>
+<h2 id="人名和地名重读：重读最后"><a href="#人名和地名重读：重读最后" class="headerlink" title="人名和地名重读：重读最后"></a>人名和地名重读：重读最后</h2><ul>
+<li>两个音节，重读第二个单词。eg：South American，United Kindom</li>
+<li>三个音节，重读最后一个。eg：Martin Luther King</li>
+</ul>
+<h2 id="缩写词和数字重读"><a href="#缩写词和数字重读" class="headerlink" title="缩写词和数字重读"></a>缩写词和数字重读</h2><ul>
+<li>缩写词，重读后一字母，注意连读。eg：CNN，PhD，PC，HTML，DVD</li>
+<li>数词：重读后一数词。eg：fifty eight</li>
+</ul>
+<p>这是一般情况，特殊情况特殊对待，比如说有特别想强调的信息。英语中的重弱读现象先分享到这里～</p>
+]]></content>
+      <categories>
+        <category>英语</category>
+      </categories>
+      <tags>
+        <tag>英语</tag>
+        <tag>重读</tag>
       </tags>
   </entry>
   <entry>

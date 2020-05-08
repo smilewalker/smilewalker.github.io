@@ -301,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smilewalker">
@@ -320,7 +320,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" itemprop="url">web audio api实现你的音乐·下</a></h1>
+                <a class="post-title-link" href="/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/" itemprop="url">谈谈美式英语的重读技巧</a></h1>
         
 
         <div class="post-meta">
@@ -332,8 +332,8 @@
               
                 <span class="post-meta-item-text"> </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-27T22:54:44+08:00">
-                2017-02-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-16T20:24:01+08:00">
+                2020-04-16
               </time>
             
 
@@ -355,8 +355,8 @@
               
               
                 <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/%E8%8B%B1%E8%AF%AD/" itemprop="url" rel="index">
+                    <span itemprop="name">英语</span>
                   </a>
                 </span>
 
@@ -373,8 +373,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" itemprop="commentCount"></span>
+                <a href="/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -382,7 +382,7 @@
 
           
           
-             <span id="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/" class="leancloud_visitors" data-flag-title="web audio api实现你的音乐·下">
+             <span id="/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/" class="leancloud_visitors" data-flag-title="谈谈美式英语的重读技巧">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -407,1398 +407,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  1.8k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在上文《web audio api实现你的音乐》中，我们了解到Audio API简单的音频知识点，重在理论，今天搞点有趣的试验，偏重实践。大家知道，光有光谱，电磁波有频谱，音乐呢？当然也有自己的谱。想奥斯特实验揭示电流周围存在磁场，分散的铁屑显现磁铁的磁场分布，那音乐如何看到自身的频率，所以，本文的主题来了，音频可视化，让你的音乐浪起来。先附上效果图，接下来会主要围绕效果例子出发：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ca71f849ca37bdf6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620" alt="效果图.png"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/27/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8B/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" itemprop="url">web audio api实现你的音乐·上</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-16T22:54:44+08:00">
-                2017-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/" class="leancloud_visitors" data-flag-title="web audio api实现你的音乐·上">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  2.3k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  9
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Web Audio API为控制网页的音频提供了强有力的后盾，允许开发人员为音频添加效果，创建音频可视化等等。</p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1487245004499&di=5772e6bce17addb4605adf4284b86861&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D715823f1f403918fd7d13dc2613c264b%2Ffaa155540923dd544431d379d209b3de9d824896.jpg" alt="源自网络.png"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/02/16/web%20audio%20api%E5%AE%9E%E7%8E%B0%E4%BD%A0%E7%9A%84%E9%9F%B3%E4%B9%90%C2%B7%E4%B8%8A/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/" itemprop="url">js解决canvas合成图模糊</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-21T22:54:44+08:00">
-                2017-01-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/" class="leancloud_visitors" data-flag-title="js解决canvas合成图模糊">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  1k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>写H5 canvas的时候，我们可能会遇到这样那样的问题，比如说canvas合成的图片模糊，俗语有言“一颗老鼠屎坏了一锅粥”，最后有没有因模糊而坏了H5这锅粥也就自我衡量吧。索性来看看移动端canvas合成的图片模糊问题。先上两张图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-ac4adb2cf965c867.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/440" alt="图1"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/21/js%E8%A7%A3%E5%86%B3canvas%E5%90%88%E6%88%90%E5%9B%BE%E6%A8%A1%E7%B3%8A/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/" itemprop="url">css之神奇的渐变效果</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-13T21:34:08+08:00">
-                2017-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/" class="leancloud_visitors" data-flag-title="css之神奇的渐变效果">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  880
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>最近发现css3渐变无敌，边边角角利用<code>linear-gradient</code>或者<code>radial-gradient</code>也可以实现，如下图，包括之前所讲的<a href="http://www.jianshu.com/p/8570433e3669" target="_blank" rel="noopener"> CSS3 | 制作文字波浪线效果 </a>一文也有谈到：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-1adaee5592d8c46d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="Paste_Image.png"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/13/css%E4%B9%8B%E7%A5%9E%E5%A5%87%E7%9A%84%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/" itemprop="url">js解决canvas绘制多图</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-12T22:54:44+08:00">
-                2017-01-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/" class="leancloud_visitors" data-flag-title="js解决canvas绘制多图">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  801
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>canvas一箩筐问题， 之前一文<a href="http://www.jianshu.com/p/3c223211ca7e" target="_blank" rel="noopener"> JS | canvas 图片模糊 </a>讲了合成图的模糊，本文讲讲另一个，canvas绘制多图，这也是在做H5的过程中遇到的一个坎，比如说合成图少元素，比如说跨域等。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/12/js%E8%A7%A3%E5%86%B3canvas%E7%BB%98%E5%88%B6%E5%A4%9A%E5%9B%BE/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/" itemprop="url">js实现canvas画笔效果</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-01-11T19:54:44+08:00">
-                2017-01-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/" class="leancloud_visitors" data-flag-title="js实现canvas画笔效果">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  1.7k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  7
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>“别看我只是支画笔，我有雄心志气高”，今天便来讲讲canvas的画笔。之前做H5 canvas绘画时，思考如何让画出来的线条有纹理，翻找半天找不出个所以然，机缘巧合得知有个<code>createPattern</code>属性，嘿，成了，效果图如下。索性总结下画笔的属性，列个大概。</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-feef2756babfaa3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="纹理画笔"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/01/11/js%E5%AE%9E%E7%8E%B0canvas%E7%94%BB%E7%AC%94%E6%95%88%E6%9E%9C/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/" itemprop="url">css读懂动画steps</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-29T22:54:44+08:00">
-                2016-12-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/" class="leancloud_visitors" data-flag-title="css读懂动画steps">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  903
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">时长 &asymp;</span>
-                
-                <span title="时长">
-                  3
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>当我们给元素做动画的时候，可能会用到steps，把多个图片拼合成一张雪碧图，改变background-position进行动画，简便而又强大的属性。如同变形金刚，“卡卡卡”，而有时又被它搞得一愣一愣的，咦，咋没看到最后一张图。用归用，不由疑惑steps到底是个什么鬼？索性来了解一下。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/12/29/css%E8%AF%BB%E6%87%82%E5%8A%A8%E7%94%BBsteps/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="smilewalker">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Smilewalker">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/" itemprop="url">css美化scrollbar滚动条</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar"></i>
-              </span>
-              
-                <span class="post-meta-item-text"> </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-26T22:54:44+08:00">
-                2016-12-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-bookmark-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">专集</span>
-              
-              
-                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/" class="leancloud_visitors" data-flag-title="css美化scrollbar滚动条">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text"> </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数&#58;</span>
-                
-                <span title="字数">
-                  611
+                  578
                 </span>
               
 
@@ -1836,11 +445,13 @@
 
       
         
-          <p>在布局页面样式的时候，可能会遇到显示滚动条的需要，默认滚动条样式普通也不具备自认为的美感，想打造自己的滚动条，咋破？按例我们先上效果图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-7a6b0a82851599a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="效果图"></p>
+          
+          英语中的单词与句子都有重弱读现象，重读音节的元音发音更响亮更长，那么一般如何对单词或句子进行重弱读分辨呢？
+音节是什么？英语的单词至少包含一个音节。音节一般以元音为主进行划分，每个音节一般由一个元音字母或一个元音字母组合加上一个或几个辅音构成。单音节：eg. bag, book双音节：eg. bor
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/12/26/css%E7%BE%8E%E5%8C%96scrollbar%E6%BB%9A%E5%8A%A8%E6%9D%A1/#more" rel="contents">
+            <a class="btn" href="/2020/04/16/%E8%8B%B1%E8%AF%AD%E7%9A%84%E9%87%8D%E8%AF%BB%E5%8F%98%E5%8C%96/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1891,7 +502,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smilewalker">
@@ -1910,7 +521,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/" itemprop="url">css搞定input-checkbox的美化</a></h1>
+                <a class="post-title-link" href="/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/" itemprop="url">MWeb+七牛云图床</a></h1>
         
 
         <div class="post-meta">
@@ -1922,8 +533,8 @@
               
                 <span class="post-meta-item-text"> </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-24T20:54:44+08:00">
-                2016-12-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-16T15:24:01+08:00">
+                2020-04-16
               </time>
             
 
@@ -1945,8 +556,8 @@
               
               
                 <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -1963,8 +574,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/" itemprop="commentCount"></span>
+                <a href="/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1972,7 +583,7 @@
 
           
           
-             <span id="/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/" class="leancloud_visitors" data-flag-title="css搞定input-checkbox的美化">
+             <span id="/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/" class="leancloud_visitors" data-flag-title="MWeb+七牛云图床">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1997,7 +608,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  686
+                  383
                 </span>
               
 
@@ -2013,7 +624,7 @@
                   <span class="post-meta-item-text">时长 &asymp;</span>
                 
                 <span title="时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -2035,13 +646,15 @@
 
       
         
-          <blockquote>
-<p>写H5有时候遇到要打勾选择，比如说同意XXX，已阅读XXX啥的，而本人又不太想用图片切换，第一个就想到checkbox，而默认的样式又不是那么合意，总想设计自己的效果，抓耳挠腮，咋弄？今天我们便来解决这个问题，移动端H5，按例上效果图：</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2320147-dd562467ad1f0a5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/540" alt="效果图"></p>
+          
+          拥有七牛云账号注册七牛云就不多介绍了，主要是要注意创建存储对象的时候，空间名称不能重复、所选择的存储区域要记得、访问限制一定要选公开空间，如下图：
+MWeb设置七牛云发布进入Mweb—偏好设置-发布服务，选择七牛云
+AK与SK是七牛云的SK与AK，进入七牛云的个人中心–密钥管理-AK/SK复制
+名称
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/12/24/css%E6%90%9E%E5%AE%9Ainput-checkbox%E7%9A%84%E7%BE%8E%E5%8C%96/#more" rel="contents">
+            <a class="btn" href="/2020/04/16/MWeb+%E4%B8%83%E7%89%9B%E4%BA%91%E5%9B%BE%E5%BA%8A/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2092,7 +705,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="smilewalker">
@@ -2111,7 +724,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/" itemprop="url">web之GPU 动画：正确的打开方式</a></h1>
+                <a class="post-title-link" href="/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/" itemprop="url">Hexo+NexT的进阶配置</a></h1>
         
 
         <div class="post-meta">
@@ -2123,8 +736,1404 @@
               
                 <span class="post-meta-item-text"> </span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-22T22:44:44+08:00">
-                2016-12-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-16T14:24:01+08:00">
+                2020-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/" class="leancloud_visitors" data-flag-title="Hexo+NexT的进阶配置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  5
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>完成博客网站的基本搭建后，这篇文章是对于Hexo配置的进阶设置，可自定义选择。以下主题配置文件皆为Hexo主题themes目录下的_config.yml，网站配置文件皆为hexo根目录下的_config.yml。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/16/Hexo+NexT%E7%9A%84%E8%BF%9B%E9%98%B6%E9%85%8D%E7%BD%AE/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/" itemprop="url">Markdown语法大全</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-16T11:57:01+08:00">
+                2020-04-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/" class="leancloud_visitors" data-flag-title="Markdown语法大全">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Markdown 是什么Markdown 是一种轻量级标记语言，在很多平台上都有使用，它允许人们使用易读易写的纯文本格式编写文档，在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档，编
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/16/Markdown%E8%AF%AD%E6%B3%95/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="url">Hexo(MacOS)+Github快速搭建博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-15T13:24:01+08:00">
+                2020-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="leancloud_visitors" data-flag-title="Hexo(MacOS)+Github快速搭建博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  2.9k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+信息化时代的我们有许多平台去写文章，比如心得，护肤，经验，学习，技术。每个平台都有自己的主打方向，可能我们管理着不同的平台，规划这里写什么主题，那里写什么主题。作为希望拥有自己的文章汇集处，能够全局看自己的文章，折腾捣鼓下，建立自己的博客是非常因吹斯汀以及捎带一些成就感。那么这篇文章就是带着Gee
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/15/Hexo(MacOS)+Github%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/" itemprop="url">Mac快捷键指南</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-28T22:54:44+08:00">
+                2019-04-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/" class="leancloud_visitors" data-flag-title="Mac快捷键指南">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  3.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  11
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Mac快捷指南集合，先收藏着：注释： Command（或 Cmd）⌘；Shift ⇧；Option（或 Alt）⌥；Control（或 Ctrl）⌃；Caps Lock ⇪；Fn
+常用快捷键组合
+剪切Cmd-X、拷贝Cmd-C、粘贴Cmd-V
+Command-Z：撤销上一个命令。随后可按 Shift
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/28/Mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%8C%87%E5%8D%97/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/" itemprop="url">Mac安装office365</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-15T22:54:44+08:00">
+                2019-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/" class="leancloud_visitors" data-flag-title="Mac安装office365">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  209
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>自从mac升级系统，原先的2016版office总是闪退；<br>索性去App store下了Office，发现是365版本，不激活无法使用；<br>一番搜索折腾总算安装成功，两步搞定，分享经验仅供参考。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/15/Mac%E5%AE%89%E8%A3%85office365/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/" itemprop="url">Mac实现Adobe Indesign CC快速切换中英</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T22:54:44+08:00">
+                2018-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/" class="leancloud_visitors" data-flag-title="Mac实现Adobe Indesign CC快速切换中英">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  193
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Mac 如何快速实现Adobe Indesign CC 2018 中英文切换，比如说我的版本是英文版，想切到中文版，怎么做？<br><img src="https://upload-images.jianshu.io/upload_images/2320147-cd43f3db4a662c33.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Adobe CC">邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/28/Mac%E5%AE%9E%E7%8E%B0AdobeIndesignCC%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2%E4%B8%AD%E8%8B%B1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" itemprop="url">Mac Mail绑定QQ邮箱</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-28T22:54:44+08:00">
+                2017-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-bookmark-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">专集</span>
+              
+              
+                <span class="post-meta-item-text-name" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/" class="leancloud_visitors" data-flag-title="Mac Mail绑定QQ邮箱">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"> </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数&#58;</span>
+                
+                <span title="字数">
+                  221
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">时长 &asymp;</span>
+                
+                <span title="时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Mac 拥有自带的Mail软件，不用下载邮箱软件便可进行一体化处理，已经导入163邮箱、公司邮箱，正在倒腾QQ邮箱，发现报错，然而账号密码均没问题，遇到这种情况怎么解决呢？</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/28/Mac%20Mail%E7%BB%91%E5%AE%9AQQ%E9%82%AE%E7%AE%B1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://smilewalker.github.io/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="smilewalker">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Smilewalker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="url">node-sass安装的小坑</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar"></i>
+              </span>
+              
+                <span class="post-meta-item-text"> </span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-19T22:54:44+08:00">
+                2017-04-19
               </time>
             
 
@@ -2164,8 +2173,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/" itemprop="commentCount"></span>
+                <a href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -2173,7 +2182,7 @@
 
           
           
-             <span id="/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/" class="leancloud_visitors" data-flag-title="web之GPU 动画：正确的打开方式">
+             <span id="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/" class="leancloud_visitors" data-flag-title="node-sass安装的小坑">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -2198,7 +2207,7 @@
                   <span class="post-meta-item-text">字数&#58;</span>
                 
                 <span title="字数">
-                  8.3k
+                  152
                 </span>
               
 
@@ -2214,7 +2223,7 @@
                   <span class="post-meta-item-text">时长 &asymp;</span>
                 
                 <span title="时长">
-                  30
+                  1
                 </span>
               
             </div>
@@ -2236,10 +2245,12 @@
 
       
         
-          <p>译者序：原文<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">GPU Animation: Doing It Right</a>，发表于2016年12月6日，本文是对该篇的中文翻译，如有帮助，作为译者，也深感欣慰。<br>附原文链接：<a href="https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/" target="_blank" rel="noopener">https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/</a></p>
+          <p>一项目，开始运行的时候，总会报出node-sass没找到的error：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2320147-5bddcd094005b215.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<p>ok，那就安装node sass，一查发现，这个问题大家伙似乎都有经历，我也顺带着记录下来，以备埋坑。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2016/12/22/web%E4%B9%8BGPU%E5%8A%A8%E7%94%BB%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%89%93%E5%BC%80%E6%96%B9%E5%BC%8F/#more" rel="contents">
+            <a class="btn" href="/2017/04/19/node-sass%E7%9A%84%E5%AE%89%E8%A3%85/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2281,7 +2292,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">&gt;</a>
   </nav>
 
 
@@ -2330,7 +2341,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2352,7 +2363,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-count">43</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2421,7 +2432,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">37.1k</span>
+    <span title="Site words total count">42.9k</span>
   
 </div>
 
